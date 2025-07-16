@@ -117,14 +117,24 @@ class GeminiChatClient(BaseChatClient):
 _CLIENT_REGISTRY = {
     # OpenRouter models
     "gpt-4o": (OpenRouterChatClient, "openai/gpt-4o"),
+    # Anthropic Claude 3 Sonnet
     "claude-sonnet-3.7": (OpenRouterChatClient, "anthropic/claude-3-sonnet"),
+    "claude-3-sonnet-20240229": (OpenRouterChatClient, "anthropic/claude-3-sonnet"),
+    # Mistral Large
     "mistral-large": (OpenRouterChatClient, "mistralai/mistral-large"),
+    # DeepSeek
     "deepseek-r1": (OpenRouterChatClient, "deepseek-ai/deepseek-llm-r1-chat"),
-    "grok-3": (OpenRouterChatClient, "xai/grok-3"),  # 若未上架需更新
+    "deepseek-chat": (OpenRouterChatClient, "deepseek-ai/deepseek-llm-r1-chat"),
+    # Grok
+    "grok-3": (OpenRouterChatClient, "xai/grok-3"),
+    # Kimi (Moonshot)
     "kimi-k2": (OpenRouterChatClient, "moonshot-ai/moonshot-kimi-k2"),
+    "kimi": (OpenRouterChatClient, "moonshot-ai/moonshot-kimi-k2"),
+    # Perplexity
     "perplexity": (OpenRouterChatClient, "perplexity/pplx-70b-online"),
-    # Gemini
+    # Gemini (Google)
     "gemini-pro": (GeminiChatClient, None),
+    "gemini-1.5-pro-latest": (GeminiChatClient, None),
 }
 
 
