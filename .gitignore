@@ -5,6 +5,8 @@ __pycache__/
 
 # --- Configuration --- #
 # Sensitive configuration files
+# Log files
+diag.log
 .env
 config.ini
 

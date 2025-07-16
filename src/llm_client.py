@@ -38,10 +38,13 @@ class BaseChatClient(ABC):
     def _create_session_with_retries(self) -> requests.Session:
         """Creates a requests session with a retry mechanism."""
         session = requests.Session()
+        # In hostile environments (e.g., with interfering security software), the 'headers_to_keep' 
+        # parameter can cause crashes. We are removing it and relying on the default behavior of 
+        # requests.Session, which persists headers across all requests made with it, including retries.
         retries = Retry(
-            total=3,  # Total number of retries
-            backoff_factor=1,  # Wait 1s, 2s, 4s between retries
-            status_forcelist=[500, 502, 503, 504],  # Retry on these server errors
+            total=5,
+            backoff_factor=1,
+            status_forcelist=[429, 500, 502, 503, 504],
             allowed_methods=["POST"]
         )
         adapter = HTTPAdapter(max_retries=retries)
@@ -68,7 +71,8 @@ class OpenRouterChatClient(BaseChatClient):
         self.session.headers.update({
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "X-Title": "Aquasky-AIQA-Monitor"
+            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            "X-Title": "AQUASKY AIQA Monitor"
         })
 
     def chat(self, messages: List[Dict[str, str]], **kwargs) -> str:
@@ -79,6 +83,7 @@ class OpenRouterChatClient(BaseChatClient):
             "temperature": kwargs.get("temperature", 0.7),
             "stream": False,
         }
+        # Headers are now set in the session, no need to pass them here
         resp = self.session.post(self.ENDPOINT, json=payload, timeout=HTTP_TIMEOUT)
         if resp.status_code != 200:
             raise LLMError(f"OpenRouter API error: {resp.status_code} {resp.text}")
@@ -136,16 +141,33 @@ _CLIENT_REGISTRY = {
     "perplexity-sonar-pro": (OpenRouterChatClient, "perplexity/sonar-pro"),
 }
 
+# Cache for client instances to avoid re-creation
+_client_cache = {}
 
-def get_client(name: str) -> BaseChatClient:
-    """Return an initialized chat client by simplified name."""
-    if name not in _CLIENT_REGISTRY:
-        raise ValueError(f"Unknown model name: {name}")
-    
-    client_class, model_name = _CLIENT_REGISTRY[name]
-    
-    # Pass the specific model name if it exists, otherwise the client uses its default
-    if model_name:
-        return client_class(model=model_name)
+def get_client(model_name: str) -> Union[OpenRouterChatClient, GeminiChatClient]:
+    """Factory function to get a client for a given model, with caching."""
+    if model_name not in _CLIENT_REGISTRY:
+        raise LLMError(f"Model '{model_name}' is not supported.")
+
+    client_class, model_identifier = _CLIENT_REGISTRY[model_name]
+
+    # Use the class name as the cache key to reuse the client (e.g., OpenRouterChatClient)
+    cache_key = client_class.__name__
+
+    if cache_key in _client_cache:
+        # If a client for this class exists, update its model and return it
+        client = _client_cache[cache_key]
+        # The model to be queried is updated on the existing client instance
+        client.model = model_identifier or model_name 
+        return client
+
+    # If no client for this class exists, create a new one
+    if client_class == GeminiChatClient:
+        # For Gemini, model_identifier is None, so we pass the original name
+        instance = client_class(model=model_name)
     else:
-        return client_class()
+        # For OpenRouter, we pass the specific model identifier
+        instance = client_class(model=model_identifier)
+    
+    _client_cache[cache_key] = instance
+    return instance

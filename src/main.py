@@ -62,13 +62,13 @@ def main():
     from llm_client import get_client, LLMError
     TARGET_MODELS = [
         "kimi-k2-free",
-        "devstral-medium",
-        "deepseek-chimera-free",
-        "gemini-2.5-flash-lite",
-        "grok-3",
-        "claude-sonnet-4",
-        "gpt-4o-mini-high",
-        "perplexity-sonar-pro",
+        # "devstral-medium",
+        # "deepseek-chimera-free",
+        # "gemini-2.5-flash-lite",
+        # "grok-3",
+        # "claude-sonnet-4",
+        # "gpt-4o-mini-high",
+        # "perplexity-sonar-pro",
     ]
     print(f"\nTarget models: {', '.join(TARGET_MODELS)}")
 
