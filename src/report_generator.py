@@ -8,12 +8,13 @@ from typing import List, Dict
 import pandas as pd
 
 
-def save_to_excel(results: List[Dict], output_dir: str) -> None:
+def save_to_excel(results: List[Dict], output_dir: str, filename: str = None) -> None:
     """Saves the results to an Excel file.
 
     Args:
         results: A list of dictionaries, where each dict is a result.
         output_dir: The directory to save the report file in.
+        filename: Optional custom filename. If not provided, auto-generates with timestamp.
     """
     if not results:
         print("No results to save to Excel.")
@@ -26,8 +27,11 @@ def save_to_excel(results: List[Dict], output_dir: str) -> None:
         # Reorder columns for better readability
         df = df[['question_id', 'question', 'model', 'answer']]
 
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_name = f"AQUASKY_AIQA_Report_{timestamp}.xlsx"
+        if filename:
+            file_name = filename
+        else:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            file_name = f"AQUASKY_AIQA_Report_{timestamp}.xlsx"
         file_path = os.path.join(output_dir, file_name)
 
         df.to_excel(file_path, index=False, engine='openpyxl')
@@ -36,12 +40,13 @@ def save_to_excel(results: List[Dict], output_dir: str) -> None:
         print(f"Error saving Excel report: {e}")
 
 
-def save_to_markdown(results: List[Dict], output_dir: str) -> None:
+def save_to_markdown(results: List[Dict], output_dir: str, filename: str = None) -> None:
     """Saves the results to a Markdown file.
 
     Args:
         results: A list of dictionaries, where each dict is a result.
         output_dir: The directory to save the report file in.
+        filename: Optional custom filename. If not provided, auto-generates with timestamp.
     """
     if not results:
         print("No results to save to Markdown.")
@@ -50,8 +55,11 @@ def save_to_markdown(results: List[Dict], output_dir: str) -> None:
     print("Generating Markdown report...")
     try:
         os.makedirs(output_dir, exist_ok=True)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_name = f"AQUASKY_AIQA_Report_{timestamp}.md"
+        if filename:
+            file_name = filename
+        else:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            file_name = f"AQUASKY_AIQA_Report_{timestamp}.md"
         file_path = os.path.join(output_dir, file_name)
 
         with open(file_path, 'w', encoding='utf-8') as f:
