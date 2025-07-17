@@ -83,8 +83,16 @@ class OpenRouterChatClient(BaseChatClient):
             "temperature": kwargs.get("temperature", 0.7),
             "stream": False,
         }
-        # Headers are now set in the session, no need to pass them here
-        resp = self.session.post(self.ENDPOINT, json=payload, timeout=HTTP_TIMEOUT)
+        
+        # 確保每次請求都明確設定 headers，避免 session headers 被覆蓋的問題
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            "X-Title": "AQUASKY AIQA Monitor"
+        }
+        
+        resp = self.session.post(self.ENDPOINT, json=payload, headers=headers, timeout=HTTP_TIMEOUT)
         if resp.status_code != 200:
             raise LLMError(f"OpenRouter API error: {resp.status_code} {resp.text}")
         data = resp.json()
