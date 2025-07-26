@@ -58,11 +58,12 @@ class WorkingModelsProcessor:
                 "name": "Mistral 7B",
                 "status": "verified"   # 已驗證可用
             },
-            # 使用者指定必需的 Perplexity 模型
+            # 使用者指定必需的 Perplexity 模型（已驗證可用）
             {
-                "id": "perplexity/llama-3.1-sonar-small-128k-online",
-                "name": "Perplexity Sonar",
-                "status": "required"   # 必需模型
+                "id": "perplexity/sonar-pro",
+                "name": "Perplexity Sonar Pro",
+                "status": "verified",   # 已驗證可用
+                "api_type": "perplexity"  # 使用 Perplexity 直接 API
             },
             # 尋找可用的 Grok 模型
             {
@@ -78,7 +79,8 @@ class WorkingModelsProcessor:
             }
         ]
         
-        self.api_key = None
+        self.openrouter_api_key = None
+        self.perplexity_api_key = None
         self.questions = []
         
     def load_config(self):
@@ -92,10 +94,19 @@ class WorkingModelsProcessor:
             return False
         
         config.read(config_path, encoding='utf-8')
-        self.api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
         
-        if not self.api_key or self.api_key == 'your_openrouter_api_key_here':
+        # 載入 OpenRouter API Key
+        self.openrouter_api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        
+        # 載入 Perplexity API Key
+        self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
+        
+        if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
             print("❌ 請在 config.ini 中設定有效的 OPENROUTER_API_KEY")
+            return False
+        
+        if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':
+            print("❌ 請在 config.ini 中設定有效的 PERPLEXITY_API_KEY")
             return False
         
         return True
@@ -132,20 +143,35 @@ class WorkingModelsProcessor:
             print(f"❌ 讀取問題檔案時發生錯誤: {str(e)}")
             return False
     
-    def test_model_availability(self, model_id):
-        """測試模型是否可用"""
+    def test_model_availability(self, model_info):
+        """測試模型是否可用（支援 OpenRouter 和 Perplexity）"""
+        model_id = model_info["id"]
+        api_type = model_info.get("api_type", "openrouter")
+        
         print(f"\n🧪 測試模型 {model_id} 是否可用...")
-        url = "https://openrouter.ai/api/v1/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
-            "X-Title": "AQUASKY AIQA Monitor"
-        }
+        
+        if api_type == "perplexity":
+            # 使用 Perplexity 直接 API
+            url = "https://api.perplexity.ai/chat/completions"
+            headers = {
+                "Authorization": f"Bearer {self.perplexity_api_key}",
+                "Content-Type": "application/json"
+            }
+            actual_model_id = model_id.replace("perplexity/", "")
+        else:
+            # 使用 OpenRouter API
+            url = "https://openrouter.ai/api/v1/chat/completions"
+            headers = {
+                "Authorization": f"Bearer {self.openrouter_api_key}",
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
+                "X-Title": "AQUASKY AIQA Monitor"
+            }
+            actual_model_id = model_id
         
         # 使用簡單的測試問題
         data = {
-            "model": model_id,
+            "model": actual_model_id,
             "messages": [
                 {
                     "role": "user",
@@ -181,18 +207,33 @@ class WorkingModelsProcessor:
             print(f"  ❌ 測試模型時發生錯誤: {str(e)}")
             return False
     
-    def call_llm_api(self, model_id, question, question_num):
-        """呼叫 LLM API"""
-        url = "https://openrouter.ai/api/v1/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
-            "X-Title": "AQUASKY AIQA Monitor"
-        }
+    def call_llm_api(self, model_info, question, question_num):
+        """呼叫 LLM API（支援 OpenRouter 和 Perplexity）"""
+        model_id = model_info["id"]
+        api_type = model_info.get("api_type", "openrouter")
+        
+        if api_type == "perplexity":
+            # 使用 Perplexity 直接 API
+            url = "https://api.perplexity.ai/chat/completions"
+            headers = {
+                "Authorization": f"Bearer {self.perplexity_api_key}",
+                "Content-Type": "application/json"
+            }
+            # Perplexity 模型 ID 需要移除 perplexity/ 前綴
+            actual_model_id = model_id.replace("perplexity/", "")
+        else:
+            # 使用 OpenRouter API
+            url = "https://openrouter.ai/api/v1/chat/completions"
+            headers = {
+                "Authorization": f"Bearer {self.openrouter_api_key}",
+                "Content-Type": "application/json",
+                "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
+                "X-Title": "AQUASKY AIQA Monitor"
+            }
+            actual_model_id = model_id
         
         data = {
-            "model": model_id,
+            "model": actual_model_id,
             "messages": [
                 {
                     "role": "user",
@@ -243,7 +284,7 @@ class WorkingModelsProcessor:
         
         # 如果不是已驗證的模型，先測試可用性
         if model_info["status"] != "verified":
-            if not self.test_model_availability(model_id):
+            if not self.test_model_availability(model_info):
                 print(f"❌ 模型 {model_name} 不可用，跳過處理")
                 return False, 0, 0
         
@@ -252,7 +293,7 @@ class WorkingModelsProcessor:
         total_tokens = 0
         
         for i, question in enumerate(self.questions, 1):
-            result = self.call_llm_api(model_id, question, i)
+            result = self.call_llm_api(model_info, question, i)
             results.append(result)
             
             if result['success']:
