@@ -65,18 +65,18 @@ class WorkingModelsProcessor:
                 "status": "verified",   # 已驗證可用
                 "api_type": "perplexity"  # 使用 Perplexity 直接 API
             },
-            # 尋找可用的 Grok 模型
+            # OpenRouter 可用的 Grok 模型（已測試 2025-07-26）
             {
-                "id": "x-ai/grok-beta",
-                "name": "Grok Beta",
-                "status": "testing"   # 待測試
+                "id": "x-ai/grok-3-mini-beta",
+                "name": "Grok 3 Mini Beta",
+                "status": "verified"   # ✅ 已驗證可用，2.74秒回應（最快）
             },
-            # 備用 Grok 模型
-            {
-                "id": "x-ai/grok-2",
-                "name": "Grok 2",
-                "status": "testing"   # 備用 Grok 模型
-            }
+            # 不可用的模型（保留作為記錄）
+            # {
+            #     "id": "x-ai/grok-beta",
+            #     "name": "Grok Beta",
+            #     "status": "unavailable"   # ❌ HTTP 404 - No endpoints found
+            # }
         ]
         
         self.openrouter_api_key = None
@@ -96,13 +96,13 @@ class WorkingModelsProcessor:
         config.read(config_path, encoding='utf-8')
         
         # 載入 OpenRouter API Key
-        self.openrouter_api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        self.openrouter_api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
         
         # 載入 Perplexity API Key
         self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
         
         if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("❌ 請在 config.ini 中設定有效的 OPENROUTER_API_KEY")
+            print("❌ 請在 config.ini 中設定有效的 openrouter_api_key")
             return False
         
         if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':

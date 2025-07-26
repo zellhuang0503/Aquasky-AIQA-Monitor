@@ -10,23 +10,23 @@ from typing import List, Dict, Any
 class BatchConfig:
     """批次處理配置類別"""
     
-    # 支援的 LLM 模型列表（按推薦順序排列）
+    # 支援的 LLM 模型列表（按推薦順序排列，已驗證可用）
     AVAILABLE_MODELS: List[str] = [
-        "kimi-k2-free",           # 月之暗面 Kimi - 免費版
-        "deepseek-chimera-free",  # DeepSeek - 免費版
-        "gemini-2.5-flash-lite",  # Google Gemini - 輕量版
-        "gpt-4o-mini-high",       # OpenAI GPT-4o Mini - 高品質
-        "claude-sonnet-4",        # Anthropic Claude Sonnet 4
-        "devstral-medium",        # Mistral Devstral - 中等版本
-        "grok-3",                 # xAI Grok 3
-        "perplexity-sonar-pro",   # Perplexity Sonar Pro
+        "deepseek/deepseek-chat",           # DeepSeek Chat - 已驗證
+        "openai/gpt-4o-mini",              # OpenAI GPT-4o Mini - 已驗證
+        "google/gemini-flash-1.5",         # Google Gemini Flash 1.5 - 已驗證
+        "anthropic/claude-3.5-sonnet",     # Anthropic Claude 3.5 Sonnet - 已驗證
+        "meta-llama/llama-3.1-8b-instruct", # Meta Llama 3.1 8B - 已驗證
+        "mistralai/mistral-7b-instruct",   # Mistral 7B - 已驗證
+        "perplexity/sonar-pro",            # Perplexity Sonar Pro - 已驗證
+        "x-ai/grok-3-mini-beta",           # xAI Grok 3 Mini Beta - 已驗證 ✅
     ]
     
-    # 預設模型組合（用於快速開始）
+    # 預設模型組合（用於快速開始，選擇高效模型）
     DEFAULT_MODELS: List[str] = [
-        "kimi-k2-free",
-        "deepseek-chimera-free", 
-        "gemini-2.5-flash-lite"
+        "deepseek/deepseek-chat",        # 最穩定的模型
+        "x-ai/grok-3-mini-beta",         # 最快的 Grok 模型（2.74秒）
+        "openai/gpt-4o-mini"             # 高品質 OpenAI 模型
     ]
     
     # 推薦的完整測試模型組合

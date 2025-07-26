@@ -24,16 +24,16 @@ class SequentialLLMProcessor:
         self.output_dir = self.project_root / "outputs"
         self.output_dir.mkdir(exist_ok=True)
         
-        # 支援的 LLM 模型列表
+        # 支援的 LLM 模型清單（已驗證可用）
         self.available_models = [
-            "deepseek/deepseek-chat",           # DeepSeek
-            "anthropic/claude-3.5-sonnet",     # Claude Sonnet
+            "deepseek/deepseek-chat",           # DeepSeek Chat
+            "anthropic/claude-3.5-sonnet",     # Claude 3.5 Sonnet
             "openai/gpt-4o-mini",              # GPT-4o Mini
-            "google/gemini-2.0-flash-exp",     # Gemini Flash
-            "meta-llama/llama-3.1-8b-instruct", # Llama
-            "mistralai/mistral-7b-instruct",   # Mistral
-            "perplexity/llama-3.1-sonar-small-128k-online", # Perplexity
-            "x-ai/grok-beta"                   # Grok
+            "google/gemini-flash-1.5",         # Gemini Flash 1.5
+            "meta-llama/llama-3.1-8b-instruct", # Llama 3.1 8B
+            "mistralai/mistral-7b-instruct",   # Mistral 7B
+            "perplexity/sonar-pro",            # Perplexity Sonar Pro
+            "x-ai/grok-3-mini-beta"            # Grok 3 Mini Beta (✅ 已驗證)
         ]
         
         # 模型顯示名稱
@@ -41,11 +41,12 @@ class SequentialLLMProcessor:
             "deepseek/deepseek-chat": "DeepSeek Chat",
             "anthropic/claude-3.5-sonnet": "Claude 3.5 Sonnet",
             "openai/gpt-4o-mini": "GPT-4o Mini",
-            "google/gemini-2.0-flash-exp": "Gemini 2.0 Flash",
+            "google/gemini-flash-1.5": "Gemini Flash 1.5",
             "meta-llama/llama-3.1-8b-instruct": "Llama 3.1 8B",
             "mistralai/mistral-7b-instruct": "Mistral 7B",
-            "perplexity/llama-3.1-sonar-small-128k-online": "Perplexity Sonar",
-            "x-ai/grok-beta": "Grok Beta"
+            "perplexity/sonar-pro": "Perplexity Sonar Pro",
+            "x-ai/grok-4": "Grok 4",
+            "x-ai/grok-3-mini-beta": "Grok 3 Mini Beta"
         }
         
         self.api_key = None
