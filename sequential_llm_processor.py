@@ -62,10 +62,11 @@ class SequentialLLMProcessor:
             return False
         
         config.read(config_path, encoding='utf-8')
-        self.api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        # Use lowercase key to match config.ini
+        self.api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
         
         if not self.api_key or self.api_key == 'your_openrouter_api_key_here':
-            print("❌ 請在 config.ini 中設定有效的 OPENROUTER_API_KEY")
+            print("❌ 請在 config.ini 中設定有效的 openrouter_api_key")
             return False
         
         return True
@@ -111,7 +112,7 @@ class SequentialLLMProcessor:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
+            "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
             "X-Title": "AQUASKY AIQA Monitor"
         }
         

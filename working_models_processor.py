@@ -164,7 +164,7 @@ class WorkingModelsProcessor:
             headers = {
                 "Authorization": f"Bearer {self.openrouter_api_key}",
                 "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
+                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
                 "X-Title": "AQUASKY AIQA Monitor"
             }
             actual_model_id = model_id
@@ -227,7 +227,7 @@ class WorkingModelsProcessor:
             headers = {
                 "Authorization": f"Bearer {self.openrouter_api_key}",
                 "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/aquasky-aiqa-monitor",
+                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
                 "X-Title": "AQUASKY AIQA Monitor"
             }
             actual_model_id = model_id

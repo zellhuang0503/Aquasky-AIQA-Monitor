@@ -55,11 +55,11 @@ class GrokModelTester:
         
         config.read(config_path, encoding='utf-8')
         
-        # 載入 OpenRouter API Key
-        self.openrouter_api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        # 載入 OpenRouter API Key（與 config.ini 一致的小寫）
+        self.openrouter_api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
         
         if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("❌ 請在 config.ini 中設定有效的 OPENROUTER_API_KEY")
+            print("❌ 請在 config.ini 中設定有效的 openrouter_api_key")
             return False
         
         print("✅ 配置檔案載入成功")
