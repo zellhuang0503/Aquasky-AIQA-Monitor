@@ -11,8 +11,13 @@ config.ini
 diag.log
 
 # --- Generated Files --- #
-# Reports and other generated outputs
-outputs/
+# Reports and other generated outputs (root-level outputs)
+/outputs/*
 .env
 .venv/
 logs/*.log
+
+# --- Exceptions for versioned reports --- #
+# Allow tracking cross analysis markdown reports under outputs/cross_analysis/
+!/outputs/cross_analysis/
+!/outputs/cross_analysis/**
