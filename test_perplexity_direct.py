@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AQUASKY AIQA Monitor - 已驗證可用模型處理器
-專注於已知可用的模型，避免卡在不可用的模型上
+AQUASKY AIQA Monitor - Perplexity 直接 API 測試腳本
+使用 Perplexity 官方 API 而非 OpenRouter
 """
 
 import os
@@ -15,68 +15,42 @@ from datetime import datetime
 from pathlib import Path
 import pandas as pd
 
-class WorkingModelsProcessor:
-    """已驗證可用模型的處理器"""
+class PerplexityDirectTest:
+    """Perplexity 直接 API 測試器"""
     
     def __init__(self):
+        print(f"📁 初始化 Perplexity 測試器 - 工作目錄: {Path.cwd()}")
         self.project_root = Path.cwd()
         self.output_dir = self.project_root / "outputs"
         self.output_dir.mkdir(exist_ok=True)
+        print(f"📂 輸出目錄: {self.output_dir}")
         
-        # 已驗證可用的模型（根據用戶需求調整）
-        self.working_models = [
-            # 已成功測試過的模型
+        # Perplexity 模型配置（使用正確的官方模型名稱）
+        self.perplexity_models = [
             {
-                "id": "deepseek/deepseek-chat",
-                "name": "DeepSeek Chat",
-                "status": "verified"  # 已驗證可用
+                "id": "llama-3.1-sonar-small-128k-online",
+                "name": "Perplexity Sonar Small 128K",
+                "api_endpoint": "https://api.perplexity.ai/chat/completions",
+                "status": "primary"
             },
             {
-                "id": "openai/gpt-4o-mini",
-                "name": "GPT-4o Mini",
-                "status": "verified"   # 已驗證可用
-            },
-            # 使用者要求移除 Claude 3 Haiku
-            {
-                "id": "google/gemini-flash-1.5",
-                "name": "Gemini Flash 1.5",
-                "status": "verified"   # 已驗證可用
-            },
-            # 其它已驗證可用的模型
-            {
-                "id": "anthropic/claude-3.5-sonnet",
-                "name": "Claude 3.5 Sonnet",
-                "status": "verified"   # 已驗證可用
+                "id": "llama-3.1-sonar-large-128k-online",
+                "name": "Perplexity Sonar Large 128K",
+                "api_endpoint": "https://api.perplexity.ai/chat/completions",
+                "status": "alternative"
             },
             {
-                "id": "meta-llama/llama-3.1-8b-instruct",
-                "name": "Llama 3.1 8B",
-                "status": "verified"   # 已驗證可用
+                "id": "llama-3.1-sonar-huge-128k-online",
+                "name": "Perplexity Sonar Huge 128K",
+                "api_endpoint": "https://api.perplexity.ai/chat/completions",
+                "status": "premium"
             },
             {
-                "id": "mistralai/mistral-7b-instruct",
-                "name": "Mistral 7B",
-                "status": "verified"   # 已驗證可用
-            },
-            # 使用者指定必需的 Perplexity 模型（已驗證可用）
-            {
-                "id": "perplexity/sonar-pro",
-                "name": "Perplexity Sonar Pro",
-                "status": "verified",   # 已驗證可用
-                "api_type": "perplexity"  # 使用 Perplexity 直接 API
-            },
-            # OpenRouter 可用的 Grok 模型（已測試 2025-07-26）
-            {
-                "id": "x-ai/grok-3-mini-beta",
-                "name": "Grok 3 Mini Beta",
-                "status": "verified"   # ✅ 已驗證可用，2.74秒回應（最快）
-            },
-            # 不可用的模型（保留作為記錄）
-            # {
-            #     "id": "x-ai/grok-beta",
-            #     "name": "Grok Beta",
-            #     "status": "unavailable"   # ❌ HTTP 404 - No endpoints found
-            # }
+                "id": "sonar-small-online",
+                "name": "Perplexity Sonar Small (Legacy)",
+                "api_endpoint": "https://api.perplexity.ai/chat/completions",
+                "status": "legacy"
+            }
         ]
         
         self.openrouter_api_key = None
@@ -91,24 +65,35 @@ class WorkingModelsProcessor:
         
         if not config_path.exists():
             print("❌ 找不到 config.ini 檔案")
+            print("💡 請複製 config.ini.template 為 config.ini 並設定 API Keys")
             return False
         
         config.read(config_path, encoding='utf-8')
         
+        # 調試輸出：顯示所有可用的 section 和 key
+        print(f"🔍 配置檔案節區: {config.sections()}")
+        if 'api_keys' in config.sections():
+            print(f"🔑 api_keys 節區的所有鍵: {list(config['api_keys'].keys())}")
+        
         # 載入 OpenRouter API Key
-        self.openrouter_api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
+        self.openrouter_api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        print(f"🔍 OpenRouter API Key 讀取結果: {self.openrouter_api_key[:10] + '...' if self.openrouter_api_key and len(self.openrouter_api_key) > 10 else self.openrouter_api_key}")
         
         # 載入 Perplexity API Key
         self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
-        
-        if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("❌ 請在 config.ini 中設定有效的 openrouter_api_key")
-            return False
+        print(f"🔍 Perplexity API Key 讀取結果: {self.perplexity_api_key[:10] + '...' if self.perplexity_api_key and len(self.perplexity_api_key) > 10 else self.perplexity_api_key}")
         
         if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':
             print("❌ 請在 config.ini 中設定有效的 PERPLEXITY_API_KEY")
+            print("💡 請到 https://www.perplexity.ai/ 註冊並取得 API Key")
+            print("📝 請確認 config.ini 檔案中有以下格式:")
+            print("[api_keys]")
+            print("PERPLEXITY_API_KEY = your_actual_api_key_here")
             return False
         
+        print("✅ 配置檔案載入成功")
+        print(f"🔑 OpenRouter API Key: {'已設定' if self.openrouter_api_key else '未設定'}")
+        print(f"🔑 Perplexity API Key: {'已設定' if self.perplexity_api_key else '未設定'}")
         return True
     
     def extract_questions(self):
@@ -143,35 +128,36 @@ class WorkingModelsProcessor:
             print(f"❌ 讀取問題檔案時發生錯誤: {str(e)}")
             return False
     
-    def test_model_availability(self, model_info):
-        """測試模型是否可用（支援 OpenRouter 和 Perplexity）"""
-        model_id = model_info["id"]
-        api_type = model_info.get("api_type", "openrouter")
+    def find_working_perplexity_model(self):
+        """尋找可用的 Perplexity 模型"""
+        print(f"\n🧪 測試 Perplexity 模型可用性...")
+        print(f"📋 將測試 {len(self.perplexity_models)} 個模型")
         
-        print(f"\n🧪 測試模型 {model_id} 是否可用...")
+        for i, model in enumerate(self.perplexity_models, 1):
+            print(f"\n🔄 測試模型 {i}/{len(self.perplexity_models)}: {model['name']}")
+            print(f"🌐 API 端點: {model['api_endpoint']}")
+            print(f"🤖 模型 ID: {model['id']}")
+            
+            if self.test_single_perplexity_model(model):
+                print(f"✅ 找到可用的 Perplexity 模型: {model['name']}")
+                return model
+            else:
+                print(f"❌ 模型 {model['name']} 不可用，嘗試下一個...")
         
-        if api_type == "perplexity":
-            # 使用 Perplexity 直接 API
-            url = "https://api.perplexity.ai/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.perplexity_api_key}",
-                "Content-Type": "application/json"
-            }
-            actual_model_id = model_id.replace("perplexity/", "")
-        else:
-            # 使用 OpenRouter API
-            url = "https://openrouter.ai/api/v1/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.openrouter_api_key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
-                "X-Title": "AQUASKY AIQA Monitor"
-            }
-            actual_model_id = model_id
+        print("❌ 所有 Perplexity 模型都不可用")
+        return None
+    
+    def test_single_perplexity_model(self, model):
+        """測試單一 Perplexity 模型是否可用"""
+        
+        headers = {
+            "Authorization": f"Bearer {self.perplexity_api_key}",
+            "Content-Type": "application/json"
+        }
         
         # 使用簡單的測試問題
         data = {
-            "model": actual_model_id,
+            "model": model["id"],
             "messages": [
                 {
                     "role": "user",
@@ -183,13 +169,23 @@ class WorkingModelsProcessor:
         }
         
         try:
-            print(f"  🧪 測試模型可用性...")
-            response = requests.post(url, headers=headers, json=data, timeout=30)
+            print(f"  🔄 發送測試請求...")
+            response = requests.post(
+                model["api_endpoint"], 
+                headers=headers, 
+                json=data, 
+                timeout=30
+            )
+            
+            print(f"  📊 HTTP 狀態碼: {response.status_code}")
             
             if response.status_code == 200:
                 result = response.json()
+                print(f"  📋 完整回應: {json.dumps(result, indent=2, ensure_ascii=False)}")
+                
                 if 'choices' in result and len(result['choices']) > 0:
-                    print(f"  ✅ 模型可用")
+                    answer = result['choices'][0]['message']['content']
+                    print(f"  ✅ 模型可用，回應: {answer}")
                     return True
                 else:
                     print(f"  ❌ 模型回應格式異常")
@@ -198,7 +194,7 @@ class WorkingModelsProcessor:
                 print(f"  ❌ 模型不可用 (HTTP {response.status_code})")
                 try:
                     error_info = response.json()
-                    print(f"      錯誤詳情: {error_info}")
+                    print(f"      錯誤詳情: {json.dumps(error_info, indent=2, ensure_ascii=False)}")
                 except:
                     print(f"      錯誤內容: {response.text}")
                 return False
@@ -207,33 +203,15 @@ class WorkingModelsProcessor:
             print(f"  ❌ 測試模型時發生錯誤: {str(e)}")
             return False
     
-    def call_llm_api(self, model_info, question, question_num):
-        """呼叫 LLM API（支援 OpenRouter 和 Perplexity）"""
-        model_id = model_info["id"]
-        api_type = model_info.get("api_type", "openrouter")
-        
-        if api_type == "perplexity":
-            # 使用 Perplexity 直接 API
-            url = "https://api.perplexity.ai/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.perplexity_api_key}",
-                "Content-Type": "application/json"
-            }
-            # Perplexity 模型 ID 需要移除 perplexity/ 前綴
-            actual_model_id = model_id.replace("perplexity/", "")
-        else:
-            # 使用 OpenRouter API
-            url = "https://openrouter.ai/api/v1/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.openrouter_api_key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
-                "X-Title": "AQUASKY AIQA Monitor"
-            }
-            actual_model_id = model_id
+    def call_perplexity_api(self, model, question, question_num):
+        """呼叫 Perplexity API"""
+        headers = {
+            "Authorization": f"Bearer {self.perplexity_api_key}",
+            "Content-Type": "application/json"
+        }
         
         data = {
-            "model": actual_model_id,
+            "model": model["id"],
             "messages": [
                 {
                     "role": "user",
@@ -246,7 +224,12 @@ class WorkingModelsProcessor:
         
         try:
             print(f"  🔄 處理問題 {question_num}/20...")
-            response = requests.post(url, headers=headers, json=data, timeout=60)
+            response = requests.post(
+                model["api_endpoint"], 
+                headers=headers, 
+                json=data, 
+                timeout=60
+            )
             
             if response.status_code == 200:
                 result = response.json()
@@ -265,35 +248,44 @@ class WorkingModelsProcessor:
                     return {'success': False, 'error': 'Invalid response format'}
             else:
                 print(f"  ❌ 問題 {question_num} - API 錯誤: {response.status_code}")
-                return {'success': False, 'error': f'HTTP {response.status_code}'}
+                try:
+                    error_info = response.json()
+                    print(f"      錯誤詳情: {json.dumps(error_info, indent=2, ensure_ascii=False)}")
+                    return {'success': False, 'error': f'HTTP {response.status_code}: {error_info}'}
+                except:
+                    return {'success': False, 'error': f'HTTP {response.status_code}: {response.text}'}
                     
         except Exception as e:
             print(f"  ❌ 問題 {question_num} - 發生錯誤: {str(e)}")
             return {'success': False, 'error': str(e)}
     
-    def process_single_model(self, model_info):
-        """處理單一模型的所有問題"""
-        model_id = model_info["id"]
-        model_name = model_info["name"]
+    def process_perplexity_model(self):
+        """處理 Perplexity 模型的所有問題"""
+        # 尋找可用的 Perplexity 模型
+        working_model = self.find_working_perplexity_model()
+        if not working_model:
+            print(f"❌ 沒有可用的 Perplexity 模型，無法處理")
+            return False, 0, 0
+        
+        # 使用找到的可用模型
+        self.current_model = working_model
+        model_name = working_model["name"]
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        print(f"\n▶️▶️▶️ 開始處理模型: {model_name} ({model_id})")
         
-        print(f"\n🤖 開始處理模型: {model_name}")
-        print(f"📝 模型ID: {model_id}")
-        print("=" * 60)
+        print(f"\n{'='*80}")
+        print(f"🤖 開始處理模型: {model_name}")
+        print(f"📝 模型 ID: {working_model['id']}")
+        print(f"🌐 API 端點: {working_model['api_endpoint']}")
+        print(f"{'='*80}")
         
-        # 如果不是已驗證的模型，先測試可用性
-        if model_info["status"] != "verified":
-            if not self.test_model_availability(model_info):
-                print(f"❌ 模型 {model_name} 不可用，跳過處理")
-                return False, 0, 0
+        print(f"\n✅ {model_name} 模型可用，開始處理 20 個問題...")
         
         results = []
         successful_count = 0
         total_tokens = 0
         
         for i, question in enumerate(self.questions, 1):
-            result = self.call_llm_api(model_info, question, i)
+            result = self.call_perplexity_api(working_model, question, i)
             results.append(result)
             
             if result['success']:
@@ -305,17 +297,17 @@ class WorkingModelsProcessor:
                 time.sleep(3)
         
         # 儲存結果
-        self.save_model_results(model_id, model_name, results, timestamp)
+        self.save_results(working_model, model_name, results, timestamp)
         
         print(f"\n📊 {model_name} 處理完成:")
         print(f"  ✅ 成功: {successful_count}/20 個問題")
         print(f"  📈 總Token: {total_tokens}")
-        print("=" * 60)
+        print(f"{'='*80}")
         
         return True, successful_count, total_tokens
     
-    def save_model_results(self, model_id, model_name, results, timestamp):
-        """儲存單一模型的結果"""
+    def save_results(self, model, model_name, results, timestamp):
+        """儲存結果"""
         # 準備資料
         data = []
         
@@ -332,8 +324,8 @@ class WorkingModelsProcessor:
             }
             data.append(row)
         
-        # 生成安全的檔案名稱
-        safe_model_name = model_id.replace('/', '_').replace('\\', '_')
+        # 生成檔案名稱
+        safe_model_name = "perplexity_sonar_direct"
         
         # 儲存 Excel
         df = pd.DataFrame(data)
@@ -346,10 +338,11 @@ class WorkingModelsProcessor:
         md_path = self.output_dir / md_filename
         
         with open(md_path, 'w', encoding='utf-8') as f:
-            f.write(f"# AQUASKY AIQA Monitor - {model_name} 測試報告\n\n")
+            f.write(f"# AQUASKY AIQA Monitor - {model_name} 測試報告 (直接 API)\n\n")
             f.write(f"**生成時間**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"**模型**: {model_id}\n")
-            f.write(f"**模型名稱**: {model_name}\n\n")
+            f.write(f"**模型**: {model['id']}\n")
+            f.write(f"**模型名稱**: {model_name}\n")
+            f.write(f"**API 端點**: {model['api_endpoint']}\n\n")
             
             # 統計資訊
             successful_count = sum(1 for r in results if r['success'])
@@ -379,77 +372,80 @@ class WorkingModelsProcessor:
         print(f"    Excel: {excel_filename}")
         print(f"    Markdown: {md_filename}")
     
-    def run_processing(self):
-        """執行處理"""
-        print("🚀 AQUASKY AIQA Monitor - 可用模型處理系統")
-        print("=" * 60)
+    def run_test(self):
+        """執行測試"""
+        print("🚀 AQUASKY AIQA Monitor - Perplexity 直接 API 測試系統")
+        print("=" * 80)
+        print(f"🕰️ 開始時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
         # 載入配置
+        print("🔄 步驟 1: 載入配置檔案")
         if not self.load_config():
+            print("❌ 載入配置失敗")
             return False
         
         # 提取問題
+        print("🔄 步驟 2: 提取問題")
         if not self.extract_questions():
+            print("❌ 提取問題失敗")
             return False
         
-        print(f"\n📋 將依序處理以下模型:")
-        for i, model in enumerate(self.working_models, 1):
-            status_icon = "✅" if model["status"] == "verified" else "🧪"
-            print(f"  {i}. {status_icon} {model['name']} ({model['id']})")
+        print(f"\n📋 將測試 {len(self.perplexity_models)} 個 Perplexity 模型:")
+        for i, model in enumerate(self.perplexity_models, 1):
+            print(f"  {i}. 🔴 {model['name']} ({model['id']})")
         
-        print(f"\n💡 每個模型將處理 20 個問題，完成後自動儲存結果")
-        print("=" * 60)
+        print(f"\n💡 將找到第一個可用的模型並處理 20 個問題，完成後自動儲存結果")
+        print("=" * 80)
         
-        # 開始處理每個模型
-        total_successful = 0
-        total_tokens = 0
-        processed_models = 0
-        
-        for i, model_info in enumerate(self.working_models, 1):
-            print(f"\n🔄 進度: {i}/{len(self.working_models)}")
+        # 處理 Perplexity 模型
+        try:
+            success, successful, tokens = self.process_perplexity_model()
             
-            try:
-                success, successful, tokens = self.process_single_model(model_info)
+            # 顯示總結
+            print(f"\n🎉 Perplexity 測試完成！")
+            if success:
+                print(f"📊 成功處理: ✅")
+                print(f"📈 成功問題數: {successful}/20")
+                print(f"💰 總Token使用: {tokens}")
+            else:
+                print(f"📊 處理結果: ❌ 失敗")
+            print(f"📁 結果檔案已儲存至 outputs/ 目錄")
+            print("=" * 80)
+            
+            return success
                 
-                if success:
-                    processed_models += 1
-                    total_successful += successful
-                    total_tokens += tokens
-                
-                # 模型之間暫停 5 秒
-                if i < len(self.working_models):
-                    print(f"⏸️ 暫停 5 秒後處理下一個模型...")
-                    time.sleep(5)
-                    
-            except KeyboardInterrupt:
-                print(f"\n⏸️ 使用者中斷處理，已完成 {processed_models} 個模型")
-                break
-            except Exception as e:
-                print(f"\n❌ 處理模型 {model_info['name']} 時發生錯誤: {str(e)}")
-                continue
-        
-        # 顯示總結
-        print(f"\n🎉 處理完成！")
-        print(f"📊 成功處理模型數: {processed_models}")
-        print(f"📈 總成功問題數: {total_successful}")
-        print(f"💰 總Token使用: {total_tokens}")
-        print(f"📁 所有結果檔案已儲存至 outputs/ 目錄")
-        print("=" * 60)
-        
-        return True
+        except KeyboardInterrupt:
+            print(f"\n⏸️ 使用者中斷處理")
+            return False
+        except Exception as e:
+            print(f"\n❌ 處理 Perplexity 模型時發生錯誤: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            return False
 
 def main():
     """主程式"""
-    print("===== 開始執行 working_models_processor.py =====")
+    print("===== 開始執行 Perplexity 直接 API 測試 =====")
+    print(f"🕰️ 執行時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"📁 工作目錄: {Path.cwd()}")
+    
     try:
-        processor = WorkingModelsProcessor()
-        processor.run_processing()
+        print("🚀 初始化 Perplexity 測試器...")
+        tester = PerplexityDirectTest()
+        print("✅ 測試器初始化成功")
+        
+        print("📝 開始執行 Perplexity 測試...")
+        result = tester.run_test()
+        print(f"🏁 測試結果: {'Success' if result else 'Failed'}")
+        
     except Exception as e:
         import traceback
         print(f"\n❌❌❌ 發生未捕獲的錯誤: {str(e)}")
         print("詳細錯誤追蹤:")
         traceback.print_exc()
-    print("===== 腳本執行結束 =====")
+    
+    print("===== Perplexity 測試執行結束 =====")
+    print(f"🕰️ 結束時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 if __name__ == "__main__":
     main()

@@ -17,7 +17,7 @@ import configparser
 from pathlib import Path
 import uuid
 from abc import ABC, abstractmethod
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 
 # --- Configuration Loading ---
 # Build a robust path to the config.ini file and load it.
@@ -25,7 +25,8 @@ config = configparser.ConfigParser()
 config_path = Path(__file__).parent.parent / 'config.ini'
 config.read(config_path)
 
-HTTP_TIMEOUT = config.getint('settings', 'HTTP_TIMEOUT', fallback=60) # Increased timeout for more stability
+# Use lowercase keys to match config.ini
+HTTP_TIMEOUT = config.getint('settings', 'http_timeout', fallback=60)  # Increased timeout for more stability
 
 
 class LLMError(Exception):
@@ -64,14 +65,16 @@ class OpenRouterChatClient(BaseChatClient):
 
     def __init__(self, model: str, api_key: Optional[str] = None):
         self.model = model
-        self.api_key = api_key or config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+        # Read lowercase key name to match config.ini
+        self.api_key = api_key or config.get('api_keys', 'openrouter_api_key', fallback=None)
         if not self.api_key:
             raise LLMError("Missing OPENROUTER_API_KEY.")
         self.session = self._create_session_with_retries()
         self.session.headers.update({
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            # Unify Referer to the repository URL
+            "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
             "X-Title": "AQUASKY AIQA Monitor"
         })
 
@@ -88,7 +91,8 @@ class OpenRouterChatClient(BaseChatClient):
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            # Unify Referer to the repository URL
+            "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
             "X-Title": "AQUASKY AIQA Monitor"
         }
         
@@ -107,7 +111,8 @@ class GeminiChatClient(BaseChatClient):
 
     def __init__(self, model: str = "gemini-1.5-pro-latest", api_key: Optional[str] = None):
         self.model = model
-        self.api_key = api_key or config.get('api_keys', 'GEMINI_API_KEY', fallback=None)
+        # Read lowercase key name to match config.ini
+        self.api_key = api_key or config.get('api_keys', 'gemini_api_key', fallback=None)
         if not self.api_key:
             raise LLMError("Missing GEMINI_API_KEY.")
         self.session = self._create_session_with_retries()
