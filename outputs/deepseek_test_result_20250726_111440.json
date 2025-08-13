@@ -1,8 +1,0 @@
-{
-  "timestamp": "20250726_111440",
-  "model": "deepseek/deepseek-chat",
-  "api_key_preview": "sk-or-v1...f804",
-  "success": true,
-  "answer": "你好！我是DeepSeek-V3，一个由深度求索公司开发的智能助手。我旨在通过自然语言处理和机器学习技术来提供信息查询、对话交流和解答问题等服务。我可以帮助用户获取知识、解决问题，并提供各种辅助功能。如果你有任何问题或需要帮助，随时可以告诉我！",
-  "test_question": "你好，請簡單介紹一下你自己。"
-}
