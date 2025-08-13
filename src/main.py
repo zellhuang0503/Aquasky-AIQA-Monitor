@@ -1,111 +1,122 @@
-"""AQUASKY 自動黃金問題問答主程式
+# -*- coding: utf-8 -*-
+"""Main script for AQUASKY AIQA Monitor.
 
-1. `python src/main.py --once`  立即執行一次並產生報告。
-2. `python src/main.py`         常駐排程，每週一 09:00 執行。
-
-程式流程：
-    - 讀取黃金問題庫 Markdown
-    - 依 MODEL_LIST 呼叫 LLM 取得回覆
-    - 透過 reporter 產生 Markdown 與 Excel
-    - 排程使用 schedule，每分鐘檢查一次
-
-注意：需先設定 .env（OPENROUTER_API_KEY, GEMINI_API_KEY）。
+This script will:
+1. Load questions from the golden query file.
+2. Initialize LLM clients for target models.
+3. Iterate through questions and get answers from each model.
+4. Save the results into a structured format (e.g., CSV or Excel).
+5. (Future) Schedule the script to run weekly.
 """
-from __future__ import annotations
 
-import argparse
-import logging
 import os
+import re
 import time
-from pathlib import Path
-from typing import Dict, List
+from typing import List
 
-import schedule
-from dotenv import load_dotenv
+def load_questions(file_path: str) -> List[str]:
+    """Loads questions from the specified markdown file.
 
-from question_loader import load_questions
-from llm_client import get_client, LLMError
-from reporter import save_excel, save_markdown
+    Args:
+        file_path: The path to the markdown file containing the questions.
 
-# ---------------------------- 基本設定 ----------------------------
-ROOT = Path(__file__).resolve().parent.parent
-QUESTION_MD = ROOT / "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md"
-REPORT_DIR = ROOT / "reports"
+    Returns:
+        A list of questions as strings.
+    """
+    if not os.path.exists(file_path):
+        print(f"Error: Question file not found at {file_path}")
+        return []
 
-# 使用者指定模型
-MODEL_LIST = [
-    "gpt-4o",
-    "gemini-1.5-pro-latest",
-    # 以下模型名以 OpenRouter 支援為準
-    "claude-3-sonnet-20240229",
-    "mistral-large",
-    "deepseek-chat",
-    "grok-3",
-    "kimi",
-    "perplexity",
-]
+    print(f"Loading questions from {file_path}...")
+    questions = []
+    # Regex to find lines starting with a number, a dot, and a space. e.g., "1. ..."
+    question_pattern = re.compile(r"^\d+\.\s.*")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                if question_pattern.match(line.strip()):
+                    # Remove the leading number and dot, e.g., "1. "
+                    question_text = re.sub(r"^\d+\.\s", "", line.strip())
+                    questions.append(question_text)
+        print(f"Successfully loaded {len(questions)} questions.")
+        return questions
+    except Exception as e:
+        print(f"Error reading or parsing question file: {e}")
+        return []
 
-# --------------------------- logger ------------------------------
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-logger = logging.getLogger(__name__)
+def main():
+    """Main execution function."""
+    print("Starting AQUASKY AIQA Monitor...")
+    
+    # --- 1. Load Questions ---
+    # The question file is expected to be in the project root, one level above the 'src' directory.
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    question_file = os.path.join(project_root, "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md")
+    questions = load_questions(question_file)
 
-# --------------------------- 核心函式 -----------------------------
-
-def ask_all_models(questions: List[str]) -> Dict[str, List[str]]:
-    """逐模型提問並收集回覆。"""
-    results: Dict[str, List[str]] = {m: [] for m in MODEL_LIST}
-    for model in MODEL_LIST:
-        client = get_client(model)
-        logger.info("→ %s 開始回答 …", model)
-        for q in questions:
-            messages = [
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": q},
-            ]
-            try:
-                ans = client.chat(messages, max_tokens=1024)
-            except LLMError as e:
-                logger.warning("%s 第一次失敗：%s，重試一次…", model, e)
-                try:
-                    ans = client.chat(messages, max_tokens=1024)
-                except Exception as e2:
-                    logger.error("%s 第二次失敗：%s，答案留空。", model, e2)
-                    ans = ""
-            results[model].append(ans)
-    return results
-
-
-def generate_reports() -> None:
-    """單次完整流程：讀問題→問模型→寫報告"""
-    logger.info("讀取問題庫…")
-    questions = load_questions(QUESTION_MD)
-    logger.info("共 %d 題。", len(questions))
-
-    results = ask_all_models(questions)
-
-    md_path = save_markdown(results, questions, REPORT_DIR)
-    xls_path = save_excel(results, questions, REPORT_DIR)
-    logger.info("✅ 報告完成 → %s, %s", md_path.name, xls_path.name)
-
-# ---------------------------- 入口 -------------------------------
-
-def main() -> None:
-    load_dotenv()
-    parser = argparse.ArgumentParser(description="AQUASKY Weekly LLM Q&A")
-    parser.add_argument("--once", action="store_true", help="run once and exit")
-    args = parser.parse_args()
-
-    if args.once:
-        generate_reports()
+    if not questions:
+        print("No questions loaded. Exiting.")
         return
 
-    # 排程：每週一 09:00
-    schedule.every().monday.at("09:00").do(generate_reports)
-    logger.info("排程已啟動，每週一 09:00 自動產出報告… (Ctrl+C 結束)")
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
+    # --- 2. Initialize Models ---
+    from llm_client import get_client, LLMError
+    TARGET_MODELS = [
+        "kimi-k2-free",
+        # "devstral-medium",
+        # "deepseek-chimera-free",
+        # "gemini-2.5-flash-lite",
+        # "grok-3",
+        # "claude-sonnet-4",
+        # "gpt-4o-mini-high",
+        # "perplexity-sonar-pro",
+    ]
+    print(f"\nTarget models: {', '.join(TARGET_MODELS)}")
 
+    # --- 3. Run Q&A ---
+    results = []
+    for i, question in enumerate(questions):
+        print(f"\n--- Processing Question {i+1}/{len(questions)} ---")
+        print(f"Q: {question}")
+        for model_name in TARGET_MODELS:
+            print(f"  > Asking {model_name}...")
+            try:
+                client = get_client(model_name)
+                # Format the question into the message structure the client expects
+                messages = [
+                    {"role": "system", "content": "You are a professional assistant for the water systems industry. Please respond exclusively in Traditional Chinese (請務必使用繁體中文回答)."},
+                    {"role": "user", "content": question}
+                ]
+                answer = client.chat(messages)
+                print(f"  < Answer from {model_name} received.")
+                results.append({
+                    "question_id": i + 1,
+                    "question": question,
+                    "model": model_name,
+                    "answer": answer
+                })
+            except LLMError as e:
+                print(f"  ! Error from {model_name}: {e}")
+                results.append({
+                    "question_id": i + 1,
+                    "question": question,
+                    "model": model_name,
+                    "answer": f"ERROR: {e}"
+                })
+        # Add a delay to avoid hitting API rate limits
+        print("  ... Pausing for 2 seconds ...")
+        time.sleep(2)
+
+    # --- 4. Save Results ---
+    from report_generator import save_to_excel, save_to_markdown
+
+    if results:
+        output_dir = os.path.join(project_root, "outputs")
+        save_to_excel(results, output_dir)
+        save_to_markdown(results, output_dir)
+    else:
+        print("No results to save.")
+
+    print("AQUASKY AIQA Monitor finished.")
 
 if __name__ == "__main__":
     main()

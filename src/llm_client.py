@@ -10,16 +10,22 @@ from __future__ import annotations
 
 import os
 import time
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import configparser
+from pathlib import Path
 import uuid
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional
 
-import requests
-from dotenv import load_dotenv
+# --- Configuration Loading ---
+# Build a robust path to the config.ini file and load it.
+config = configparser.ConfigParser()
+config_path = Path(__file__).parent.parent / 'config.ini'
+config.read(config_path)
 
-load_dotenv()
-
-HTTP_TIMEOUT = int(os.getenv("HTTP_TIMEOUT", "30"))
+HTTP_TIMEOUT = config.getint('settings', 'HTTP_TIMEOUT', fallback=60) # Increased timeout for more stability
 
 
 class LLMError(Exception):
@@ -28,6 +34,23 @@ class LLMError(Exception):
 
 class BaseChatClient(ABC):
     """Abstract base class for chat completion clients."""
+
+    def _create_session_with_retries(self) -> requests.Session:
+        """Creates a requests session with a retry mechanism."""
+        session = requests.Session()
+        # In hostile environments (e.g., with interfering security software), the 'headers_to_keep' 
+        # parameter can cause crashes. We are removing it and relying on the default behavior of 
+        # requests.Session, which persists headers across all requests made with it, including retries.
+        retries = Retry(
+            total=5,
+            backoff_factor=1,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["POST"]
+        )
+        adapter = HTTPAdapter(max_retries=retries)
+        session.mount("https://", adapter)
+        session.mount("http://", adapter)
+        return session
 
     @abstractmethod
     def chat(self, messages: List[Dict[str, str]], **kwargs) -> str:
@@ -41,14 +64,15 @@ class OpenRouterChatClient(BaseChatClient):
 
     def __init__(self, model: str, api_key: Optional[str] = None):
         self.model = model
-        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        self.api_key = api_key or config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
         if not self.api_key:
             raise LLMError("Missing OPENROUTER_API_KEY.")
-        self.session = requests.Session()
+        self.session = self._create_session_with_retries()
         self.session.headers.update({
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "X-Title": "Aquasky-AIQA-Monitor"
+            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            "X-Title": "AQUASKY AIQA Monitor"
         })
 
     def chat(self, messages: List[Dict[str, str]], **kwargs) -> str:
@@ -59,7 +83,16 @@ class OpenRouterChatClient(BaseChatClient):
             "temperature": kwargs.get("temperature", 0.7),
             "stream": False,
         }
-        resp = self.session.post(self.ENDPOINT, json=payload, timeout=HTTP_TIMEOUT)
+        
+        # 確保每次請求都明確設定 headers，避免 session headers 被覆蓋的問題
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/Zell-Huang/AQUASKY-AIQA-Monitor",
+            "X-Title": "AQUASKY AIQA Monitor"
+        }
+        
+        resp = self.session.post(self.ENDPOINT, json=payload, headers=headers, timeout=HTTP_TIMEOUT)
         if resp.status_code != 200:
             raise LLMError(f"OpenRouter API error: {resp.status_code} {resp.text}")
         data = resp.json()
@@ -70,28 +103,18 @@ class OpenRouterChatClient(BaseChatClient):
 
 
 class GeminiChatClient(BaseChatClient):
-    """Client for Google Gemini Pro/1.5 Pro.
-
-    Google Generative Language API 目前常用 model:
-    - gemini-pro (text-only, **v1**)
-    - gemini-1.5-pro-latest (長上下文, **v1beta**)
-
-    依官方文件，endpoint 需包含 model 名稱：
-    https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent
-    """
+    """Client for Google Gemini Pro/1.5 Pro."""
 
     def __init__(self, model: str = "gemini-1.5-pro-latest", api_key: Optional[str] = None):
         self.model = model
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY")
+        self.api_key = api_key or config.get('api_keys', 'GEMINI_API_KEY', fallback=None)
         if not self.api_key:
             raise LLMError("Missing GEMINI_API_KEY.")
-        self.session = requests.Session()
+        self.session = self._create_session_with_retries()
         self.session.params.update({"key": self.api_key})
         self.endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent"
 
     def chat(self, messages: List[Dict[str, str]], **kwargs) -> str:
-        # Gemini expects the entire conversation flattened in "contents"
-        # Gemini 不接受 "system" 角色，統一轉為 "user"
         contents = []
         for m in messages:
             role = "user" if m["role"] == "system" else m["role"]
@@ -115,50 +138,44 @@ class GeminiChatClient(BaseChatClient):
 
 # Factory mapping
 _CLIENT_REGISTRY = {
-    # OpenRouter models
-    "gpt-4o": (OpenRouterChatClient, "openai/gpt-4o"),
-    # Anthropic Claude 3 Sonnet
-    "claude-sonnet-3.7": (OpenRouterChatClient, "anthropic/claude-3-sonnet"),
-    "claude-3-sonnet-20240229": (OpenRouterChatClient, "anthropic/claude-3-sonnet"),
-    # Mistral Large
-    "mistral-large": (OpenRouterChatClient, "mistralai/mistral-large"),
-    # DeepSeek
-    "deepseek-r1": (OpenRouterChatClient, "deepseek-ai/deepseek-llm-r1-chat"),
-    "deepseek-chat": (OpenRouterChatClient, "deepseek-ai/deepseek-llm-r1-chat"),
-    # Grok
-    "grok-3": (OpenRouterChatClient, "xai/grok-3"),
-    # Kimi (Moonshot)
-    "kimi-k2": (OpenRouterChatClient, "moonshot-ai/moonshot-kimi-k2"),
-    "kimi": (OpenRouterChatClient, "moonshot-ai/moonshot-kimi-k2"),
-    # Perplexity
-    "perplexity": (OpenRouterChatClient, "perplexity/pplx-70b-online"),
-    # Gemini (Google)
-    "gemini-pro": (GeminiChatClient, None),
-    "gemini-1.5-pro-latest": (GeminiChatClient, None),
+    # --- User Specified Models for Final Run ---
+    "kimi-k2-free": (OpenRouterChatClient, "moonshotai/kimi-k2:free"),
+    "devstral-medium": (OpenRouterChatClient, "mistralai/devstral-medium"),
+    "deepseek-chimera-free": (OpenRouterChatClient, "tngtech/deepseek-r1t2-chimera:free"),
+    "gemini-2.5-flash-lite": (OpenRouterChatClient, "google/gemini-2.5-flash-lite-preview-06-17"),
+    "grok-3": (OpenRouterChatClient, "x-ai/grok-3"),
+    "claude-sonnet-4": (OpenRouterChatClient, "anthropic/claude-sonnet-4"),
+    "gpt-4o-mini-high": (OpenRouterChatClient, "openai/o4-mini-high"),
+    "perplexity-sonar-pro": (OpenRouterChatClient, "perplexity/sonar-pro"),
 }
 
+# Cache for client instances to avoid re-creation
+_client_cache = {}
 
-def get_client(name: str) -> BaseChatClient:
-    """Return an initialized chat client by simplified name."""
-    if name not in _CLIENT_REGISTRY:
-        raise ValueError(f"Unknown model name: {name}")
-    cls, model_name = _CLIENT_REGISTRY[name]
-    if model_name is None:
-        return cls()  # type: ignore[arg-type]
-    return cls(model=model_name)  # type: ignore[arg-type]
+def get_client(model_name: str) -> Union[OpenRouterChatClient, GeminiChatClient]:
+    """Factory function to get a client for a given model, with caching."""
+    if model_name not in _CLIENT_REGISTRY:
+        raise LLMError(f"Model '{model_name}' is not supported.")
 
+    client_class, model_identifier = _CLIENT_REGISTRY[model_name]
 
-# Simple test runner when executed standalone
-if __name__ == "__main__":
-    demo_messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Say hello in one sentence."},
-    ]
-    for model in ("gpt-4o", "gemini-pro"):
-        try:
-            client = get_client(model)
-            start = time.time()
-            reply = client.chat(demo_messages)
-            print(f"[{model}] {reply} (took {time.time() - start:.1f}s)")
-        except Exception as err:
-            print(f"[{model}] error: {err}")
+    # Use the class name as the cache key to reuse the client (e.g., OpenRouterChatClient)
+    cache_key = client_class.__name__
+
+    if cache_key in _client_cache:
+        # If a client for this class exists, update its model and return it
+        client = _client_cache[cache_key]
+        # The model to be queried is updated on the existing client instance
+        client.model = model_identifier or model_name 
+        return client
+
+    # If no client for this class exists, create a new one
+    if client_class == GeminiChatClient:
+        # For Gemini, model_identifier is None, so we pass the original name
+        instance = client_class(model=model_name)
+    else:
+        # For OpenRouter, we pass the specific model identifier
+        instance = client_class(model=model_identifier)
+    
+    _client_cache[cache_key] = instance
+    return instance
