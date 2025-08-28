@@ -4,6 +4,7 @@ import csv
 from collections import defaultdict, Counter
 from typing import Dict, Any, List, Tuple
 from datetime import datetime, timezone, timedelta
+from ipaddress import ip_address
 
 # Input columns expected (case-insensitive match by normalized keys):
 # IP Address, Timestamp, Timezone, Method, URL, Protocol, Status Code, Response Size,
@@ -46,6 +47,66 @@ NON_LLM_EXCLUDE = [
 
 def normalize_key(name: str) -> str:
     return name.strip().lower().replace(" ", "_")
+
+
+# Optional GeoIP resolver (uses local MaxMind DB if available)
+class GeoIPResolver:
+    def __init__(self, base_dir: str) -> None:
+        self.country_reader = None
+        self.asn_reader = None
+        self.enabled = False
+        try:
+            # Prefer env vars; fallback to project data directory
+            country_db = os.environ.get("GEOIP_COUNTRY_DB") or os.path.join(base_dir, "data", "GeoLite2-Country.mmdb")
+            asn_db = os.environ.get("GEOIP_ASN_DB") or os.path.join(base_dir, "data", "GeoLite2-ASN.mmdb")
+            if os.path.exists(country_db) or os.path.exists(asn_db):
+                try:
+                    import geoip2.database  # type: ignore
+                except Exception:
+                    # geoip2 not installed; keep disabled
+                    return
+                if os.path.exists(country_db):
+                    self.country_reader = geoip2.database.Reader(country_db)
+                if os.path.exists(asn_db):
+                    self.asn_reader = geoip2.database.Reader(asn_db)
+                self.enabled = True
+        except Exception:
+            self.enabled = False
+
+    def close(self) -> None:
+        try:
+            if self.country_reader:
+                self.country_reader.close()
+            if self.asn_reader:
+                self.asn_reader.close()
+        except Exception:
+            pass
+
+    def resolve(self, ip: str) -> Tuple[str, str, str]:
+        if not self.enabled:
+            return "", "", ""
+        try:
+            _ = ip_address(ip)
+        except Exception:
+            return "", "", ""
+        country_iso = ""
+        asn = ""
+        as_org = ""
+        try:
+            if self.country_reader:
+                r = self.country_reader.country(ip)
+                country_iso = (r.country.iso_code or "")
+        except Exception:
+            country_iso = ""
+        try:
+            if self.asn_reader:
+                r = self.asn_reader.asn(ip)
+                asn = str(r.autonomous_system_number or "")
+                as_org = (r.autonomous_system_organization or "")
+        except Exception:
+            asn = asn or ""
+            as_org = as_org or ""
+        return country_iso or "", asn or "", as_org or ""
 
 
 BOT_FAMILY_MAP: Dict[str, str] = {
@@ -127,6 +188,10 @@ def analyze(csv_path: str, out_dir: str) -> None:
 
     analyzed: List[Dict[str, Any]] = []
 
+    # Prepare GeoIP resolver (base_dir = project root)
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    geo = GeoIPResolver(project_root)
+
     for r in rows:
         ip = get(r, "ip_address")
         ts = get(r, "timestamp")
@@ -169,6 +234,9 @@ def analyze(csv_path: str, out_dir: str) -> None:
         except Exception:
             hour_bucket = ""
 
+        # GeoIP lookup (optional)
+        country_iso, asn, as_org = geo.resolve(ip or "")
+
         analyzed.append({
             "timestamp": ts,
             "timezone": tz,
@@ -190,6 +258,9 @@ def analyze(csv_path: str, out_dir: str) -> None:
             "status_class": status_class,
             "hour_bucket": hour_bucket,
             "note": ("DuckAssist Q&A crawler" if ("duckassist" in (ua or "")) else ""),
+            "country_iso": country_iso,
+            "asn": asn,
+            "as_org": as_org,
             "success": success,
         })
 
@@ -303,6 +374,25 @@ def analyze(csv_path: str, out_dir: str) -> None:
                 "success_rate": sr,
             })
 
+    # Also write per-vendor hourly trend CSVs
+    per_vendor_hourly: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+    for (vendor, hb), d in sorted(trend_hourly.items(), key=lambda kv: (kv[0][0], kv[0][1])):
+        req = d["requests"]
+        suc = d["success"]
+        sr = round(suc / req, 4) if req else 0.0
+        per_vendor_hourly[vendor].append({
+            "hour_bucket": hb,
+            "requests": req,
+            "success": suc,
+            "success_rate": sr,
+        })
+    for vendor, rows in per_vendor_hourly.items():
+        path = os.path.join(out_dir, f"llm_bot_trend_hourly_{safe_name(vendor)}.csv")
+        with open(path, "w", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=["hour_bucket", "requests", "success", "success_rate"])
+            writer.writeheader()
+            writer.writerows(rows)
+
     # Write trend daily CSV
     daily_path = os.path.join(out_dir, "llm_bot_trend_daily.csv")
     with open(daily_path, "w", newline="", encoding="utf-8-sig") as f:
@@ -319,6 +409,25 @@ def analyze(csv_path: str, out_dir: str) -> None:
                 "success": suc,
                 "success_rate": sr,
             })
+
+    # Also write per-vendor daily trend CSVs
+    per_vendor_daily: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+    for (vendor, day), d in sorted(trend_daily.items(), key=lambda kv: (kv[0][0], kv[0][1])):
+        req = d["requests"]
+        suc = d["success"]
+        sr = round(suc / req, 4) if req else 0.0
+        per_vendor_daily[vendor].append({
+            "date": day,
+            "requests": req,
+            "success": suc,
+            "success_rate": sr,
+        })
+    for vendor, rows in per_vendor_daily.items():
+        path = os.path.join(out_dir, f"llm_bot_trend_daily_{safe_name(vendor)}.csv")
+        with open(path, "w", newline="", encoding="utf-8-sig") as f:
+            writer = csv.DictWriter(f, fieldnames=["date", "requests", "success", "success_rate"])
+            writer.writeheader()
+            writer.writerows(rows)
 
     # Write markdown report
     report_md = os.path.join(out_dir, "report.md")
@@ -343,6 +452,10 @@ def analyze(csv_path: str, out_dir: str) -> None:
     print(" - ", report_md)
     print(" - ", hourly_path)
     print(" - ", daily_path)
+    try:
+        geo.close()
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":

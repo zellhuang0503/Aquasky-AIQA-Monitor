@@ -65,8 +65,11 @@ class OpenRouterChatClient(BaseChatClient):
 
     def __init__(self, model: str, api_key: Optional[str] = None):
         self.model = model
-        # Read lowercase key name to match config.ini
+        # Read lowercase key name to match config.ini, but also support legacy uppercase key
         self.api_key = api_key or config.get('api_keys', 'openrouter_api_key', fallback=None)
+        if not self.api_key:
+            # Fallback to uppercase for backward compatibility
+            self.api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
         if not self.api_key:
             raise LLMError("Missing OPENROUTER_API_KEY.")
         self.session = self._create_session_with_retries()
@@ -152,6 +155,7 @@ _CLIENT_REGISTRY = {
     "claude-sonnet-4": (OpenRouterChatClient, "anthropic/claude-sonnet-4"),
     "gpt-4o-mini-high": (OpenRouterChatClient, "openai/o4-mini-high"),
     "perplexity-sonar-pro": (OpenRouterChatClient, "perplexity/sonar-pro"),
+    "gpt-5": (OpenRouterChatClient, "openai/gpt-5-mini"),  # 已確認：OpenRouter slug 為 openai/gpt-5-mini
 }
 
 # Cache for client instances to avoid re-creation
