@@ -14,6 +14,38 @@ import re
 import time
 from typing import List
 
+def read_text_with_fallback(file_path: str, encodings=None) -> str:
+    """Read text file with multiple encoding fallbacks to handle Windows multibyte issues.
+
+    Tries a list of common encodings and returns the content of the file once successful.
+    """
+    if encodings is None:
+        encodings = [
+            'utf-8',
+            'utf-8-sig',
+            'utf-16',
+            'utf-16-le',
+            'utf-16-be',
+            'cp950',   # Traditional Chinese (Windows)
+            'big5',
+        ]
+    last_err = None
+    for enc in encodings:
+        try:
+            with open(file_path, 'r', encoding=enc) as f:
+                return f.read()
+        except UnicodeDecodeError as e:
+            last_err = e
+            continue
+        except FileNotFoundError:
+            raise
+    # If all failed, raise the last UnicodeDecodeError for visibility
+    if last_err:
+        raise last_err
+    # Fallback (should not reach here normally)
+    with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
+        return f.read()
+
 def load_questions(file_path: str) -> List[str]:
     """Loads questions from the specified markdown file.
 
@@ -32,12 +64,12 @@ def load_questions(file_path: str) -> List[str]:
     # Regex to find lines starting with a number, a dot, and a space. e.g., "1. ..."
     question_pattern = re.compile(r"^\d+\.\s.*")
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                if question_pattern.match(line.strip()):
-                    # Remove the leading number and dot, e.g., "1. "
-                    question_text = re.sub(r"^\d+\.\s", "", line.strip())
-                    questions.append(question_text)
+        content = read_text_with_fallback(file_path)
+        for line in content.splitlines():
+            if question_pattern.match(line.strip()):
+                # Remove the leading number and dot, e.g., "1. "
+                question_text = re.sub(r"^\d+\.\s", "", line.strip())
+                questions.append(question_text)
         print(f"Successfully loaded {len(questions)} questions.")
         return questions
     except Exception as e:

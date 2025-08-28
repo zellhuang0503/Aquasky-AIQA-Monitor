@@ -23,7 +23,16 @@ from typing import Dict, List, Optional, Union
 # Build a robust path to the config.ini file and load it.
 config = configparser.ConfigParser()
 config_path = Path(__file__).parent.parent / 'config.ini'
-config.read(config_path)
+# Read config with explicit UTF-8 encoding; if it fails, try common fallbacks
+try:
+    config.read(config_path, encoding='utf-8')
+except Exception:
+    for enc in ('utf-8-sig', 'cp950', 'big5', 'utf-16', 'utf-16-le', 'utf-16-be'):
+        try:
+            config.read(config_path, encoding=enc)
+            break
+        except Exception:
+            continue
 
 # Use lowercase keys to match config.ini
 HTTP_TIMEOUT = config.getint('settings', 'http_timeout', fallback=60)  # Increased timeout for more stability

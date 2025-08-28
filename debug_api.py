@@ -15,9 +15,9 @@ def test_openrouter_client():
     print("=== 測試 OpenRouterChatClient ===")
     
     try:
-        # 獲取客戶端
-        print("正在初始化 kimi-k2-free 客戶端...")
-        client = get_client("kimi-k2-free")
+        # 獲取客戶端（改為 gpt-5）
+        print("正在初始化 gpt-5 客戶端...")
+        client = get_client("gpt-5")
         
         # 檢查客戶端屬性
         print(f"客戶端類型: {type(client).__name__}")
@@ -76,13 +76,15 @@ def test_config_loading():
             sections = config.sections()
             print(f"配置區段: {sections}")
             
-            # 檢查 API Key
+            # 檢查 API Key（優先小寫，回退大寫）
             if 'api_keys' in config:
-                api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
+                api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
+                if not api_key:
+                    api_key = config.get('api_keys', 'OPENROUTER_API_KEY', fallback=None)
                 if api_key:
-                    print(f"✅ OPENROUTER_API_KEY 已設定 (前10字元: {api_key[:10]}...)")
+                    print(f"✅ OpenRouter API Key 已設定 (前10字元: {api_key[:10]}...)")
                 else:
-                    print("❌ OPENROUTER_API_KEY 未設定")
+                    print("❌ OpenRouter API Key 未設定（請在 [api_keys] 裡填 openrouter_api_key）")
             else:
                 print("❌ [api_keys] 區段不存在")
         
