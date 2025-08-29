@@ -27,8 +27,8 @@ class WorkingModelsProcessor:
         self.working_models = [
             # 已成功測試過的模型
             {
-                "id": "deepseek/deepseek-chat-v3.1:free",
-                "name": "DeepSeek Chat v3.1 Free",
+                "id": "deepseek/deepseek-v3.1-base",
+                "name": "DeepSeek v3.1 Base",
                 "status": "verified"  # 已驗證可用
             },
             {
