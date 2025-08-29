@@ -27,13 +27,13 @@ class WorkingModelsProcessor:
         self.working_models = [
             # 已成功測試過的模型
             {
-                "id": "deepseek/deepseek-chat",
-                "name": "DeepSeek Chat",
+                "id": "deepseek/deepseek-chat-v3.1:free",
+                "name": "DeepSeek Chat v3.1 Free",
                 "status": "verified"  # 已驗證可用
             },
             {
-                "id": "openai/gpt-4o-mini",
-                "name": "GPT-4o Mini",
+                "id": "openai/gpt-5-mini",
+                "name": "GPT-5 Mini",
                 "status": "verified"   # 已驗證可用
             },
             # 使用者要求移除 Claude 3 Haiku

@@ -12,8 +12,8 @@ class BatchConfig:
     
     # 支援的 LLM 模型列表（按推薦順序排列，已驗證可用）
     AVAILABLE_MODELS: List[str] = [
-        "deepseek/deepseek-chat",           # DeepSeek Chat - 已驗證
-        "openai/gpt-4o-mini",              # OpenAI GPT-4o Mini - 已驗證
+        "deepseek/deepseek-chat-v3.1:free",           # DeepSeek Chat v3.1 Free - 已驗證
+        "openai/gpt-5-mini",              # OpenAI GPT-5 Mini - 已驗證
         "google/gemini-flash-1.5",         # Google Gemini Flash 1.5 - 已驗證
         "anthropic/claude-3.5-sonnet",     # Anthropic Claude 3.5 Sonnet - 已驗證
         "meta-llama/llama-3.1-8b-instruct", # Meta Llama 3.1 8B - 已驗證
@@ -24,9 +24,9 @@ class BatchConfig:
     
     # 預設模型組合（用於快速開始，選擇高效模型）
     DEFAULT_MODELS: List[str] = [
-        "deepseek/deepseek-chat",        # 最穩定的模型
+        "deepseek/deepseek-chat-v3.1:free",        # 最穩定的模型（v3.1 Free）
         "x-ai/grok-3-mini-beta",         # 最快的 Grok 模型（2.74秒）
-        "openai/gpt-4o-mini"             # 高品質 OpenAI 模型
+        "openai/gpt-5-mini"             # 高品質 OpenAI 模型（GPT-5 Mini）
     ]
     
     # 推薦的完整測試模型組合
