@@ -21,3 +21,5 @@ logs/*.log
 # Allow tracking cross analysis markdown reports under outputs/cross_analysis/
 !/outputs/cross_analysis/
 !/outputs/cross_analysis/**
+# Large log files
+Website Log file from Jason/*.csv
