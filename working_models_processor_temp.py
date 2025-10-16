@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AQUASKY AIQA Monitor - 已驗證可用模型處理器 (編碼修復版)
+AQUASKY AIQA Monitor - 已驗證可用模型處理器
 專注於已知可用的模型，避免卡在不可用的模型上
 """
 
@@ -69,8 +69,14 @@ class WorkingModelsProcessor:
             {
                 "id": "x-ai/grok-3-mini-beta",
                 "name": "Grok 3 Mini Beta",
-                "status": "verified"   # [VERIFIED] 已驗證可用，2.74秒回應（最快）
+                "status": "verified"   # ✅ 已驗證可用，2.74秒回應（最快）
             },
+            # 不可用的模型（保留作為記錄）
+            # {
+            #     "id": "x-ai/grok-beta",
+            #     "name": "Grok Beta",
+            #     "status": "unavailable"   # ❌ HTTP 404 - No endpoints found
+            # }
         ]
         
         self.openrouter_api_key = None
@@ -79,12 +85,12 @@ class WorkingModelsProcessor:
         
     def load_config(self):
         """載入配置檔案"""
-        print("\n[LOADING] 開始載入配置檔案...")
+        print("\n🔍 開始載入配置檔案...")
         config = configparser.ConfigParser()
         config_path = Path("config.ini")
         
         if not config_path.exists():
-            print("[ERROR] 找不到 config.ini 檔案")
+            print("❌ 找不到 config.ini 檔案")
             return False
         
         config.read(config_path, encoding='utf-8')
@@ -96,22 +102,22 @@ class WorkingModelsProcessor:
         self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
         
         if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("[ERROR] 請在 config.ini 中設定有效的 openrouter_api_key")
+            print("❌ 請在 config.ini 中設定有效的 openrouter_api_key")
             return False
         
         if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':
-            print("[ERROR] 請在 config.ini 中設定有效的 PERPLEXITY_API_KEY")
+            print("❌ 請在 config.ini 中設定有效的 PERPLEXITY_API_KEY")
             return False
         
         return True
     
     def extract_questions(self):
         """從問題檔案中提取所有 20 個問題"""
-        print("\n[LOADING] 開始提取問題...")
+        print("\n🔍 開始提取問題...")
         questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md")
         
         if not questions_file.exists():
-            print(f"[ERROR] 找不到問題檔案: {questions_file}")
+            print(f"❌ 找不到問題檔案: {questions_file}")
             return False
         
         try:
@@ -130,11 +136,11 @@ class WorkingModelsProcessor:
                     questions.append(question)
             
             self.questions = questions
-            print(f"[SUCCESS] 成功提取 {len(questions)} 個問題")
+            print(f"✅ 成功提取 {len(questions)} 個問題")
             return len(questions) == 20
             
         except Exception as e:
-            print(f"[ERROR] 讀取問題檔案時發生錯誤: {str(e)}")
+            print(f"❌ 讀取問題檔案時發生錯誤: {str(e)}")
             return False
     
     def test_model_availability(self, model_info):
@@ -142,7 +148,7 @@ class WorkingModelsProcessor:
         model_id = model_info["id"]
         api_type = model_info.get("api_type", "openrouter")
         
-        print(f"\\n[TEST] 測試模型 {model_id} 是否可用...")
+        print(f"\n🧪 測試模型 {model_id} 是否可用...")
         
         if api_type == "perplexity":
             # 使用 Perplexity 直接 API
@@ -177,19 +183,19 @@ class WorkingModelsProcessor:
         }
         
         try:
-            print(f"  [TEST] 測試模型可用性...")
+            print(f"  🧪 測試模型可用性...")
             response = requests.post(url, headers=headers, json=data, timeout=30)
             
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
-                    print(f"  [SUCCESS] 模型可用")
+                    print(f"  ✅ 模型可用")
                     return True
                 else:
-                    print(f"  [ERROR] 模型回應格式異常")
+                    print(f"  ❌ 模型回應格式異常")
                     return False
             else:
-                print(f"  [ERROR] 模型不可用 (HTTP {response.status_code})")
+                print(f"  ❌ 模型不可用 (HTTP {response.status_code})")
                 try:
                     error_info = response.json()
                     print(f"      錯誤詳情: {error_info}")
@@ -198,7 +204,7 @@ class WorkingModelsProcessor:
                 return False
                 
         except Exception as e:
-            print(f"  [ERROR] 測試模型時發生錯誤: {str(e)}")
+            print(f"  ❌ 測試模型時發生錯誤: {str(e)}")
             return False
     
     def call_llm_api(self, model_info, question, question_num):
@@ -239,7 +245,7 @@ class WorkingModelsProcessor:
         }
         
         try:
-            print(f"  [PROCESSING] 處理問題 {question_num}/20...")
+            print(f"  🔄 處理問題 {question_num}/20...")
             response = requests.post(url, headers=headers, json=data, timeout=60)
             
             if response.status_code == 200:
@@ -248,21 +254,21 @@ class WorkingModelsProcessor:
                     answer = result['choices'][0]['message']['content']
                     usage = result.get('usage', {})
                     
-                    print(f"  [SUCCESS] 問題 {question_num} 完成 (Token: {usage.get('total_tokens', 0)})")
+                    print(f"  ✅ 問題 {question_num} 完成 (Token: {usage.get('total_tokens', 0)})")
                     return {
                         'success': True,
                         'answer': answer,
                         'usage': usage
                     }
                 else:
-                    print(f"  [ERROR] 問題 {question_num} - API 回應格式異常")
+                    print(f"  ❌ 問題 {question_num} - API 回應格式異常")
                     return {'success': False, 'error': 'Invalid response format'}
             else:
-                print(f"  [ERROR] 問題 {question_num} - API 錯誤: {response.status_code}")
+                print(f"  ❌ 問題 {question_num} - API 錯誤: {response.status_code}")
                 return {'success': False, 'error': f'HTTP {response.status_code}'}
                     
         except Exception as e:
-            print(f"  [ERROR] 問題 {question_num} - 發生錯誤: {str(e)}")
+            print(f"  ❌ 問題 {question_num} - 發生錯誤: {str(e)}")
             return {'success': False, 'error': str(e)}
     
     def process_single_model(self, model_info):
@@ -270,16 +276,16 @@ class WorkingModelsProcessor:
         model_id = model_info["id"]
         model_name = model_info["name"]
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        print(f"\\n[PROCESSING] 開始處理模型: {model_name} ({model_id})")
+        print(f"\n▶️▶️▶️ 開始處理模型: {model_name} ({model_id})")
         
-        print(f"\\n[MODEL] 開始處理模型: {model_name}")
-        print(f"[ID] 模型ID: {model_id}")
+        print(f"\n🤖 開始處理模型: {model_name}")
+        print(f"📝 模型ID: {model_id}")
         print("=" * 60)
         
         # 如果不是已驗證的模型，先測試可用性
         if model_info["status"] != "verified":
             if not self.test_model_availability(model_info):
-                print(f"[ERROR] 模型 {model_name} 不可用，跳過處理")
+                print(f"❌ 模型 {model_name} 不可用，跳過處理")
                 return False, 0, 0
         
         results = []
@@ -301,9 +307,9 @@ class WorkingModelsProcessor:
         # 儲存結果
         self.save_model_results(model_id, model_name, results, timestamp)
         
-        print(f"\\n[RESULT] {model_name} 處理完成:")
-        print(f"  [SUCCESS] 成功: {successful_count}/20 個問題")
-        print(f"  [TOKENS] 總Token: {total_tokens}")
+        print(f"\n📊 {model_name} 處理完成:")
+        print(f"  ✅ 成功: {successful_count}/20 個問題")
+        print(f"  📈 總Token: {total_tokens}")
         print("=" * 60)
         
         return True, successful_count, total_tokens
@@ -327,7 +333,7 @@ class WorkingModelsProcessor:
             data.append(row)
         
         # 生成安全的檔案名稱
-        safe_model_name = model_id.replace('/', '_').replace('\\\\', '_')
+        safe_model_name = model_id.replace('/', '_').replace('\\', '_')
         
         # 儲存 Excel
         df = pd.DataFrame(data)
@@ -369,13 +375,13 @@ class WorkingModelsProcessor:
                     f.write(f"**錯誤**: {result.get('error', '未知錯誤')}\n\n")
                 f.write("---\n\n")
         
-        print(f"  [SAVED] 結果已儲存:")
+        print(f"  📁 結果已儲存:")
         print(f"    Excel: {excel_filename}")
         print(f"    Markdown: {md_filename}")
     
     def run_processing(self):
         """執行處理"""
-        print("[START] AQUASKY AIQA Monitor - 可用模型處理系統")
+        print("🚀 AQUASKY AIQA Monitor - 可用模型處理系統")
         print("=" * 60)
         
         # 載入配置
@@ -386,12 +392,12 @@ class WorkingModelsProcessor:
         if not self.extract_questions():
             return False
         
-        print(f"\n[MODELS] 將依序處理以下模型:")
+        print(f"\n📋 將依序處理以下模型:")
         for i, model in enumerate(self.working_models, 1):
-            status_icon = "[VERIFIED]" if model["status"] == "verified" else "[TEST]"
+            status_icon = "✅" if model["status"] == "verified" else "🧪"
             print(f"  {i}. {status_icon} {model['name']} ({model['id']})")
         
-        print(f"\\n[INFO] 每個模型將處理 20 個問題，完成後自動儲存結果")
+        print(f"\n💡 每個模型將處理 20 個問題，完成後自動儲存結果")
         print("=" * 60)
         
         # 開始處理每個模型
@@ -400,7 +406,7 @@ class WorkingModelsProcessor:
         processed_models = 0
         
         for i, model_info in enumerate(self.working_models, 1):
-            print(f"\\n[PROGRESS] 進度: {i}/{len(self.working_models)}")
+            print(f"\n🔄 進度: {i}/{len(self.working_models)}")
             
             try:
                 success, successful, tokens = self.process_single_model(model_info)
@@ -412,35 +418,35 @@ class WorkingModelsProcessor:
                 
                 # 模型之間暫停 5 秒
                 if i < len(self.working_models):
-                    print(f"[PAUSE] 暫停 5 秒後處理下一個模型...")
+                    print(f"⏸️ 暫停 5 秒後處理下一個模型...")
                     time.sleep(5)
                     
             except KeyboardInterrupt:
-                print(f"\\n[INTERRUPTED] 使用者中斷處理，已完成 {processed_models} 個模型")
+                print(f"\n⏸️ 使用者中斷處理，已完成 {processed_models} 個模型")
                 break
             except Exception as e:
-                print(f"\\n[ERROR] 處理模型 {model_info['name']} 時發生錯誤: {str(e)}")
+                print(f"\n❌ 處理模型 {model_info['name']} 時發生錯誤: {str(e)}")
                 continue
         
         # 顯示總結
-        print(f"\\n[COMPLETED] 處理完成！")
-        print(f"[MODELS] 成功處理模型數: {processed_models}")
-        print(f"[QUESTIONS] 總成功問題數: {total_successful}")
-        print(f"[TOKENS] 總Token使用: {total_tokens}")
-        print(f"[SAVED] 所有結果檔案已儲存至 outputs/ 目錄")
+        print(f"\n🎉 處理完成！")
+        print(f"📊 成功處理模型數: {processed_models}")
+        print(f"📈 總成功問題數: {total_successful}")
+        print(f"💰 總Token使用: {total_tokens}")
+        print(f"📁 所有結果檔案已儲存至 outputs/ 目錄")
         print("=" * 60)
         
         return True
 
 def main():
     """主程式"""
-    print("===== 開始執行 working_models_processor_fixed.py =====")
+    print("===== 開始執行 working_models_processor.py =====")
     try:
         processor = WorkingModelsProcessor()
         processor.run_processing()
     except Exception as e:
         import traceback
-        print(f"\\n[ERROR] 發生未捕獲的錯誤: {str(e)}")
+        print(f"\n❌❌❌ 發生未捕獲的錯誤: {str(e)}")
         print("詳細錯誤追蹤:")
         traceback.print_exc()
     print("===== 腳本執行結束 =====")

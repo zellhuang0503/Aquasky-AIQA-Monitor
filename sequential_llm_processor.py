@@ -31,7 +31,7 @@ class SequentialLLMProcessor:
             "openai/gpt-4o-mini",              # GPT-4o Mini
             "google/gemini-flash-1.5",         # Gemini Flash 1.5
             "meta-llama/llama-3.1-8b-instruct", # Llama 3.1 8B
-            "mistralai/mistral-7b-instruct",   # Mistral 7B
+            "mistralai/mistral-small-3.2-24b-instruct",   # Mistral Small 3.2 24B
             "perplexity/sonar-pro",            # Perplexity Sonar Pro
             "x-ai/grok-3-mini-beta"            # Grok 3 Mini Beta (✅ 已驗證)
         ]
@@ -43,7 +43,7 @@ class SequentialLLMProcessor:
             "openai/gpt-4o-mini": "GPT-4o Mini",
             "google/gemini-flash-1.5": "Gemini Flash 1.5",
             "meta-llama/llama-3.1-8b-instruct": "Llama 3.1 8B",
-            "mistralai/mistral-7b-instruct": "Mistral 7B",
+            "mistralai/mistral-small-3.2-24b-instruct": "Mistral Small 3.2 24B",
             "perplexity/sonar-pro": "Perplexity Sonar Pro",
             "x-ai/grok-4": "Grok 4",
             "x-ai/grok-3-mini-beta": "Grok 3 Mini Beta"
@@ -73,7 +73,7 @@ class SequentialLLMProcessor:
     
     def extract_questions(self):
         """從問題檔案中提取所有 20 個問題"""
-        questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md")
+        questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md")
         
         if not questions_file.exists():
             print(f"❌ 找不到問題檔案: {questions_file}")

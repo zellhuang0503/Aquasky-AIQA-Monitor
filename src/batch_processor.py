@@ -51,7 +51,7 @@ class BatchProcessor:
             "gemini-2.5-flash-lite",
             "grok-3",
             "claude-sonnet-4",
-            "gpt-4o-mini-high",
+            "openai/gpt-5-mini",
             "perplexity-sonar-pro",
         ]
         

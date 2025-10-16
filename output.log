@@ -1,0 +1,16 @@
+===== 開始執行 working_models_processor.py =====
+Traceback (most recent call last):
+  File "E:\CascadeProjects\Aquasky-AIQA-Monitor\working_models_processor.py", line 446, in main
+    processor.run_processing()
+  File "E:\CascadeProjects\Aquasky-AIQA-Monitor\working_models_processor.py", line 384, in run_processing
+    print("\U0001f680 AQUASKY AIQA Monitor - 可用模型處理系統")
+UnicodeEncodeError: 'cp950' codec can't encode character '\U0001f680' in position 0: illegal multibyte sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\CascadeProjects\Aquasky-AIQA-Monitor\working_models_processor.py", line 455, in <module>
+    main()
+  File "E:\CascadeProjects\Aquasky-AIQA-Monitor\working_models_processor.py", line 449, in main
+    print(f"\n\u274c\u274c\u274c 發生未捕獲的錯誤: {str(e)}")
+UnicodeEncodeError: 'cp950' codec can't encode character '\u274c' in position 2: illegal multibyte sequence

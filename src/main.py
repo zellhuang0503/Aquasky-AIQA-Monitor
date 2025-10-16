@@ -83,8 +83,7 @@ def main():
     # --- 1. Load Questions ---
     # The question file is expected to be in the project root, one level above the 'src' directory.
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    question_file = os.path.join(project_root, "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md")
-    questions = load_questions(question_file)
+            question_file = os.path.join(project_root, "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md")    questions = load_questions(question_file)
 
     if not questions:
         print("No questions loaded. Exiting.")

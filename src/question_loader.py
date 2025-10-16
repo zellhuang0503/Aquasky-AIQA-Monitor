@@ -41,6 +41,6 @@ def load_questions(md_path: Path) -> List[str]:
 
 
 if __name__ == "__main__":
-    path = Path(__file__).resolve().parent.parent / "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md"
+    path = Path(__file__).resolve().parent.parent / "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"
     for idx, q in enumerate(load_questions(path), 1):
         print(idx, q)

@@ -67,7 +67,7 @@ def check_question_file():
     print("\n=== 問題檔案檢查 ===")
     
     project_root = Path(__file__).parent
-    question_file = project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md"
+    question_file = project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"
     
     if not question_file.exists():
         print("❌ 問題檔案不存在")

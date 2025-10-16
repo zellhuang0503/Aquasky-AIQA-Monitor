@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(where python)",
+      "Bash(C:UserszellhAppDataLocalProgramsPythonPython312python.exe -m pip install requests pandas openpyxl)",
+      "Bash(\"C:\\Users\\zellh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" -m pip install requests pandas openpyxl)",
+      "Bash(\"C:\\Users\\zellh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" working_models_processor.py)",
+      "Bash(\"C:\\Users\\zellh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" --version)",
+      "Bash(git checkout:*)",
+      "Bash(chcp 65001)",
+      "Bash(set PYTHONIOENCODING=utf-8)",
+      "Bash(set PYTHONLEGACYWINDOWSSTDIO=utf-8)",
+      "Bash(cat:*)",
+      "Bash(\"C:\\Users\\zellh\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\" working_models_processor_fixed.py)",
+      "Bash(tasklist)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(if exist CLAUDE.md echo \"CLAUDE.md exists\" else echo \"CLAUDE.md does not exist\")",
+      "Bash(test:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

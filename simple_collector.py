@@ -80,7 +80,7 @@ class SimpleCollector:
     def extract_questions(self):
         """從黃金問題庫提取問題"""
         print("LOADING: 提取問題...")
-        questions_file = self.project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md"
+        questions_file = self.project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"
         
         if not questions_file.exists():
             print(f"ERROR: 找不到問題檔案: {questions_file}")

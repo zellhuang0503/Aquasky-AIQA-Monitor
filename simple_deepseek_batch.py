@@ -35,7 +35,7 @@ def load_config():
 
 def extract_questions():
     """從問題檔案中提取所有 20 個問題"""
-    questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md")
+    questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md")
     
     if not questions_file.exists():
         print(f"❌ 找不到問題檔案: {questions_file}")

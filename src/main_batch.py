@@ -151,12 +151,16 @@ def main():
     print(f"📁 專案根目錄: {project_root}")
     
     # 2. 載入問題
-    question_file = project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V2.0.md"
-    questions = load_questions(str(question_file))
+            question_file = project_root / "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"    questions = load_questions(str(question_file))
     
     if not questions:
         print("❌ 沒有載入到問題，程式結束")
         return
+
+    # --- 臨時測試修改：只使用第一個問題 ---
+    questions = questions[:1]
+    print("⚠️  注意：已啟用臨時測試模式，僅使用 1 個問題。")
+    # --- 臨時測試修改結束 ---
     
     # 3. 初始化批次處理器
     processor = BatchProcessor(str(project_root))
@@ -164,8 +168,9 @@ def main():
     # 4. 顯示現有進度
     show_progress_info(processor)
     
-    # 5. 選擇模型
-    target_models = get_user_model_selection(processor.available_models)
+    # 5. 選擇模型 (臨時測試修改：自動選擇所有模型)
+    target_models = processor.available_models
+    print("⚠️  注意：已啟用臨時測試模式，自動選擇所有可用模型。")
     
     # 6. 確認開始處理
     print(f"\n🎯 處理摘要:")
@@ -178,16 +183,17 @@ def main():
     for i, model in enumerate(target_models, 1):
         print(f"  {i}. {model}")
     
-    # 確認開始
-    while True:
-        confirm = input(f"\n是否開始批次處理？(y/n): ").strip().lower()
-        if confirm in ['y', 'yes', '是']:
-            break
-        elif confirm in ['n', 'no', '否']:
-            print("❌ 用戶取消操作")
-            return
-        else:
-            print("❌ 請輸入 y 或 n")
+    # 確認開始 (臨時測試修改：自動開始)
+    print("⚠️  注意：已啟用臨時測試模式，自動開始處理。")
+    # while True:
+    #     confirm = input(f"\n是否開始批次處理？(y/n): ").strip().lower()
+    #     if confirm in ['y', 'yes', '是']:
+    #         break
+    #     elif confirm in ['n', 'no', '否']:
+    #         print("❌ 用戶取消操作")
+    #         return
+    #     else:
+    #         print("❌ 請輸入 y 或 n")
     
     # 7. 開始批次處理
     print(f"\n🔄 開始批次處理...")
@@ -215,11 +221,12 @@ def main():
         
         print(f"  總成功率: {total_success}/{total_tasks} ({total_success/total_tasks*100:.1f}%)")
         
-        # 9. 清理進度檔案
-        cleanup = input(f"\n是否清理進度檔案？(y/n): ").strip().lower()
-        if cleanup in ['y', 'yes', '是']:
-            processor.cleanup_progress()
-            print("✅ 進度檔案已清理")
+        # 9. 清理進度檔案 (臨時測試修改：自動跳過)
+        print("⚠️  注意：已啟用臨時測試模式，自動跳過清理進度檔案的步驟。")
+        # cleanup = input(f"\n是否清理進度檔案？(y/n): ").strip().lower()
+        # if cleanup in ['y', 'yes', '是']:
+        #     processor.cleanup_progress()
+        #     print("✅ 進度檔案已清理")
         
         print(f"\n📁 請檢查輸出目錄中的結果檔案: {processor.output_dir}")
         
