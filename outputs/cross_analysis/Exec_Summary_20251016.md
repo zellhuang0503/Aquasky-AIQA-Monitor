@@ -85,3 +85,8 @@
 - 追蹤碼：GA4/gtag = 有；GTM = 有（提醒：避免多組 GA 同時上報導致重複計數）
 
 詳細稽核輸出：`outputs/cross_analysis/home_audit.md`
+
+## 站點稽核分數（整合）
+- 本期站點稽核分數：80/100
+- JSON‑LD：有；hreflang：有；meta description：有；canonical：無；追蹤：有
+
