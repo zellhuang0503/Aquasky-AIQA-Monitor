@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AQUASKY AIQA Monitor - 已驗證可用模型處理器
-專注於已知可用的模型，避免卡在不可用的模型上
+AQUASKY AIQA Monitor - 撌脤?霅?冽芋???
+撠釣?澆歇?亙?函?璅∪?嚗??其??舐?芋??
 """
 
 import os
@@ -16,62 +16,52 @@ from pathlib import Path
 import pandas as pd
 
 class WorkingModelsProcessor:
-    """已驗證可用模型的處理器"""
+    """撌脤?霅?冽芋??????""
     
     def __init__(self):
         self.project_root = Path.cwd()
         self.output_dir = self.project_root / "outputs"
         self.output_dir.mkdir(exist_ok=True)
         
-        # 已驗證可用的模型（根據用戶需求調整）
+        # 撌脤?霅?函?璅∪?嚗??園?瘙矽?湛?
         self.working_models = [
-            # 已成功測試過的模型
-            {
+            # 撌脫??葫閰阡??芋??            {
                 "id": "deepseek/deepseek-chat-v3.1",
                 "name": "DeepSeek Chat v3.1",
-                "status": "verified"  # 已更新
-            },
+                "status": "verified"  # 撌脫??            },
             {
                 "id": "openai/gpt-5-mini",
                 "name": "GPT-5 Mini",
-                "status": "verified"   # 已驗證可用
-            },
-            # 使用者要求移除 Claude 3 Haiku
+                "status": "verified"   # 撌脤?霅??            },
+            # 雿輻??瘙宏??Claude 3 Haiku
             {
                 "id": "google/gemini-2.5-flash",
                 "name": "Gemini 2.5 Flash",
-                "status": "verified"   # 已驗證可用
-            },
-            # 其它已驗證可用的模型
+                "status": "verified"   # 撌脤?霅??            },
+            # ?嗅?撌脤?霅?函?璅∪?
             {
                 "id": "anthropic/claude-sonnet-4",
                 "name": "Claude Sonnet 4",
-                "status": "verified"   # 已驗證可用
-            },
+                "status": "verified"   # 撌脤?霅??            },
             {
                 "id": "meta-llama/llama-3.1-8b-instruct",
                 "name": "Llama 3.1 8B",
-                "status": "verified"   # 已驗證可用
-            },
+                "status": "verified"   # 撌脤?霅??            },
             {
                 "id": "mistralai/mistral-small-3.2-24b-instruct",
                 "name": "Mistral Small 3.2 24B",
-                "status": "verified"   # 已更新
-            },
-            # 使用者指定必需的 Perplexity 模型（已驗證可用）
-            {
+                "status": "verified"   # 撌脫??            },
+            # 雿輻??摰????Perplexity 璅∪?嚗歇撽??舐嚗?            {
                 "id": "perplexity/sonar-pro",
                 "name": "Perplexity Sonar Pro",
-                "status": "verified",   # 已驗證可用
-                "api_type": "perplexity"  # 使用 Perplexity 直接 API
+                "status": "verified",   # 撌脤?霅??                "api_type": "perplexity"  # 雿輻 Perplexity ?湔 API
             },
-            # OpenRouter 可用的 Grok 模型（已測試 2025-07-26）
-            {
+            # OpenRouter ?舐??Grok 璅∪?嚗歇皜祈岫 2025-07-26嚗?            {
                 "id": "x-ai/grok-3-mini-beta",
                 "name": "Grok 3 Mini Beta",
-                "status": "verified"   # 已驗證可用，2.74秒回應（最快）
+                "status": "verified"   # 撌脤?霅?剁?2.74蝘????敹恬?
             },
-            # 不可用的模型（保留作為記錄）
+            # 銝?函?璅∪?嚗????箄???
             # {
             #     "id": "x-ai/grok-beta",
             #     "name": "Grok Beta",
@@ -79,7 +69,7 @@ class WorkingModelsProcessor:
             # }
         ]
 
-        # 嘗試從外部 JSON 覆蓋模型清單（若存在且格式正確）
+        # ?岫敺???JSON 閬?璅∪?皜嚗摮銝撘迤蝣綽?
         try:
             config_json = self.project_root / 'config' / 'working_models.json'
             if config_json.exists():
@@ -87,52 +77,50 @@ class WorkingModelsProcessor:
                     models = json.load(f)
                 if isinstance(models, list) and all(isinstance(m, dict) and 'id' in m and 'name' in m for m in models):
                     self.working_models = models
-                    print(f"已載入外部模型清單：{config_json}")
+                    print(f"撌脰??亙??冽芋???殷?{config_json}")
                 else:
-                    print("外部模型清單格式不正確，改用內建清單。")
+                    print("憭璅∪?皜?澆?銝迤蝣綽??寧?批遣皜??)
         except Exception as e:
-            print(f"讀取外部模型清單失敗，改用內建清單：{e}")
+            print(f"霈???冽芋???桀仃???寧?批遣皜嚗e}")
 
         self.openrouter_api_key = None
         self.perplexity_api_key = None
         self.questions = []
         
     def load_config(self):
-        """載入配置檔案"""
-        print("\n 開始載入配置檔案...")
+        """頛?蔭瑼?"""
+        print("\n ??頛?蔭瑼?...")
         config = configparser.ConfigParser()
         config_path = Path("config.ini")
         
         if not config_path.exists():
-            print("找不到 config.ini 檔案")
+            print("?曆???config.ini 瑼?")
             return False
         
         config.read(config_path, encoding='utf-8')
         
-        # 載入 OpenRouter API Key
+        # 頛 OpenRouter API Key
         self.openrouter_api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
         
-        # 載入 Perplexity API Key
+        # 頛 Perplexity API Key
         self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
         
         if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("請在 config.ini 中設定有效的 openrouter_api_key")
+            print("隢 config.ini 銝剛身摰??? openrouter_api_key")
             return False
         
         if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':
-            print("請在 config.ini 中設定有效的 PERPLEXITY_API_KEY")
+            print("隢 config.ini 銝剛身摰??? PERPLEXITY_API_KEY")
             return False
         
         return True
     
     def extract_questions(self):
-        """從問題檔案中提取所有 20 個問題"""
-        print("\n 開始提取問題...")
-        questions_file = Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0_processed.md")
+        """敺?憿?獢葉?????20 ??憿?""
+        print("\n ??????...")
+        candidates = [\n            Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"),\n            Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0_processed.md"),\n        ]\n        questions_file = next((p for p in candidates if p.exists()), None)
         
-        if not questions_file.exists():
-            print(f"找不到問題檔案: {questions_file}")
-            return False
+        if not questions_file:\n            print("找不到題庫檔案（V3.0.md 或 V3.0_processed.md）")\n            return False
         
         try:
             with open(questions_file, 'r', encoding='utf-8') as f:
@@ -143,29 +131,29 @@ class WorkingModelsProcessor:
             
             for line in lines:
                 line = line.strip()
-                if line and any(line.startswith(f"{i}.") for i in range(1, 21)):
+                if line and any(line.startswith(f"{i}.") for i in range(1, 13)):
                     question = line.split('.', 1)[1].strip()
                     if '(' in question and ')' in question:
                         question = question.split('(')[0].strip()
                     questions.append(question)
             
-            self.questions = questions
-            print(f"成功提取 {len(questions)} 個問題")
+            self.questions = questions[:12]
+            print(f"???? {len(questions)} ??憿?)
             return len(questions) > 0
             
         except Exception as e:
-            print(f"讀取問題檔案時發生錯誤: {str(e)}")
+            print(f"霈??憿?獢??潛??航炊: {str(e)}")
             return False
     
     def test_model_availability(self, model_info):
-        """測試模型是否可用（支援 OpenRouter 和 Perplexity）"""
+        """皜祈岫璅∪??臬?舐嚗??OpenRouter ??Perplexity嚗?""
         model_id = model_info["id"]
         api_type = model_info.get("api_type", "openrouter")
         
-        print(f"\n 測試模型 {model_id} 是否可用...")
+        print(f"\n 皜祈岫璅∪? {model_id} ?臬?舐...")
         
         if api_type == "perplexity":
-            # 使用 Perplexity 直接 API
+            # 雿輻 Perplexity ?湔 API
             url = "https://api.perplexity.ai/chat/completions"
             headers = {
                 "Authorization": f"Bearer {self.perplexity_api_key}",
@@ -173,7 +161,7 @@ class WorkingModelsProcessor:
             }
             actual_model_id = model_id.replace("perplexity/", "")
         else:
-            # 使用 OpenRouter API
+            # 雿輻 OpenRouter API
             url = "https://openrouter.ai/api/v1/chat/completions"
             headers = {
                 "Authorization": f"Bearer {self.openrouter_api_key}",
@@ -183,8 +171,7 @@ class WorkingModelsProcessor:
             }
             actual_model_id = model_id
         
-        # 使用簡單的測試問題
-        data = {
+        # 雿輻蝪∪?葫閰血?憿?        data = {
             "model": actual_model_id,
             "messages": [
                 {
@@ -197,46 +184,46 @@ class WorkingModelsProcessor:
         }
         
         try:
-            print(f"  測試模型可用性...")
+            print(f"  皜祈岫璅∪??舐??..")
             response = requests.post(url, headers=headers, json=data, timeout=30)
             
             if response.status_code == 200:
                 result = response.json()
                 if 'choices' in result and len(result['choices']) > 0:
-                    print(f"  模型可用")
+                    print(f"  璅∪??舐")
                     return True
                 else:
-                    print(f"  模型回應格式異常")
+                    print(f"  璅∪????澆??啣虜")
                     return False
             else:
-                print(f"  模型不可用 (HTTP {response.status_code})")
+                print(f"  璅∪?銝??(HTTP {response.status_code})")
                 try:
                     error_info = response.json()
-                    print(f"      錯誤詳情: {error_info}")
+                    print(f"      ?航炊閰單?: {error_info}")
                 except:
-                    print(f"      錯誤內容: {response.text}")
+                    print(f"      ?航炊?批捆: {response.text}")
                 return False
                 
         except Exception as e:
-            print(f"  測試模型時發生錯誤: {str(e)}")
+            print(f"  皜祈岫璅∪???隤? {str(e)}")
             return False
     
     def call_llm_api(self, model_info, question, question_num):
-        """呼叫 LLM API（支援 OpenRouter 和 Perplexity）"""
+        """?澆 LLM API嚗??OpenRouter ??Perplexity嚗?""
         model_id = model_info["id"]
         api_type = model_info.get("api_type", "openrouter")
         
         if api_type == "perplexity":
-            # 使用 Perplexity 直接 API
+            # 雿輻 Perplexity ?湔 API
             url = "https://api.perplexity.ai/chat/completions"
             headers = {
                 "Authorization": f"Bearer {self.perplexity_api_key}",
                 "Content-Type": "application/json"
             }
-            # Perplexity 模型 ID 需要移除 perplexity/ 前綴
+            # Perplexity 璅∪? ID ?閬宏??perplexity/ ?韌
             actual_model_id = model_id.replace("perplexity/", "")
         else:
-            # 使用 OpenRouter API
+            # 雿輻 OpenRouter API
             url = "https://openrouter.ai/api/v1/chat/completions"
             headers = {
                 "Authorization": f"Bearer {self.openrouter_api_key}",
@@ -259,7 +246,7 @@ class WorkingModelsProcessor:
         }
         
         try:
-            print(f"  處理問題 {question_num}/20...")
+            print(f"  ???? {question_num}/20...")
             response = requests.post(url, headers=headers, json=data, timeout=60)
             
             if response.status_code == 200:
@@ -268,38 +255,37 @@ class WorkingModelsProcessor:
                     answer = result['choices'][0]['message']['content']
                     usage = result.get('usage', {})
                     
-                    print(f"  問題 {question_num} 完成 (Token: {usage.get('total_tokens', 0)})")
+                    print(f"  ?? {question_num} 摰? (Token: {usage.get('total_tokens', 0)})")
                     return {
                         'success': True,
                         'answer': answer,
                         'usage': usage
                     }
                 else:
-                    print(f"  問題 {question_num} - API 回應格式異常")
+                    print(f"  ?? {question_num} - API ???澆??啣虜")
                     return {'success': False, 'error': 'Invalid response format'}
             else:
-                print(f"  問題 {question_num} - API 錯誤: {response.status_code}")
+                print(f"  ?? {question_num} - API ?航炊: {response.status_code}")
                 return {'success': False, 'error': f'HTTP {response.status_code}'}
                     
         except Exception as e:
-            print(f"  問題 {question_num} - 發生錯誤: {str(e)}")
+            print(f"  ?? {question_num} - ?潛??航炊: {str(e)}")
             return {'success': False, 'error': str(e)}
     
     def process_single_model(self, model_info):
-        """處理單一模型的所有問題"""
+        """???桐?璅∪?????憿?""
         model_id = model_info["id"]
         model_name = model_info["name"]
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        print(f"\n 開始處理模型: {model_name} ({model_id})")
+        print(f"\n ????璅∪?: {model_name} ({model_id})")
         
-        print(f"\n 開始處理模型: {model_name}")
-        print(f" 模型ID: {model_id}")
+        print(f"\n ????璅∪?: {model_name}")
+        print(f" 璅∪?ID: {model_id}")
         print("=" * 60)
         
-        # 如果不是已驗證的模型，先測試可用性
-        if model_info["status"] != "verified":
+        # 憒?銝撌脤?霅?璅∪?嚗?皜祈岫?舐??        if model_info["status"] != "verified":
             if not self.test_model_availability(model_info):
-                print(f"模型 {model_name} 不可用，跳過處理")
+                print(f"璅∪? {model_name} 銝?剁?頝喲???")
                 return False, 0, 0
         
         results = []
@@ -314,113 +300,109 @@ class WorkingModelsProcessor:
                 successful_count += 1
                 total_tokens += result.get('usage', {}).get('total_tokens', 0)
             
-            # 每個問題之間暫停 3 秒
-            if i < len(self.questions):
+            # 瘥?憿????3 蝘?            if i < len(self.questions):
                 time.sleep(3)
         
-        # 儲存結果
+        # ?脣?蝯?
         self.save_model_results(model_id, model_name, results, timestamp)
         
-        print(f"\n {model_name} 處理完成:")
-        print(f"  成功: {successful_count}/20 個問題")
-        print(f"  總Token: {total_tokens}")
+        print(f"\n {model_name} ??摰?:")
+        print(f"  ??: {successful_count}/20 ??憿?)
+        print(f"  蝮確oken: {total_tokens}")
         print("=" * 60)
         
         return True, successful_count, total_tokens
     
     def save_model_results(self, model_id, model_name, results, timestamp):
-        """儲存單一模型的結果"""
-        # 準備資料
+        """?脣??桐?璅∪?????""
+        # 皞?鞈?
         data = []
         
         for i, (question, result) in enumerate(zip(self.questions, results), 1):
             row = {
-                '問題編號': i,
-                '問題': question,
-                '回答': result.get('answer', '處理失敗') if result['success'] else '處理失敗',
-                '狀態': '成功' if result['success'] else '失敗',
-                '錯誤訊息': result.get('error', '') if not result['success'] else '',
-                '輸入Token': result.get('usage', {}).get('prompt_tokens', 0) if result['success'] else 0,
-                '輸出Token': result.get('usage', {}).get('completion_tokens', 0) if result['success'] else 0,
-                '總Token': result.get('usage', {}).get('total_tokens', 0) if result['success'] else 0
+                '??蝺刻?': i,
+                '??': question,
+                '??': result.get('answer', '??憭望?') if result['success'] else '??憭望?',
+                '???: '??' if result['success'] else '憭望?',
+                '?航炊閮': result.get('error', '') if not result['success'] else '',
+                '頛詨Token': result.get('usage', {}).get('prompt_tokens', 0) if result['success'] else 0,
+                '頛詨Token': result.get('usage', {}).get('completion_tokens', 0) if result['success'] else 0,
+                '蝮確oken': result.get('usage', {}).get('total_tokens', 0) if result['success'] else 0
             }
             data.append(row)
         
-        # 生成安全的檔案名稱
-        safe_model_name = model_id.replace('/', '_').replace('\\', '_')
+        # ??摰??獢?蝔?        safe_model_name = model_id.replace('/', '_').replace('\\', '_')
         
-        # 儲存 Excel
+        # ?脣? Excel
         df = pd.DataFrame(data)
         excel_filename = f"AQUASKY_AIQA_{safe_model_name}_{timestamp}.xlsx"
         excel_path = self.output_dir / excel_filename
         df.to_excel(excel_path, index=False, engine='openpyxl')
         
-        # 儲存 Markdown
+        # ?脣? Markdown
         md_filename = f"AQUASKY_AIQA_{safe_model_name}_{timestamp}.md"
         md_path = self.output_dir / md_filename
         
         with open(md_path, 'w', encoding='utf-8') as f:
-            f.write(f"# AQUASKY AIQA Monitor - {model_name} 測試報告\n\n")
-            f.write(f"**生成時間**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"**模型**: {model_id}\n")
-            f.write(f"**模型名稱**: {model_name}\n\n")
+            f.write(f"# AQUASKY AIQA Monitor - {model_name} 皜祈岫?勗?\n\n")
+            f.write(f"**????**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"**璅∪?**: {model_id}\n")
+            f.write(f"**璅∪??迂**: {model_name}\n\n")
             
-            # 統計資訊
+            # 蝯梯?鞈?
             successful_count = sum(1 for r in results if r['success'])
             total_input_tokens = sum(r.get('usage', {}).get('prompt_tokens', 0) for r in results if r['success'])
             total_output_tokens = sum(r.get('usage', {}).get('completion_tokens', 0) for r in results if r['success'])
             
-            f.write(f"## 統計資訊\n\n")
-            f.write(f"- **成功問題數**: {successful_count}/20\n")
-            f.write(f"- **總輸入Token**: {total_input_tokens}\n")
-            f.write(f"- **總輸出Token**: {total_output_tokens}\n")
-            f.write(f"- **總Token**: {total_input_tokens + total_output_tokens}\n\n")
+            f.write(f"## 蝯梯?鞈?\n\n")
+            f.write(f"- **??????*: {successful_count}/20\n")
+            f.write(f"- **蝮質撓?冉oken**: {total_input_tokens}\n")
+            f.write(f"- **蝮質撓?摭oken**: {total_output_tokens}\n")
+            f.write(f"- **蝮確oken**: {total_input_tokens + total_output_tokens}\n\n")
             
-            # 問題和回答
-            for i, (question, result) in enumerate(zip(self.questions, results), 1):
-                f.write(f"## 問題 {i}\n\n")
-                f.write(f"**問題**: {question}\n\n")
+            # ????蝑?            for i, (question, result) in enumerate(zip(self.questions, results), 1):
+                f.write(f"## ?? {i}\n\n")
+                f.write(f"**??**: {question}\n\n")
                 if result['success']:
-                    f.write(f"**回答**: {result['answer']}\n\n")
+                    f.write(f"**??**: {result['answer']}\n\n")
                     usage = result.get('usage', {})
-                    f.write(f"**Token使用**: 輸入 {usage.get('prompt_tokens', 0)}, 輸出 {usage.get('completion_tokens', 0)}, 總計 {usage.get('total_tokens', 0)}\n\n")
+                    f.write(f"**Token雿輻**: 頛詨 {usage.get('prompt_tokens', 0)}, 頛詨 {usage.get('completion_tokens', 0)}, 蝮質? {usage.get('total_tokens', 0)}\n\n")
                 else:
-                    f.write(f"**狀態**: 處理失敗\n")
-                    f.write(f"**錯誤**: {result.get('error', '未知錯誤')}\n\n")
+                    f.write(f"**???*: ??憭望?\n")
+                    f.write(f"**?航炊**: {result.get('error', '?芰?航炊')}\n\n")
                 f.write("---\n\n")
         
-        print(f"  結果已儲存:")
+        print(f"  蝯?撌脣摮?")
         print(f"    Excel: {excel_filename}")
         print(f"    Markdown: {md_filename}")
     
     def run_processing(self):
-        """執行處理"""
-        print("AQUASKY AIQA Monitor - 可用模型處理系統")
+        """?瑁???"""
+        print("AQUASKY AIQA Monitor - ?舐璅∪???蝟餌絞")
         print("=" * 60)
         
-        # 載入配置
+        # 頛?蔭
         if not self.load_config():
             return False
         
-        # 提取問題
+        # ????
         if not self.extract_questions():
             return False
         
-        print(f"\n 將依序處理以下模型:")
+        print(f"\n 撠?摨??誑銝芋??")
         for i, model in enumerate(self.working_models, 1):
             status_icon = "[V]" if model["status"] == "verified" else "[T]"
             print(f"  {i}. {status_icon} {model['name']} ({model['id']})")
         
-        print(f"\n 每個模型將處理 20 個問題，完成後自動儲存結果")
+        print(f"\n 瘥芋???? 20 ??憿?摰?敺?摮???)
         print("=" * 60)
         
-        # 開始處理每個模型
-        total_successful = 0
+        # ????瘥芋??        total_successful = 0
         total_tokens = 0
         processed_models = 0
         
         for i, model_info in enumerate(self.working_models, 1):
-            print(f"\n 進度: {i}/{len(self.working_models)}")
+            print(f"\n ?脣漲: {i}/{len(self.working_models)}")
             
             try:
                 success, successful, tokens = self.process_single_model(model_info)
@@ -430,40 +412,40 @@ class WorkingModelsProcessor:
                     total_successful += successful
                     total_tokens += tokens
                 
-                # 模型之間暫停 5 秒
-                if i < len(self.working_models):
-                    print(f"暫停 5 秒後處理下一個模型...")
+                # 璅∪?銋??怠? 5 蝘?                if i < len(self.working_models):
+                    print(f"?怠? 5 蝘???銝??芋??..")
                     time.sleep(5)
                     
             except KeyboardInterrupt:
-                print(f"\n 使用者中斷處理，已完成 {processed_models} 個模型")
+                print(f"\n 雿輻?葉?瑁???撌脣???{processed_models} ?芋??)
                 break
             except Exception as e:
-                print(f"\n 處理模型 {model_info['name']} 時發生錯誤: {str(e)}")
+                print(f"\n ??璅∪? {model_info['name']} ??隤? {str(e)}")
                 continue
         
-        # 顯示總結
-        print(f"\n 處理完成！")
-        print(f" 成功處理模型數: {processed_models}")
-        print(f" 總成功問題數: {total_successful}")
-        print(f" 總Token使用: {total_tokens}")
-        print(f" 所有結果檔案已儲存至 outputs/ 目錄")
+        # 憿舐內蝮賜?
+        print(f"\n ??摰?嚗?)
+        print(f" ????璅∪??? {processed_models}")
+        print(f" 蝮賣???憿: {total_successful}")
+        print(f" 蝮確oken雿輻: {total_tokens}")
+        print(f" ?????獢歇?脣???outputs/ ?桅?")
         print("=" * 60)
         
         return True
 
 def main():
-    """主程式"""
-    print("===== 開始執行 working_models_processor.py =====")
+    """銝餌?撘?""
+    print("===== ???瑁? working_models_processor.py =====")
     try:
         processor = WorkingModelsProcessor()
         processor.run_processing()
     except Exception as e:
         import traceback
-        print(f"\n 發生未捕獲的錯誤: {str(e)}")
-        print("詳細錯誤追蹤:")
+        print(f"\n ?潛??芣??脩??航炊: {str(e)}")
+        print("閰喟敦?航炊餈質馱:")
         traceback.print_exc()
-    print("===== 腳本執行結束 ====")
+    print("===== ?單?瑁?蝯? ====")
 
 if __name__ == "__main__":
     main()
+

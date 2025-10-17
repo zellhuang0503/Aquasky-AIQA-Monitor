@@ -71,6 +71,11 @@ AQUASKY-AIQA-Monitor/
 - `run_standardized_analysis.py` 為根目錄啟動器，實際執行委派到 `archive/run_standardized_analysis.py`，以保留相容的命令與參數。
 - 如需更新支援模型清單，請以 `config/working_models.json` 為準，並使用同步工具更新文件。
 
+## 主管版報告（選用）
+```bash
+python scripts/generate_exec_summary.py
+# 會讀取 outputs/cross_analysis/ 下最新的交叉分析，輸出 Exec_Summary_YYYYMMDD.md
+```
+
 ## 授權
 本專案以 MIT 授權條款釋出，詳見 `LICENSE`。
-
