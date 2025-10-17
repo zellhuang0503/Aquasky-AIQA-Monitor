@@ -21,7 +21,9 @@
       "Bash(git commit:*)",
       "Bash(git filter-branch:*)",
       "Bash(if exist CLAUDE.md echo \"CLAUDE.md exists\" else echo \"CLAUDE.md does not exist\")",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

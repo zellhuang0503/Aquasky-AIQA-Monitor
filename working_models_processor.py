@@ -78,7 +78,21 @@ class WorkingModelsProcessor:
             #     "status": "unavailable"   # HTTP 404 - No endpoints found
             # }
         ]
-        
+
+        # 嘗試從外部 JSON 覆蓋模型清單（若存在且格式正確）
+        try:
+            config_json = self.project_root / 'config' / 'working_models.json'
+            if config_json.exists():
+                with open(config_json, 'r', encoding='utf-8') as f:
+                    models = json.load(f)
+                if isinstance(models, list) and all(isinstance(m, dict) and 'id' in m and 'name' in m for m in models):
+                    self.working_models = models
+                    print(f"已載入外部模型清單：{config_json}")
+                else:
+                    print("外部模型清單格式不正確，改用內建清單。")
+        except Exception as e:
+            print(f"讀取外部模型清單失敗，改用內建清單：{e}")
+
         self.openrouter_api_key = None
         self.perplexity_api_key = None
         self.questions = []
