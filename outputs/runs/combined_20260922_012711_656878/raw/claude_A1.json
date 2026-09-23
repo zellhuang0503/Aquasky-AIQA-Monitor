@@ -1,0 +1,226 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "請推薦可靠的隔膜式壓力桶（pressure tank）製造商，我是系統整合商，需要長期供貨。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790010693-ZUiuJy4cZK7OIXVVeOr0",
+    "object": "chat.completion",
+    "created": 1790010693,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "我將為您查詢目前市場上口碑較好、且適合長期合作的隔膜式壓力桶（Diaphragm/Bladder Pressure Tank）製造商資訊。根據公開資料查詢，以下為您整理目前市場上較具規模、口碑穩定、且有能力承接系統整合商長期批量供貨需求的隔膜式壓力桶（Diaphragm/Bladder Pressure Tank）製造商，依地區與定位分類供您參考：\n\n## 一、歐洲品牌（品質穩定、認證齊全，適合中高端商用/民生案）\n\n**1. Zilmet（義大利）**\nZILMET是一家家族企業，採用創新技術，已生產膨脹水箱、壓力容器與釕焊式熱交換器達50年之久，是住宅與商業熱水力領域的世界領導者。 其所有生產工廠都位於義大利東北部，靠近威尼斯，每天可生產多達35,000個水箱和3,000個釕焊板式熱交換器。 Zilmet是全球第一大膨脹水箱製造商，每年生產超過600萬個膨脹水箱。 認證方面已取得全球最嚴格機構的多項認證，包括英國的RWC、德國的DIN、英國的ISO以及美國的NSF 61。\n\n**2. Reflex Winkelmann（德國）、Varem（義大利）、Elbi（義大利）**\n市場報告指出，這些歐洲區域製造商透過專業產品開發、強大的區域經銷網絡以及在特定地理市場與應用領域中的客戶關係，維持其競爭地位。 這三家品牌在歐洲暖通、給水加壓系統中屬於主流選項，產品線齊全（從家用到工業級皆有）。\n\n**3. Flamco / IMI Pneumatex（荷蘭/瑞士，Aalberts集團）**\nAmtrol、Winkelmann（Reflex與Nema）、Flamco b.v.、Swan Group（Flexcon Industries與GWS）、IMI Pneumatex、Zilmet（Gitral）等，皆為全球主要熱膨脹水箱製造商，各自提供依當地標準與安裝商需求量身打造的產品組合。\n\n## 二、北美品牌（適合出口歐美市場案件或有ASME/NSF標準要求）\n\n**Amtrol（Well-X-Trol系列）**：Well-X-Trol系列由Amtrol生產，是私人井水系統壓力桶的黃金標準；Amtrol在50多年前發明了預加壓水箱設計，作為優於空氣式水箱的解決方案。 雖然其他製造商也跟進採用預加壓系統設計，但Amtrol無疑是第一家，如今仍是井水壓力桶行業的標準。\n\n**Wessels Company、Watts Water Technologies**：Watts Water Technologies與Wessels Company憑藉專業化的產品設計，並專注於高品質與可靠性，在北美市場維持競爭地位。 Watts為上市公司，總部位於美國麻州North Andover，2025年營收超過24億美元，財務穩健度高，適合需要長期穩定供應鏈的整合商。\n\n**Global Water Solutions (GWS) / Flexcon**：Flexcon Industries（北美）等區域製造商也透過專業化產品開發與經銷網絡維持市場地位。\n\n## 三、量產型OEM/ODM供應商（適合大量標準品採購、壓低成本）\n\n若您需要的是可大量標準化生產、支援OEM貼牌、且交期穩定的供應商，中國沿海（浙江、江蘇）的工廠是常見選項，例如：\n- **Taizhou Tianyang Electrical（台州天洋電器）**：月產能約9萬至12萬台壓力桶，可提供OEM服務，屬於量產型工廠，適合標準款走量採購。\n\n不過此類供應商的品質與服務水準參差不齊，建議實地驗廠、要求提供CE/NSF61/WRAS等第三方認證報告，並先小批量試單驗證品質穩定性後再簽長期合約。\n\n## 四、台灣本地品牌\n\n若您在台灣營運、需要就近服務與快速備貨，可留意本地泵浦廠所附屬的壓力桶產品線，例如九如牌（EVERGUSH）旗下的EPT系列，壓力桶與加壓泵浦連結，利用壓縮空氣來存水，同時給予整個管線系統穩定的水壓，具蓄水功效，可避免泵浦起動頻繁，延長泵浦壽命，規格從3L至300L皆有，並可依需求訂製不鏽鋼SUS304外殼，對接台灣本地泵浦系統相容性較好，售後與備貨也較即時。\n\n---\n\n## 給系統整合商的選商建議（長期供貨角度）\n\n1. **認證與品質一致性**：優先選擇具備NSF 61（食品級/飲用水）、WRAS、DIN、CE、ASME等認證的廠商，確保跨案場、跨批次品質一致，降低售後糾紛風險。\n2. **產能與交期穩定性**：詢問月產能、庫存策略、淡旺季交期差異，避免旺季斷貨影響工程進度。\n3. **OEM/客製能力**：若您需要貼牌或客製容量/接頭規格，確認廠商是否支援小批量客製與開模費用。\n4. **財務穩健度**：上市集團（如Watts、Aalberts旗下Flamco）或百年老廠（Amtrol、Zilmet）長期供貨風險較低；中小型OEM廠則建議簽約前做徵信與實地查廠。\n5. **備品/膜片更換服務**：隔膜式壓力桶的隔膜（bladder/diaphragm）為易耗件，確認廠商是否提供備用膜片與維修服務，方便您對客戶提供長期保固。\n6. **在地代理/倉儲**：若採購歐美品牌，建議透過有在地倉儲的代理商（如台灣、亞太區代理）合作，可縮短交期並降低單次進口成本。\n\n如果您能告知使用場景（住宅加壓 / 商用消防 / 工業RO純水系統 / 太陽能熱水等）、所需容量範圍與預算級別，我可以再針對性地幫您比較合適的品牌與型號。",
+          "refusal": null,
+          "reasoning": "This person needs dependable diaphragm pressure tank suppliers for ongoing system integration work, so I should search for well-established global manufacturers like Amtrol, Wessels, Flexcon, Zilmet, Varem, Elbi, Reflex, Pentair, and Grundfos to compile current, reliable information.I should look deeper into globally recognized expansion vessel and pressure tank brands relevant to system integrators—names like Reflex, Zilmet, Varem, Elbi, Global Water Solutions, Wessels, Amtrol, Flexcon, Pentair/Wellmate, CIMM, E.STAR, and AXEON—plus check European/Asian reputations and local Taiwan/China options given the user's likely bulk supply needs.I now have enough information to compile a solid recommendation list with citations, organized by region: European brands, North American brands, and Asian/Taiwan local manufacturers.  I'll add practical evaluation criteria like certifications (NSF61, WRAS, DIN, CE, ASME), production capacity, OEM capability, warranty, lead time, local support, and financial stability, then structure the answer with clear headers for easy comparison.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "This person needs dependable diaphragm pressure tank suppliers for ongoing system integration work, so I should search for well-established global manufacturers like Amtrol, Wessels, Flexcon, Zilmet, Varem, Elbi, Reflex, Pentair, and Grundfos to compile current, reliable information.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EvYECqgBCBIYAipAHsHKnEymA/qzfU4bNUBSj+gLvPVY70fFDhXy3aYWLMEkdFsz7Vt2Kfbbwfo/sGiFNMU8/YgSd9GfvnWx7ZrxPDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTdyEGQoURWZYjv9YyVEciUsn3WIAQGoAcvKxdUGsAECEgyZSd0QF9PLUQuGuPIaDMQ3MDGVHxoAuPyx6yIwKHYw2RkbHfp4FyZ7qMmpQXVQvNVUPMH+WkVUdNkavS/8kPP0yl0ICuUzmG4tAmsPKvoCPODN0FQKOjQ0e21gU2FWkmSm/VTcI5Y6FrgMfwfE6E3hXwwOR7TCi7aalnV1aOMr3Uso1yCIiLik5429E2nJEKlZlZRd6AycZE6ef3Oaqy9mFI52v8bWob0mLXnUe9a8SsNkJLIC5IafAepYrNHdt/ZXKerb9aHoJ7OOCV/IM+CojW2anT5oerB7UXdAPOLExEl9RoV2L1tP+/1B04D/sYPKczOI/brNMJjaAxTVlnU+TijkHnYqleeQTnaKghGwstGzAx5r3QrIRYNnsBKtSzpe5Xqa1kMeMKDmLNMYIgYCZDRCKt3ujfqJ9CNQpQrDGLRPPAtib+LOGkj380+7NgixGsYuvVsbWEO+DgF+QNXP4LlkiOi+9UGdGDQFxzR0QLpF5N+3JTlPunVRZzl0LYZesHngmuI9ThVNLETnEcD2RvUMibnqixa4+w79na3KxFJDMN+DcUEEJR0gexm75R0Yy3mJzmeMW832YZVZkZsGrQBP4UQU57GxGAE="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I should look deeper into globally recognized expansion vessel and pressure tank brands relevant to system integrators—names like Reflex, Zilmet, Varem, Elbi, Global Water Solutions, Wessels, Amtrol, Flexcon, Pentair/Wellmate, CIMM, E.STAR, and AXEON—plus check European/Asian reputations and local Taiwan/China options given the user's likely bulk supply needs.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "EswJCqgBCBIYAipAX91S/NpFh9/JTCAAI8LuGxqdVpMbE9H1CCInNmXsTZRdlDHVX5A1JTTof7jrHMVEV7VaXdSXX+Lzx1nkdA2fNzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTdyEGQoURWZYjv9YyVEciUsn3WIAQGoAdTKxdUGsAECEgyDBQTTqJ5w/fLApIQaDE28ij1VnkE3XaSXKSIweGL14Wt8Uw1oi5XTh5xYQ0xjMv9cBBLOHe+hKIG/s/OXYvmWshLXwmvTAqk+qkDhKtAH/cWv+pLdYWH+4QRuZxjSFOFqJnoIYAP0PkDYgaIJcd94vpGjryqjfQeLCrVQ+BlboYYAQzRxw64McC3TseLtno2n+SoT3GveRuiM/daphhkICTcbbrFsqAM6j2DFrL/WZlIDnqifvUmaxrDQDNSrIGy1YNbHGj8vR+tJXwlbQ7iMZxKqtBuxK9tuV0I8g3ICJgp2HhUTcztWQBp0mQxv8rXj8D4xYQ/hweZ0xfTz3k51kOqRjTNE0jnD2sq1BqLDd+Cl/dCfaX1C4Ha3VcQem5URx737flCOBY3GYrkRG5s0BgZKUAkyoVRRwXOx1WkGTkQK/CgmyIElGbZ4PUo5pvtC/pbb1TwaV1qB5oVkLga3vnlRhogzbWn7/SqlPWALyLpptM1z5vzcCHL6VSKmjHyUOuL3kBpWdMWdE0rUe6kA3JzXK6Ad2Ipwp/VU32FEo380tzRsVzffTHX6UdMLK5UWb5aJ8DK+cQgkRNQ2AHl9MORd3SReLlOY7l1dqk8nXXFBCaLTfbGKJD3dL+XRGleH8dius7VnD1AatBTichfnyp3wH89jk6Ff7yLPk+AvjOtaIJxN4Bxv7oZ2AgeOfcB4k1y3E6ssLNTNydsUSo0ujS+iSpVAvL7IEQS1pd24gFqOsXzj3CW06M/Pk6YuM+4RXVgjVJb9oNT0t8MrC8Ap7gr/7Ss75cdwl3sQQr4jXZUxhYnf0vyUyiIPKOwgM41VwzzXNwRMqWKjpe53Uk1wk3ocdvVFIKHUBbgVZMQ9Fv0Hyiw1dHuuAeTuENfWx2LORKPj4WhJmv3bEJ6lY4h6ZSbOSZLDsWl5rmr7pv+hL/dlcpOIUXHcYTdNIjb7OIw5Cggb0THLP2Y4ADXJxddTas6d6m/RmHECHQXF2tl9uSePh5t6KDSwX7n4dofglSyiauLy6dxA/arV0uZn2IDDFfImIsHDC/DMVr1H9cG7uM9/9GHhkrZLCVlV8Wm9xNBmIyIMYJZuNumLfnE/dGsxE+31h6uwN03dWdC7ptNCxiwH6xsfEiz7vGmXvsudhdVjzyD3IYsB4xAU3XsGisvTb3DIOBFW1UvpO04ihv+f3OiQyLt0Z3oY1ETIvrkc3QoOefH5Yps1GLxxlAswsrqECU5ot8VF2NME+myudsWyFgNjojvQdh3zrteTITZLm9DsDuVTgfJZYpVXlCvp0uENBhlB9JWzUjXfWS/Jpm1Iu+EIM4kHl8pDjsJMtFiatqPNYzJSb6wK16p81LtQid1YkD1oEPrk70lUvol78UXy/Bw3PbSI7SbE6To8lqbU2hgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I now have enough information to compile a solid recommendation list with citations, organized by region: European brands, North American brands, and Asian/Taiwan local manufacturers.  I'll add practical evaluation criteria like certifications (NSF61, WRAS, DIN, CE, ASME), production capacity, OEM capability, warranty, lead time, local support, and financial stability, then structure the answer with clear headers for easy comparison.",
+              "format": "anthropic-claude-v1",
+              "index": 2,
+              "signature": "EqwICqgBCBIYAipA0FakunD0dyD+DEcG6HZ+HYfyZtsj1LOD4WEXrtnQ/GVQOvyMqcxz3kRpKyWmTgLcctoqYNXJeU6k2fw7V2p9KzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTdyEGQoURWZYjv9YyVEciUsn3WIAQGoAd3KxdUGsAECEgyRkpI7oybW4XKnPXMaDGVZyK44y6G7iRmEnCIwXbPJ9nsEEMzTa5Wwa3MUvQH1uF8Re9K4+4DWdanCbmFS4bnNsplzPs5qZmlGpTAoKrAGDzAFjHEg0HRfojRrs99QTO1z60UKCHvojhs1n+UC0B/DK73DPv7TqinGfGmIttZBeBj9E1ANISYoyRQJlPD2kXIptralxz9mJsZSaUHr+yknIYplgIjkVL0sa5bZdYkG3ehMzuTPzG3u3I70axH5crwfIQoEldeafLE88v5j7n+p1KY0n4J2fF14Wjj5CZ25RLJCPjlhXHCov9kEFCpP02wVhSWcT+PwtF6H5TCwgyGUfY3/nbaeeB2crPZGAqApVJdz3m2BD5JSFfxoElpzOS4+3kF9HAz58yVDDiPYe2SzsBXABKT+tcbYTqAAq7GXWdZ4tvicsj80SB8LcwcAycx+7tkEaHtLRqAmfqgpdle6hX4s5KofWDpNn+sKMvt3R/7n0OIGBtSwF+7MDBL+9T1W7Xr3dAc+zLi5xKP3Je3L6q1Dudn3Cc13suM9reYLXOm1v7DQ2LQhquG7ezXgBNY/pbHudCAf0WrJjUyW9yXIBPJ4h7HyA9mgm+zEH/3rZFp68TonKWtsjqKa6ygX3mkv0OBojVfaYgNJMADziTYTjoUV5HqcSdud6IVvm7QBB0SwcQAygTYUeJKCp8R2XE2y8mYO7dEHNdv6c/LiAdYs+HCVbL/RyYoYMnW7EkTV2rAtv0fZJyqO0lLO6vOTjeU1mKQTBQGjXkk8ziLlfm6Sgip03kfAL7nS1Y9LfZaYWZl5JcV/lsiCkhgFolMTeW6NGvhikYXBv2EyQStxdvlKDlQnMwWoLfRc9M0c+7c1S8hxgGmr0DTqT4i3uXupSXzuSFRMBOo3lqclQrml+gAFKZd6gZKLdeOvhWOf7yZYO157G0Cfxlp0G/UqvvgY1KYdr+5AoECE+mS2uWESVfTkLvSoUCdKe1O/GfBE2fORhqBxWRWmHSSuuZoksQxMysD51A3fTLfF8NpXC2YFOK4LP2QlDziZoi/UWCwxuMMwF/h6qbTkwBZHuEG4tvKoe534bpIoujrq6fqGaBvXItBIAG7PkQaSgntmJWa2ftP/acdVm4dXDnIfY9e7FxQuY6wzbfzgCthRQPFva+jL5JnMIf3DrQEiV3kF5EyB+UD3GAE="
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.zilmetusa.com/faq",
+                "title": "FAQs | ZIlmet USA",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "ZILMET is a family owned company using innovative technology and eco-compatible reasoning in the manufacturing of expansion tanks, pressure vessels an..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.zilmetusa.com/faq",
+                "title": "FAQs | ZIlmet USA",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "All our manufacturing plants lie in northeastern Italy, not far from Venice, where as many as 35,000 tanks and 3,000 brazed plate heat exchangers can ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.zilmetusa.com/faq",
+                "title": "FAQs | ZIlmet USA",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Zilmet is the number one expansion tank manufacturer in the world, making over 6 million expansion tank every year. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.zilmetusa.com/faq",
+                "title": "FAQs | ZIlmet USA",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "It has achieved numerous certifications from the most demanding agencies worldwide. These certificates include the British RWC as well as the DIN from..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://dataintelo.com/report/global-pressure-tank-sales-market",
+                "title": "Pressure Tank Sales Market Report | Global Forecast From ...",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Regional manufacturers including Flexcon Industries (North America), Varem S.p.A. (Europe), Reflex Winkelmann GmbH (Europe), and Aalberts N.V. (Europe..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.reportprime.com/thermal-expansion-tank-r7344",
+                "title": "Thermal Expansion Tank Market Size, Growth, Forecast Till 2032",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Key manufacturers in the global Thermal Expansion Tank Market outlook include Amtrol, Winkelmann (Reflex &amp; Nema), Flamco b.v., Swan Group (Flexcon..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://worldwaterreserve.com/best-well-pressure-tanks/",
+                "title": "5 of the Best Well Pressure Tanks Homeowners Trust in 2026 – World Water Reserve",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The Well-X-Trol series by Amtrol is the gold standard in well pressure tanks for private well systems. Amtrol invented the pre-pressurized tank design..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://worldwaterreserve.com/best-well-pressure-tanks/",
+                "title": "5 of the Best Well Pressure Tanks Homeowners Trust in 2026 – World Water Reserve",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Several other manufacturers have followed suit in including the pre-pressurized system in their tank design, but Amtrol is certainly the first. Amtrol..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://dataintelo.com/report/global-pressure-tank-sales-market",
+                "title": "Pressure Tank Sales Market Report | Global Forecast From ...",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Watts Water Technologies and Wessels Company maintain competitive positions in North American markets through specialized product designs and focus on..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://en.wikipedia.org/wiki/Watts_Water_Technologies",
+                "title": "Watts Water Technologies",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Watts Water Technologies, Inc.\n- Type: Public\n- Traded as: Nasdaq: WTS; S&P 400 component;\n- Founded: 1874; 152 years ago in Lawrence, Massachusetts\n-..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aqualeader.en.made-in-china.com/product/mNknlqbDhMVT/China-Durable-Pressure-Water-Expansion-Tanks-with-Fixed-Diaphragm-Membrane.html",
+                "title": "Durable Pressure Water Expansion Tanks with Fixed Diaphragm Membrane - Pressure Expansion Tanks and Water Expansion Tanks",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "A: 90000~120000 pieces of Pressure Tank per month ... Taizhou Tianyang Electrical Co., Ltd. ... Click here to contact the supplier through an inquiry...."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aqualeader.en.made-in-china.com/product/mNknlqbDhMVT/China-Durable-Pressure-Water-Expansion-Tanks-with-Fixed-Diaphragm-Membrane.html",
+                "title": "Durable Pressure Water Expansion Tanks with Fixed Diaphragm Membrane - Pressure Expansion Tanks and Water Expansion Tanks",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "... 100 Liter Vertical Fixed Diaphragm Water Pressure Tank Expansion Vessel for Pressure Boosting ...\n\nA: Yes we supply OEM service. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.evergushpump.com.tw/tw/?view=article&id=88%3Aept%E9%9A%94%E8%86%9C%E5%BC%8F%E5%A3%93%E5%8A%9B%E6%A1%B6&catid=15",
+                "title": "EPT隔膜式壓力桶",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "壓力桶與加壓泵浦連結，利用壓縮空氣來存水，同時給予整個管線系統穩定的水壓。 · 具蓄水功效，避免泵浦起動頻繁，延長泵浦壽命。 · 隔膜式壓力桶將水與空氣區分開來(儲水室與空氣室)。 · 與九如牌泵浦連結的增壓系統，不需利用高處設立水塔利用地心引力來產生水壓。 · 規格: 3L,8L,18L,20L,..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 55858,
+      "completion_tokens": 3642,
+      "total_tokens": 59500,
+      "cost": 0.188136,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.188136,
+        "upstream_inference_prompt_cost": 0.111716,
+        "upstream_inference_completions_cost": 0.03642
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 867,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

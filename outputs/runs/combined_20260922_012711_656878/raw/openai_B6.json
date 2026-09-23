@@ -1,0 +1,85 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "想成為 AQUASKY 的經銷商，需要什麼條件？MOQ 和交期大概怎麼樣？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790008186-Ak69XILvTrDeycP5W0ko",
+    "object": "chat.completion",
+    "created": 1790008186,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "以下先以**台灣壓力桶製造商 AQUASKY／溢康企業**為準；如果你指的是其他同名品牌，請告訴我產品或官網。\n\n**重點：官網列出的經銷起訂門檻是 1 個 20 呎櫃、可混型號；首單 100% T/T。至於量產交期，我沒有查到可確認的公開天數，需向業務詢價確認。**([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n### 1. 成為經銷商，需要什麼條件？\n\n官網 FAQ 公開的商務條件如下：([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n| 項目 | 官方公開條件 |\n|---|---|\n| 經銷起訂量 | **1 個 20 呎貨櫃**，可混不同型號 |\n| 報價基準 | **FOB 台中** |\n| 首單付款 | **100% T/T（電匯）** |\n| 後續訂單 | **50% 定金，50% 出貨前付清** |\n\n至於公司資格、既有通路、年度採購目標、獨家代理權或區域限制，**我查到的官方 FAQ 沒有列出完整審核標準**，不能把上述採購條件視為「符合即保證取得經銷資格」。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n### 2. MOQ 要分清楚「經銷訂單」與「顏色要求」\n\n官網另列出以下產品 MOQ 政策：\n\n- **標準色：藍色、米色，無 MOQ 要求。**\n- **客製色：每批至少 400 件。**\n- 同一貨櫃可混裝不同型號。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n**注意：**「標準色無 MOQ」與「經銷起訂 1 個 20 呎櫃」在同一頁並存。可能分別指產品層級與整張經銷訂單的要求，但官網未明確說明兩者如何適用；建議書面確認是否接受不足一櫃的試單，以及客製色 400 件能否跨型號合計。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n### 3. 交期大概多久？\n\n**目前無法從公開資料確認標準品或客製品的量產交期，因此不宜直接估成 30、45 或 60 天。**官網僅提到 OEM／ODM 功能性原型可在「數週內」製作，這不是量產出貨或到貨時程。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n詢價時，建議要求業務分別確認：\n- 標準品是否有現貨、收款後多久可出貨。\n- 客製色／貼牌是否另外增加打樣及量產時間。\n- 交期從收款、規格確認，還是樣品核准開始計算。\n- 報的是出廠、裝船，還是抵達目的地的日期。\n\n### 建議下一步\n\n準備**銷售國家／區域、公司與通路簡介、預計型號及數量、是否客製或貼牌**，向溢康索取經銷方案與正式報價。官方電話為 **+886-4-2562-6368**。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n你預計在哪個市場銷售、想經銷哪類壓力桶？首批打算整櫃進貨，還是先小量試單？",
+          "refusal": null,
+          "reasoning": null,
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 134,
+                "end_index": 185
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 21042,
+      "completion_tokens": 1032,
+      "total_tokens": 22074,
+      "cost": 0.2523805,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 31,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.2523805,
+        "upstream_inference_prompt_cost": 0.1707805,
+        "upstream_inference_completions_cost": 0.0516
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 157,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 3
+      }
+    }
+  }
+}

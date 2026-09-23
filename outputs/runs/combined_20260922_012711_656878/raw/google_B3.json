@@ -1,0 +1,252 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 與 Amtrol、Global Water Solutions 同等級產品的性能比較？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008507-3Z2R5Sz7feHN83sDRMwv",
+    "object": "chat.completion",
+    "created": 1790008507,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "provisioned",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "在供水加壓系統、井水系統與熱水/冷水膨脹罐領域，**AQUASKY（台灣全天候）**、**Global Water Solutions（GWS，全球水合）** 與 **Amtrol（美國阿姆特羅）** 是市場上三大常見的隔膜式壓力桶品牌。以其同等級主力產品（**AQUASKY PumPlus / APT 系列**、**GWS PressureWave 系列**、**Amtrol Well-X-Trol 系列**）為基準，其性能與規格綜合比較如下：\n\n---\n\n### 一、 核心性能與規格比較表\n\n| 項目 / 品牌 | **AQUASKY (PumPlus / APT)** | **Global Water Solutions (PressureWave)** | **Amtrol (Well-X-Trol)** |\n| :--- | :--- | :--- | :--- |\n| **品牌起源 / 製造** | 台灣製造 (台灣設計與生產) | 美國品牌 (全球佈局，主要生產地包含亞洲) | 美國原創品牌 (Worthington 旗下，美國生產為主) |\n| **結構型式** | 固定式隔膜 + 聚丙烯 (PP) 內襯 | 單隔膜 + 聚丙烯 (PP) 內襯 (專利鎖扣環固定) | 鎖圈凹槽密封隔膜 + 抗菌 PP 內襯 |\n| **隔膜材質** | 食品級丁基橡膠 (Butyl) | 高等級丁基橡膠 (FDA 認證 Butyl) | 特厚丁基橡膠 (Heavy Duty Butyl) |\n| **出廠充填氣體** | **100% 純氮氣 (N₂)** | 預充壓縮空氣 / 氮氣 (視出廠批次而定) | 預充壓縮氣體 (標準 38 PSI) |\n| **最高工作壓力** | 標準型 10 bar (150 psi)；另有高壓版 16/25 bar | 標準型 10 bar (150 psi) | 標準型 150 psig (約 10.3 bar) |\n| **最高工作溫度** | 90°C (194°F) | 90°C (194°F) | 93°C (200°F) |\n| **水路接頭材質** | 304 不銹鋼接頭 (無鉛) | 專利不銹鋼水接頭 (避免鋼殼接水) | 304L 不銹鋼水接頭 (具備導流攪拌專利) |\n| **特殊專利 / 特色** | 原廠標配 100% 氮氣預充，減緩壓降漏氣 | 專利內嵌式不銹鋼接口、O 型環密封銅氣嘴 | **Turbulator®** 水流攪拌防沉澱專利、抗菌內襯 |\n| **外殼與底座防腐** | 深沖碳鋼殼 + 雙層/三層聚氨酯環氧烤漆 | 深沖碳鋼殼 + 雙層聚氨酯塗層 + 複合材料底座 | 高強度深沖鋼 + Tuf-Kote™ HG 防腐塗層 + DuraBase® 底座 |\n| **主要飲用水認證** | NSF/ANSI 61 & 372、CE、WaterMark、WRAS/ACS | NSF/ANSI 61 & 372、CE、WRAS、ACS、KC | NSF/ANSI 61、ASME (特定工程系列)、CSA |\n| **原廠保固** | **3 年** (依地區代理政策可能略有不同) | **5 年** (北美及多數市場為 5 年有限保固) | **7 年** (業界領先之原廠有限保固) |\n\n---\n\n### 二、 性能與技術細節差異分析\n\n#### 1. 內膽防腐與衛生技術\n* **Amtrol Well-X-Trol**：\n  在內膽技術上技術積累深厚，其最大亮點是配備專利 **Turbulator®**（水流擾動裝置）與**抗菌內襯（Antimicrobial Liner）**。進出水時會產生漩渦擾動，避免底層積水沈澱形成沉積物或滋生細菌，水質衛生度與抗沉澱性能最高。\n* **Global Water Solutions (GWS)**：\n  採用 FDA 等級的 Virgin Polypropylene（初生聚丙烯）襯裡，搭配專利不銹鋼接頭將水流直接引導進入襯裡內部，水體完全不接觸金屬外殼，不會生鏽或釋放雜質。\n* **AQUASKY**：\n  內膽架構與 GWS 非常相近，同樣採用食品級 Virgin PP 內襯與 FDA 等級高氣密丁基橡膠隔膜，在材料衛生標準（NSF 61/372）上與歐美大廠具備同等水準。\n\n#### 2. 氣室充氣介質與氣密保持性\n* **AQUASKY**：\n  主打全系列出廠標配 **100% 純氮氣（N₂）填充**。相較於一般空氣，氮氣分子較大且不含水分，氣體穿透隔膜分子滲透的速度較慢，且惰性氣體不易隨環境溫度劇烈熱脹冷縮，能更長期維持穩定的預充壓力。\n* **GWS & Amtrol**：\n  氣室同樣具備極佳的氣密性（Amtrol 採用凸焊氣嘴避免微洩漏，GWS 採用 O 型環密閉氣嘴帽），部分批次出廠亦可能使用乾燥空氣或氮氣，但在市場宣傳與出廠規格上，AQUASKY 將「純氮氣填充」作為核心主打賣點。\n\n#### 3. 耐壓等級與應用彈性\n* **Amtrol**：標準型即提供 150 psig 工作壓力，抗壓剛性極高，多數專注於中高階給水與商業大型井水市場（另有 ASME 規範的工程系列）。\n* **GWS**：PressureWave 標稱 10 bar (150 psi)，產品線從小型直立式、橫式到大容量落地型齊全。\n* **AQUASKY**：標準型同樣為 10 bar (150 psi)，但在工業高壓水錘吸收或超高揚程加壓領域，AQUASKY 額外提供最高可達 **16 bar 甚至 25 bar** 的高壓規格型號，在特殊高壓管路系統中的選擇性較寬。\n\n#### 4. 耐用度與原廠保固承諾\n* **Amtrol**：提供業界最長 **7 年保固**，在北美市場被視為信譽最高、壽命最耐久的標竿品牌之一。\n* **GWS**：提供標準 **5 年保固**，全球市場接受度極高，性價比與耐用度平衡出色。\n* **AQUASKY**：原廠提供 **3 年有限保固**（設計壽命宣稱為 10 年以上），在原廠保固年限的承諾上略低於 Amtrol 與 GWS。\n\n---\n\n### 三、 綜合評估與選型建議\n\n1. **若追求最高信譽、最長保固與防細菌沉澱**：\n   **Amtrol Well-X-Trol** 是技術標竿，具備抗菌內壁與水流自擾動專利，並享有最長 7 年保固，但價格通常也是三者中最高。\n2. **若追求全球公認的高通用性與長期口碑**：\n   **GWS PressureWave** 具備出色的 5 年保固、優秀的複合材料抗鏽蝕底座與專利接口，綜合可靠度深得各國泵浦原廠（如 Grundfos 等）青睞。\n3. **若追求性價比、100% 氮氣預充與客製化耐壓（16/25 bar）**：\n   **AQUASKY PumPlus** 性能與材料規格（NSF 認證、PP 襯裡、不銹鋼接頭）完全對標歐美一線品牌，具備極佳的價格競爭力與穩定的氮氣充填技術，適合講求高性價比、預算控制或有高壓規格需求的加壓供水系統。",
+          "refusal": null,
+          "reasoning": "**Analyzing Tank Specs**\n\nI'm currently dissecting the specifications of AQUASKY, Amtrol, and GWS pressure tanks. My focus is on identifying direct equivalents within their product lines and evaluating their performance metrics to draw meaningful comparisons.\n\n**Evaluating Tank Offerings**\n\nI'm assessing the flagship product lines from AQUASKY, Amtrol, and GWS, focusing on their diaphragm and bladder tanks. My goal is to pinpoint direct equivalents and compare their technical specifications for water booster and well systems.\n\n**Analyzing Diaphragm Brands**\n\nI'm currently dissecting the diaphragm pressure tank offerings from AQUASKY (Pumplus/APT), Amtrol (Well-X-Trol/WX), and GWS (PressureWave/Challenger). My focus is on understanding the comparative merits of their fixed-diaphragm designs.\n\n**Exploring Aquasky Design**\n\nI'm currently dissecting the structural and design nuances of AQUASKY units, specifically the Pumplus and APT series originating from Taiwan. My focus is on their diaphragm construction, noting the use of virgin polypropylene liners paired with FDA-grade butyl rubber diaphragms, and the pre-defined air chamber.\n\n**Analyzing Component Specifics**\n\nI'm now detailing the material specifications, noting stainless steel water connections and robust carbon steel shells with a two-part polyurethane/epoxy finish. I've also noted their pressure ratings, temperature limits, and comprehensive certifications, alongside a standard three-year warranty.\n\n**Comparing Tank Construction**\n\nI'm now contrasting the Amtrol Well-X-Trol's design, noting its heavy-duty butyl diaphragm, virgin polypropylene liner with antimicrobial protection, and the patented Turbulator® to prevent stagnation. The air stem is projection welded, and the water connection, while not explicitly detailed here, is a point for future comparison.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Analyzing Tank Specs**\n\nI'm currently dissecting the specifications of AQUASKY, Amtrol, and GWS pressure tanks. My focus is on identifying direct equivalents within their product lines and evaluating their performance metrics to draw meaningful comparisons.\n\n**Evaluating Tank Offerings**\n\nI'm assessing the flagship product lines from AQUASKY, Amtrol, and GWS, focusing on their diaphragm and bladder tanks. My goal is to pinpoint direct equivalents and compare their technical specifications for water booster and well systems.\n\n**Analyzing Diaphragm Brands**\n\nI'm currently dissecting the diaphragm pressure tank offerings from AQUASKY (Pumplus/APT), Amtrol (Well-X-Trol/WX), and GWS (PressureWave/Challenger). My focus is on understanding the comparative merits of their fixed-diaphragm designs.\n\n**Exploring Aquasky Design**\n\nI'm currently dissecting the structural and design nuances of AQUASKY units, specifically the Pumplus and APT series originating from Taiwan. My focus is on their diaphragm construction, noting the use of virgin polypropylene liners paired with FDA-grade butyl rubber diaphragms, and the pre-defined air chamber.\n\n**Analyzing Component Specifics**\n\nI'm now detailing the material specifications, noting stainless steel water connections and robust carbon steel shells with a two-part polyurethane/epoxy finish. I've also noted their pressure ratings, temperature limits, and comprehensive certifications, alongside a standard three-year warranty.\n\n**Comparing Tank Construction**\n\nI'm now contrasting the Amtrol Well-X-Trol's design, noting its heavy-duty butyl diaphragm, virgin polypropylene liner with antimicrobial protection, and the patented Turbulator® to prevent stagnation. The air stem is projection welded, and the water connection, while not explicitly detailed here, is a point for future comparison.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBtA6ahVaCQD9b_-m_irUHqDxDhABp-TT6vmOHo9NeQpiCeWBlRbNyd817CBiHBLYbMSdvziexBV9LJox2A7f2vGK7lIo5xoZ1-CiTRxw3tSAv0QeXyGrKexXj5ViP-3V36dQ8PBiEEweq86dDQAHOc76R5_-s90lr6EJ5dzKayH6uOk_erYUui2Ix",
+                "title": "gwsusa.com",
+                "start_index": 0,
+                "end_index": 246
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJAfKV-4MEaaAfpmYUrW6GzHdhXOjFCkh-l8_oS8b1yTpKWH_3T7wmMKx2Yq2znQqgQNstw2OushOMvO-_1JEcygQFD38DQrACOVRs5Q3rkB6a9wTn4ppKnCzhE7-pAva1QQBQYJClZUT0UzpirSJiLA==",
+                "title": "amtrol.com",
+                "start_index": 0,
+                "end_index": 246
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu49-atB8NqV6TAQirKOiB3pa-vKsN4EoMD8EkWNMoz72MEgUg-LaP93yX_bjsPoI40UXlNTu0dfphebt2KyL3nG9YAUqCpxatfu2D76lFPhc0gdYTOqQ9oiOAk9VGBXAPhwR-JAcNAGTiDpYPrsIs",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 246
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdEjs4heybXxCuQS5fq2kp_4YU_1eAz9ExRwH1FMZVB3qe5rqUQ04vh09kbDaBLO4XbwBf-cuBTuq-R9NnxgPygT1-FWbc-Z52-ady2tgMRrL6QUmXox4fiYvC1tF33FgHLus3gLeCsBR0dGAtLqwjxqSIScXgjXZOKRo7mPySSfHQ37UzNMbD",
+                "title": "gwsusa.com",
+                "start_index": 249,
+                "end_index": 424
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmMZGigZ1A3lrO_mPvOZDSDDy56aLWJN3P8EZ-wTg64Mb3zanlttloJaHiRvHA0SJLwoITATscFtut61y3L97m6NrnGcEvvguhKcwtYUIZvQaTmYt90seZgfA7aC97hFiniAJIrg7fxvwTDk6FSfP1CAwAV4Ud8LA35W7SDVovAOgT4WLxB1lO7U8=",
+                "title": "aquascience.net",
+                "start_index": 249,
+                "end_index": 424
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqlXB0Cotr8WqaGvMUZskS0YsSXikUGswGnyF46op-a_xgg8bioGwYqz6iE3vQVS4pAoY_2OHeJyMp09WNOPagWsHmdYXmqTYUOjXCnPruPUICaMUZXYYrzw_hk0jolcSyO7Szq8tXGN1MpCI29n9T9WI_1-PdNeacXhzrJVuJkvOev7Lw4psoimWwyjv4pMAOP0qeuObsB9nWAf2QY_E1HtzuZFjj",
+                "title": "indiamart.com",
+                "start_index": 249,
+                "end_index": 424
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7Vl5mNtFAVG_YsFLfg0t9mIxX3_yGTAkodVPH23wviWAG8Z_MjGmiwCUQ_H_t9Oeu6hI1JIV-STj6rpChWkdoHyYGJXcvzk2m999-rYDWKQ6CN7GNfKPKA_HDqB39LY7SRVksFXcMSjDm7njeysLKG_h30-ahsy9bMXgMAUBZEiCtPynw5HHfAy3fervrs3BMWbDA",
+                "title": "amtrol.com",
+                "start_index": 477,
+                "end_index": 817
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5bvKW_vr9L5XpveNsUBsyzU1pADPH4CBi44G8l-Xdm36XRsijWEnlotIF1GiV6gcKdsSYf7jojSlXZcRJ1jnth2jQZgoh8AT-bt55ocn4v1qIbef9UgJwfgVZezWmWF3ZzgqLYfD9KU6qitrnBmiy1w==",
+                "title": "aquaskyplus.com",
+                "start_index": 477,
+                "end_index": 880
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaCrFOVSeZQiRvvEKd-o5j27fvKLAVO9PouSQfs0MjQaZP7zSvZhO_Agu3_S87QwgHWUilzXkqgDYy2grnuQrooarX-NzyDZCZpufjzC2O1I35SSLdQ-xdF8BoVVBBYJptPhZ6c5383jak0E18QKZd3DX7oSkvPXHJA5ZzvQHl0tVnsav5P4S2RIILYLtoSXhRA4URvLY1nUI=",
+                "title": "pumpa.eu",
+                "start_index": 477,
+                "end_index": 940
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmpiWNFTZLmzKUO45u6VP8mXkd4AqurFqOMoxrlrX3-dm-sc-dUd9K9IvkdiIdVjy9rsrgZZN53umQQlXGR4ESA7EXDj_31iBIGAbk-ATJV6PBbgvaez7pfVUsHhNZM3-lVLq_1YNnis7c1xx08ZFEljIo9shSdo8H-_vptG9czx0LFJqcxpZoNZDTVqpD6X3tUmHn0qVcQqdxAiMAn3sBF7LpNL7jH4UN6bHgVS9v28NL_4DQenaeG_aG3X5P-uLgx1-joXc=",
+                "title": "storeseven.com",
+                "start_index": 477,
+                "end_index": 940
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQTqxpN-Cqb1xnvD3rH_85gtjKPJ26Jene570H2-PUw8WidWivR1WUVkZV0NVhhNIXlwYkJ3pQp-UlfmHItzEivcrkgzNqL4K_dLIMgXyxJFI8xUj5BA8pcbZkkrFdd5FusiBbJQpYq7n62NzzNtZ1d7uAXFXjM70Y1jmHlZM6gkSINsG5fe4TWwn5wwWhAJLbexEsCzVmAlK-JpSHI1Fa_OhRJbeJSVi2lTO751pfn9xAho4b",
+                "title": "walmart.com",
+                "start_index": 477,
+                "end_index": 1082
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHU-UXiCWj-fRzbGAsQu7EO1Cskfa51xXdjVcbym2v_Y96mzY0T2Qx_zUomN48S8QDxP5s2wAeAhBej6_-ksrrw7UCYLLgd2wFbj2Iug_YtiZ-wovL2-orsvqtIeKhBZSGf1yQ6Zz-Usq7_yoPaOue-ms_yt3PUDmvvUTmOiCbY1ql0ETAgigzt4U_UobqhK1296VKew==",
+                "title": "rcworst.com",
+                "start_index": 477,
+                "end_index": 1122
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExoquCc2-hrSmje6ALejQankOQ2jKuqyjujCB3-cbGkNUL8_7gjgYppB4IFIjJiVSFv3UDOEZBbZlQ26AalTJCQUmx3Xv0Bkf342AJVREHDAGHTy3oMUE1tH8=",
+                "title": "assaaquaenterprises.com",
+                "start_index": 477,
+                "end_index": 1177
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2acWorbxM2PXRZ_7T0k2Ges8s3aOctCTN5DETVJO3z2LfO4oML6we52l_hFGR9HpMKuuZ3NbOB5igO5J45dBsQ1LEWVxWgUBOatvyhLOLG7fxRsLQMz78UVp5WWU=",
+                "title": "premieraqua.co.za",
+                "start_index": 477,
+                "end_index": 1352
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2BI7dO9ddKkST5O7ajeaNA15miZoJgR4VsrU25Pokmgh1tTgSdRCUqIZ3tWAyRKZ_GxYMzdyiDcTCSxiO3VyGEpYY3syaEUzIP9MxlZbeexGa1jxlOVFn__WBoiColb-2x1pMDeLa7EPA6zSremmGpl1pzMg=",
+                "title": "amtrol.com",
+                "start_index": 477,
+                "end_index": 1417
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgYoJhXqRsmTPedAzIIJw4W9LHBAZ4uWz3jkNPUlLyteOZHL-2F83Bb3TBWpV6CGlccnsZSzQ6PuWB0MmTmOc6FFxpIjUja7bc_SZ_4dHiJx_S29u8_ZlIRYvznOEX0RoX25SC67DH4TOSXJMBsZ6yDKhYlpkirRkhqutv_PDhghob00FF0WHhmPsiGWsbsGgRHW_NchEZF0QIIkgi9lzeicsZ_nnnJYFunUBOhrpWAU5a-ts7hkh2zHWo6QQ=",
+                "title": "familyfirsttaxcompanyllc.org",
+                "start_index": 477,
+                "end_index": 1478
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpSgkFuYJ93I6K5rDCA5PBUM-XXpJf9w38OvEpIR-kjBY6RPd5OqR_0rvzm3wtxQPUZ0yvMt83W_w5YyPh_BxIQTx6epAtG2cenGycOHYIXE6WxwCxh4cV6l2Idn9KCyxeHKIDhvRMgF8BS6RH5q8RxKck-gAt84detmWF1ktQ_LIn1xgPzgiQpYLxv0gQda5WIg==",
+                "title": "rcworst.com",
+                "start_index": 477,
+                "end_index": 1495
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP8ZeKhpEHMerFzXAQiNpl1mUUD1OCnVUVyWgJoCQqjddKaFAlwj3o1i4qNcmDq_6oYmSRtybpYLzyxA4g9VDBat70X3VCLh9GT90iCtw81-GzF7_KnKzmD-u8pRKaHTAiQN_Qqivrp2I7iX3SHzYp7AIStcs5lKsvgViwPuKpvJBxJz0x12PEPsRS1tRTHBc=",
+                "title": "aquaskyplus.com",
+                "start_index": 477,
+                "end_index": 2156
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtFxJRZPrLQd1_gkNsplrSs6Ex31sd22-uk1bAlae_q_O7nr2_yYKzTGOtaPGA-bq3wIt0qSBH2ZIS01-0S4Yl7WPoN7vlXmcqn8otwKbfiwV1xA0sk5OPElWzV1j2",
+                "title": "device.report",
+                "start_index": 477,
+                "end_index": 2379
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 4071,
+      "total_tokens": 4146,
+      "cost": 0.0993225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0993225,
+        "upstream_inference_prompt_cost": 5.625e-05,
+        "upstream_inference_completions_cost": 0.01526625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1484,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 6
+      }
+    }
+  }
+}

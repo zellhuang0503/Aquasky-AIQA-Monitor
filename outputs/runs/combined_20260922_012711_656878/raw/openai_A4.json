@@ -1,0 +1,170 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "反滲透（RO）淨水系統用的壓力桶，該怎麼選？有推薦的品牌嗎？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790007845-awcjmQyO1Il3C9kBLVix",
+    "object": "chat.completion",
+    "created": 1790007845,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**挑 RO 壓力桶，我會優先看「實際可用水量、接頭與壓力相容性、可查證的認證」，而不是只看品牌或不鏽鋼外殼。**品牌方面，可先比較 **TankPAC／PA-E、PurePro**；若是較大容量或商用系統，再考慮 **Pentair Everpure**。以下推薦是根據公開規格與文件完整度，不是耐用度實測排名。\n\n## 一、怎麼選？重點有 5 個\n\n### 1. 先分清楚「桶子容積」與「實際能放出的水量」\n\n**標示 4 加侖，不代表能接出 4 加侖的水。**壓力桶內有壓縮空氣，儲水量會受到進水壓力、預充氣壓及系統設定影響；APEC 的原廠說明書也明確區分桶體容量與不同水壓下的儲水量。([images.thdstatic.com](https://images.thdstatic.com/catalog/pdfImages/7b/7bbd75e4-f028-4de1-a4de-b04ac8fcf5e8.pdf))\n\n我的選購建議：\n- 先想清楚「一次連續要接多少水」，例如水壺加煮飯共需幾公升。\n- 請賣家提供**你家工作壓力下的可用水量**，不要只給桶體公升數。\n- 若原本容量夠用，只是最近出水變少，先檢查預充氣壓，不一定需要買更大桶。原廠維修文件也把排空後檢查氣壓列為處理方式。([watergeneral.com](https://www.watergeneral.com/support/pdf/rechargetank.pdf?utm_source=openai))\n\n### 2. 接頭、尺寸、耐壓要一起核對\n\n下單前至少確認：\n\n| 項目 | 要問什麼 |\n|---|---|\n| 安裝空間 | 桶高、直徑之外，是否留得下球閥與水管？ |\n| 桶口螺紋 | 是不是原機需要的規格，例如 **1/4 吋 NPT**？ |\n| 球閥管側 | 是否能接原機水管？是否附球閥？ |\n| 最大工作壓力 | 能否符合整套系統的要求？ |\n| 擺放方式 | 原廠是否允許橫放？ |\n\n不同桶款差異不小：GWS RO-132 使用 1/4 吋 NPT 接口，Pentair 商用 RO 桶則有 1 吋、1¼ 吋 NPT；PurePro 部分家用款明載可直放或橫放。**不能只因為都叫 RO 壓力桶，就當成能直接替換。**([globalwatersolutions.com](https://www.globalwatersolutions.com/apac/ro-132-1496.html))\n\n### 3. 看接觸水的材質，不只看外殼\n\n以 TankPAC／GWS 的產品為例，其結構包括 **PP 內襯與丁基橡膠隔膜**；因此「金屬外殼」不等於水直接接觸金屬，「不鏽鋼桶」也不能直接推論成沒有橡膠或塑膠接觸水。([tankpac.com](https://www.tankpac.com/ro-pressure-tanks?utm_source=openai))\n\n我的建議是：**先確認內襯、隔膜、接頭材質及認證，再決定是否為外殼材質加價。**\n\n### 4. 認證要查「完整型號與範圍」\n\nNSF/ANSI 58 適用於 RO 系統及相關零件，涉及接觸飲水材料安全、結構完整性，以及適用的系統性能要求。**桶子的零件認證，不代表整台淨水器所有污染物去除效果都經過認證。**([nsf.org](https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems?utm_source=openai))\n\n購買時我會要求賣家提供：\n- 製造商名稱與完整型號。\n- 認證機構及可核對的登錄資料。\n- 認證涵蓋的範圍，而不是只看一張 NSF 標誌圖片。\n\nNSF 有公開產品名錄可供核對。以下品牌的認證描述部分來自原廠網站；**我沒有逐一完成所有在售型號的第三方名錄核驗**，因此不把整個品牌一概視為都已認證。([info.nsf.org](https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=058&TradeName=&utm_source=openai))\n\n### 5. 預充氣壓照原廠設定，別自行打高\n\n例如 GWS RO-132 公布的預充氣壓為 **7 psi**，但這不是所有桶款的通用值。量測或調整預充氣壓時，要在**桶內水排空後**進行，不能拿裝滿水時的讀值當作預充氣壓。([globalwatersolutions.com](https://www.globalwatersolutions.com/apac/ro-132-1496.html))\n\n## 二、推薦哪些品牌？\n\n| 品牌／系列 | 我的推薦情境 | 選購注意事項 |\n|---|---|---|\n| **TankPAC／PA-E、GWS RO 桶系列** | **一般家用替換，我會優先列入比較** | 原廠有內襯、隔膜、接頭、預充氣壓與耐壓資料。例如 GWS RO-132 公布總容積 18 L、1/4 吋 NPT、預充 7 psi、最高工作壓力 100 psi；18 L 不是可直接取出的水量。([globalwatersolutions.com](https://www.globalwatersolutions.com/apac/ro-132-1496.html)) |\n| **PurePro** | 想比較不同大小、金屬或塑膠外殼的家用桶 | 原廠提供多種尺寸及 1/4 吋 NPT 家用款，也有塑膠外殼款。購買時要核對實際桶身標籤、容量定義及認證資料。([pure-pro.com](https://www.pure-pro.com/water_storage_tanks.htm?utm_source=openai)) |\n| **Pentair Everpure RO 儲水桶** | 較大容量、商用設備或由專業人員配套選型 | 官方系列有複合材料桶身與多種容量，但接口及預充設定範圍與一般廚下小桶不同，不建議未確認相容性就直接替換。([pentair.com](https://www.pentair.com/commercial-filtration/products/tanks/ro-storage-tanks.html?utm_source=openai)) |\n\n**特別提醒：不要只憑「RO-132」這類型號字樣買。**我查到 GWS 與 PurePro 的公開資料，對 RO-132 的容量標示並不相同；無法僅凭型號確認是相同產品或相同容量定義，應以實際品牌、桶身標籤及該產品規格書為準。([globalwatersolutions.com](https://www.globalwatersolutions.com/apac/ro-132-1496.html))\n\n## 我的結論\n\n若是一般廚下 RO 換桶，我會先選：\n\n**容量符合一次取水需求、有完整型號與可核對認證、原機接頭相容、當地有保固服務的 TankPAC／PA-E 或 PurePro。**沒有足夠可靠的比較資料能斷言哪一家一定最耐用，也不建議單憑「全不鏽鋼」「食品級」就多付錢。\n\n你可以提供 **所在地、RO 主機型號、舊桶標籤照片、櫥櫃可用尺寸，以及一次大約要接幾公升水**；有這些資料，才能把推薦縮小到合適的桶款。",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVo0SMyJ86GGNrCtZXJhco6a9g0VlixbE9c4XNexrOe4xdPtjXNo8wcPZa_RXzfokHHl0OGTLRZ24TEy6sleuYQrZY_LQDQJYrAlrvMGRxvooBA-GE65DJLzVNsHpIqhSYk6ZrqhUP52vZB0lfntnyFSHXS2CS9ulpjb6rqhnFVUw_dQWMENM7ysfG8G7MlKpIjVt7sIEl9hSJukclpyniDtxwKMnCUYmfqaRaFl6bFw37VNz_3uPIPsRgj0vw1IN2Z93wcEbFoG4wAGp0swrTk36_HNE1IvUL6oARfnncSp6-PD3P7nl-EdYJJogxzw_tKYWc1ounClmVtbVOUKnXSWsEL_GfrkHwYd47A2B9lCA38-rE7mRxWTjPO_OGALsmHQqC1HMduxIGR5fT8Hm2nJzvxs5afIZFGIv0qfuEVZWM7K9YSqWjDeNcuuSyZVx9N4l5Ty0hVSTA67pmsgps1X44GBqVb-Z_sNq4p1cWyYWT_SHpavcVbS6NyiNn2pP0b-EF6jRnYHbDh8JEhOhxG867EUsJbb_LgvM9ffclzUQqD2MMwLzQLZvGy_SJAdUnOTAr7WCNOr_3ZP24HpX56nNSA-hTzkqmcaMJQikpxtRciDrxdsg6DJdz5pNynB51SR34Qd9Tffnn3QzU_CfDSSUgHIVixrJG4pJ3OFjOhPRmMQ1kLB4o1XlJjPLciboLPq0OJbMzZHTZSRfjIM-XCy_UXL1lOvVXqBTEI4bWNEfZfxUc05YLLf4fdoyKJhodpxpsCNIhKRUczDpfTlZNMAbUYjrTHWJWgHDMUnLN0h2V2iDQxdjZzCHEbHLuB-h5nFhzg5A_6WHe6WBKcqSJWiQwjgLnKuF7APG2_7t27G-v2DByByQA2qIHhdnzR3ZuF0aqk-hsrRO4ILxkicpjcwFW19X4ZpY_ptBd2vD82vzy6E1x-IDxzX9eukZ_AcWI7oxFRgBI0JmYOhLZHAMqYtLSrzzboG4ZdkYzCSPE8MIklSz_0_aSJ6-bYJ3jx52ZAj33vbdRVCCdRaZctimbgtuGB26_iH0F6VMcISZwQNr6Q-MtF8cmlAYtQK4UhPpsuvcuB3j8kAMDRVaqSYD8T6C3koY2DVM96Es-So38sqZygL-b-Qa6n6UrsRm_m0jVbrWLoBbVWDGbHmqFowFUdk5BwLWt5p9PuNNbBlTh3WpjHoFWhDlQEKD2pfgrMYvV9Nd3_cyYaql86B8CKGcC9ADaow130x2zaM2TQAE0T8Om1gLPS81iGm3MWtQiPiLtQ-Tjun0oaDcfNyx7z16hghaUQNHREUtW9buInMB4AC3jWK2d6xnYHm5kpIOU6ptZ6nNMLT-2qysbAc4lLoirvJYWOTaZKaOchE2kHr2CBp3QCwWInlvE2Qa6A8ew_Zw0Cr.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_04cd001b9f250fff016ab15a33ec5087d1ab0662bc174e8517",
+              "index": 0
+            },
+            {
+              "type": "reasoning.summary",
+              "summary": "**Considering certification sources**\n\nI need to formulate an answer that’s about 900 to 1400 words in Chinese. It's important to incorporate three brands: Tankpac, Purepro, and Pentair. I might run into the issue of redundant citations since there’s a guideline about having more than half from NSF sources. I’ll need to focus on primary sources and perhaps adjust my approach to avoid awkward repetitions. I should check the primary manuals to get the necessary capacity information.",
+              "format": "openai-responses-v1",
+              "index": 1
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVo6rQn8tEk_hXHJ-ZiEdSk6B_SiEO5_l9oO-F0O6Bn1g2zBKotf0D5R2a543_urZkSvBuepoD8F4nxvDnPDkgDCF5TDISoXnYXvotQIZR1J3HrUFIbIlIm7YUPxg4x1TydJB12BY0lprnx2JbtOcbyl81UytUNAxnD7P3UBki3ym4DHZLjonMmIerBCcI5UgycgBwBkYIU6WPrgTDZ7Y6l06a-p-HQIqCora2ZgFK4l0gPmkuBk4K0rroHliGOpDtWBy3wAVnuk8bpA0Nz_oMl5y4ASw6aU5N244iz4XFCcGSJAaslfhry_HwIizsPLMo927ldT-ZiHHx_R7Qzj10g-XKF2A4QnMiiq_obU8EL9aGQdfJVRhjRE-BsRUL6JPp6u98gEjLPQTS8DaC4Rq86wFTu35GvslYET2y3JmVBVAMevjByehEnHPt7uw1zxlUof-_wOOIKDDEzS_GORNj_8QB5gZZfdexqjma4iVC0A2_KCS1OndNlsPU5igmhhZiYtbDiwBxw4wFU80HcL9qPov0TiTgsp5hCr3CXvHTcp6ptCsV3PXTb9o0wtY6xjQ7ibsmBmelslMGLhM53wxqeKYQyXDNwY_Z58GAkmFhc3hqMoJE3RIHAVAd1_Vyv-0xkm-RuDfxE9RXRRjC326ONOfP_76JNB2qq-J8x9ExaokmDxSNIEs8mpuNKXXKIFsRLv4nC8UIBio8kI46pHxIs9ypCfSpztnV7D9LYNk_9xk1URMhq2UfNiDfB076npkEjPqC-CKLj68TwIjAeZrBmkAxASCx1eCwBLF7dyqWMb8ks50td30IMMGwfpe1Zt968S9TkNMPb0v1APQ7ddKpjIV7oSwwDLL24USXuwGboccKbbm3eQGcYJkiyLZG7-0yeFUoG0h_i1zZhUCijGeifKaOHtrTImXTW06NpqQ6zN8vHxpPvwu_bUqbiapbvZ8iXWJO-3eCUnlv8kzugnODe0qowE-ThKV-yPwDFTt-I780nmpsE0CxtwDbee9ZBueJesVzBfTQpznG0cOzk7jyJmiEA5AW8JGoSnTfcn0OizroFof4pSFeky1brAlCuC0GvDJnT1PdV7OYaFsrYSJERfdPFU3Eatn2S4pOH414bNIhDKtnWBJtsiriVm2v3Q20xKwrxXiC3IiXEQ7SyHn9w6sSn6e3_-NRVyUgGC1B0QzfdWqaExW7sJBUus_dVmDs75f9YGqPiLFdLd_pBxV66NeO7isK9mVLyAOZlloR_IUKmnQO4sE_uD_2GeQMbJ1QFj3aiqcenisZumzgg3kyKhGuYUxLPVRVIAVtlj18ed4lvbitg1lQol9d7dSLrjlVhljpnpyLloyB_GRSwgX2p6UgSZ33UQmZmB7cHgQtcYXLi-nPrKVen0dbDCfxrTXthJrpEI1DFY2VvhxfFe0Svn0ZrE4JKtr_pnB2sQ1-TBU53b4pNopuf0RFbnYj2L91mb6lFCwYUQFR-L2GbcRuj5CtSwwPr_PPd74ikwzGGwn0j2G0nYwd0w_dgL3gc8RcmnnCnUO_ErfSzl1WqtZ6pvodtmmRP9mmetodlVdocPWicRlxPy7z-ICBuURClzMkcnxoD1VTSPvn8ysjgbneJsmOnxjuvhpmV2UfX-P_YI_TnouY40PiFlPlpN2qkKigiHfB9-N2tMNgJkcu-H5VoJkQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_04cd001b9f250fff016ab15a388f3887d1832f1a951467984c",
+              "index": 2
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://images.thdstatic.com/catalog/pdfImages/7b/7bbd75e4-f028-4de1-a4de-b04ac8fcf5e8.pdf",
+                "title": "",
+                "start_index": 297,
+                "end_index": 413
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.watergeneral.com/support/pdf/rechargetank.pdf?utm_source=openai",
+                "title": "RECHARGING TANK PROCEDURE:",
+                "start_index": 549,
+                "end_index": 646
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/apac/ro-132-1496.html",
+                "title": "RO-132 | Global Water Solutions",
+                "start_index": 967,
+                "end_index": 1055
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.tankpac.com/ro-pressure-tanks?utm_source=openai",
+                "title": "RO Pressure Tanks for Reverse Osmosis Water Filter Systems",
+                "start_index": 1166,
+                "end_index": 1242
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.nsf.org/knowledge-library/nsf-ansi-58-reverse-osmosis-drinking-water-treatment-systems?utm_source=openai",
+                "title": "NSF/ANSI 58: Reverse Osmosis Drinking Water Treatment Systems | NSF",
+                "start_index": 1399,
+                "end_index": 1528
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?Standard=058&TradeName=&utm_source=openai",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 1680,
+                "end_index": 1788
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.pure-pro.com/water_storage_tanks.htm?utm_source=openai",
+                "title": "PurePro® Water Storage Tanks",
+                "start_index": 2384,
+                "end_index": 2468
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.pentair.com/commercial-filtration/products/tanks/ro-storage-tanks.html?utm_source=openai",
+                "title": "Pentair RO Storage Tanks",
+                "start_index": 2577,
+                "end_index": 2694
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 29917,
+      "completion_tokens": 2197,
+      "total_tokens": 32114,
+      "cost": 0.4093905,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 35,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.4093905,
+        "upstream_inference_prompt_cost": 0.2595405,
+        "upstream_inference_completions_cost": 0.10985
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 410,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

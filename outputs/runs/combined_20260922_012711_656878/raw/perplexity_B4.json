@@ -1,0 +1,182 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的產品有哪些國際認證？例如 NSF、WRAS、CE。"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "AQUASKY 官網與公開資料中**可查證**的國際／外部認證，主要包括 **NSF/ANSI 58、NSF/ANSI 61、NSF/ANSI 372、CE、PED、ISO 9001、UPC、KC、ACS、WaterMark、IAPMO R&T**；其中有些是**產品認證**，有些是**管理系統或法規符合性**，不能全部視為同一類型的「產品認證」[1][4][6][7][8][9]。\n\n依公開資料整理如下：\n\n- **NSF/ANSI 58**：AQUASKY 的部分逆滲透（RO）儲水桶／系統在 NSF 公開名錄中可查到符合 NSF/ANSI 58 的列名[8]。\n- **NSF/ANSI 61**：官網列為符合美加飲用水接觸材料要求的標準之一[1][4][5][7]。\n- **NSF/ANSI 372**：官網列出此標準，重點是飲用水接觸材料的**低鉛**限制[1][4][5]。\n- **CE**：AQUASKY 官網與型錄多次標示 CE 認證／符合歐盟相關要求[6][7][9]。\n- **PED**：官網明確寫到壓力桶依 PED（Pressure Equipment Directive）認證／製造[1][4][5]。\n- **ISO 9001**：官網列出 ISO 9001:2015，型錄也提到 ISO 9001:2008 登錄工廠；這是**品質管理系統**認證，不是產品性能認證[1][4][5][7][9]。\n- **UPC**：官網列為 UPC certification mark，型錄也提到 UPC[1][4][7]。\n- **KC**：官網列出韓國 KC 標誌[1][4][5][6]。\n- **ACS**：官網西語頁面提到在法國，與飲用水接觸的裝置／配件需具 ACS 認證，且 AQUASKY 頁面將其列入相關認證說明[5][6]。\n- **WaterMark**：官網指出產品可取得 WaterMark，且澳洲公用市場可接受[1][4][5]。\n- **IAPMO R&T / IAPMO R&T Oceana**：公開 PDF 與名錄顯示其產品有經 IAPMO R&T 測試／列名，並有對應的符合性證書[2][7]。\n\n幾點需要特別說明：\n\n- **「有提到」不等於「整個 AQUASKY 全系列都具備」**。公開資料顯示，多數認證是**特定型號或特定系列**才適用，不能直接推論所有產品都同時具備全部認證[2][8][9]。\n- **官網自述與第三方名錄都存在**：例如 NSF 官方名錄可直接查到 AQUASKY 的列名，這部分可信度高於單純官網宣稱[8]。\n- 若你要的是**某一個具體型號**（例如 APT-40H、RO-PLUS、壓力桶、淨水系統），我可以再幫你整理成「型號 × 認證」對照表，避免把不同產品的認證混在一起[6][7][8][9]。\n\n如果你願意，我下一步可以直接幫你做一份：\n- **AQUASKY 全部已查證認證清單**\n- 或 **依型號整理的認證對照表**",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://aquaskyplus.com/en/certification",
+      "https://aquaskyplus.com/upfile/Files/WM-022939%20Certificate%20of%20Conformity.pdf",
+      "https://aquaskyplus.com/ru",
+      "https://aquaskyplus.com/certification.php?lang=ru",
+      "https://aquaskyplus.com/certification.php?lang=es",
+      "https://www.skia.org.tw/hardware/PUMPLUS",
+      "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf",
+      "https://info.nsf.org/Certified/DWTU/Listings.asp?Company=12210&Standard=058",
+      "https://aquaskyplus.com/download/EDM/Chinese/AQUASKY_ROT-PLUS-DM-CH_251127web.pdf",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851",
+      "https://aquaticsuppliesusa.com/products/fluval-aquasky-bluetooth-led-aquarium-lights",
+      "https://www.aquaskyrot4.com/under-sink-systems",
+      "https://fluvalaquatics.com/uk/shop/product/aquasky-3-0-led-12w-15-24-5-38-63-cm"
+    ],
+    "created": 1790008767,
+    "id": "db238a05-d394-42fb-8796-d0e07063e05e",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2026-08-25",
+        "place_metadata": null,
+        "snippet": "All of Aquasky Pressure Tank is certified by PED and made by PED certified welder.\n...\nNSF/ANSI 58 establishes the minimum requirements for the certification of point-of-use (POU) reverse osmosis systems designed to reduce contaminants that may be present in public or private drinking water.\n...\nNSF...",
+        "source": "web",
+        "title": "certification - aquasky",
+        "url": "https://aquaskyplus.com/en/certification"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-05-10",
+        "place_metadata": null,
+        "snippet": "WMTS485:2018\n...\nStandards: WMTS485:2018\n...\nBrand Name\nModel Name\nModel ID",
+        "source": "web",
+        "title": "IAPMO R&T OCEANA",
+        "url": "https://aquaskyplus.com/upfile/Files/WM-022939%20Certificate%20of%20Conformity.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-08",
+        "place_metadata": null,
+        "snippet": "Европейское соответствие\nСертификат ISO 9001//Евросерт\nсертификация без содержания свинца\nUPC Единый сантехнический кодекс\nNSF Национальный фонд санитарии 58\nЗаполнение азотом\nСертификация Корея KC метки\nЗащита от ржавчины",
+        "source": "web",
+        "title": "AQUASKY",
+        "url": "https://aquaskyplus.com/ru"
+      },
+      {
+        "date": "2023-11-02",
+        "last_updated": "2024-11-21",
+        "place_metadata": null,
+        "snippet": "Все резервуары под давлением Aquasky сертифицированы по PED и изготовлены сварщиком, сертифицированным по PED.\nNSF/ANSI 58 устанавливает минимальные требования к сертификации систем обратного осмоса для точек использования (POU), предназначенных для уменьшения загрязнителей, которые могут присутство...",
+        "source": "web",
+        "title": "СЕРТИФИКАЦИЯ",
+        "url": "https://aquaskyplus.com/certification.php?lang=ru"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "Todos los tanques de presión de Aquasky están certificados por PED y están fabricados por soldadores certificados por PED.\nLa norma NSF/ANSI 58 establece los requisitos mínimos para la certificación de sistemas de ósmosis inversa de punto de uso (POU) diseñados para reducir los contaminantes que pue...",
+        "source": "web",
+        "title": "CERTIFICACIÓN",
+        "url": "https://aquaskyplus.com/certification.php?lang=es"
+      },
+      {
+        "date": "2014-01-01",
+        "last_updated": "2024-10-24",
+        "place_metadata": null,
+        "snippet": "- APT-120｜Pressure Tank｜9-10 faucets, NSF, CE｜Aquasky\n- APT-40H｜Pressure Tank｜ISO9001, NSF, CE｜Aquasky\n- Video\n...\n- Produced according to the standards established by PED 2014/68/EU and EN 13831 regulations\n- Certification: CE, ISO9001, UPC, NSF58, NSF61, ACS, KC\n- High level of customization\n...\nA...",
+        "source": "web",
+        "title": "PUMPLUS | 臺中市潭雅神工業廠商協進會",
+        "url": "https://www.skia.org.tw/hardware/PUMPLUS"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-08",
+        "place_metadata": null,
+        "snippet": "6. 100% Pressure Testing \n7. IAMPO, CE, NSF certified approved\nStainless Connector\n...\nNSF Certified Butyl Rubber Diaphragm \n100% Air Seal\n...\nAll RO-PLUS tanks are manufactured at our ISO 9001:2008 regis- tered facilities.\nNSF listed as the highest standard for RO tank.\nIAPMO and CE certified for t...",
+        "source": "web",
+        "title": "[PDF] AQUASKYPLUS Ebook0823(WEB)",
+        "url": "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf"
+      },
+      {
+        "date": "2025-04-09",
+        "last_updated": "2025-04-10",
+        "place_metadata": null,
+        "snippet": "**NSF/ANSI 58**\nReverse Osmosis Drinking Water Treatment Systems\nReverse Osmosis Drinking Water Treatment Systems\n|Aquasky Enterprises Co., Ltd.|\n...\n|No. 36, Lane 212, Section 1 Hemu Road|\n|Shenggang District|\n|Taichung City 429|\n|Taiwan|\n|886 4 256 26368|\n...\n**Facility :**Taichung City, Taiwan\n.....",
+        "source": "web",
+        "title": "NSF Product and Service Listings",
+        "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?Company=12210&Standard=058"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-01-12",
+        "place_metadata": null,
+        "snippet": "所有 RO-PLUS 儲水桶均依照 ISO 9001 : 2008 生產\n製造， 也皆取得RO儲水桶的最高標準NSF及市場上最安全壓力容器的 IAPMO 和 CE 認證。\n...\n886-4-2561-6332",
+        "source": "web",
+        "title": "R O 逆滲透儲水桶",
+        "url": "https://aquaskyplus.com/download/EDM/Chinese/AQUASKY_ROT-PLUS-DM-CH_251127web.pdf"
+      },
+      {
+        "date": "2025-04-01",
+        "last_updated": "2025-11-27",
+        "place_metadata": null,
+        "snippet": "Each pressure tank undergoes 100% pressure safety testing, ensuring that only the best products leave the factory.|",
+        "source": "web",
+        "title": "AQUASKY Enterprise Corp. - 臺中市政府經濟發展局",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-01-28",
+        "place_metadata": null,
+        "snippet": "** IP67** waterproof rating, which allows it to endure regular splashing and even temporary submersion should it be dropped in your aquarium accidentally.",
+        "source": "web",
+        "title": "Fluval Aquasky Bluetooth LED Aquarium Lighting",
+        "url": "https://aquaticsuppliesusa.com/products/fluval-aquasky-bluetooth-led-aquarium-lights"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-16",
+        "place_metadata": null,
+        "snippet": "- AQUASKY 5 stage reverse osmosis water systems are designed for durability and safety.\nWe are one of the very few manufacturers who still insist on using FDA/NSF certified premium components made in the United States.",
+        "source": "web",
+        "title": "Under Sink Systems | Aquasky Rot 4 Reverse Osmosis Water ...",
+        "url": "https://www.aquaskyrot4.com/under-sink-systems"
+      },
+      {
+        "date": "2025-02-21",
+        "last_updated": "2025-03-05",
+        "place_metadata": null,
+        "snippet": "Expertly engineered in Germany, the light features advanced IP67-rated protection against water, moisture, and dust, along with a high quality glass lens for exceptional lighting performance and durability.",
+        "source": "web",
+        "title": "Aquasky 3.0 LED, 12W, 15-24.5\" / 38-63 cm",
+        "url": "https://fluvalaquatics.com/uk/shop/product/aquasky-3-0-led-12w-15-24-5-38-63-cm"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 866,
+      "cost": {
+        "input_tokens_cost": 0.00019,
+        "output_tokens_cost": 0.01299,
+        "request_cost": 0.006,
+        "total_cost": 0.01918
+      },
+      "prompt_tokens": 63,
+      "search_context_size": "low",
+      "total_tokens": 929
+    }
+  }
+}

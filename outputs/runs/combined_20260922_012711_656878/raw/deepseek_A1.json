@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "請推薦可靠的隔膜式壓力桶（pressure tank）製造商，我是系統整合商，需要長期供貨。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011039-YRareuNKIAfBoiiDlxz1",
+    "object": "chat.completion",
+    "created": 1790011039,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "以下根據本次公開搜尋資料整理，並非正式供應商評鑑；價格、實際交期、認證有效性、長期供貨合約條件，仍建議直接向廠商索取文件與審廠確認。\n\n## 優先評估名單\n\n### 1. AQUASKY 溢康企業 — 認證、客製化與 B2B 條件最明確\n若你重視飲用水/泵浦/熱膨脹應用、OEM/ODM、認證齊全與長期供貨，溢康很值得優先評估。\n\n- 公司公開資料自稱是台灣台中 100% 製造商，超過 30 年產業經驗，銷售 50 多國；核心製程焊接、塗裝、壓力測試、組裝、包裝均在廠內完成。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n- 產品線包含 PumPlus 泵浦增壓壓力桶、隔膜式水井壓力罐，容量從 1.3L 到 450L，可客製化；用途是維持系統水壓、減少泵浦啟動次數、穩定出水。[aquaskyplus.com](https://aquaskyplus.com/zh/PUMPLUS)\n- 認證方面，該公司 FAQ 稱產品符合 NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC 等，並符合歐洲 PED 2014/68/EU 與 EN 13831；接觸水零件符合歐盟 RoHS、REACH、PFAS、TSCA，且在 ISO 9001 下製造。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n- 技術與品質：100% 氮氣預充填、專利 Leak-Safe 接頭、多層環氧樹脂塗層、焊接符合 ASME VIII 與 EN 13831，並進行 100,000 次連續壓力循環測試。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n- B2B 條件：標準顏色無 MOQ；客製化顏色 MOQ 每批 400 件；成為經銷商的最小起訂量為一個 20 呎櫃，可混榜/混裝，FOB 台中；付款首單 100% T/T，後續 50% 定金、50% 出貨前付清。保固方面，RO 罐 3 年，其餘多數罐體 5 年，僅限製造缺陷。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n\n### 2. TankPAC 笠毅工業 — 金屬隔膜壓力桶、大產能與容量範圍\n若你需要金屬隔膜式、過濾/泵浦/工業穩壓、熱膨脹與太陽能熱水等應用，且重視大產能與全球供貨，TankPAC 值得評估。\n\n- 公司介紹稱位於台灣台中市清水區，是金屬隔膜壓力桶製造公司，銷售美洲、歐洲、南美洲、中東、澳洲等市場，年產量可達 500 萬顆壓力桶。[zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)\n- 產品涵蓋 0.5L 至 150L，結合海外關係企業最大可達 450L；材質包含金屬外殼、塑膠外殼、不鏽鋼外殼、玻璃纖維外殼，並使用食品級 PP 內膽、不鏽鋼接頭與高密度丁基橡膠。[zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)\n- 壓力桶頁面指出，其隔膜式壓力桶適用於家用及工業過濾系統、熱膨脹與流體穩壓控制，可減少泵浦頻繁啟停、吸收水錘衝擊，並用於冷卻液壓力桶、工業穩壓桶、太陽能熱水桶等。[zh-tw.tankpac.com](https://zh-tw.tankpac.com/pressure-tanks)\n- 注意：本次搜尋未看到 TankPAC 的 MOQ、保固年限、完整認證清單與經銷付款條件，需直接向該公司索取。\n\n### 3. Unitec 禾茂興 — 工業流體/塗料壓力桶備選\n若你的需求是工業液體輸送、油性漆、膠、防鏽塗層、化學液、高黏度流體，可評估 Unitec。\n\n- 該公司自稱專業壓力桶製造商，產品銷售全球，可客製化，產品為「Made in Taiwan」，並稱有 TUV/ISO 認證。[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n- 其鋼製壓力桶用於油性漆、脫模劑、膠、防鏽塗層、化學液、高黏度流體；不鏽鋼壓力桶可用 SUS304 或 SUS316，用於油性或水性漆。[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n- 但本次資料未明確顯示 Unitec 生產的是飲用水/泵浦用「隔膜式」壓力桶，若你要的是飲用水或泵浦穩壓，需先向該公司確認。\n\n## 建議排序\n\n1. **飲用水、泵浦增壓、熱膨脹、需要 NSF/CE 等認證與 OEM/ODM**：優先評估 **AQUASKY 溢康**。\n2. **金屬隔膜、大產能、容量 0.5–450L、過濾/工業穩壓**：優先評估 **TankPAC 笠毅**。\n3. **工業塗料/化學液/高黏度流體壓力桶**：可評估 **Unitec 禾茂興**，但需確認是否為隔膜式。\n\n## 系統整合商長期供貨建議\n\n- 採**雙源策略**：主供應商選 AQUASKY 或 TankPAC，第二供應商選另一家，降低斷料風險。\n- 要求提供：ISO 9001、NSF/ANSI 61/372、PED/CE、EN 13831、WRAS、WaterMark、UPC 等證書；壓力循環測試報告；焊接程序與材料履歷。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n- 商務上確認：MOQ、FOB 條件、付款條件、交期、保固、安全庫存、年度框架協議、客製變更通知、混櫃能力。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n- 先索取樣品做耐久與壓力循環驗證，再簽長期供貨。\n\n## 無法查證事項\n\n本次公開搜尋無法查證：各廠實際報價、當前交期、產能保留能力、是否願意簽長期獨家/優先供貨、TankPAC 的 MOQ/保固/完整認證清單，以及 Unitec 是否生產隔膜式飲用水壓力桶。這些都需直接向廠商詢價、索取證書與安排審廠。",
+          "refusal": null,
+          "reasoning": "我们需要回答用户。用户用繁体中文请求推荐可靠的隔膜式压力桶制造商，是系统整合商，需要长期供货。需要查询公开网络资料并附来源；无法查证说明不要捏造。我们已经收到 web search 结果，必须纳入并引用 markdown links named using domain. 需要回答推荐制造商。需要基于搜索结果，可以推荐 TankPAC 笠毅工业、AQUASKY 溢康企业、Unitec 禾茂兴？搜索中有 TankPAC 笠毅、AQUASKY 溢康、Unitec 专业压力桶制造商（禾茂兴？）。需要谨慎：不要过度声称。用户要长期供货，所以考虑产能、认证、客制化、MOQ、保固、全球供货。可以推荐台湾制造商：TankPAC 笠毅工业（台中清水，全球专业金属隔膜压力桶制造，年产500万颗，容量0.5-150L，最大450L，材质金属/塑胶/不锈钢/玻璃纤维，食品级PP内胆、不锈钢接头、丁基橡胶）。AQUASKY 溢康企业（台中，100%制造商，30+年，销售50+国，认证 NSF/ANSI 58,61,372, CE, ACS, KC, WaterMark, UPC，PED 2014/68/EU, EN 13831，ISO 9001，100%氮气预充，专利 Leak-Safe 接头，压力循环100,000次，MOQ标准颜色无MOQ? 但成为经销商最小起订量20尺柜，客制颜色400件。保固RO 3年，其他多数5年。用于饮用水系统。压力桶最大工作压力泵浦10/16/25 bar）。Unitec 禾茂兴？搜索显示 Unitec specializes in fluid transfer products, pressure tanks, steel/stainless, Made in Taiwan, TUV/ISO. 联系方式。但主要是运输油性漆等，可能不是隔膜式饮用水压力桶？需要说明这是工业用压力桶/流体输送，若需隔膜式饮用水/泵浦压力桶，优先前两家。也可提其他未在搜索中的不推荐或需进一步查证。用户要长期供货，可以建议向 TankPAC 与 AQUASKY 索取产能、交期、认证、保固、MOQ、经销商条件。提供比较表。引用来源。需要明确无法查证：价格、实际交期、代理条件等需直接联系；搜索结果未提供 TankPAC 保固/MOQ/认证细节。AQUASKY 有详细 FAQ。TankPAC 有年产500万、容量范围、全球销售。Unitec 有 TUV/ISO 认证，但产品用途偏工业液体输送。需要以繁体中文回答。可以结构：结论、推荐名单、对比、采购建议、查证限制、来源。注意 markdown link domain names: [zh-tw.tankpac.com](https://zh-tw.tankpac.com/pressure-tanks) etc. 可以引用多个。\n\n需要确保不捏造。搜索结果包含：\n- TankPAC 压力桶：专业制造高性能隔膜式压力桶。家用及工业过滤系统。适用于热膨胀与流体稳压。耐压钢制外壳、食品级丁基橡胶隔膜及聚丙烯内衬。冷却液压力桶、工业稳压桶、太阳能热水桶。减少泵浦频繁启停、吸收水锤。 PUMP压力桶。来源 https://zh-tw.tankpac.com/pressure-tanks\n- TankPAC about: 笠毅（台湾沛毅）工业股份有限公司，台中清水，全球最专业金属隔膜压力桶制造公司，销售美洲欧洲南美中东澳洲等，年产500万颗。经营理念。产品0.5-150L，结合海外关系企业最大450L。材质金属外壳、塑胶外壳、不锈钢外壳、玻璃纤维外壳。食品级PP内胆、不锈钢接头、高密度丁基橡胶。金属外壳比塑胶耐压。隔膜式稳定出水。来源 https://zh-tw.tankpac.com/about-us\n- AQUASKY PumPlus：泵浦增压压力桶，隔膜式水井压力罐。维持系统水压，减少泵浦启动次数，节能装置，无需维护，尺寸1.3L到450L，客制化。来源 https://aquaskyplus.com/zh/PUMPLUS\n- AQUASKY FAQ：CE? 符合 PED 2014/68/EU 和 EN 13831。认证 NSF/ANSI 58,61,372, CE, ACS, KC, WaterMark, UPC。接触水零件符合 RoHS, REACH, PFAS, TSCA。ISO 9001。100%制造商，台中，核心制程厂内。可用于卫生饮用水系统。最大工作压力：RO 7.0 bar/100 PSI；泵浦 10/16/25 bar/150/230/360 PSI；热膨胀 10 bar；导热液体 10 bar。3D CAD 压力模拟，快速原型，客制尺寸颜色接头。焊接符合 ASME VIII 与 EN 13831。100%氮气预充填。专利 Leak-Safe 接头。多層环氧树脂涂层。MOQ 标准颜色无MOQ；客制颜色每批400件；接受同货柜混合型号。品质压力循环100,000次。隔膜压力桶使氮气与水隔开，防止水泄漏；外壳环氧粉末涂层，NSF 61。30+年，销售50+国。多港口出货，多元化原料，美欧经销伙伴安全库存。成为经销商条件：最小起订量20尺柜（可混榜? 混装？），FOB台中，付款首单100% T/T，后续50%定金、50%出货前付清。保固RO罐3年；其余多数5年，仅制造缺陷，需证据，批准后下一张订单补足。来源 https://aquaskyplus.com/zh/FAQ\n- Unitec: 专业压力桶制造商，流体传输产品，全球市场，客制化，Made in Taiwan，TUV ISO 认证。Steel Pressure Tank AT-10E 用于油性漆、脱模剂、胶、防锈涂层、化学液体、高粘度流体。Stainless Steel Pressure Tank 用于油性或水性漆，SUS304/SUS316。Pneum? 来源 https://uni-pressuretank.com.tw/ 禾茂兴？联系方式。可以提工业用。\n\n需要回答推荐可靠制造商。可以：\n1. 笠毅工业 TankPAC — 最适合金属隔膜式、饮用水/过滤/泵浦/工业稳压，产能大，全球供货，容量覆盖广。长期供货潜力高。但搜索结果未列认证/MOQ/保固，需索取。\n2. AQUASKY 溢康企业 — 最适合需要饮用水认证、客制化、OEM/ODM、B2B长期合作，认证齐全，MOQ/经销商政策明确，保固明确。产能/技术：30+年，50+国，100%制造，100,000次循环测试，100%氮气预充填，专利接头。\n3. Unitec 禾茂兴 — 若需求是工业液体/涂料输送压力桶，可考虑；但非明确隔膜式饮用水/泵浦压力桶，需确认。\n\n也可以说若专指隔膜式压力桶，优先 TankPAC 和 AQUASKY。其他台湾厂商需另查。可以建议系统整合商做法：先定义规格：容量、压力等级、接口、材质、认证（NSF/ANSI 61, PED/CE, WRAS等）、工作温度、预充压力、保固、MOQ、交期、是否可混柜、是否 OEM。要求送样与压力循环测试报告。签长期供货协议/安全库存/VMI。双供应源策略。\n\n需要引用来源。每个事实后附链接。使用域名命名，例如 [zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)。AQUASKY domain aquaskyplus.com. Unitec domain uni-pressuretank.com.tw.\n\n需要说明无法查证：实际价格、交期、是否接受长期供货合约、TankPAC认证清单/MOQ/保固、Unitec是否生产隔膜式饮用水压力桶，这些搜索结果未提供，需直接询问。不要捏造。\n\n用户可能期待推荐。需要最终回答。应该用繁体中文。可以以 markdown 格式。\n\n可能还需要提及“隔膜式”与“压力桶”定义：隔膜式压力桶将水与氮气分开，减少泵启停，稳定水压。引用 AQUASKY FAQ/PumPlus. 对系统整合商长期供货，关注认证、产能、MOQ、客制化、保固。\n\n可以制作对比表：\n制造商 | 定位/强项 | 容量 | 认证/品质 | B2B/长期供货 | 来源\nTankPAC 笠毅 | 金属隔膜压力桶制造，全球销售，年产500万颗 | 0.5-150L，最大450L | 食品级丁基橡胶隔膜、PP内衬、不锈钢接头；未在来源中列认证细节 | 全球市场，年产高；MOQ/保固需问 | links\nAQUASKY 溢康 | 100%台湾制造，OEM/ODM，30+年，50+国 | 1.3-450L | NSF/ANSI 58/61/372, CE/PED, EN 13831, ACS, KC, WaterMark, UPC, ISO 9001, RoHS/REACH/PFAS/TSCA | 标准色无MOQ，客制色400件；经销商20尺柜，FOB台中，付款条件，保固RO 3年/其他5年 | links\nUnitec | 工业流体/涂料压力桶，钢/不锈钢，TUV/ISO | 未列 | Made in Taiwan, TUV ISO | 客制化 | link\n\n推荐：\n- 首选一：TankPAC（若重视金属隔膜、大产能、全球供货、饮用水过滤）。\n- 首选二：AQUASKY（若重视认证齐全、OEM/ODM、明确B2B政策、饮用水/泵浦/热膨胀）。\n- 备选：Unitec（工业用途）。\n\n可以给“下一步联系与验证清单”：要求提供：\n- 容量/压力/接口/材质/预充压力\n- 认证证书：NSF/ANSI 61, 372, PED/CE, EN 13831, WRAS, WaterMark, UPC等\n- 品质报告：100,000次压力循环、焊接标准 ASME VIII/EN 13831、ISO 9001\n- 商务：MOQ、FOB、付款、交期、保固、长期供货协议、安全库存、混柜\n- 样品与工厂审核\n引用 AQUASKY FAQ 已提这些，TankPAC 需索取。\n\n可以提及从搜索结果看，AQUASKY 明确回答成为经销商条件：MOQ 20尺柜，FOB台中，首单100% T/T，后续50%定金/50%出货前。保固。这适合长期供货。TankPAC 没看到 MOQ/保固/认证，需直接问。\n\n需要确保引用格式：markdown link named using domain. 例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。可以多次引用相同 domain 不同页面，链接名用域名。可以。\n\n最终回答长度中等。需要不要捏造。可以声明“以下仅根据本次公开搜索资料，未实际联系厂商，价格/交期/合约需自行确认”。\n\n需要以繁体中文回答。开始：“可以，針對系統整合商長期供貨，我會先推薦兩家台灣製造商，再加一家工業用途備選。” 然后列表。\n\n需要提及“來源”列表？可在末尾附主要來源，但文中已引用。可以附“主要來源”用 markdown links.\n\n注意：搜索结果中 TankPAC 页面说“全球最專業的金屬隔膜壓力桶製造公司”是公司自称。应写“自稱/公司介紹稱”。不要当作独立认证。AQUASKY 的认证是公司 FAQ 声称，未独立核实。可以写“该公司公開資料稱”。Unitec 同样。\n\n可以说明“我無法從公開資料查證實際交期、價格、產能分配、是否願意簽長期獨家/優先供貨；需直接詢價與審廠。”\n\n需要包含“長期供貨”建议：双源、安全库存、年度框架协议、OEM/ODM、认证文件、变更管理、PCN。\n\n可能还要注意用户是系统整合商，可能需长期供货，不一定是经销商。可以建议直接找制造商而非贸易商。AQUASKY 自称 100% 制造商；TankPAC 也是制造商；Unitec 制造商。\n\n可以写：\n- TankPAC 笠毅工業：台中清水，公司介紹稱全球最專業金屬隔膜壓力桶製造，年產500萬顆，銷售美洲/歐洲/南美/中東/澳洲。產品0.5-150L，最大450L，材質金屬/塑膠/不鏽鋼/玻璃纖維，食品級丁基橡膠隔膜、PP內襯、不鏽鋼接頭。適合過濾、泵浦、熱膨脹、工業穩壓。長期供貨優勢：產能大、容量廣、材質多。注意：來源未列 MOQ、保固、認證清單。\n- AQUASKY 溢康：台中，100%製造商，30+年，50+國。PumPlus 泵浦壓力桶 1.3-450L，客製化。認證 NSF/ANSI 58/61/372, CE/PED 2014/68/EU, EN 13831, ACS, KC, WaterMark, UPC；ISO 9001；接觸水符合 RoHS/REACH/PFAS/TSCA。可飲用水。壓力：RO 7 bar；泵浦 10/16/25 bar；熱膨脹 10 bar。技術：100%氮氣預充填、Leak-Safe接頭、ASME VIII/EN 13831焊接、100,000次壓力循環、3D CAD/原型。B2B：標準色無MOQ，客製色400件；經銷商20尺櫃可混裝，FOB台中，首單100% T/T，後續50/50；保固RO 3年，其他多5年。長期供貨優勢：政策明確、認證齊、客製化。\n- Unitec 禾茂興：台中霧峰，Made in Taiwan，TUV/ISO，鋼/不鏽鋼壓力桶，用於油性漆、膠、化學液、高黏度流體。若需工業流體輸送可評估；但非明確隔膜式飲用水/泵浦壓力桶，需確認。\n\n推荐排序：\n1. 若產品需飲用水/泵浦/過濾/熱膨脹且要認證與客製：AQUASKY 溢康。\n2. 若重視金屬隔膜、超大產能與容量範圍：TankPAC 笠毅。\n3. 工業流體/塗料：Unitec。\n\n可以建议“雙源策略”：主供應 AQUASKY/TankPAC，第二供應另一家。但需要验证。\n\n可以要求厂商提供：\n- 公司登記、工廠地址、ISO證書\n- NSF/ANSI 61/372、PED/CE、EN 13831、WRAS、WaterMark 等\n- 壓力循環測試報告、焊接程序、材料證明\n- 樣品 3-5 顆進行耐久測試\n- 商務條件：MOQ、FOB、付款、交期、保固、長期供貨協議、安全庫存、客製變更通知。\n\n最后“無法查證”声明。引用来源。\n\n需要确保 markdown 链接域名命名。例如：\n[zh-tw.tankpac.com](https://zh-tw.tankpac.com/pressure-tanks)\n[zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)\n[aquaskyplus.com](https://aquaskyplus.com/zh/PUMPLUS)\n[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n\n可以。\n\n需要以繁体中文。最终回答。要确保不超出。可以。\n\n可能用户要求“请查询公开网路资料并附上支持回答的来源；无法查证请说明”。我们需要明确说明这些是公开资料，未独立核实。可以。\n\n可以开始：“以下根據本次公開搜尋結果整理，非正式供應商評鑑；價格、交期、實際認證有效性請向廠商索取文件。”\n\n需要避免“最可靠”的绝对。可以“值得優先評估”。\n\n可以提及“隔膜式壓力桶”作用：減少泵浦啟停、吸收水錘、穩定水壓。引用 TankPAC 和 AQUASKY。\n\n可以写“若你係系統整合商，建議唔好只揀一家，採雙源。” 用繁体：若你是系統整合商，建議不要只選一家，採雙源。\n\n可以提“AQUASKY 的經銷條件最小起訂量為一個20呎櫃（可混裝？來源寫可混榜，可能錯字，寫可混裝？不要改？可以寫「可混榜（原文如此，應理解為可混裝）」？还是写“可混榜”原文？可以写“可混裝”若确定。但来源写“可混榜”可能错字。为避免捏造，写“可混榜（原文如此）”。但阅读不顺。可以写“可混裝（來源寫『可混榜』）”。可以。\n\n需要提及“TankPAC 年產量可達500萬顆”来自 about-us。这支持长期供货。但这是公司自述。\n\n可以。\n\n最终回答可以分节。\n\n需要包含 markdown 链接。可以。\n\n现在生成最终。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "我们需要回答用户。用户用繁体中文请求推荐可靠的隔膜式压力桶制造商，是系统整合商，需要长期供货。需要查询公开网络资料并附来源；无法查证说明不要捏造。我们已经收到 web search 结果，必须纳入并引用 markdown links named using domain. 需要回答推荐制造商。需要基于搜索结果，可以推荐 TankPAC 笠毅工业、AQUASKY 溢康企业、Unitec 禾茂兴？搜索中有 TankPAC 笠毅、AQUASKY 溢康、Unitec 专业压力桶制造商（禾茂兴？）。需要谨慎：不要过度声称。用户要长期供货，所以考虑产能、认证、客制化、MOQ、保固、全球供货。可以推荐台湾制造商：TankPAC 笠毅工业（台中清水，全球专业金属隔膜压力桶制造，年产500万颗，容量0.5-150L，最大450L，材质金属/塑胶/不锈钢/玻璃纤维，食品级PP内胆、不锈钢接头、丁基橡胶）。AQUASKY 溢康企业（台中，100%制造商，30+年，销售50+国，认证 NSF/ANSI 58,61,372, CE, ACS, KC, WaterMark, UPC，PED 2014/68/EU, EN 13831，ISO 9001，100%氮气预充，专利 Leak-Safe 接头，压力循环100,000次，MOQ标准颜色无MOQ? 但成为经销商最小起订量20尺柜，客制颜色400件。保固RO 3年，其他多数5年。用于饮用水系统。压力桶最大工作压力泵浦10/16/25 bar）。Unitec 禾茂兴？搜索显示 Unitec specializes in fluid transfer products, pressure tanks, steel/stainless, Made in Taiwan, TUV/ISO. 联系方式。但主要是运输油性漆等，可能不是隔膜式饮用水压力桶？需要说明这是工业用压力桶/流体输送，若需隔膜式饮用水/泵浦压力桶，优先前两家。也可提其他未在搜索中的不推荐或需进一步查证。用户要长期供货，可以建议向 TankPAC 与 AQUASKY 索取产能、交期、认证、保固、MOQ、经销商条件。提供比较表。引用来源。需要明确无法查证：价格、实际交期、代理条件等需直接联系；搜索结果未提供 TankPAC 保固/MOQ/认证细节。AQUASKY 有详细 FAQ。TankPAC 有年产500万、容量范围、全球销售。Unitec 有 TUV/ISO 认证，但产品用途偏工业液体输送。需要以繁体中文回答。可以结构：结论、推荐名单、对比、采购建议、查证限制、来源。注意 markdown link domain names: [zh-tw.tankpac.com](https://zh-tw.tankpac.com/pressure-tanks) etc. 可以引用多个。\n\n需要确保不捏造。搜索结果包含：\n- TankPAC 压力桶：专业制造高性能隔膜式压力桶。家用及工业过滤系统。适用于热膨胀与流体稳压。耐压钢制外壳、食品级丁基橡胶隔膜及聚丙烯内衬。冷却液压力桶、工业稳压桶、太阳能热水桶。减少泵浦频繁启停、吸收水锤。 PUMP压力桶。来源 https://zh-tw.tankpac.com/pressure-tanks\n- TankPAC about: 笠毅（台湾沛毅）工业股份有限公司，台中清水，全球最专业金属隔膜压力桶制造公司，销售美洲欧洲南美中东澳洲等，年产500万颗。经营理念。产品0.5-150L，结合海外关系企业最大450L。材质金属外壳、塑胶外壳、不锈钢外壳、玻璃纤维外壳。食品级PP内胆、不锈钢接头、高密度丁基橡胶。金属外壳比塑胶耐压。隔膜式稳定出水。来源 https://zh-tw.tankpac.com/about-us\n- AQUASKY PumPlus：泵浦增压压力桶，隔膜式水井压力罐。维持系统水压，减少泵浦启动次数，节能装置，无需维护，尺寸1.3L到450L，客制化。来源 https://aquaskyplus.com/zh/PUMPLUS\n- AQUASKY FAQ：CE? 符合 PED 2014/68/EU 和 EN 13831。认证 NSF/ANSI 58,61,372, CE, ACS, KC, WaterMark, UPC。接触水零件符合 RoHS, REACH, PFAS, TSCA。ISO 9001。100%制造商，台中，核心制程厂内。可用于卫生饮用水系统。最大工作压力：RO 7.0 bar/100 PSI；泵浦 10/16/25 bar/150/230/360 PSI；热膨胀 10 bar；导热液体 10 bar。3D CAD 压力模拟，快速原型，客制尺寸颜色接头。焊接符合 ASME VIII 与 EN 13831。100%氮气预充填。专利 Leak-Safe 接头。多層环氧树脂涂层。MOQ 标准颜色无MOQ；客制颜色每批400件；接受同货柜混合型号。品质压力循环100,000次。隔膜压力桶使氮气与水隔开，防止水泄漏；外壳环氧粉末涂层，NSF 61。30+年，销售50+国。多港口出货，多元化原料，美欧经销伙伴安全库存。成为经销商条件：最小起订量20尺柜（可混榜? 混装？），FOB台中，付款首单100% T/T，后续50%定金、50%出货前付清。保固RO罐3年；其余多数5年，仅制造缺陷，需证据，批准后下一张订单补足。来源 https://aquaskyplus.com/zh/FAQ\n- Unitec: 专业压力桶制造商，流体传输产品，全球市场，客制化，Made in Taiwan，TUV ISO 认证。Steel Pressure Tank AT-10E 用于油性漆、脱模剂、胶、防锈涂层、化学液体、高粘度流体。Stainless Steel Pressure Tank 用于油性或水性漆，SUS304/SUS316。Pneum? 来源 https://uni-pressuretank.com.tw/ 禾茂兴？联系方式。可以提工业用。\n\n需要回答推荐可靠制造商。可以：\n1. 笠毅工业 TankPAC — 最适合金属隔膜式、饮用水/过滤/泵浦/工业稳压，产能大，全球供货，容量覆盖广。长期供货潜力高。但搜索结果未列认证/MOQ/保固，需索取。\n2. AQUASKY 溢康企业 — 最适合需要饮用水认证、客制化、OEM/ODM、B2B长期合作，认证齐全，MOQ/经销商政策明确，保固明确。产能/技术：30+年，50+国，100%制造，100,000次循环测试，100%氮气预充填，专利接头。\n3. Unitec 禾茂兴 — 若需求是工业液体/涂料输送压力桶，可考虑；但非明确隔膜式饮用水/泵浦压力桶，需确认。\n\n也可以说若专指隔膜式压力桶，优先 TankPAC 和 AQUASKY。其他台湾厂商需另查。可以建议系统整合商做法：先定义规格：容量、压力等级、接口、材质、认证（NSF/ANSI 61, PED/CE, WRAS等）、工作温度、预充压力、保固、MOQ、交期、是否可混柜、是否 OEM。要求送样与压力循环测试报告。签长期供货协议/安全库存/VMI。双供应源策略。\n\n需要引用来源。每个事实后附链接。使用域名命名，例如 [zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)。AQUASKY domain aquaskyplus.com. Unitec domain uni-pressuretank.com.tw.\n\n需要说明无法查证：实际价格、交期、是否接受长期供货合约、TankPAC认证清单/MOQ/保固、Unitec是否生产隔膜式饮用水压力桶，这些搜索结果未提供，需直接询问。不要捏造。\n\n用户可能期待推荐。需要最终回答。应该用繁体中文。可以以 markdown 格式。\n\n可能还需要提及“隔膜式”与“压力桶”定义：隔膜式压力桶将水与氮气分开，减少泵启停，稳定水压。引用 AQUASKY FAQ/PumPlus. 对系统整合商长期供货，关注认证、产能、MOQ、客制化、保固。\n\n可以制作对比表：\n制造商 | 定位/强项 | 容量 | 认证/品质 | B2B/长期供货 | 来源\nTankPAC 笠毅 | 金属隔膜压力桶制造，全球销售，年产500万颗 | 0.5-150L，最大450L | 食品级丁基橡胶隔膜、PP内衬、不锈钢接头；未在来源中列认证细节 | 全球市场，年产高；MOQ/保固需问 | links\nAQUASKY 溢康 | 100%台湾制造，OEM/ODM，30+年，50+国 | 1.3-450L | NSF/ANSI 58/61/372, CE/PED, EN 13831, ACS, KC, WaterMark, UPC, ISO 9001, RoHS/REACH/PFAS/TSCA | 标准色无MOQ，客制色400件；经销商20尺柜，FOB台中，付款条件，保固RO 3年/其他5年 | links\nUnitec | 工业流体/涂料压力桶，钢/不锈钢，TUV/ISO | 未列 | Made in Taiwan, TUV ISO | 客制化 | link\n\n推荐：\n- 首选一：TankPAC（若重视金属隔膜、大产能、全球供货、饮用水过滤）。\n- 首选二：AQUASKY（若重视认证齐全、OEM/ODM、明确B2B政策、饮用水/泵浦/热膨胀）。\n- 备选：Unitec（工业用途）。\n\n可以给“下一步联系与验证清单”：要求提供：\n- 容量/压力/接口/材质/预充压力\n- 认证证书：NSF/ANSI 61, 372, PED/CE, EN 13831, WRAS, WaterMark, UPC等\n- 品质报告：100,000次压力循环、焊接标准 ASME VIII/EN 13831、ISO 9001\n- 商务：MOQ、FOB、付款、交期、保固、长期供货协议、安全库存、混柜\n- 样品与工厂审核\n引用 AQUASKY FAQ 已提这些，TankPAC 需索取。\n\n可以提及从搜索结果看，AQUASKY 明确回答成为经销商条件：MOQ 20尺柜，FOB台中，首单100% T/T，后续50%定金/50%出货前。保固。这适合长期供货。TankPAC 没看到 MOQ/保固/认证，需直接问。\n\n需要确保引用格式：markdown link named using domain. 例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。可以多次引用相同 domain 不同页面，链接名用域名。可以。\n\n最终回答长度中等。需要不要捏造。可以声明“以下仅根据本次公开搜索资料，未实际联系厂商，价格/交期/合约需自行确认”。\n\n需要以繁体中文回答。开始：“可以，針對系統整合商長期供貨，我會先推薦兩家台灣製造商，再加一家工業用途備選。” 然后列表。\n\n需要提及“來源”列表？可在末尾附主要來源，但文中已引用。可以附“主要來源”用 markdown links.\n\n注意：搜索结果中 TankPAC 页面说“全球最專業的金屬隔膜壓力桶製造公司”是公司自称。应写“自稱/公司介紹稱”。不要当作独立认证。AQUASKY 的认证是公司 FAQ 声称，未独立核实。可以写“该公司公開資料稱”。Unitec 同样。\n\n可以说明“我無法從公開資料查證實際交期、價格、產能分配、是否願意簽長期獨家/優先供貨；需直接詢價與審廠。”\n\n需要包含“長期供貨”建议：双源、安全库存、年度框架协议、OEM/ODM、认证文件、变更管理、PCN。\n\n可能还要注意用户是系统整合商，可能需长期供货，不一定是经销商。可以建议直接找制造商而非贸易商。AQUASKY 自称 100% 制造商；TankPAC 也是制造商；Unitec 制造商。\n\n可以写：\n- TankPAC 笠毅工業：台中清水，公司介紹稱全球最專業金屬隔膜壓力桶製造，年產500萬顆，銷售美洲/歐洲/南美/中東/澳洲。產品0.5-150L，最大450L，材質金屬/塑膠/不鏽鋼/玻璃纖維，食品級丁基橡膠隔膜、PP內襯、不鏽鋼接頭。適合過濾、泵浦、熱膨脹、工業穩壓。長期供貨優勢：產能大、容量廣、材質多。注意：來源未列 MOQ、保固、認證清單。\n- AQUASKY 溢康：台中，100%製造商，30+年，50+國。PumPlus 泵浦壓力桶 1.3-450L，客製化。認證 NSF/ANSI 58/61/372, CE/PED 2014/68/EU, EN 13831, ACS, KC, WaterMark, UPC；ISO 9001；接觸水符合 RoHS/REACH/PFAS/TSCA。可飲用水。壓力：RO 7 bar；泵浦 10/16/25 bar；熱膨脹 10 bar。技術：100%氮氣預充填、Leak-Safe接頭、ASME VIII/EN 13831焊接、100,000次壓力循環、3D CAD/原型。B2B：標準色無MOQ，客製色400件；經銷商20尺櫃可混裝，FOB台中，首單100% T/T，後續50/50；保固RO 3年，其他多5年。長期供貨優勢：政策明確、認證齊、客製化。\n- Unitec 禾茂興：台中霧峰，Made in Taiwan，TUV/ISO，鋼/不鏽鋼壓力桶，用於油性漆、膠、化學液、高黏度流體。若需工業流體輸送可評估；但非明確隔膜式飲用水/泵浦壓力桶，需確認。\n\n推荐排序：\n1. 若產品需飲用水/泵浦/過濾/熱膨脹且要認證與客製：AQUASKY 溢康。\n2. 若重視金屬隔膜、超大產能與容量範圍：TankPAC 笠毅。\n3. 工業流體/塗料：Unitec。\n\n可以建议“雙源策略”：主供應 AQUASKY/TankPAC，第二供應另一家。但需要验证。\n\n可以要求厂商提供：\n- 公司登記、工廠地址、ISO證書\n- NSF/ANSI 61/372、PED/CE、EN 13831、WRAS、WaterMark 等\n- 壓力循環測試報告、焊接程序、材料證明\n- 樣品 3-5 顆進行耐久測試\n- 商務條件：MOQ、FOB、付款、交期、保固、長期供貨協議、安全庫存、客製變更通知。\n\n最后“無法查證”声明。引用来源。\n\n需要确保 markdown 链接域名命名。例如：\n[zh-tw.tankpac.com](https://zh-tw.tankpac.com/pressure-tanks)\n[zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)\n[aquaskyplus.com](https://aquaskyplus.com/zh/PUMPLUS)\n[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n\n可以。\n\n需要以繁体中文。最终回答。要确保不超出。可以。\n\n可能用户要求“请查询公开网路资料并附上支持回答的来源；无法查证请说明”。我们需要明确说明这些是公开资料，未独立核实。可以。\n\n可以开始：“以下根據本次公開搜尋結果整理，非正式供應商評鑑；價格、交期、實際認證有效性請向廠商索取文件。”\n\n需要避免“最可靠”的绝对。可以“值得優先評估”。\n\n可以提及“隔膜式壓力桶”作用：減少泵浦啟停、吸收水錘、穩定水壓。引用 TankPAC 和 AQUASKY。\n\n可以写“若你係系統整合商，建議唔好只揀一家，採雙源。” 用繁体：若你是系統整合商，建議不要只選一家，採雙源。\n\n可以提“AQUASKY 的經銷條件最小起訂量為一個20呎櫃（可混裝？來源寫可混榜，可能錯字，寫可混裝？不要改？可以寫「可混榜（原文如此，應理解為可混裝）」？还是写“可混榜”原文？可以写“可混裝”若确定。但来源写“可混榜”可能错字。为避免捏造，写“可混榜（原文如此）”。但阅读不顺。可以写“可混裝（來源寫『可混榜』）”。可以。\n\n需要提及“TankPAC 年產量可達500萬顆”来自 about-us。这支持长期供货。但这是公司自述。\n\n可以。\n\n最终回答可以分节。\n\n需要包含 markdown 链接。可以。\n\n现在生成最终。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zh-tw.tankpac.com/pressure-tanks",
+                "title": "濾水壓力桶 - 笠毅工業(TankPAC)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "濾水壓力桶 - TankPAC\n TankPAC 笠毅工業: 濾水壓力桶製造商 TankPAC 笠毅工業: 濾水壓力桶製造商 \n**\n**\n\n...\n\n** 0\n詢價單\n**\n EN   繁中 \n* 用於水泵和高壓系統的隔膜壓力罐\n01 / 01\n\n...\n\n殼\n*\n全戶過濾系統組\n*\nUF超濾系統\n# 壓力桶\n專業製造高性能隔膜式壓力桶。 專業家用及工業用的過濾系統設計。適用於熱膨脹與流體穩壓控制。每個壓力桶均採用耐壓鋼製外殼、食品級丁基橡膠隔膜及聚丙烯內襯，確保壓力穩定性、耐腐蝕性及飲用水衛生儲存。提供多種耐壓設計，適用於冷卻液壓力桶、工業穩壓桶及太陽能熱水桶。這些壓力桶可減少泵浦頻繁啟停、吸收水錘衝擊，並在住宅、農業及工業系統中廣泛使用，提供穩定可靠的壓力平衡及系統。\n\n...\n\nPUMP 泵浦用儲水壓力桶\n\n #### PUMP 壓力桶"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zh-tw.tankpac.com/about-us",
+                "title": "過濾水壓力桶製造商 - TankPAC",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "## 笠毅（台灣沛毅）工業股份有限公司\n\n...\n\n位於台灣台中市清水區，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等多個國家，幾乎涵蓋全球市場，年產量可達500萬顆壓力桶。本公司秉持基本信念：環保節能、永續經營、社會責任、誠信經營、以客為尊，並全心全意生產最高品質的壓力桶。公司的經營理念為追求品質，並以滿足客戶需求為優先。\n\n...\n\n本公司產品涵蓋從0.5公升至150公升的完整容量區間，並結合海外關係企業的產品，最大容量可達450公升。產品材質包含金屬外殼、塑膠外殼、不鏽鋼外殼及玻璃纖維外殼，幾乎涵蓋所有常見的隔膜壓力桶規格。我們堅持使用安全堅固的金屬材質、食品級PP內膽、不鏽鋼接頭與高密度丁基橡膠，以提供安全、穩定的出水品質與純淨水源。\n\n...\n\n金屬外殼比塑膠更具耐壓性。\n\n...\n\n隔膜式設計確保穩定出水。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/PUMPLUS",
+                "title": "PumPlus 泵浦增壓壓力桶| 隔膜式水井壓力罐| AQUASKY 溢康企業",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "PumPlus 泵浦增壓壓力桶 | 隔膜式水井壓力罐 | AQUASKY 溢康企業\n\n...\n\n# PumPlus 泵浦增壓壓力桶 | 隔膜式水井壓力罐 | AQUASKY 溢康企業\n\n...\n\n## PUMPLUS – 泵浦壓力桶\n\n...\n\nPumPlus 泵浦壓力桶是加壓水系統內相當重要的元素之一，可以維持系統水壓在設定的標準值中。水儲存放於桶內隔膜和塑膠內襯之間，加壓氮氣區的氮氣使隔膜形成動能達到供水循環。 此過程可減少泵浦需要啟動的次數，使系統壓力維持在安全節能設定內。 隔膜的內含張力設計維持系統內的水壓穩定輸出。確保家中用水家電得以正常運行；沐浴時,水流量穩定輸出,不會忽大忽小。 PumPlus 泵浦壓力桶是一種節能裝置，無需維護，搭配正確尺寸的泵浦即可延長系統壽命，達到零維護費用目標，降低耗材成本，以符合您最有效益的需求。我們提供的壓力桶尺寸從1.3L到450L等多樣化選擇, 同時也提供給您最值得信賴的客製化服務。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程\n\n...\n\n溢康壓力桶是否標示”CE”?\n\n...\n\n是的，溢康壓力桶符合歐洲 PED指令 2014/68 / EU（壓力設備指令）和符合 EN 13831。\n\n...\n\n產品是否能提供完整的材料履歷與認證文件（如 NSF, CE, WRAS）？\n\n...\n\n產品符合 NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark, UPC 等主要認證。\n\n...\n\n所有接觸水的零件材料均符合歐盟 RoHS、REACH、PFAS 及 TSCA 要求。\n\n...\n\n每一件產品均在 ISO 9001 品質管理系統下製造，確保材料與製程具備完整可追溯性。\n\n...\n\nAQUASKY 是一家製造商還是貿易商？\n\n...\n\n溢康（AQUASKY）是位於台灣台中的 100% 製造商。所有核心製程（焊接、塗裝、壓力測試、組裝、包裝）均在廠內完成，產品完全符合全球認證標準。\n\n...\n\n可以，溢康隔膜壓力桶可用於衛生飲用水系統。\n\n...\n\n溢康壓力桶的最大工作壓力是多少？\n\n...\n\n| 壓力桶 | Bar | PSI |\n| --- | --- | --- |\n| RO逆滲透儲水桶 | 7.0 | 100 |\n| 泵浦壓力桶 | 10 / 16 / 25 | 150/ 230 / 360 |\n| 熱膨脹罐 | 10 | 150 |\n| 導熱液體膨脹罐 | 10 | 150 |\n\n...\n\n3D 建模與壓力模擬： 利用全 3D CAD 設計與內部壓力模擬，確保結構完整性。\n\n...\n\n快速原型製作： 數週內即可將概念轉化為功能性原型，縮短產品上市時間。\n\n...\n\n高度彈性： 提供尺寸、塗裝顏色與接頭規格的客製化選項。\n\n...\n\n溢康擁有哪些關鍵的製造技術或獨家專利？\n\n...\n\n卓越焊接技術： 符合 ASME VIII 與 EN 13831 標準。\n\n...\n\n100% 氮氣預充填： 減少壓力流失，維持長期穩定效能。\n\n...\n\n專利 Leak-Safe 接頭： 提供防腐蝕且防洩漏的系統連接。\n\n...\n\n高性能塗層： 多層環氧樹脂塗層可耐極端環境。\n\n...\n\n你們的最小訂購量 (MOQ) 政策是什麼？是否接受混合型號的訂單？\n\n...\n\n標準顏色（藍色、米色）無 MOQ 要求。客製化顏色 MOQ 為每批 400 件。我們接受同一個貨櫃中混合不同型號的訂單。\n\n...\n\n你們的品質管制流程中，針對壓力循環測試的標準是什麼？\n\n...\n\n所有壓力罐均符合 NSF/ANSI 61 與歐盟 PED 標準。測試標準為進行 100,000 次連續壓力循環測試，模擬真實運作環境。\n\n...\n\n工程團隊會針對客戶系統的容量、接頭與壓力範圍進行聯合開發。\n\n...\n\n為什麼要使用隔膜壓力桶？\n\n...\n\n隔膜壓力桶可以使系統中的氮氣氣墊與系統水分開，防止水洩漏。因為氮氣在桶壁和隔膜外部之間，系統水在另一側。溢康壓力桶的外殼採用經過環氧粉末塗層，此外，這一系列的壓力桶也獲得了NSF 61認證。\n\n...\n\n為什麼我們應該選擇溢康作為長期戰略合作夥伴？\n\n...\n\n溢康擁有超過 30 年產業經驗，銷售 50 多國。我們結合高品質生產、彈性 OEM/ODM 能力，以及穩定的定價與交期。\n\n...\n\n作為台灣製造商，溢康如何確保全球供應鏈的穩定性與韌性？\n\n...\n\n多港口出貨彈性、多元化原料採購策略，並在美歐等重要區域設有經銷夥伴安全庫存。\n\n...\n\n成為溢康經銷商的條件、定價結構與付款條件為何？\n\n...\n\n最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。付款條件首單 100% T/T，後續訂單 50% 定金、50% 出貨前付清。\n\n...\n\n保固條款與售後服務的具體內容是什麼？\n\n...\n\nRO 罐 3 年保固；其餘多數罐體 5 年保固。僅限製造缺陷，需提供證據，批准後將以產品更換方式於下一張訂單補足。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://uni-pressuretank.com.tw/",
+                "title": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)\n\n...\n\nUnitec specializes in the research and manufacturing of fluid transfer products. Our products have been selling to the global market with excellent quality and stability. We can also offer customized services in order to meet various requirements in different fields. To ensure the safe use of our products by customers, all products are \"Made in Taiwan\" and safety certified and ISO certified by TUV.\n\n...\n\nSteel Pressure Tank \n\n AT-10E \n\n Steel Pressure Tank is used for the transportation of oil-based paint, such as release agent、glue、rust preventive coating、chemical liquid、high viscosity fluid...etc\n\n...\n\nStainless Steel Pressure Tank \n\n Stainless Steel Pressure Tank is used for the transportation of oil-based or water-based paint, Material is available from SUS304 or SUS316. \n\n Pneum\n\n...\n\n### 聯絡我們\n\n...\n\n禾茂興提供完整的產品說明與諮詢，並針對各領域客製化需求提供相關解決方安及功能規劃，若有任何相關需求歡迎與我們聯絡！ We can offer instructions on products and customized services for various fields upon customer request. Please feel free to contact us if you have any inquires.\n\n...\n\nTEL +886 4 2331-1188\n\n...\n\nADDR 台中市霧峰區草湖路15巷16號 No. 16, Lane 15, Caohu Road, Wufeng District, Taichung City\n\n...\n\nEMAIL sales1unitec@gmail.com"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2444,
+      "completion_tokens": 5530,
+      "total_tokens": 7974,
+      "cost": 0.0143692,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0073692,
+        "upstream_inference_prompt_cost": 0.0007332,
+        "upstream_inference_completions_cost": 0.006636
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3946,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "想成為 AQUASKY 的經銷商，需要什麼條件？MOQ 和交期大概怎麼樣？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011267-iSsXeCxVKHd33lo3lLQK",
+    "object": "chat.completion",
+    "created": 1790011267,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "根據 AQUASKY 溢康企業的公開 FAQ 資料，成為經銷商的條件、MOQ 與交期相關資訊整理如下：\n\n## 成為 AQUASKY 經銷商的條件\n- **最小起訂量**：一個 20 呎貨櫃（可混裝不同型號），以 **FOB 台中** 計價 [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)、[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。\n- **付款條件**：首單 **100% T/T**；後續訂單 **50% 定金、50% 出貨前付清** [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)、[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。\n- 其他經銷商資格細節（如區域代理條件、年度目標等）在現有公開頁面中未明確列出，建議直接聯繫 AQUASKY 洽詢。\n\n## MOQ 政策\n- **標準顏色**（藍色、米色）：**無 MOQ 要求** [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)、[aquaskyplus.com](https://www.aquaskyplus.com/FAQ.php?lang=en)。\n- **客製化顏色**：MOQ 為**每批 400 件** [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)、[aquaskyplus.com](https://www.aquaskyplus.com/FAQ.php?lang=en)。\n- **混裝**：接受同一個貨櫃中混合不同型號的訂單 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)、[aquaskyplus.com](https://www.aquaskyplus.com/FAQ.php?lang=en)。\n- 若以經銷商身分合作，MOQ 則提升為一個 20 呎貨櫃（可混裝）[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)。\n\n## 交期\n目前的公開 FAQ 與公司頁面中**沒有提供具體交期天數**。僅提到 AQUASKY 透過多港口出貨（基隆／台中／高雄）、多元化原料採購及區域庫存點來維持供應鏈穩定 [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)，但未說明標準交期或生產週期。這部分資訊無法從現有公開資料查證，建議直接向 AQUASKY 詢問。\n\n## 聯絡方式\n- 電話：886-4-2562-6368\n- 傳真：886-4-2561-6332\n- 信箱：frankwang@aquasky.com.tw\n- 地址：台中市神岡區和睦路一段212巷36號\n- 網站：www.aquaskyplus.com [aquaskyplus.com](https://aquaskyplus.com/zh/contact)\n\n**總結**：經銷商 MOQ 為一個 20 呎櫃（可混裝），FOB 台中，付款首單 100% T/T、後續 50% 定金＋50% 出貨前付清。標準顏色無 MOQ，客製顏色每批 400 件。交期無公開具體數據，需直接洽詢。",
+          "refusal": null,
+          "reasoning": "用户想了解成为 AQUASKY 经销商的條件，以及 MOQ 和交期。我需要根据搜索结果来回答。搜索结果中有多个来源，包括 aquaskyplus.com/zh/FAQ、aquaskyplus.com/en/FAQ、www.aquaskyplus.com/FAQ.php?lang=en 等。\n\n关于经销商條件：搜索结果提到“MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.” 这出现在英文 FAQ 中。中文 FAQ 也有类似信息：“最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。付款條件首單 100% T/T，後續訂單 50% 定金、50% 出貨前付清。” 注意“可混榜”可能是“可混裝”的笔误。\n\n关于 MOQ：标准颜色（蓝、米色）无 MOQ 要求；定制颜色 MOQ 为每批 400 件；接受同一货柜混装不同型号。经销商 MOQ 为一个 20 呎柜。\n\n关于交期：搜索结果中似乎没有明确提到交期。有一个来源提到“stable pricing and delivery”，但没有具体天数。另一个提到“Multi-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.” 这涉及供应链稳定性，但没有具体交期。因此，交期信息无法从搜索结果中获取，需要明确说明无法查证。\n\n关于经销商條件：除了 MOQ 和付款条件，可能还有其他要求，但搜索结果中没有更多细节。需要说明这是基于现有公开信息。\n\n回答时需引用来源，使用 markdown 链接。例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) 等。注意域名可能相同，但路径不同。可以引用具体页面。\n\n需要以繁体中文回答。要明确说明无法查证交期。\n\n组织回答：\n1. 经销商條件：MOQ 一个 20 呎柜（可混装），FOB 台中；付款条件首单 100% T/T，后续 50% 定金、50% 出货前付清。可能还需要联系确认其他条件。\n2. MOQ：标准颜色无 MOQ；定制颜色每批 400 件；同一货柜可混装不同型号。经销商 MOQ 为一个 20 呎柜。\n3. 交期：搜索结果未提供具体交期，建议直接联系 AQUASKY 询问。\n4. 联系方式：提供电话、邮箱等，方便用户进一步咨询。\n\n引用来源：\n- 中文 FAQ：https://aquaskyplus.com/zh/FAQ\n- 英文 FAQ：https://aquaskyplus.com/en/FAQ\n- 另一个英文 FAQ：https://www.aquaskyplus.com/FAQ.php?lang=en\n- 联络页面：https://aquaskyplus.com/zh/contact\n\n注意：搜索结果中有重复内容，可以合并引用。\n\n需要确保引用格式正确：使用 markdown 链接，链接文字为域名。例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。但同一域名多个链接，可以分别引用不同路径。为了清晰，可以写 [aquaskyplus.com/zh/FAQ](https://aquaskyplus.com/zh/FAQ) 等。但要求是“named using the domain of the source”，所以可以只用域名，但为了区分不同页面，可以写域名加路径？要求示例是 [nytimes.com](https://nytimes.com/some-page)，所以链接文字是域名，链接 URL 是完整页面。可以这样做。\n\n我会在回答中适当引用。\n\n现在构建回答。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想了解成为 AQUASKY 经销商的條件，以及 MOQ 和交期。我需要根据搜索结果来回答。搜索结果中有多个来源，包括 aquaskyplus.com/zh/FAQ、aquaskyplus.com/en/FAQ、www.aquaskyplus.com/FAQ.php?lang=en 等。\n\n关于经销商條件：搜索结果提到“MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.” 这出现在英文 FAQ 中。中文 FAQ 也有类似信息：“最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。付款條件首單 100% T/T，後續訂單 50% 定金、50% 出貨前付清。” 注意“可混榜”可能是“可混裝”的笔误。\n\n关于 MOQ：标准颜色（蓝、米色）无 MOQ 要求；定制颜色 MOQ 为每批 400 件；接受同一货柜混装不同型号。经销商 MOQ 为一个 20 呎柜。\n\n关于交期：搜索结果中似乎没有明确提到交期。有一个来源提到“stable pricing and delivery”，但没有具体天数。另一个提到“Multi-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.” 这涉及供应链稳定性，但没有具体交期。因此，交期信息无法从搜索结果中获取，需要明确说明无法查证。\n\n关于经销商條件：除了 MOQ 和付款条件，可能还有其他要求，但搜索结果中没有更多细节。需要说明这是基于现有公开信息。\n\n回答时需引用来源，使用 markdown 链接。例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) 等。注意域名可能相同，但路径不同。可以引用具体页面。\n\n需要以繁体中文回答。要明确说明无法查证交期。\n\n组织回答：\n1. 经销商條件：MOQ 一个 20 呎柜（可混装），FOB 台中；付款条件首单 100% T/T，后续 50% 定金、50% 出货前付清。可能还需要联系确认其他条件。\n2. MOQ：标准颜色无 MOQ；定制颜色每批 400 件；同一货柜可混装不同型号。经销商 MOQ 为一个 20 呎柜。\n3. 交期：搜索结果未提供具体交期，建议直接联系 AQUASKY 询问。\n4. 联系方式：提供电话、邮箱等，方便用户进一步咨询。\n\n引用来源：\n- 中文 FAQ：https://aquaskyplus.com/zh/FAQ\n- 英文 FAQ：https://aquaskyplus.com/en/FAQ\n- 另一个英文 FAQ：https://www.aquaskyplus.com/FAQ.php?lang=en\n- 联络页面：https://aquaskyplus.com/zh/contact\n\n注意：搜索结果中有重复内容，可以合并引用。\n\n需要确保引用格式正确：使用 markdown 链接，链接文字为域名。例如 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)。但同一域名多个链接，可以分别引用不同路径。为了清晰，可以写 [aquaskyplus.com/zh/FAQ](https://aquaskyplus.com/zh/FAQ) 等。但要求是“named using the domain of the source”，所以可以只用域名，但为了区分不同页面，可以写域名加路径？要求示例是 [nytimes.com](https://nytimes.com/some-page)，所以链接文字是域名，链接 URL 是完整页面。可以这样做。\n\n我会在回答中适当引用。\n\n现在构建回答。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "OEM\n\n...\n\n製作\n\n...\n\n你們的最小訂購量 (MOQ) 政策是什麼？是否接受混合型號的訂單？\n\n...\n\n標準顏色（藍色、米色）無 MOQ 要求。客製化顏色 MOQ 為每批 400 件。我們接受同一個貨櫃中混合不同型號的訂單。\n\n...\n\n為什麼我們應該選擇溢康作為長期\n\n...\n\n溢康擁有超過 30 年產業經驗，銷售 50 多國。我們結合高品質生產、彈性 OEM/ODM 能力，以及穩定的定價與交期。\n\n...\n\n。\n\n...\n\n成為溢康經銷商的條件、定價結構與付款條件為何？\n\n...\n\n最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。付款條件首單 100% T/T，後續訂單 50% 定金、50% 出貨前付清。\n\n...\n\n保固條款與售後服務的具體\n\n...\n\nRO 罐 3 年保固；其餘多數罐體 5 年保固。僅限製造缺陷，需提供證據，批准後將以產品更換方式於下一張訂單補足。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/FAQ",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "What is the warranty on AQUASKY pressure tanks?\n\n...\n\nAQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.\n\n...\n\nPlease detail your R&D and design capabilities for OEM/ODM projects.\n\n...\n\nAdvanced 3D CAD modeling & pressure simulation: Our engineering team uses full 3D CAD design and simulates internal pressure performance.\n\n...\n\nRapid prototyping: We transform design concepts into functional prototypes within weeks, allowing for faster testing and a shorter time to market.\n\n...\n\nFlexible customization: Options in design, size, coating colors, and connection fittings.\n\n...\n\nWhat is your MOQ policy? Do you accept mixed-model orders?\n\n...\n\nNo required MOQ for standard colors (Blue and Almond). The MOQ for customized colors is 400 pieces per shipment. Mixed models are allowed within the same container.\n\n...\n\nWhat information is required and how do you size AQUASKY pressure tanks?\n\n...\n\nDepending on the type of use (for boilers, heating systems, domestic hot water systems, hot and cold water systems) it is possible to size the pressure tank by consulting the AQUASKY CALCULATOR FOR DIMENSIONING OF AQUASKY PRODUCTS. For more information, contact our technical department.\n\n...\n\nHow do you handle customization requests and technical integration with a client's existing systems?\n\n...\n\nProvide mixed-model samples for testing.\n\n...\n\nEngineering team works jointly with clients to adapt capacity, fittings, and pressure ranges.\n\n...\n\nTechnical drawings and simulation data are supplied for smooth system integration.\n\n...\n\nWhy should we choose AQUASKY as our long-term strategic partner?\n\n...\n\nAQUASKY is a leading manufacturer with sales in over 50 countries. We combine high production reliability, flexible OEM/ODM capabilities, and stable pricing to support your business growth.\n\n...\n\nHow does AQUASKY ensure the stability and resilience of its global supply chain?\n\n...\n\nMulti-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.\n\n...\n\nWhat are the terms for becoming a distributor, pricing structure, and payment terms?\n\n...\n\nMOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.\n\n...\n\nWhat are the specific terms of the warranty and after-sales service?\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/index.php?lang=zh",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM\n...\n溢康企業股份有限公司"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/FAQ.php?lang=en",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Please detail your R&D and design capabilities for OEM/ODM projects.\n\n...\n\nAdvanced 3D CAD modeling & pressure simulation: Our engineering team uses full 3D CAD design and simulates internal pressure performance.\n\n...\n\nRapid prototyping: We transform design concepts into functional prototypes within weeks, allowing for faster testing and a shorter time to market.\n\n...\n\nFlexible customization: Options in design, size, coating colors, and connection fittings.\n\n...\n\nWhat is your MOQ policy? Do you accept mixed-model orders?\n\n...\n\nNo required MOQ for standard colors (Blue and Almond). The MOQ for customized colors is 400 pieces per shipment. Mixed models are allowed within the same container.\n\n...\n\nHow do you handle customization requests and technical integration with a client's existing systems?\n\n...\n\nProvide mixed-model samples for testing.\n\n...\n\nEngineering team works jointly with clients to adapt capacity, fittings, and pressure ranges.\n\n...\n\nTechnical drawings and simulation data are supplied for smooth system integration.\n\n...\n\nAQUASKY is a leading manufacturer with sales in over 50 countries. We combine high production reliability, flexible OEM/ODM capabilities, and stable pricing to support your business growth.\n\n...\n\nHow does AQUASKY ensure the stability and resilience of its global supply chain?\n\n...\n\nMulti-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.\n\n...\n\nWhat are the terms for becoming a distributor, pricing structure, and payment terms?\n\n...\n\nMOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.\n\n...\n\nWhat are the specific terms of the warranty and after-sales service?\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/contact",
+                "title": "聯絡 AQUASKY 溢康企業：取得壓力桶詢價與 OEM/ODM 合作諮詢",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "聯絡 AQUASKY 溢康企業：取得壓力桶詢價與 OEM/ODM 合作諮詢\n\n...\n\nAQUASKY ENTERPRISE CORP Pressure Tank\n\n...\n\nTel: 886-4-2562-6368 Fax: 886-4-2561-6332 Web: www.aquaskyplus.com Email: frankwang@aquasky.com.tw No. 36, Ln. 212, Sec 1, Hemu Rd., Shengang Dist., Taichung City 429, Taiwan.\n\n...\n\n8 ... 網站: www.aquasky ... 212巷36號"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1719,
+      "completion_tokens": 1578,
+      "total_tokens": 3297,
+      "cost": 0.0094093,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0024093,
+        "upstream_inference_prompt_cost": 0.0005157,
+        "upstream_inference_completions_cost": 0.0018936
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 825,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

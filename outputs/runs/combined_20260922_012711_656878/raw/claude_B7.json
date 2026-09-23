@@ -1,0 +1,139 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的保固條款和售後服務內容是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790011268-b5qcwSflxE1s2L7WXZK4",
+    "object": "chat.completion",
+    "created": 1790011268,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "根據公開資料查詢的結果，關於「AQUASKY（溢康企業股份有限公司）」的保固與售後服務資訊如下：\n\n## 公司背景\nAQUASKY Enterprise Corp 於1998年創立於台灣台中，從一間小型機械工廠起步，如今已發展成為全球領先的隔膜式壓力桶製造商，服務全球水處理市場。該公司提供從端到端的壓力桶製造解決方案，為國際經銷商提供最優質的壓力桶，應用於住宅用水處理、熱水器、空調及太陽能熱水器，以及住宅與商用抽水系統。\n\n## 保固條款\n\n關於保固期限，AQUASKY 官方 FAQ 頁面明確說明：「AQUASKY 保固政策因市場而異。請聯繫您當地的經銷商以了解您所在地區適用的保固內容。」\n\n換言之，**AQUASKY 並未在官網上公開統一的全球保固年限或條款細節**，而是採取「依各地市場、由當地經銷商制定」的方式。因此若您需要確切的保固期限（例如保固幾年、涵蓋哪些故障類型、是否含人為損壞除外條款等），建議直接聯繫您購買產品所在地的授權經銷商。\n\n## 售後服務／聯絡方式\n\n根據台灣總公司官網公開的聯絡資訊：\n電話：886-4-2562-6368；傳真：886-4-2561-6332；網站：www.aquaskyplus.com；地址：台中市神岡區和睦路一段212巷36號。\n\n此外，公司網站上也強調其服務理念：「我們傾聽客戶的聲音，誠實溝通，並履行我們的承諾。我們希望讓與 Aquasky 合作盡可能地簡便」，但這僅是企業理念性描述，並非具體的售後服務流程條款（如報修方式、維修時效、換貨標準等）。\n\n## 補充說明（無法查證部分）\n\n- 目前公開網路資料（官網、FAQ、社群媒體）中**沒有找到 AQUASKY 針對特定產品線（如壓力桶、RO桶、熱水桶等）的具體保固年限、保固範圍、免責條款，或標準化售後服務流程（如維修申請表、客服專線、維修中心地點）**。\n- 若您是台灣地區的終端消費者或經銷商，建議直接透過上述電話或官網聯絡窗口，向 AQUASKY 台灣總公司或您購買時的經銷商索取正式的保固卡/保固條款文件，這類文件通常會隨產品包裝附上，但未必公開於網路。\n- 若您問的是其他同名品牌（例如南非的「Aquasky」空氣製水機公司，或其他行業的「AQUASKY」品牌），保固條款會完全不同，煩請提供更多產品類別資訊，以便進一步查證。\n\n若您能提供具體購買的產品型號或所在地區，我可以協助進一步查詢更精確的保固細節。",
+          "refusal": null,
+          "reasoning": "AQUASKY isn't a brand I immediately recognize - it sounds like it could be a Taiwanese water heater, faucet, or air conditioner company given the name. Let me look into their warranty terms and after-sales service policies.The FAQ page mentions warranty terms vary by market, so I'll answer based on that while noting there's limited public information available.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "AQUASKY isn't a brand I immediately recognize - it sounds like it could be a Taiwanese water heater, faucet, or air conditioner company given the name. Let me look into their warranty terms and after-sales service policies.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EokECrABCBIYAipAQfDz8OHGfuM0HAq41g7QlmyAT4og7oOc+cNQkIW19NRWze77gEs+IEE/tkf037i2tHfa8J2BaiD3ThtjWFVwxDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBiM/F1QYSDPEmxMBji9pAzcdX9xoM4hcoHLBU9cBMnowfIjAdipt1pD4aviHKQFLOVBglg3Eb0ea2gWPkZXSOCe3IGh7bzgNj3/3POWe2+xzBuOoqhQJyVx5b84e7nc/7MIBj/KkeC06rcj5y/hdCmzjSwb5SQOoeJAQ0xixJEZXTyu2UJmVyyCSctpaoJbNc7O54cNwOYzAj3nDtzAH7YOGCFJGAKgpS+AvZ470I3Gl6VLafFET0m7ik44d8lIsZyu0lFCyRIWrDbyvRjyv+gq6wVq1bKY5uEeR011OslrCg7ltDDBDmUmyvlY62yQ/WxSsJmzoJ+ICfkWOhV7sezpvYjJlUiNnfNmObe+SgdpRhkkMyBgH8XEl/7dgvR03UUOATRGMdaHoU4Gcr0T7nl3bG92z5TDWiUf2dsVdJrWREYtP26B6XiJ3/tsiAQVa5Wn4EpNgAjUtukRAYAQ=="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "The FAQ page mentions warranty terms vary by market, so I'll answer based on that while noting there's limited public information available.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "Eo4DCrABCBIYAipAyf2rlM+UrmeIwzmkKLUvBael6/uHuH+etdlpVaDKPghPja8H1e91fLKVrJv3cZdmLHh4KpIza1MFlBQ+K+AjETIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBjM/F1QYSDDwi5hZeU17tQGHmPhoMVSVqjDI/wqLTJhe3IjBV57Luo54eksVO8/eP+iSFq14dUUq2a3YQDv1AOZhDmyvuecQkBrvAg+nPZ3dqDWsqigG9yWWGvz6gOSeMfiDP68AbsFiLQOWTknXaHkb58gmV3lTeMSJgKYDDzxuKr5gUTQRuK0v05/GuZKQz5pfoF2I21J2QSBII0o0gf0Qd00DpzAU/Wj1AcG2ku+LObOo34ViV7Gh27ftEaQoLKcgzLvXabkwQZxjjrBGDLOC0E7z4ysfii5Il9zlihxAYAQ=="
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.youtube.com/@aquaskypressuretankpumptan4594/videos",
+                "title": "Aquasky溢康 pressure tank, pump tank, RO Tank - YouTube",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Founded in 1998, AQUASKY Enterprise Corp humble beginnings in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.youtube.com/@aquaskypressuretankpumptan4594/videos",
+                "title": "Aquasky溢康 pressure tank, pump tank, RO Tank - YouTube",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Aquasky Enterprise Corp. provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international dis..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquasky.com.tw/FAQ.php",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "... AQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.\n\n\n\n"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/contact.php",
+                "title": "AQUASKY: Contact Aquasky",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Tel: 886-4-2562-6368 Fax: 886-4-2561-6332 Web: www.aquaskyplus.com Email: [email protected] No. 36, Ln. 212, Sec 1, Hemu Rd., Shengang Dist., Taichung..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/about.php?lang=en",
+                "title": "AQUASKY: About Enterprise Introductions",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "We listen to our customers, we communicate honestly, and we deliver on our commitments. We want to make working with Aquasky as easy as possible for o..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 18537,
+      "completion_tokens": 1393,
+      "total_tokens": 19930,
+      "cost": 0.071004,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.071004,
+        "upstream_inference_prompt_cost": 0.037074,
+        "upstream_inference_completions_cost": 0.01393
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 127,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "以下是我根據公開資料整理、**較符合「可做 OEM/ODM 壓力桶，且具研發能力與國際認證」**的工廠名單。先說明一點：搜尋結果中，**直接明確寫出「壓力桶 OEM/ODM」且同時標示研發與國際認證**的廠商不多；因此我把「壓力桶」定義為與壓力容器／壓力桶相關、且有 OEM/ODM 能力的工廠一併納入，並清楚標示資料來源與不足之處。\n\n| 工廠 | 對應能力 | 研發能力 | 國際認證/品質系統 | 備註 |\n|---|---|---|---|---|\n| **河駱國際有限公司** | 明確提供 **OEM/ODM 一條龍代工**，包含研發、配方設計、原料採購、充填、生產、品檢與出貨[1] | 有，且可依客戶需求進行產品研發與改良[1] | **ISO 9001**[1] | 產品頁面主軸是**壓力噴霧瓶／氣霧罐**，若你要的是壓力桶本體，需再確認是否能做同類壓力容器或結構件[1] |\n| **台容開發股份有限公司** | 公開頁面標示為**塑膠容器 OEM 代工**廠[6] | 公開摘要未直接看到研發字樣，需進一步確認[6] | 此搜尋結果未顯示國際認證資訊[6] | 若你的壓力桶是塑膠容器類型，可列入進一步詢問名單[6] |\n| **祈星製造（Pails.com.tw）** | 提供塑膠桶／包裝桶等代工，且累積大量模具經驗[5] | 有模具開發與代工經驗，可視為具產品開發能力[5] | **ISO9001 / SGS**[5] | 雖非直接寫「壓力桶」，但若是桶類包材或相近結構件，值得詢問是否可做壓力桶[5] |\n| **合億國際企業** | 主要是化學桶、塑膠桶品牌，公開頁面可見產品製造背景[8] | 搜尋結果未明確顯示研發部門或開發流程[8] | 此搜尋結果未顯示國際認證資訊[8] | 若你接受桶類相關製造商，可進一步查證[8] |\n| **Zhejiang Cayi Vacuum Container Co., Ltd.** | 提供 **OEM/ODM** 解決方案[2] | 標示可從 concept development 到 global delivery[2] | 此搜尋結果未顯示具體認證[2] | 偏向真空容器／金屬容器方向，是否符合「壓力桶」需再確認[2] |\n| **壓力水用金屬隔膜壓力桶製造商（Tankpac）** | 明確是**壓力桶製造商**，且具全球銷售能力[4] | 目前搜尋結果未看到 OEM/ODM 或研發流程明示[4] | 搜尋結果未看到認證資訊[4] | 如果你要的是**過濾水壓力桶／膨脹桶**，這家最接近，但還需補查 OEM/ODM 與認證[4] |\n\n我會優先推薦你先聯繫這三家：\n\n- **河駱國際有限公司**：因為它最明確具備 **OEM/ODM + 研發 + ISO 9001**，雖然產品主軸較偏噴霧瓶／氣霧罐，但開發流程完整[1]  \n- **祈星製造**：有 **ISO9001 / SGS**，且長期做桶類塑膠製造與模具開發，適合詢問是否能客製壓力桶[5]  \n- **Tankpac**：如果你要的是**過濾水系統用壓力桶**，它是搜尋結果中最直接的壓力桶製造商[4]\n\n如果你要，我可以下一步直接幫你整理成：\n- **台灣/中國大陸分開的廠商清單**\n- **適合詢價的聯絡信模板**\n- **一份篩選 OEM/ODM 壓力桶工廠的查核表**（例如：材質、耐壓、測試報告、認證、MOQ、開模費）",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://www.rivercamel.com.tw/about/19.htm",
+      "https://en.cayigroup.com/oem.html",
+      "https://tw.ttnet.net/wholesale-market/suppliers-px2rol6w6zim13ybz2.html",
+      "https://zh-tw.tankpac.com/about-us",
+      "https://www.pails.com.tw/chinese/supplier_oem.html",
+      "https://www.tairung.com/m/412-1759-4474.php?Lang=zh-tw",
+      "https://www.archi.net.tw/tw/yelpage/keyword-1-%E5%A3%93%E5%8A%9B%E6%A1%B6.html",
+      "https://www.houyi-drum.com/",
+      "https://www.jetro.go.jp/world/qa/04A-011247.html",
+      "https://www.aetals.com.tw/stamping-oem-odm.html",
+      "https://wangteng100.com/",
+      "https://www.rocktone.com.tw/aboutus",
+      "https://oemodm.com.tw/tw/index",
+      "https://www.kfstamping.com/zh-TW/company",
+      "https://vleeosmarttoilet.com/zh/why-vleeo/",
+      "https://1208865314739.tw66.com.tw/",
+      "https://yewaydrinkware.com/drinkware-odm-oem/",
+      "https://www.lingwei-s.com/",
+      "https://www.tsunghsing.com.tw/zh-TW/category/Category_OEM.ODM-Service.html",
+      "https://www.oxmmatch.com/"
+    ],
+    "created": 1790008718,
+    "id": "e7767155-375e-40b4-a3c1-ad63ba9a3aa9",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2026-09-16",
+        "place_metadata": null,
+        "snippet": "河駱國際有限公司自 1994 年成立以來，專注於氣霧罐與化學產品的 **ODM／OEM 一條龍代工服務**，為客戶提供從產品研發、配方設計、原料採購、充填生產、品質檢驗到成品包裝與出貨的完整製造流程。\n憑藉超過三十年的專業經驗與 2004 年通過的 ISO 9001 國際品質認證，河駱國際已成為國內外眾多品牌與企業長期合作的穩定夥伴。\n...\n公司擁有豐富的配方設計與產品改良經驗，可依客戶需求進行研發，並提供多元應用領域的噴霧產品生產，包括汽車化學品、工業用品、家庭清潔與個人保養等。從產品概念到量產出貨，河駱國際能夠全程參與，協助客戶縮短開發時程並確保產品品質穩定。",
+        "source": "web",
+        "title": "壓力噴霧瓶& 氣霧罐OEM / ODM 專業代工",
+        "url": "https://www.rivercamel.com.tw/about/19.htm"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-28",
+        "place_metadata": null,
+        "snippet": "CAYI transforms your vision into premium products.\nFrom concept development to global delivery, we provide comprehensive OEM/ODM solutions that drive your business growth.",
+        "source": "web",
+        "title": "OEM/ODM-Zhejiang Cayi Vacuum Container Co.,Ltd",
+        "url": "https://en.cayigroup.com/oem.html"
+      },
+      {
+        "date": "2008-01-01",
+        "last_updated": "2025-03-20",
+        "place_metadata": null,
+        "snippet": "河北省棗強縣劉宅城大桶配件廠",
+        "source": "web",
+        "title": "壓力桶 製造商 & 供應商",
+        "url": "https://tw.ttnet.net/wholesale-market/suppliers-px2rol6w6zim13ybz2.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-11",
+        "place_metadata": null,
+        "snippet": "位於台灣台中市清水區，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等多個國家，幾乎涵蓋全球市場，年產量可達500萬顆壓力桶。",
+        "source": "web",
+        "title": "過濾水壓力桶製造商",
+        "url": "https://zh-tw.tankpac.com/about-us"
+      },
+      {
+        "date": "2025-01-01",
+        "last_updated": "2025-10-12",
+        "place_metadata": null,
+        "snippet": "已經累積上百套塑膠桶模具開模經驗，為塑膠桶領域的主要領導廠商，系列塑料桶器均符合SGS認證，為國內外眾多客群提供專業諮詢與代工需求，連要求最為嚴苛的日本廠也委託祈星製造生產。\n...\n### ISO9001 / SGS\n...\n|聯絡人:|業務部|\n|--|--|\n|通訊地址:|台北市八德路二段 374 號7樓之8|\n|電話:|886-2-27117656（8線）|\n|傳真:|886-2-27117659|\n|Email:|hdpepail@pails.com.tw sales@pails.com.tw|\n|網址:|http://www.pails.com.tw http://www.pail...",
+        "source": "web",
+        "title": "★潤滑油桶、塗料桶、油墨罐、塑膠桶、包裝桶、塑料桶",
+        "url": "https://www.pails.com.tw/chinese/supplier_oem.html"
+      },
+      {
+        "date": "2025-09-25",
+        "last_updated": "2025-12-10",
+        "place_metadata": null,
+        "snippet": "新北市樹林區東興街26號\n(02) 8686 – 3079\n80\n(02) 8685 – 8430\n31\n(02) 8686 – 0917\nfci.ccpc@msa.hinet.net\n...\n台容開發股份有限公司\n(02)8686-3079~80",
+        "source": "web",
+        "title": "塑膠容器OEM代工-台容開發塑膠容器製造廠",
+        "url": "https://www.tairung.com/m/412-1759-4474.php?Lang=zh-tw"
+      },
+      {
+        "date": "2010-01-01",
+        "last_updated": "2025-10-16",
+        "place_metadata": null,
+        "snippet": "多用途不銹鋼流體接頭模具設計/製造/開發、全自動不銹鋼壓力桶、水壓機、抽水機、沉水泵浦、消防泵浦、無水自動斷電器、渦流馬達、恆壓變頻馬達、日本壓力開關、泵浦部品生產製造/開發開發、消防設備、 ...",
+        "source": "web",
+        "title": "壓力桶廠商20大推薦",
+        "url": "https://www.archi.net.tw/tw/yelpage/keyword-1-%E5%A3%93%E5%8A%9B%E6%A1%B6.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-07-23",
+        "place_metadata": null,
+        "snippet": "合億國際化學桶塑膠桶品牌\n...\n行動電話",
+        "source": "web",
+        "title": "化學桶,塑膠桶- 合億國際企業",
+        "url": "https://www.houyi-drum.com/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-04",
+        "place_metadata": null,
+        "snippet": "OEMとは、Original Equipment ManufacturingまたはOriginal Equipment Manufacturerの略語で、委託者のブランドで製品を生産すること、または生産するメーカーのことです。ODMとは、Original Design Manufacturingの略語で、委託者のブランドで製品を設計・生産することをいいます。",
+        "source": "web",
+        "title": "OEM生産とODM生産の違い | 貿易・投資相談Q&A",
+        "url": "https://www.jetro.go.jp/world/qa/04A-011247.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-17",
+        "place_metadata": null,
+        "snippet": "沖壓代工廠-福潮記擁有40年以上金屬沖壓零件代工經驗，提供從設計到量產的一站式OEM/ODM服務，涵蓋3C電子、建築五金與精密機械等產業。專注模具開發、精密加工，並嚴控品質，確保產品穩定可靠。快速交付與靈活應對，讓我們成為您值得信賴的合作夥伴。",
+        "source": "web",
+        "title": "沖壓代工OEM/ODM服務｜精密金屬沖壓製造與量產解決方案",
+        "url": "https://www.aetals.com.tw/stamping-oem-odm.html"
+      },
+      {
+        "date": "2025-02-10",
+        "last_updated": "2025-10-30",
+        "place_metadata": null,
+        "snippet": "旺騰實業有限公司位於台南西港區，\n__專門從事不銹鋼、鍋具、小家電類OEM、ODM等模具開發及生產。__",
+        "source": "web",
+        "title": "旺騰實業-沖壓代工,沖壓加工,台南沖壓代工",
+        "url": "https://wangteng100.com/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-15",
+        "place_metadata": null,
+        "snippet": "本公司之產品從原料採購、製造至包裝皆採用一貫性之生產作業，對產品之品質更能夠有效且準確控制；因而以我們豐富的市場經驗與專業技術，能在家用產品領域中佔有一席之地，更不斷的開發新式樣及提昇產品功能性來滿足更多需求，並接受OEM、OBM及ODM生產研發製造。\n...\n本公司於 1999 年 12 月份通過ISO-9002，並於 2018 年再通過 ISO-9001 2015年版國際品質認證，依ISO 品質管理系統的精神落實 TQM制度，我們始終秉持著創新觀念，服務至上，品質第一之永續經營的理念，不斷提昇企業經營管理來達到客戶滿意；並以 ”美化生活，造福你我” 之精神，為世界創造更美好的明天。",
+        "source": "web",
+        "title": "ODM/OEM清潔用品製造工廠｜專業清潔用品供應商",
+        "url": "https://www.rocktone.com.tw/aboutus"
+      },
+      {
+        "date": "2024-01-25",
+        "last_updated": "2026-06-05",
+        "place_metadata": null,
+        "snippet": "「昇暘工業有限公司」，是您在**金屬零件專案** 上可靠的合作夥伴。\n我們可以提供從2D/3D製圖-開模-生產-表面處理-組裝-出貨的一條龍式的服務，讓您能放心的將OEM/ODM的專案交給昇暘處理。\n我們擁有豐沛的生產經驗，研發智囊團隊以及充足的檢驗手法及測試機台。",
+        "source": "web",
+        "title": "昇暘工業有限公司| OEM/ODM 金屬零件製造",
+        "url": "https://oemodm.com.tw/tw/index"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-07-30",
+        "place_metadata": null,
+        "snippet": "坤豐金屬工業股份有限公司提供多樣化的精密工程解決方案，以滿足全球各產業不斷變化的需求。從高精度沖壓模具到客製化的OEM/ODM五金零件，我們的業務範圍涵蓋消費性電子產品、汽車系統和高階音響設備。",
+        "source": "web",
+        "title": "公司簡介｜臺灣精密金屬沖壓廠| OEM & ODM 專業服務| 坤豐金屬工業",
+        "url": "https://www.kfstamping.com/zh-TW/company"
+      },
+      {
+        "date": "2024-11-10",
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "我們的 B2B 服務包括\n- 完全 OEM/ODM 客製化\n...\n我們對品質的承諾得到全球產品認證的支持，例如 **cUPC**, **CE** 以及工廠稽核，包括 **CIDB**, **NOM**, **TISI**, **SNI ** 等。\n...\n**A**:是的。\n作為一個靈活的 **中國智慧廁所工廠** 我們提供專業的 OEM/ODM 服務，包括客製化鐳射品牌、量身訂做的包裝，以及符合當地市場規範的特定功能修改。",
+        "source": "web",
+        "title": "中國領先的智能馬桶工廠和OEM專家 - Vleeo smart toilet",
+        "url": "https://vleeosmarttoilet.com/zh/why-vleeo/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-01-16",
+        "place_metadata": null,
+        "snippet": "源芳塑膠實業社，以多年的經驗專業製造，品質優良、多樣設計、尺寸多樣、競爭價格、環保產品，可接受原廠委託設計製造ODM、接受原廠委託代工製造OEM，為客戶提供多樣服務。\n...\n- 電話04-8946660",
+        "source": "web",
+        "title": "源芳塑膠實業社",
+        "url": "https://1208865314739.tw66.com.tw/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-05",
+        "place_metadata": null,
+        "snippet": "Our stainless steel water bottle factory is equipped with automated production lines, precision welding systems, vacuum insulation technology, and standardized quality control processes to support stable OEM and ODM manufacturing at scale.\n...\nWe support OEM manufacturing for insulated water bottles...",
+        "source": "web",
+        "title": "OEM & ODM Stainless Steel Water Bottle Manufacturer - yeway",
+        "url": "https://yewaydrinkware.com/drinkware-odm-oem/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-29",
+        "place_metadata": null,
+        "snippet": "淩威實業有限公司 專注於EVA發泡材料、製品的研發與製造，為客戶提供高品質的客製化OEM與ODM服務。我們位於台灣南投草屯，擁有多年豐富的經驗與技術團隊，能依據客戶需求設計並生產各類EVA發泡產品，從原材料挑選到成品加工，皆以高效率與高品質為標準。",
+        "source": "web",
+        "title": "淩威實業有限公司",
+        "url": "https://www.lingwei-s.com/"
+      },
+      {
+        "date": "2026-07-23",
+        "last_updated": "2026-08-03",
+        "place_metadata": null,
+        "snippet": "歡迎與我們聯繫\n07-616-6555",
+        "source": "web",
+        "title": "機械OEM/ODM設備代工製造",
+        "url": "https://www.tsunghsing.com.tw/zh-TW/category/Category_OEM.ODM-Service.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-09",
+        "place_metadata": null,
+        "snippet": "專業大規模生產，擁有完整設備與生產線。適合需要量產的品牌商，提供 ODM 設計代工與 OEM 純製造服務。",
+        "source": "web",
+        "title": "OXM｜台灣工廠媒合與傳統產業數位資源平台",
+        "url": "https://www.oxmmatch.com/"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 1102,
+      "cost": {
+        "input_tokens_cost": 0.0002,
+        "output_tokens_cost": 0.01653,
+        "request_cost": 0.006,
+        "total_cost": 0.02273
+      },
+      "prompt_tokens": 68,
+      "search_context_size": "low",
+      "total_tokens": 1170
+    }
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "想成為 AQUASKY 的經銷商，需要什麼條件？MOQ 和交期大概怎麼樣？"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "就目前公開資料來看，**AQUASKY 並沒有清楚公開一套「成為經銷商」的統一門檻、MOQ（最低訂購量）或標準交期**；最直接能確認的是，它有對外招募合作/銷售夥伴，且部分市場資訊顯示其可提供**低 MOQ**與**彈性交期**，但沒有公開到可直接引用的數字。[8][13]\n\n你可以先這樣理解：\n\n- **成為經銷商的條件**：公開頁面只寫到「若有意透過你的事業銷售其產品，歡迎聯絡」或各地由代理商/經銷通路購買，**未公開列出完整資格審核條件**。[8][2]\n- **MOQ**：台中市政府的企業資料頁提到，AQUASKY「offers services with **low minimum order quantities** for individual product models」；也就是**部分型號可低起訂量**，但**沒有公開具體 MOQ 數字**。[13]\n- **交期**：同一資料頁提到其提供 **flexible delivery schedules**；而 AQUASKY Plus 官網則寫有 **on time delivery** 與快速客製設計選項，但**沒有公開標準交期天數**。[13][4]\n\n如果你是要實際洽談經銷，我建議直接向官方詢問以下 4 件事，因為公開資料不足以確認：\n\n- **經銷申請條件**：公司登記、產業別、通路能力、是否需店面或倉儲、是否需既有客戶群。\n- **MOQ**：是否依型號/規格/地區而不同，是否首單與補單門檻不同。\n- **交期**：現貨、標準品、客製品各自的出貨時間。\n- **授權範圍**：是否區域獨家、是否需要年度採購額、是否有價格保護。\n\n若你願意，我也可以幫你把這些問題整理成一封**繁體中文詢價/申請經銷信**，你可以直接寄給 AQUASKY。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://www.adana.co.jp/jp/release/detail?id=337",
+      "https://www.aqsys.co.jp/support/agency-list/",
+      "https://www.189.cn/dlzq/gz/stqd/",
+      "https://aquaskyplus.com/about.php?lang=en",
+      "https://www.aquaskyusa.com/about-us",
+      "https://assaaquaenterprises.com/",
+      "http://www.qzrs.net/dl.asp",
+      "https://en.aqsys.co.jp/wanted/",
+      "https://www.aquaticav.com/pages/becoming-an-authorized-dealer",
+      "https://aquadealers.com/request-dealer-information/",
+      "https://aquaskyplus.com/en",
+      "https://aquasky.eu/",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851",
+      "https://www.realsee.com/partners-reseller",
+      "https://www.aquac3268.com/214072641239318389133857734255.html",
+      "https://aquavision.tv/distributor/",
+      "https://www.fishybusiness.com.sg/product-category/lighting-system/aquasky-g/",
+      "https://awharper.co.nz/product-category/brands/aquasky/",
+      "https://www.aquac.co/pages/%E6%96%B0%E7%9A%84%E5%88%86%E9%A0%81-10",
+      "https://www.meidensha.co.jp/products/water/prod_02/prod_02_01/"
+    ],
+    "created": 1790008785,
+    "id": "1a8ab81c-43ad-435a-be38-9165bafdd8d3",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": "2025-05-01",
+        "last_updated": "2025-05-11",
+        "place_metadata": null,
+        "snippet": "※アクアスカイG 601および602は4月下旬発売予定、アクアスカイG 451は今夏発売予定です。\n全国のADA販売特約店でお求めください。",
+        "source": "web",
+        "title": "アクアスカイG 新発売のお知らせ | ADA - NEWS RELEASE",
+        "url": "https://www.adana.co.jp/jp/release/detail?id=337"
+      },
+      {
+        "date": "2025-07-22",
+        "last_updated": "2026-09-18",
+        "place_metadata": null,
+        "snippet": "当社製品は代理店より仕入・購入いただくことが可能です。直取引も可能ですが、お取引条件は当社ネットショップと同じ条件（前払制・価格はネットショップと同じ）ですので、代理店を通じての購入をお勧めいたします。",
+        "source": "web",
+        "title": "代理店情報",
+        "url": "https://www.aqsys.co.jp/support/agency-list/"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "代理商资质要求\n（一）公司资质\n取得企业法人营业执照或个体工商户营业执照，具备合法有效的、有电信业务经营范围的营业执照和符合国家规定的，手机终端产品的零售业务的相关资质。\n（二）规范经营\n代理商自成立之日起持续无重大违法、违规经营的不良记录。\n（1）被省、部级管理部门检查通报及媒体曝光的；\n（2）未被纳入失信名单；\n代理商需诚实提供合作中无重大违规记录的书面说明材料，签名并加盖公章，一旦发现代理商虚假上报，我公司有权取消合作，并纳入我公司黑名单，3年内不得参与我公司同类相关项目合作。\n（三）门店面积\n实体渠道：拥有不少于[10]平方米、使用期限至少[2]年的营业场所用于开展相关代理业务，且代理...",
+        "source": "web",
+        "title": "代理专区",
+        "url": "https://www.189.cn/dlzq/gz/stqd/"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "Our end-to end manufacturing solution provides a stable price list, the fastest custom design option and the on time delivery.",
+        "source": "web",
+        "title": "COMPANY",
+        "url": "https://aquaskyplus.com/about.php?lang=en"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-17",
+        "place_metadata": null,
+        "snippet": "Aqua sky is a Canadian company , we are ﻿not the factory of aquasky water storage﻿ tanks, and we are not﻿﻿ ﻿﻿the sole agent in Canada (we offer replacement filters only) if you need to contact aquasky in taiwan for a wholesale deal or for any other reason please vesit - www.aquasky.com.tw/﻿\n...\naqua...",
+        "source": "web",
+        "title": "About Us | Aquasky Rot 4 Reverse Osmosis Water Filters",
+        "url": "https://www.aquaskyusa.com/about-us"
+      },
+      {
+        "date": "2025-02-17",
+        "last_updated": "2025-03-28",
+        "place_metadata": null,
+        "snippet": "As the exclusive business partner for\n**Aquasky Taiwan**, we specialize in importing fixed diaphragm, maintenance-free pressure tanks.\n...\nAssa Aqua is the exclusive importer of Aquasky tanks from Taiwan for South Asia and the exclusive business partner of Eagle Turkey for AquaFlow tanks.\n...\nWe are...",
+        "source": "web",
+        "title": "AquaFlow Series",
+        "url": "https://assaaquaenterprises.com/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-21",
+        "place_metadata": null,
+        "snippet": "## 热线：0595-26885959\n#### 如何成为我们的经销商？\n想成为我们的经销商必须具备自主经营的企业法人或者自然人。具有良好的市场开拓能力或者行业销售网络，有一定的汽配销售经验。\n#### 成为我们经销商有何要求？\n1.该地区无其他我司品牌的代理权。2.贵司无代理与我司冲突的产品及品牌。3.须具备自主经营的企业法人或者自然人。\n...\n成为我们的经销商后，贵司可自由与其他公司合作，与我司冲突的产品及品牌除外。\n...\n我们给予经销商特殊的经销待遇，并在该地区保护其代理品牌的独家代理权。",
+        "source": "web",
+        "title": "招商代理",
+        "url": "http://www.qzrs.net/dl.asp"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-17",
+        "place_metadata": null,
+        "snippet": "If you are interested in offering our products through your business, we invite you to contact us.",
+        "source": "web",
+        "title": "Recruit",
+        "url": "https://en.aqsys.co.jp/wanted/"
+      },
+      {
+        "date": "2025-05-15",
+        "last_updated": "2025-05-27",
+        "place_metadata": null,
+        "snippet": "There are two ways to become an authorized dealer eligible to sell Aquatic AV products.\nThe first option is for a dealer who is interested in more purchasing freedom (i.e. being able to purchase certain Aquatic AV products anytime without meeting a purchase minimum).\nIf this sounds like you, we sugg...",
+        "source": "web",
+        "title": "Becoming an Authorized Dealer",
+        "url": "https://www.aquaticav.com/pages/becoming-an-authorized-dealer"
+      },
+      {
+        "date": "2021-03-29",
+        "last_updated": "2026-02-10",
+        "place_metadata": null,
+        "snippet": "Please complete the form to receive more information about becoming an Aqua Systems dealer.\n...\nFill out the form and we’ll contact you to answer your questions about our dealer program.\n#### Here are just a few additional benefits that come with being part of the Aqua Systems team.\n- A dedicated, e...",
+        "source": "web",
+        "title": "Request Information",
+        "url": "https://aquadealers.com/request-dealer-information/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-08",
+        "place_metadata": null,
+        "snippet": "Founded in 1998\n...\nHYDRO-PLUS\n...\nLARGE SIZE DL TANK",
+        "source": "web",
+        "title": "AQUASKY - Global Diaphragm Pressure Tank & Water ...",
+        "url": "https://aquaskyplus.com/en"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-17",
+        "place_metadata": null,
+        "snippet": "| |<table><tr><td colspan=\"2\">\n**Hoofdkantoor » Schiedam** 'sGravelandseweg 410 3125 BK Schiedam</td></tr><tr><td colspan=\"2\">\n</td></tr><tr><td>\nTel:</td><td>\n010-262 03 33</td></tr><tr><td>\nFax:</td><td>\n010-415 43 95</td></tr></table>\n<table><tr><td colspan=\"2\">\n**Vestiging » Den Haag** Groentewe...",
+        "source": "web",
+        "title": "KLIK VOOR DE VOLLEDIGE WEBSITE",
+        "url": "https://aquasky.eu/"
+      },
+      {
+        "date": "2025-04-01",
+        "last_updated": "2025-11-27",
+        "place_metadata": null,
+        "snippet": "Additionally, AQUASKY offers services with low minimum order quantities for individual product models and flexible delivery schedules, significantly reducing inventory pressure for clients.",
+        "source": "web",
+        "title": "AQUASKY Enterprise Corp. - 臺中市政府經濟發展局",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "## 成为如视经销商的几个步骤\n- ### 提交合作申请\n电话或表单申请\n- ### 服务协议签署\n与如视沟通签署服务协议\n- ### 领取培训物料\n专属销售与工程师对接\n携手如视，共同构建基于数字空间的全新商业形态",
+        "source": "web",
+        "title": "成为经销商 - 如视",
+        "url": "https://www.realsee.com/partners-reseller"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-01-25",
+        "place_metadata": null,
+        "snippet": "◆ 最低2萬元就讓您代理百貨專櫃品牌，使用商品再送您千萬電商平台",
+        "source": "web",
+        "title": "原本首頁隱藏- 花漾皙經銷代理制度公開透明（AQUA C）全方位醫美 ...",
+        "url": "https://www.aquac3268.com/214072641239318389133857734255.html"
+      },
+      {
+        "date": "2026-05-19",
+        "last_updated": "2026-06-04",
+        "place_metadata": null,
+        "snippet": "To find out more or to register your interest in becoming our Distributor, please fill in your details below and we will contact you within 24 hours:\n- - - - - - -",
+        "source": "web",
+        "title": "Become a Distributor - Aquavision TV",
+        "url": "https://aquavision.tv/distributor/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-21",
+        "place_metadata": null,
+        "snippet": "**HOURS**\nTUE - FRI:\n1:30PM - 7:00PM*\nSAT & SUN:\n1:30PM - 6:00PM*\nPublic Holiday Closed\n*Hours differ due to Covid\n...\n#### Contact\n96C Jalan Senang, #03-00,\nSingapore 418483\nCALL US NOW:\n(65) 6241 2622\nEmail: sales@fishybusiness.com.sg",
+        "source": "web",
+        "title": "AQUASKY G",
+        "url": "https://www.fishybusiness.com.sg/product-category/lighting-system/aquasky-g/"
+      },
+      {
+        "date": "2019-10-01",
+        "last_updated": "2024-11-19",
+        "place_metadata": null,
+        "snippet": "Aquasky Enterprise has evolved from humble beginnings to a world leader in diaphragm pressure tank manufacturer serving the global water treatment market.",
+        "source": "web",
+        "title": "Aquasky Archives",
+        "url": "https://awharper.co.nz/product-category/brands/aquasky/"
+      },
+      {
+        "date": "2025-08-22",
+        "last_updated": "2026-01-14",
+        "place_metadata": null,
+        "snippet": "{{ getSelectedItemDetail(selectedChildProduct, item).childProductName }} x {{ selectedChildProduct.quantity || 1 }}\n...\n銷售據點",
+        "source": "web",
+        "title": "銷售據點",
+        "url": "https://www.aquac.co/pages/%E6%96%B0%E7%9A%84%E5%88%86%E9%A0%81-10"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-06",
+        "place_metadata": null,
+        "snippet": "アクアスマートクラウドは、SaaS型（※）の上下水道事業者向けクラウドサービスです。\n...\nお問い合わせ",
+        "source": "web",
+        "title": "AQUA SMART CLOUD 水道事業者向けサービス | 水クラウド ...",
+        "url": "https://www.meidensha.co.jp/products/water/prod_02/prod_02_01/"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 506,
+      "cost": {
+        "input_tokens_cost": 0.00021,
+        "output_tokens_cost": 0.00759,
+        "request_cost": 0.006,
+        "total_cost": 0.0138
+      },
+      "prompt_tokens": 71,
+      "search_context_size": "low",
+      "total_tokens": 577
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的保固條款和售後服務內容是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011279-V3dNXUBijtqifbScdXXR",
+    "object": "chat.completion",
+    "created": 1790011279,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "根據 AQUASKY 官方網站的說明，其壓力桶產品的保固條款與售後服務內容如下：\n\n## 保固年限\n- **RO 壓力桶**：3 年保固。\n- **其他多數桶體**（如 Well／Thermal／Hydronic 壓力桶）：5 年保固。\n- 官方也提醒，**保固內容可能因市場而異**，具體適用條款請洽詢當地經銷商。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n## 保固範圍與理賠方式\n- 保固**僅涵蓋製造缺陷**。\n- 申請理賠時**需提供相關證據**；經批准後，將以**產品更換**的方式，於客戶的**下一張訂單中補足**。[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n## 其他相關售後與訂購資訊\n- 官方建議安裝、服務與維護時，應參閱產品隨附的**安裝手冊**及桶體上的**技術標籤**。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n- 若需確認壓力桶內部隔膜是否破損，可按壓氣閥芯檢查：若出水表示隔膜已破；若出氣則隔膜應完好，只需重新預充壓力即可。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n- 訂購方面，**最低訂購量（MOQ）為一個 20 呎貨櫃**（可混裝型號），以**FOB 台中**為交易條件；付款方式為首次訂單 100% T/T，後續訂單 50% 訂金、50% 出貨前付清。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n> 提醒：上述保固年限與理賠方式為官方 FAQ 所列的一般性說明，實際適用條款可能因銷售地區而異，建議向當地授權經銷商確認。",
+          "refusal": null,
+          "reasoning": "用户想了解AQUASKY的保固條款和售後服務內容。我需要根據提供的搜索結果來回答。搜索結果中有多個來源，包括AQUASKY的官方FAQ頁面（中文和英文）。我需要提取關鍵信息：保固年限、保固範圍、售後服務方式。還要注意，不同市場的保固可能有所不同，建議聯繫當地經銷商。另外，MOQ和付款條件可能也相關，但用戶主要問保固和售後。我會用繁體中文回答，並引用來源。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想了解AQUASKY的保固條款和售後服務內容。我需要根據提供的搜索結果來回答。搜索結果中有多個來源，包括AQUASKY的官方FAQ頁面（中文和英文）。我需要提取關鍵信息：保固年限、保固範圍、售後服務方式。還要注意，不同市場的保固可能有所不同，建議聯繫當地經銷商。另外，MOQ和付款條件可能也相關，但用戶主要問保固和售後。我會用繁體中文回答，並引用來源。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "固期因\n...\n異。 請\n...\n保固條款與售後服務的具體內容是什麼？\n...\nRO 罐 3 年保固；其餘多數罐體 5 年保固。僅限製造缺陷，需提供證據，批准後將以產品更換方式於下一張訂單補足。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/FAQ",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "What is the warranty on AQUASKY pressure tanks?\n\n...\n\nAQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.\n\n...\n\n## INSTALL\n\n...\n\nHow can I install, service and mantain the pressure tanks manufactured by AQUASKY?\n\n...\n\nAs regard to the installation, service and maintenance of pressure tanks manufactured by AQUASKY, please refer to the instruction manuals.\n\n...\n\nHow do you handle customization requests and technical integration with a client's existing systems?\n\n...\n\nProvide mixed-model samples for testing.\n\n...\n\nEngineering team works jointly with clients to adapt capacity, fittings, and pressure ranges.\n\n...\n\nTechnical drawings and simulation data are supplied for smooth system integration.\n\n...\n\nHow can you check if the internal diaphragm of a pressure tank is broken?\n\n...\n\nAll AQUASKY pressure tanks with diaphragm are pre-charged with N2 through an air valve. The rubber diaphragm inside the tank keeps the water separated from the N2. Therefore, in case of malfunction and to check if the diaphragm of the tank is broken, you must act on the internal mechanism of the air valve, pressing it with a tool such as a screwdriver, and checking what comes out. If water leaks, it means the membrane is broken and the water has completely filled the vessel. Whereas, if air comes out, the membrane should still be intact and it is necessary to simply pre-charge the pressure tank again to make it work.\n\n...\n\nHow to avoid damages and malfunctions in pressure tanks and ensure lifetime to the installed product?\n\n...\n\nIn order to avoid breakages and malfunctions, consult the technical label which stuck to the pressure tank and the instruction manual supplied by the manufacturer first. Moreover, it is necessary to:\n\n...\n\n● Install correctly and periodic maintenance\n\n...\n\n● Periodically check the pre-charge pressure of the pressure tank and if necessary restore it to the value indicated on the label\n\n...\n\n● Check the correct grounding of the system, so as to avoid galvanic currents\n\n...\n\n● Check the correct volume of the pressure tank\n\n...\n\n● Pay attention to excessive overpressure and water hammering phenomena in the system\n\n...\n\n● Avoid to install the pressure tank in unsuitable environments or areas subjected to particularly aggressive climatic conditions\n\n...\n\n● Avoid the formation of condensation that leads to the development of corrosive phenomena\n\n...\n\n● Monitor the pH value of solutions containing glycols or other substances\n\n...\n\nare the terms ... distributor ... pricing structure ... payment terms\n\n...\n\nMOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.\n\n...\n\nWhat are the specific terms of the warranty and after-sales service?\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/FAQ.php?lang=en",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "What is the warranty on AQUASKY pressure tanks?\n\n...\n\nAQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.\n\n...\n\n## INSTALL\n\n...\n\nHow can I install, service and mantain the pressure tanks manufactured by AQUASKY?\n\n...\n\nAs regard to the installation, service and maintenance of pressure tanks manufactured by AQUASKY, please refer to the instruction manuals.\n\n...\n\nHow do you handle customization requests and technical integration with a client's existing systems?\n\n...\n\nProvide mixed-model samples for testing.\n\n...\n\nEngineering team works jointly with clients to adapt capacity, fittings, and pressure ranges.\n\n...\n\nTechnical drawings and simulation data are supplied for smooth system integration.\n\n...\n\nHow can you check if the internal diaphragm of a pressure tank is broken?\n\n...\n\nAll AQUASKY pressure tanks with diaphragm are pre-charged with N2 through an air valve. The rubber diaphragm inside the tank keeps the water separated from the N2. Therefore, in case of malfunction and to check if the diaphragm of the tank is broken, you must act on the internal mechanism of the air valve, pressing it with a tool such as a screwdriver, and checking what comes out. If water leaks, it means the membrane is broken and the water has completely filled the vessel. Whereas, if air comes out, the membrane should still be intact and it is necessary to simply pre-charge the pressure tank again to make it work.\n\n...\n\nHow to avoid damages and malfunctions in pressure tanks and ensure lifetime to the installed product?\n\n...\n\nIn order to avoid breakages and malfunctions, consult the technical label which stuck to the pressure tank and the instruction manual supplied by the manufacturer first. Moreover, it is necessary to:\n\n...\n\n● Install correctly and periodic maintenance\n\n...\n\n● Periodically check the pre-charge pressure of the pressure tank and if necessary restore it to the value indicated on the label\n\n...\n\n● Check the correct grounding of the system, so as to avoid galvanic currents\n\n...\n\n● Check the correct volume of the pressure tank\n\n...\n\n● Pay attention to excessive overpressure and water hammering phenomena in the system\n\n...\n\n● Avoid to install the pressure tank in unsuitable environments or areas subjected to particularly aggressive climatic conditions\n\n...\n\n● Avoid the formation of condensation that leads to the development of corrosive phenomena\n\n...\n\n● Monitor the pH value of solutions containing glycols or other substances\n\n...\n\n● Avoid mixing different antifreeze products\n\n...\n\nWhat are the specific terms of the warranty and after-sales service?\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/index.php?lang=zh",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM\n...\n防鏽護盾"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/downloadpage",
+                "title": "AQUASKY 壓力桶規格目錄、PDF 型錄與安裝手冊下載專區",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY 壓力桶規格目錄、PDF 型錄與安裝手冊下載專區"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1600,
+      "completion_tokens": 612,
+      "total_tokens": 2212,
+      "cost": 0.0082144,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0012144,
+        "upstream_inference_prompt_cost": 0.00048,
+        "upstream_inference_completions_cost": 0.0007344
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 115,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

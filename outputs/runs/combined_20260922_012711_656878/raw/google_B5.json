@@ -1,0 +1,162 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的壓力桶出廠前經過什麼品質測試？壓力循環測試標準是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008559-fuHzoA6B76pYeAWq9KNW",
+    "object": "chat.completion",
+    "created": 1790008559,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "根據台灣壓力桶製造商 **AQUASKY（溢康企業）** 公開的品質規範與技術文件，其壓力桶在出廠前與品質管制流程中包含以下檢驗項目與循環測試標準：\n\n---\n\n### 一、AQUASKY 壓力桶出廠前經過的品質測試\n\n1. **水壓強度測試（Hydrostatic / Hydraulic Pressure Test）**\n   - 壓力桶依照壓力容器規範進行耐壓檢驗，測試壓力通常為**設計壓力的 1.5 倍（1.5× Design Pressure）**，以確保桶體焊接結構無變形破裂風險與結構安全性。\n\n2. **氣密與防漏測試（Leakage & Helium Test）**\n   - 出廠前需針對桶身焊接處、氣閥與專利接頭（Leak-Safe Connector）進行氣密防漏檢驗（包含氣密檢測與特定產品的氦氣測漏），確保氣室及儲水腔體皆達到零洩漏標準。\n\n3. **100% 純氮氣預充與出廠氣壓校準（N2 Filling & Pre-charge Check）**\n   - 壓力桶出廠前全面充填 **100% 純氮氣**（防止內部生鏽並避免因環境溫差造成壓力大幅變動），並逐顆量測校驗出廠預充氣壓（依不同規格型號設定標準預充值，如常見預充 2 psi 低於泵浦啟動值，或依標籤標示）。\n\n4. **材料與製程品質驗證**\n   - 全製程符合 **ISO 9001** 品質管理體系。\n   - 接水材料（丁基橡膠/EPDM 隔膜及 PP 內襯）符合美國 **FDA**、**NSF/ANSI 61** 及歐盟 RoHS/REACH 等飲用水衛生規範，焊接技術符合 **ASME VIII Div. 1** 與 **EN 13831** 標準。\n\n---\n\n### 二、壓力循環測試標準（Pressure Cycle Testing Standard）\n\n在品質管制與耐疲勞認證中，AQUASKY 訂定的壓力循環測試標準如下：\n\n* **遵循標準規範**：符合美國飲用水認證 **NSF/ANSI 61** 以及歐盟壓力設備指令 **EU PED（符合 EN 13831）**。\n* **測試次數**：進行 **100,000 次（10 萬次）** 連續壓力循環交變測試。\n* **測試壓力區間**：在**預充壓力（Pre-charge Pressure）**與**最大工作壓力（Maximum Working Pressure）**之間反覆加壓與卸壓。\n* **測試目的**：模擬長期實際運作中的高頻啟閉環境，確保內部橡膠隔膜與鋼殼結構在長時間受力膨脹/收縮下不會產生疲勞破裂或壓力衰減。",
+          "refusal": null,
+          "reasoning": "**Investigating Pressure Vessel Testing**\n\nI'm currently researching the quality control and testing procedures AQUASKY applies to their pressure vessels before they leave the factory, specifically looking into their pressure cycling test standards.\n\n**Testing Pressure Requirements**\n\nMy current focus is on understanding the pre-factory quality tests, specifically the hydrostatic and hydraulic pressure testing applied to all models, including Hydro-Plus expansion tanks. This is critical for ensuring product integrity before deployment.\n\n**Validating Pressure Protocols**\n\nI'm now delving into the specifics of pre-factory pressure validation. This involves a hydrostatic test at 1.5 times design pressure, alongside meticulous leak detection for all components, including patented joints. I'm also confirming the 100% nitrogen pre-charge and its calibration for every unit.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Investigating Pressure Vessel Testing**\n\nI'm currently researching the quality control and testing procedures AQUASKY applies to their pressure vessels before they leave the factory, specifically looking into their pressure cycling test standards.\n\n**Testing Pressure Requirements**\n\nMy current focus is on understanding the pre-factory quality tests, specifically the hydrostatic and hydraulic pressure testing applied to all models, including Hydro-Plus expansion tanks. This is critical for ensuring product integrity before deployment.\n\n**Validating Pressure Protocols**\n\nI'm now delving into the specifics of pre-factory pressure validation. This involves a hydrostatic test at 1.5 times design pressure, alongside meticulous leak detection for all components, including patented joints. I'm also confirming the 100% nitrogen pre-charge and its calibration for every unit.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJ-2ptKzDGgn9WYY_nY7VmFEgikFNK_GZbHxy7bmZa36Tulxb2n9jBhM-rCbRWYQh7XTXVKcO-7nxW9Eqn1to1xJcZ6yHYZsSlE9xTCCZp0h2a9AcG_S3s1A==",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 193
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU5clOqghW4BG7HjbmB-PYQS8qHBs3SIGtnWspGoqgKODFPuLrU5JJu0bo5n_-PMXSOZiOC4w4239GyJ92Bl0OBUcGJSlY7eCcJEtq7RKLARcbW1u2RCIYuw==",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 193
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHORaf7jVKT9E7y944ejQzy9rvKGVYr9PoyNhLK4VpVRm9KPEfFn1_4Td-XA7k3eLXNGMbM-xZRaVn9K4r84SKNX-zX3E-7vsJ0E7R_m2iqdznJG1o7JBYEuXzgDkF_",
+                "title": "aquaskyplus.com",
+                "start_index": 265,
+                "end_index": 534
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGP6d5hiK5sZ60OKZdp-4t0-ozm2AjZOlUF8pgOlqiyA8LN7h8tp7ycrtMGuAKCNBwuHBmYV4I3HM43h5Cjps3tvRq0ktJZgy20rod1JqKJdLWCaQiiWs-JfvQVi3QlM396EtXfc7XUl_fBavcrAbFs_6RYw==",
+                "title": "aquaskyplus.com",
+                "start_index": 265,
+                "end_index": 534
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnzzVC5dfVOLa6ZNG0zthvz2TayRIbDulqjktq2Myccc3I_X1Opd0wFM6luMjaWzZfwYjVJB_T-vHI4dDFvAHGm5H62NA8Y_4PF05rM4Si1ZwBZWAKlHdGcprP1Q==",
+                "title": "aquaskyplus.com",
+                "start_index": 542,
+                "end_index": 814
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGL2tLIXJoPpgPvgoRUq4XNS4NYnwzlCCDPW706Fupr14wUaPEgs5c5uVF63YsctpYkJ46kRg9rB9BBekotAo-9pDuHmHEG-N3ia7OgO7hJXcO2gg0bvOp66D6-LLe_yVTd2ST29NBaQQEKpCe76mD9wy5sTc1sgwsO0R_3sJxdbBET4lQtS9AhbubVPjJ26Yig8WBWtf9lMAQJp077c3_cs0gN0sDDFTSGbdr_YEj6gKwakKHwTRXD",
+                "title": "thewaterguy.ca",
+                "start_index": 542,
+                "end_index": 814
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3189e8H6FnhFqom7O31Pc9qeIrPKBwfjoy4KgsqybuDV2NFHUpjseqqgY1DNuxOJMpcsucRH6K6LGjxxDq0njKRQVAC9Bj7HxlPRXwHTTINy3QeeuaU5bfCJka2rPJwOfcKFTYnFEQABUwpuj3Xrc8ohTd5lqgP5pRleYDyPoFEk=",
+                "title": "aquaskyplus.com",
+                "start_index": 822,
+                "end_index": 1186
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_s_MMvHtjniy0I1LbhaBCAKnF-aVylFFgykW0Tho1WdcaiirJoeVL_NO_LdW9MK1sJdNdXcxLtWFrQJrnh2KgdGCDBO2P501Pl28BxkkUehhw7i7fUiJZ9A==",
+                "title": "aquaskyplus.com",
+                "start_index": 1465,
+                "end_index": 1492
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw_bSdtVPZNxHy129R3SqSNehNKEcEKRabT6VBoZMFv7ECd3PNOoSIcj2VL8MCEsAwm65Zn4JuQSQLHI_XQEClx-eYEIS7xbzvJX2fOrUHdS6YLDhBq9zgyQ==",
+                "title": "aquaskyplus.com",
+                "start_index": 1465,
+                "end_index": 1492
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1497,
+      "total_tokens": 1575,
+      "cost": 0.06167225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.06167225,
+        "upstream_inference_prompt_cost": 5.85e-05,
+        "upstream_inference_completions_cost": 0.00561375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 676,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

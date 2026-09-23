@@ -2,6 +2,7 @@
 # Virtual environment and cache
 .venv/
 __pycache__/
+.venv312/
 
 # --- Configuration --- #
 # Sensitive configuration files (API Keys)
@@ -23,3 +24,12 @@ logs/*.log
 !/outputs/cross_analysis/**
 # Large log files
 Website Log file from Jason/*.csv
+
+# Reviewed evidence for the 2026-09-24 client meeting only
+!/outputs/runs/
+/outputs/runs/*
+!/outputs/runs/combined_20260922_012711_656878/
+!/outputs/runs/combined_20260922_012711_656878/**
+
+# Keep browser verification metadata, omit local screenshot scratch files
+/presentations/*/qa/*.png

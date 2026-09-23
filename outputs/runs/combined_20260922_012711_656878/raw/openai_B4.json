@@ -1,0 +1,130 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的產品有哪些國際認證？例如 NSF、WRAS、CE。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790008120-B3RfjgoaM8QmhMn4Jrsu",
+    "object": "chat.completion",
+    "created": 1790008120,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "若你指的是台灣壓力桶／RO 儲水桶品牌 **AQUASKY（Aquasky Enterprises Co., Ltd.）**，公開資料確實列有 **NSF、WRAS、CE／PED** 等項目；但應區分「認證機構可核實的型號」與「品牌官網列示的認證」，不能直接認定所有產品都具備全部認證。([info.nsf.org](https://info.nsf.org/Certified/DWTU/Listings.asp?Company=12210&Standard=058&utm_source=openai))\n\n### 主要認證與查證結果\n\n| 認證／標準 | AQUASKY 的公開資料與適用範圍 | 本次查證結果 |\n|---|---|---|\n| **NSF/ANSI 58** | NSF 官方列有 **ROT-2、ROT-3、ROT-4、ROT-6、ROT-14、ROT-20** 六款低壓儲水桶。 | **已由 NSF 官方名錄確認**。特別注意：認證範圍僅限**材料與結構完整性**，不是整套 RO 系統的污染物去除效能。([info.nsf.org](https://info.nsf.org/Certified/DWTU/Listings.asp?Company=12210&Standard=058&utm_source=openai)) |\n| **NSF/ANSI/CAN 372** | NSF 官方列有 **APT、ROT 系列共 41 個型號**，例如 APT-24、APT-100、ROT-4、ROT-20 等。 | **已由 NSF 官方名錄確認**，屬於飲用水接觸零組件的**鉛含量要求**，不是去除水中鉛的效能認證。([info.nsf.org](https://info.nsf.org/Certified/Lead_Content/Listings.asp?Company=12210&Standard=372-DWTU)) |\n| **NSF/ANSI 61** | 官網列示此標準，並在品牌公告中表示 **PUMPLUS、THERMAL-PLUS** 經 IAPMO 按 NSF 61 等標準認證。 | 有品牌官方聲明；但本次未能從 IAPMO 名錄取得具體型號與有效期限，**尚未獨立確認現行完整範圍**。([aquaskyplus.com](https://aquaskyplus.com/news-detail.php?cid=0&lang=en&page=19&sid=65&utm_source=openai)) |\n| **CE／PED** | 官網列示歐盟壓力設備指令 **2014/68/EU（PED）**，並聲明其壓力桶符合 PED。 | 有官網聲明及證書查詢連結；本次證書頁未能成功讀取，**無法確認各型號的證書範圍與有效狀態**。([aquaskyplus.com](https://aquaskyplus.com/en/certification)) |\n| **WRAS** | 官網認證頁列有英國 WRAS 項目。 | **本次未查得可核對的 AQUASKY 有效核准編號、型號及期限**，因此只能確認官網有列示，不能據此斷言全系列目前均獲核准。WRAS 官方提供依公司、關鍵字或核准編號查詢的名錄。([aquaskyplus.com](https://aquaskyplus.com/en/certification)) |\n\n### 官網另外列示的項目\n\nAQUASKY 認證頁還列有 **UPC、澳洲 WaterMark、韓國 KC、法國 ACS、新加坡 PSB，以及 ISO 9001:2015**。其中 ISO 9001 是**品質管理系統認證**，不應當成個別產品的飲用水安全認證。這些項目的各型號與現行效期，本次未逐一取得第三方證書確認。([aquaskyplus.com](https://aquaskyplus.com/en/certification))\n\n另外，品牌於 **2026 年 1 月 6 日**公告 **Pumplus、Mega 壓力桶系列完成 ACS 續證**；這是較具體的產品系列聲明，但仍屬品牌公告。([aquaskyplus.com](https://aquaskyplus.com/en/news/INDUSTRY/page2?utm_source=openai))\n\n**結論：目前最能直接核實的是部分型號的 NSF 58 與 NSF 372。** 若用於採購或標案，建議要求供應商提供「**完整型號＋證書／核准編號＋有效期限＋認證範圍附件**」，尤其是 WRAS、CE／PED 與 NSF 61，不宜只看型錄上的標誌。",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVtEDZExxHQRXDuNQJRS2O_YfPo7ZvmihIyx_nu8sHoA1M7GFbwv8bL9bMv795OnrxJwgbeIXuTs0pDskYM3PebkDvodjGJLUccyUrMLagHmwdyohuqpZlXZYVHLehelBdtMWJWp64CmOQMjOJvdDqU1yg8qqH4efGaMbzyNs1kEQMwZbjfYlLpDZkrKt79OInKuF9xpdMpUZJQbRcxYwuiLKZ-fH1_JpyAP29-Y_h4lCP7GAufbi9C5hMtzMuitvdskffIGgHhlXZs7QHcmha0ufBCkID2-E05uIOFJ28eePDGDZIVIXbgSnmmjv4pH95p-86t6pWN3OqJ-jYgx0I2wcs5SGtbUc5lkHW4JAnqHZwxlZoywk6X84VdLDBuAXS8YMlUuFGUmasrPFt90kijbdpAfgmsi81VVhskSFEkASqTF0QVLBB0ce4-PZdXYn6FOhpl3jt4vP6mUK5LyLSKsvkyPGmbXeDFS46jazmoBQ-pNPN6MZbs49RDaibECAhumBmUiWZvE86XCETy7Vl2vBKC2_BMIm4qhzmOtxkb-9KlBm_lfGEPJWTiDOAn-hh2n2iqbW9ZpSr39-bp3ex0PZao7zMzBMSDZ5dL0X_Pf9Q7wsGDnVyLOKr9wVNHJ5xFyYLLXV0R5TJcc1XSeXftkUyfZI038sc4Sp_cJvJFXZsCjFT4v9VHu0RHpKqz8yG16-bLltVdKV3d6_WyRBrlW57viVJ1MNY6_NpnXe7zPbUrfPxLKqU7HojdSyC-_CJqOfVo0yInXLH9kq6-_Hea46uOOUGGPfaPEXdFJOSUd61OXBTm8sMxzZbfOUfd0U9CQ-34gUV4Bn3CpRa7KlydAIB_j6xssrMMoIx_8Lqa1h-UfhalZDvqbxU3tSZWqF1e1nYAETmOGhp_xu8lxSa3RO2p6ZjUIkdrgu_oah8TQmFABBVlUsCtTT1C2gEh7hcAhgKAh1vdfZWBwBU5Aw1uX4JaoJlF84DhlxuMK3qMzEjIRZv28p3lmdEhaGFZrYu06SAzp1iEBxbHDxJ9npSmL9qapTPfCyh9e4cRLTK3S7hPOSrGJdHzO2LvZocjD7OroOew8oqqAOw24UV8VntBbJARQR8xi46b6AUzW0pgHTjilLrh9XUm0wMUIHbcIr8EK1SzAF87BO0IKKl2KyJ7HJSPxDGJ-EuxYjsYWU0iXLgEXCbY9vct2p_20I2SrwVAThf1ATavYI4hXMX-CsJ75oLVQ_NjqxDul8gIeDkLJoHe14WoyP9Dpu5TwDd3BQjL6N3W8lG64H5yt7ZCZ8aL-uq82wVz6VegT2YkMitVioy0zHO2MRTzVt9KEImk8D5cpfZfBaGdx-Qbe-XmjV6qr5wb1jrZJDv4dKmxSWVRhY5E3PH2Dp5BsiDFDY_0Pvw67JyqqmW-l5rH9uMGXRpaUe_dhv9TLqW5kJEiaL1RhHWk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_06a6695ccaa8b30d016ab15b43cff087d1ae22600f5d99f4e2",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?Company=12210&Standard=058&utm_source=openai",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 143,
+                "end_index": 254
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/Lead_Content/Listings.asp?Company=12210&Standard=372-DWTU",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 727,
+                "end_index": 833
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/news-detail.php?cid=0&lang=en&page=19&sid=65&utm_source=openai",
+                "title": "About IAPMO R&T｜Aquasky",
+                "start_index": 977,
+                "end_index": 1084
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 1199,
+                "end_index": 1260
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/news/INDUSTRY/page2?utm_source=openai",
+                "title": "Water Treatment Industry Trends & Technical Insights | AQUASKY",
+                "start_index": 1757,
+                "end_index": 1842
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 23186,
+      "completion_tokens": 1233,
+      "total_tokens": 24419,
+      "cost": 0.293853,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 24,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.293853,
+        "upstream_inference_prompt_cost": 0.192203,
+        "upstream_inference_completions_cost": 0.06165
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 237,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

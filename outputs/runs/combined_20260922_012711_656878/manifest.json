@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "A1",
+      "group": "A",
+      "question": "請推薦可靠的隔膜式壓力桶（pressure tank）製造商，我是系統整合商，需要長期供貨。",
+      "purpose": "品類推薦——最核心的 SoV 題"
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "question": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？",
+      "purpose": "「台灣製造」這張牌 AI 記不記得溢康"
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "question": "Global Water Solutions、CIMM 和其他壓力桶品牌相比，各有什麼優缺點？有其他選擇嗎？",
+      "purpose": "競品比較題——AI 會不會把溢康列入「其他選擇」"
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "question": "反滲透（RO）淨水系統用的壓力桶，該怎麼選？有推薦的品牌嗎？",
+      "purpose": "應用場景推薦"
+    },
+    {
+      "id": "A5",
+      "group": "A",
+      "question": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。",
+      "purpose": "B2B 代工需求——溢康的強項題"
+    },
+    {
+      "id": "B1",
+      "group": "B",
+      "question": "為什麼我應該考慮 AQUASKY 作為壓力桶的長期合作夥伴？",
+      "purpose": "品牌價值主張講得對不對"
+    },
+    {
+      "id": "B2",
+      "group": "B",
+      "question": "AQUASKY 的膜片技術和義大利 CIMM 的產品相比，有什麼具體差異和優勢？",
+      "purpose": "技術差異化＋競品對決"
+    },
+    {
+      "id": "B3",
+      "group": "B",
+      "question": "AQUASKY 與 Amtrol、Global Water Solutions 同等級產品的性能比較？",
+      "purpose": "三方比較——AI 資訊完整度"
+    },
+    {
+      "id": "B4",
+      "group": "B",
+      "question": "AQUASKY 的產品有哪些國際認證？例如 NSF、WRAS、CE。",
+      "purpose": "信任訊號（認證）讀到了沒"
+    },
+    {
+      "id": "B5",
+      "group": "B",
+      "question": "AQUASKY 的壓力桶出廠前經過什麼品質測試？壓力循環測試標準是什麼？",
+      "purpose": "品質管理細節"
+    },
+    {
+      "id": "B6",
+      "group": "B",
+      "question": "想成為 AQUASKY 的經銷商，需要什麼條件？MOQ 和交期大概怎麼樣？",
+      "purpose": "通路與商務資訊"
+    },
+    {
+      "id": "B7",
+      "group": "B",
+      "question": "AQUASKY 的保固條款和售後服務內容是什麼？",
+      "purpose": "售後資訊正確性"
+    }
+  ],
+  "system_prompt": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。",
+  "max_tokens": 6000,
+  "official_domains": [
+    "aquaskyplus.com"
+  ],
+  "models": [
+    {
+      "key": "openai",
+      "id": "openai/gpt-6-astra",
+      "name": "OpenAI GPT-6 Astra",
+      "api_type": "openrouter",
+      "search_engine": "native",
+      "enabled": true,
+      "reasoning_effort": "low"
+    },
+    {
+      "key": "google",
+      "id": "google/gemini-3.8-flash",
+      "name": "Google Gemini 3.8 Flash",
+      "api_type": "openrouter",
+      "search_engine": "native",
+      "enabled": true
+    },
+    {
+      "key": "perplexity",
+      "id": "sonar-pro",
+      "name": "Perplexity Sonar Pro",
+      "api_type": "perplexity",
+      "search_engine": "sonar",
+      "enabled": true
+    },
+    {
+      "key": "claude",
+      "id": "anthropic/claude-sonnet-5",
+      "name": "Claude Sonnet 5",
+      "api_type": "openrouter",
+      "search_engine": "native",
+      "enabled": true
+    },
+    {
+      "key": "grok",
+      "id": "x-ai/grok-4.6",
+      "name": "Grok 4.6",
+      "api_type": "openrouter",
+      "search_engine": "native",
+      "enabled": true
+    },
+    {
+      "key": "deepseek",
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "api_type": "openrouter",
+      "search_engine": "exa",
+      "enabled": true,
+      "provider": {
+        "sort": "throughput"
+      }
+    }
+  ],
+  "question_hash": "a3f08dd2635ccc2f892bea8fae740337bd646e0cd0061ad97bb13907d814753c",
+  "question_source": "E:\\CascadeProjects\\Aquasky-AIQA-Monitor\\config\\questions_20260922.md",
+  "report_only": true,
+  "source_runs": [
+    {
+      "run_id": "20260922_002057_343032",
+      "path": "E:\\CascadeProjects\\Aquasky-AIQA-Monitor\\outputs\\runs\\20260922_002057_343032",
+      "created_at": "2026-09-22T00:20:57.344550+08:00",
+      "run_hash": "697fc8a07ca91efa5715d657f5188527ac7fd484b8cc918c3281858922ffb962",
+      "models": [
+        "google",
+        "openai",
+        "perplexity"
+      ]
+    },
+    {
+      "run_id": "20260922_011131_761617",
+      "path": "E:\\CascadeProjects\\Aquasky-AIQA-Monitor\\outputs\\runs\\20260922_011131_761617",
+      "created_at": "2026-09-22T01:11:31.762615+08:00",
+      "run_hash": "830a38d5f71fd0fa631c09bec1af0838ae3d08719bd1a4ea4288f2c6d7bde75a",
+      "models": [
+        "claude"
+      ]
+    },
+    {
+      "run_id": "20260922_011131_800613",
+      "path": "E:\\CascadeProjects\\Aquasky-AIQA-Monitor\\outputs\\runs\\20260922_011131_800613",
+      "created_at": "2026-09-22T01:11:31.801614+08:00",
+      "run_hash": "2852b8c3bef6e9b0c61569a6f964a60075930d9926e70702feab64d56deb29c9",
+      "models": [
+        "grok"
+      ]
+    },
+    {
+      "run_id": "20260922_011718_239537",
+      "path": "E:\\CascadeProjects\\Aquasky-AIQA-Monitor\\outputs\\runs\\20260922_011718_239537",
+      "created_at": "2026-09-22T01:17:18.240538+08:00",
+      "run_hash": "ab9bf5a56367a798d377738d35450daf3b08413a740e5ccdc5ea39e1318187ba",
+      "models": [
+        "deepseek"
+      ]
+    }
+  ],
+  "created_at": "2026-09-22T01:27:11.656878+08:00"
+}

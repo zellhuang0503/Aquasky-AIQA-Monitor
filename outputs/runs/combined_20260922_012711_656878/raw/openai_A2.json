@@ -1,0 +1,182 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790007707-dc0U5EWEAYvDJzd8VUze",
+    "object": "chat.completion",
+    "created": 1790007707,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**若你指的是 RO 淨水、加壓供水用壓力桶，台灣可優先洽詢「笠毅工業 TankPAC」與「溢康企業 AQUASKY」；若是噴漆、膠液輸送用壓力桶，則可看「禾茂興 Unitec／Protima」與「Prowin Tools」。**以下按用途區分，並將「認證機構可查證」與「廠商自行宣稱」分開，避免把官網標章直接當成全部產品均已認證。\n\n## 一、RO 淨水、供水及熱膨脹用壓力桶\n\n### 1. 笠毅工業 TankPAC\n**製造與外銷：**官網列名「笠毅（台灣沛毅）工業股份有限公司」，位於台中清水，表示產品銷往美洲、歐洲、中東、澳洲等市場；主要為隔膜式壓力儲水桶。台灣國際水週也有該公司及壓力桶產品資料。([zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us?utm_source=openai))\n\n**認證查核結果：**\n- NSF 官方名錄可查到 **TankPAC Industries／Global Water Solutions（GWS）**，製造地為台中。\n- 在 **NSF/ANSI 58** 下列有 RO-132、RO-122、RO-145、TP-12P 等低壓儲水桶。\n- 名錄明確限定為**材料與結構完整性要求**，不是整套淨水器的污染物去除效能認證。([info.nsf.org](https://info.nsf.org/Certified/dwtu/listings.asp?CompanyName=tankpac&Program=DWTU&submit1=Search+by+Manufacturer))\n\n**品質怎麼看：**就所列型號而言，已有第三方材料及結構認證，是具體的品質依據；但不能由此推論所有型號都有相同認證，或保證實際使用年限。採購時應對照完整型號與名錄附註。([info.nsf.org](https://info.nsf.org/Certified/dwtu/listings.asp?CompanyName=tankpac&Program=DWTU&submit1=Search+by+Manufacturer))\n\n### 2. 溢康企業 AQUASKY\n**製造與外銷：**台中市政府資料確認其為隔膜式壓力桶製造商，應用涵蓋住宅供水、熱水器、空調、太陽能熱水及商業加壓泵浦；該資料記載銷售至 55 個國家，北美與南美占營收一半以上。這是資料發布時的情況，不代表我已核實目前營收占比。([economic.taichung.gov.tw](https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843))\n\n**認證查核結果：**\n- NSF 官方名錄列有台中工廠的 **ROT-2、ROT-3、ROT-4、ROT-6、ROT-14、ROT-20** 低壓儲水桶，認證範圍為**材料與結構完整性**。([info.nsf.org](https://info.nsf.org/Certified/DWTU/Listings.asp?PlantCountry=TAIWAN&hdModlStd=ModlStd))\n- 官網 APT-240 產品頁另列 CE、ISO 9001、UPC、NSF/ANSI 61、ACS、KC、NSF/ANSI 372。但這部分本次僅確認到**廠商產品頁宣稱**，未逐項在發證機構資料庫核實有效狀態及涵蓋型號。([aquaskyplus.com](https://aquaskyplus.com/products-det.php?pdcl=21&sid=17&utm_source=openai))\n\n**品質怎麼看：**其所列 RO 桶有第三方材料及結構認證可支持；若採購加壓泵浦桶或熱膨脹桶，應另核對該系列文件，不能直接沿用 ROT 系列的認證結論。([info.nsf.org](https://info.nsf.org/Certified/DWTU/Listings.asp?PlantCountry=TAIWAN&hdModlStd=ModlStd))\n\n## 二、噴漆、膠液及流體輸送用壓力桶\n\n| 廠商 | 製造／外銷與產品 | 認證及品質證據 |\n|---|---|---|\n| **禾茂興國際 Unitec／Protima** | 官網表示從事流體輸送設備研發製造、行銷全球；提供鋼製及 SUS304／316 不鏽鋼壓力桶與客製產品。 | 官網宣稱 Protima 全系列台灣製造，通過德國萊茵 TÜV 安全認證及 ISO 品質管理系統認證。**本次未查到足以獨立核實的證書編號、具體標準及有效期限**，建議列入詢價名單，但先索證。([uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/?lang=tw&utm_source=openai)) |\n| **Prowin Tools** | 官網表示台灣製造、外銷歐美日韓澳，提供 OEM；產品含鋁、鋼及不鏽鋼壓力桶。 | PT-20A 頁面標示 20 L、工作壓力 4.1 bar／60 psi，並宣稱桶體一體成形無焊接、具安全洩壓閥及 CE。**上述為廠商資料，本次未獨立核實其符合性文件。**([prowin-tools.com.tw](https://prowin-tools.com.tw/?utm_source=openai)) |\n\n## 三、國際認證應如何解讀？\n\n**認證數量多，不等於品質一定比較好；重點是認證是否對應你買的型號與用途。**\n\n| 認證／標示 | 能支持什麼 | 不應誤解成 |\n|---|---|---|\n| **NSF/ANSI 58 的儲水桶零組件列名** | 依名錄附註確認材料、結構等要求；上述 TankPAC 型號即有明確範圍。 | 壓力桶本身能去除污染物，或整台 RO 系統已認證。([info.nsf.org](https://info.nsf.org/Certified/dwtu/listings.asp?CompanyName=tankpac&Program=DWTU&submit1=Search+by+Manufacturer)) |\n| **NSF/ANSI/CAN 61** | 飲用水接觸材料可能釋出的化學物質及健康影響要求。 | 全面耐久、耐壓、味道或微生物性能保證。([nsf.org](https://www.nsf.org/knowledge-library/nsf-ansi-standard-61-drinking-water-system-components-health-effects?utm_source=openai)) |\n| **ISO 9001** | 品質管理系統符合要求。 | 單一產品已通過耐壓測試，或品質必然優於競品。([iso.org](https://www.iso.org/iso/definitive_expected_outcomes_iso9001.pdf?utm_source=openai)) |\n| **CE** | 製造商對適用歐盟法規的符合性負責，需有相應評估、技術文件及符合性聲明。 | 一律由歐盟機關核發的第三方「品質證書」；應查實際適用法規與文件。([single-market-economy.ec.europa.eu](https://single-market-economy.ec.europa.eu/single-market/goods/ce-marking/manufacturers_en?utm_source=openai)) |\n\n## 四、採購結論與建議\n\n- **RO 飲用水儲水桶：**我會先比較 **TankPAC 與 AQUASKY**，理由是本次確實查到特定型號的 NSF 官方列名，而不是單靠官網標章。這是「可驗證證據」的比較，**不是耐用度排名**。([info.nsf.org](https://info.nsf.org/Certified/dwtu/listings.asp?CompanyName=tankpac&Program=DWTU&submit1=Search+by+Manufacturer))\n- **噴漆／膠液輸送：**可向 **禾茂興與 Prowin** 詢價，但我會把取得完整認證及測試文件列為下單前提。\n- **品質孰優：**本次未取得四家同條件的第三方壽命試驗、漏氣率、不良率或售後統計，因此無法負責任地判定哪一家「最耐用」。\n\n建議詢價時統一要求：\n1. 完整型號、實際製造廠址及原產地。\n2. 工作壓力、工作溫度、適用流體與有效出水量。\n3. 認證證書、適用標準、涵蓋型號及有效狀態。\n4. 耐壓、氣密、循環壽命測試報告與出廠檢驗方式。\n5. 保固、隔膜或內膽更換方式、備品及客訴處理條款。\n\n**你要找的是「RO 淨水桶／加壓供水桶」，還是「噴漆、膠液或空壓儲氣桶」？**若提供容量、工作壓力及外銷目的國，就能進一步縮小廠商與必要認證範圍。",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVmyixPqH-zovNCWPR9t0t_3AiW0QjWwjPlsUmWe-DjjJVSapK3bt7vqpc9JrsWT5yD2eyDip1LvhA4nyJZ27mGKE1BerwIQwJi5oUAZ_5jKbdWEymHvLWmdElDUfp2ghwzgMAcAHPcHNfo7_VY3QND-tMvR0xaGKqIB2HaCip-vbJe3crkXXWnnip2cYWl-v3uIEiwBD2eMM5ykdsC1qeN88KGXs7xnRZAVR93p2IpVJYI1g5LfsKKCiS4g6hlKp0lm_tzUYCOmimpKLEhjhdbfvflwRODor6XW6aEEUcjt2H65Rk86geXQis3jt7_Ubr8GBlTNzqU0LMejU6c1yLmJrxwXqLXGsS-68oW-d0QKKJI_s7hWcVaggR-WwsXOHZO8m3eQ7_otsL5txQekf9gEHTItCXgBIlx5B0cZ-xRc9ZMBD9GzUjPtw0uM1czpYql7OX1KIG2k8Spt314_r_LpNlG4NR7E5uCjujddySVkvgRwvKjYDmeXzp0HxSVndK-R3zY4uMef4xpc_lQFg2VMASU0d-mk9ELA1BZrxzuQ1HTRIXZst7cJtwTH5xnfcF7wuvpoGYRd25he9KLiEWvQc208WRRrNt99IP5DoYh-3L-E0PIRFyrGdHGmxlrGLJDTTOAz8HCy8DEHADwnB8-WmYiEZLoaJ2XAsfwY0H5_uFelfUvmPcq7EpVUX_vecVEMCa1wbnapUBaUdgZ-3k3OniFOWBA22cxV4j_DQviuGGVowC1U6Yrg9nZOTnLutq1tqSpEgGSipU6H56yhYTmIMTZ2JjwHmMpfT4tu93ev9Kpk5UggXFLYaAK2JkDF3QJc7m41C2cwizQJpj3dIzikF4xjaHgsaj5aeYR0LMBlT_I2ZP2BY49yKGfCZGzOvXFqZdFKjqn0sQbaNrBJA00dmfQ9j0acw5KlP-4eR55LmxlPvfT63pHVxzuDlKxXXVKaSWpRAJIBU7n7a4cn8P9A35E_DOzq_wpfDOEwbxO9eVTFuWdYBB3SVUH55cvoLIwrNI1NdtVeHSQdxa3fFxwxSNEmbvxU24P8nS8omAmgIQHC_Xf_yMg24Zy341-xbH-JCl7kinZ15Vj4jOuPk-tyh94luWfL0_LWmbKNVHw-aI9cUZw91NrN9vcRm-XpsiTNyXUUjlv9YYX2tY1JXspzO8soIhxfEWgfEn73guxTfw9YQrtOOzvzoItvypzNSY4Wxoa9MxNqe8mm-5gdCplEYtm31FfAh2evRhaVvi62CtketVbxK7HG0EBvLuDlHicTfQmK0-08McOALO5w2L7UBUdxsRVQbaaF_CGCcNl9NGylTvQgBCo2k_7SOsQjTH2H1t7uVXtmEBxnf_cMPKMgvv2Q9vEbT8zspkBYY5nIpS_8pd9M4WvsUZWAcjjfn8oKfFFyZdfUEBrVBxErmxtXcOwatD-2aCUaHUNTdkPy2OE=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_0a28f75d45ceab5c016ab159b1e9c887d1a0853215180617bd",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVm5yFrVA61C1QplCB_TSC_hc3y2PLqIz0u-I0aOYiEYstumLsSggo8UFBhT3Jc8TGiSaHuBKso30jnqVUaeNbCypKDpHPxdIOmOyuleJgl0R74gUz3-oo1h9FUiYGRJ9Nw5FJZ6XLZnzKhPvsDdgVHa9e0ErfpAMLeYdn-86LIJc8GDN3hMLPDupJLEdKqxz0051LgMpHkPMjThSyyMmUJxQ2puCCVuGGdDPiKUxuZnr3qFt1T9dfcKorpBSVp04taaCeW2oCGFUnv8D3tEsyqo8F8L7cGVv_e26glpavULY8m14rR9WMVoAN4nsW6YS5IWcaJe768ifeQRhn6I40IiaGMUBCXJDLDHl3vUqB7d2tLD_ZwArU8dOi_NiV_ZnkN0UeKR4UuaHjEhCliSy-i20bC6VZ-Koj8wcX4zu5CSkq1G3n2wNuMYGwE1qBluyIP14h9BbtHvgaKobGdfU_bHbf7-ulqsHTnpWh8gGFY97H3AINRQHiUkOzKpY9S7P4fXUaZNJqEQ9X1BBRulY92f_He_SVUYsMtEjsx-lLSUxBAuXsfmqs-Q9rpEozuOcUiXQ5p7FVBmgxcyv-1jvFDvCUpWVpv5RafL33enab1n3PhMbXVPgOmtJ0CunM1pV2oDarAGQ1DUuW-TsL4Tu5laxjMroSzTU35zb0HYL70Suh-HeUenp8s9cL3QCZ2u7g-A-jvFBBUenLv9pmCOzQZcy5TYmW3IioAPhKdSv3ppIYNcUU9hvIqulszq4huuQBRN74Mxcc3Uz1MeFrY2Y2LUoCfzJb1LT06eJ7UHVpq0BLcx8pXaNfLM-GNJ_VUkCXP9xdPpRtvaO90fkhCUcSCEThdHNBhHMTAhVPY0-sx7ZVJkibLOTAEclCFHL_kRTGSRyRlIViwpguiZSDK9Lu045Lc9ML6nx08DidMZV-Yq3_PZlordZRsdKGaFIuwbtxrtl4d4D2AubIpKb_-P1qTpGeeLdT02dxJKlPCX2ojVZx2dBnnDhHUCdP4LrLfUWd7-jbdYphkm1BJ2dDL2GYiUMyOD0UuNOvB1LAemfMflrgqJgzvs9RAu0aTO-LajMhbOBFJE-RscO65JbgjdVOl1g20xT4ONbgUoda0Gi4paAZo5Ru2lY5S2sWcebgIFo_sjvRZON5jCYI7mcwdG8ihl5Q75ODtN5ouGSIADvX_rYEvmW0WMMSD8GP4z4VfGPHMDlq0BjcyfAOiHn0jG8q7u4CmD-3o58hAb04aY35VEAVxCJRhNcNNoYRxaI3BnePPj1AHd-Xiu-flCzEQbVjkoOlVC70CEJd8WAocSCVWYVBl__qURFYfOBJgQr-qpCQkTo9CLDq4VX4Qkw-PWyBEZng==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_0a28f75d45ceab5c016ab159b8f17887d1a7a6b4d63097f9d5",
+              "index": 1
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zh-tw.tankpac.com/about-us?utm_source=openai",
+                "title": "過濾水壓力桶製造商 - TankPAC",
+                "start_index": 304,
+                "end_index": 379
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/dwtu/listings.asp?CompanyName=tankpac&Program=DWTU&submit1=Search+by+Manufacturer",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 568,
+                "end_index": 698
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843",
+                "title": "臺中市政府經濟發展局-特定工廠中文版產業故事-溢康企業股份有限公司",
+                "start_index": 1050,
+                "end_index": 1154
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/DWTU/Listings.asp?PlantCountry=TAIWAN&hdModlStd=ModlStd",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 1252,
+                "end_index": 1356
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/products-det.php?pdcl=21&sid=17&utm_source=openai",
+                "title": "APT-240｜Pressure Tank｜75L Water Usage Per Min Tank｜Aquasky",
+                "start_index": 1469,
+                "end_index": 1563
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://uni-pressuretank.com.tw/?lang=tw&utm_source=openai",
+                "title": "台灣壓力桶製造商-禾茂興國際有限公司(Unitec)",
+                "start_index": 1989,
+                "end_index": 2076
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://prowin-tools.com.tw/?utm_source=openai",
+                "title": "氣動工具 噴漆槍 自動噴槍 噴筆 油漆壓力桶 氣動馬達 攪拌器 Home - Prowin tools Taiwan",
+                "start_index": 2228,
+                "end_index": 2299
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.nsf.org/knowledge-library/nsf-ansi-standard-61-drinking-water-system-components-health-effects?utm_source=openai",
+                "title": "NSF/ANSI 61: Drinking Water System Components – Health Effects | NSF",
+                "start_index": 2698,
+                "end_index": 2835
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.iso.org/iso/definitive_expected_outcomes_iso9001.pdf?utm_source=openai",
+                "title": "REPORT ON PROGRESS IAF-ISO ACTION PLAN",
+                "start_index": 2891,
+                "end_index": 2986
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://single-market-economy.ec.europa.eu/single-market/goods/ce-marking/manufacturers_en?utm_source=openai",
+                "title": "Manufacturers - Internal Market, Industry, Entrepreneurship and SMEs",
+                "start_index": 3070,
+                "end_index": 3218
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 38092,
+      "completion_tokens": 2461,
+      "total_tokens": 40553,
+      "cost": 0.514318,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 26,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.514318,
+        "upstream_inference_prompt_cost": 0.341268,
+        "upstream_inference_completions_cost": 0.12305
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 457,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 5
+      }
+    }
+  }
+}

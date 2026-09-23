@@ -1,0 +1,162 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "反滲透（RO）淨水系統用的壓力桶，該怎麼選？有推薦的品牌嗎？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008364-dcgYl3gDNQh3M1bqrtoE",
+    "object": "chat.completion",
+    "created": 1790008364,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "provisioned",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "反滲透（RO）淨水系統的壓力桶（儲水桶）負責在 RO 膜製水較慢時儲存純水，並依靠內部氣囊壓力在開水龍頭時快速供水。挑選合適的壓力桶時，可從規格、材質、認證與尺寸切入：\n\n---\n\n### 一、 壓力桶怎麼選？\n\n#### 1. 容量評估（公稱容量 vs. 實際儲水量）\n* **理解公稱容量**：壓力桶標示的加侖（G）或公升數是**總容積**。桶內一半左右的空間是橡膠氣囊與壓縮空氣，**實際可用儲水量通常約為標稱容量的 50%～70%**（取決於進水水壓與預充氣壓）。\n* **挑選建議**：\n  * **3.2 加侖 ～ 4.4 加侖**：最適合一般家庭（3～5人），實際儲水量約 6～10 公升，滿足煮飯、飲水等尖峰需求，且體積適中，是市場主流。\n  * **2 加侖左右（小容量）**：適合 1～2 人租屋族或廚下空間極小的櫥櫃。\n  * **11 加侖以上（大容量）**：適合商用場所、辦公室或大家庭。\n\n#### 2. 桶身材質（外殼與內膽）\n* **外殼材質**：\n  * **鋼板烤漆金屬桶**：耐壓性佳、結構堅固、性價比高，但若廚下環境潮濕通風差，時間久了外殼有受潮生鏽風險。\n  * **塑鋼 / 複合防爆桶（外層塑膠＋內層鋼或高強度內襯）**：外殼不生鏽，耐腐蝕且防潮，特別適合潮濕的廚下環境，外觀也較好清潔。\n* **內部接觸面與隔膜（關鍵核心）**：\n  * 必須挑選採用**食品級丁基橡膠（Butyl Bladder）隔膜**與 **PP（聚丙烯）內襯**的產品，避免水質產生橡膠味或二次化學釋出。\n  * 接頭部分建議選用 **304 不鏽鋼接頭**（抗拉扯滑牙且無重金屬釋出風險）。\n\n#### 3. 國際安全認證\n壓力桶內部隔膜長期浸泡在純水中，必須有權威衛生認證：\n* **NSF/ANSI 58**：逆滲透飲用水處理系統專項認證。\n* **NSF/ANSI 61**：飲用水系統組件健康安全標準。\n* **CE / PED 認證**：壓力容器安全耐壓認證。\n\n#### 4. 尺寸與安裝介面\n* **安裝空間**：量測廚下櫃體的高、寬、深（直徑）。若高度不足，部分款式可加購側放底座改為橫放。\n* **接頭規格**：家用多為 **1/4\" NPT（2分牙）**，少數較大流量機型採用 **3/8\"（3分牙）**，購買時需留意搭配的壓力桶球閥規格。\n\n---\n\n### 二、 推薦品牌\n\n市場上建議優先選擇專門生產壓力容器的專業大廠（許多品牌淨水器也由這些廠商代工）：\n\n1. **TankPAC（笠毅工業）—— 全球市佔率極高的首選**\n   * **特色**：台灣製造（MIT），全球壓力桶製造的指標品牌之一，幾乎是各大淨水材料行與標準 RO 機組的標配。全系列通過 NSF 58 與 CE 認證，隔膜抗老化性與氣密性極佳。\n   * **常見型號**：\n     * `RO-132`（4.4G 鋼製桶，耐用經典款）。\n     * `RO-122`（3.2G 鋼製桶，適中尺寸）。\n     * `PRO 系列`（塑鋼防鏽複合桶，外殼為塑膠，防潮不生鏽）。\n2. **AMTROL（安美樂）**\n   * **特色**：隔膜式壓力罐的原始發明品牌，美國知名大廠。其隔膜耐久度與耐壓標準在業界享有極高口碑，適合偏好歐美高規進口品牌的用戶。\n3. **PAE（敦鴻科技）**\n   * **特色**：在台灣與國際市場同樣具備高市佔率，主打高品質飲用水壓力儲存罐，具備 NSF 認證與 CE 認證，耐壓穩定且價格合理。\n4. **Aquasky（天水）**\n   * **特色**：台灣知名膨脹罐與壓力桶製造商，產品具備 NSF 61/58 等多國飲用水認證，氣閥氣密結構穩定，外銷品質優異。\n\n---\n\n### 三、 使用與更換建議（避坑提醒）\n\n1. **壓力桶是消耗品，建議 3～5 年定期更換**：\n   壓力桶內的橡膠隔膜長期處於收縮與拉伸狀態，經年累月可能會出現微裂紋、失去氣壓或殘留雜質滋生細菌。\n2. **如何判斷壓力桶損壞？**\n   * **隔膜破裂/進水**：如果開水龍頭只流出幾秒強水就變極慢，但**用手去搬壓力桶卻非常沉重（滿水狀態）**，代表氣室已破裂進水、失去壓縮氣壓，通常無法修復，建議直接換新。\n   * **純水失壓**：搬動時桶子是空的，可檢查底部氣閥是否漏氣，可用打氣筒補氣至預充壓力（空桶狀態下通常為 **6～8 PSI**）。",
+          "refusal": null,
+          "reasoning": "**Researching Water Tank Options**\n\nI'm currently exploring Reverse Osmosis storage tank options. My focus is on identifying key selection criteria and investigating reputable brands within this niche, aiming to gather actionable advice for choosing the best fit.\n\n**Evaluating Tank Designs**\n\nI'm now delving into the specifics of RO pressure tank designs. My current thinking revolves around the fundamental purpose of these tanks – storing purified water under pressure due to slow membrane production. I'm also prioritizing the essential selection factors: capacity and the distinct material compositions, steel versus plastic.\n\n**Analyzing Tank Construction**\n\nI'm focusing on the benefits of composite tanks, specifically their non-corrosive nature and lighter weight, making them ideal for humid climates. The use of butyl bladders and PP liners is also a key consideration for preventing water contact with metal.\n\n**Selecting RO tank capacity**\n\nI'm focusing on how to choose an RO storage tank, specifically detailing the difference between nominal and actual storage capacity, as a key factor for users. This is the first step in building out the selection guide.\n\n**Determining tank materials**\n\nI'm now analyzing RO tank materials. I'll detail the pros and cons of different outer shell constructions, focusing on their suitability for humid environments, and the crucial inner bladder materials responsible for water storage.\n\n**Evaluating tank components**\n\nMy current focus is on the critical internal components. I'm detailing the necessity of food-grade butyl rubber bladders and PP liners to prevent odor and chemical leaching, and the advantages of 304 stainless steel fittings over plastic to avoid brittle failure. I am also researching safety certifications like NSF/ANSI 58 and 61, along with installation considerations like hub size and available space.\n\n**Researching Top RO Tank Brands**\n\nI'm compiling a list of leading RO tank manufacturers, noting their key product differentiators and certifications. This includes brands like TankPAC, AMTROL, PAE, Aquasky, and Pentair, with a focus on models suitable for various environments and user preferences.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Researching Water Tank Options**\n\nI'm currently exploring Reverse Osmosis storage tank options. My focus is on identifying key selection criteria and investigating reputable brands within this niche, aiming to gather actionable advice for choosing the best fit.\n\n**Evaluating Tank Designs**\n\nI'm now delving into the specifics of RO pressure tank designs. My current thinking revolves around the fundamental purpose of these tanks – storing purified water under pressure due to slow membrane production. I'm also prioritizing the essential selection factors: capacity and the distinct material compositions, steel versus plastic.\n\n**Analyzing Tank Construction**\n\nI'm focusing on the benefits of composite tanks, specifically their non-corrosive nature and lighter weight, making them ideal for humid climates. The use of butyl bladders and PP liners is also a key consideration for preventing water contact with metal.\n\n**Selecting RO tank capacity**\n\nI'm focusing on how to choose an RO storage tank, specifically detailing the difference between nominal and actual storage capacity, as a key factor for users. This is the first step in building out the selection guide.\n\n**Determining tank materials**\n\nI'm now analyzing RO tank materials. I'll detail the pros and cons of different outer shell constructions, focusing on their suitability for humid environments, and the crucial inner bladder materials responsible for water storage.\n\n**Evaluating tank components**\n\nMy current focus is on the critical internal components. I'm detailing the necessity of food-grade butyl rubber bladders and PP liners to prevent odor and chemical leaching, and the advantages of 304 stainless steel fittings over plastic to avoid brittle failure. I am also researching safety certifications like NSF/ANSI 58 and 61, along with installation considerations like hub size and available space.\n\n**Researching Top RO Tank Brands**\n\nI'm compiling a list of leading RO tank manufacturers, noting their key product differentiators and certifications. This includes brands like TankPAC, AMTROL, PAE, Aquasky, and Pentair, with a focus on models suitable for various environments and user preferences.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXcTrZAoAlOdC9xQHUywfLdmm4WH51Dzvja7c8vYmSQp801Ru_UQmqPDOCx9tL-XgWFVN_5hzwZMJUOUbTyH69Rf9-5y_9WpgvQ-Leb_9KzebiYWlB-r3LIqAfTsEXcTbP-L7E-xcC2jUjrIDwryeXNR6t0sn3F31Pu3SHSYpFdA8xxZQ-82wm0huTiM5fw2xnNIjZtbNBQwFWISpRokwS8HbKPfbWtOK2iV3hMN3ghUcvv9jYAW6BOtu_UNRC4UC2rKYzhKvfA8TVLUAlRnEfPUj4dgKNhbd2TJTwn0zTsYsO8_6OOVUbdBqu9XCQF1oabdJT6CdFMw==",
+                "title": "139water.com.tw",
+                "start_index": 0,
+                "end_index": 159
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJXN15oGGcL5BxHcomzbhzCes9P5wpZhNYVijVgORLXqsaAyXrbn1LvWdh-aHGKqrHPqvEhHt4u6VZijD-IKk3OO8RNUqR3_E36bdzgtkDE5-50GAqXigJUrcvA4sDog==",
+                "title": "smzdm.com",
+                "start_index": 0,
+                "end_index": 159
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECSMcLqGNYeUj8TiiIh9XgQcmW7im5Ibl0sYS5wlU2euZJjk_2tPxzZ0Kl3pAcOnfJrjpM7Nzjlm6m4rqHnIMNXzEQ_99nW98W_cRisD64kOwxFgZ8BGyHDxv8ox7vuo1kPX0=",
+                "title": "shopee.tw",
+                "start_index": 597,
+                "end_index": 800
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4qpzVQ-gvxuIvlzOKyGpWKAG3KPI8h-lhAjSWIE1_E0FTs5hcyuoTJyzwRyeBwrldqqC8xqKXiR2qE7HfDZsJokaCMEmnPZwOGh7BMgDtbNNke5xee83JVuxxzGK0KUGv",
+                "title": "findprice.com.tw",
+                "start_index": 597,
+                "end_index": 800
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsUTDtpcLjjgnAaUdGpqYgxxsTRiKhLxxHKnYl7IoOHt95A23eACiDY85Ixu8HgGOO5U-3zzYRbK2WXJDhX4Pq-D5Xa65DRFTWKJNMhj-bfn28FOOeICm2KIboWIuESHZ1bE45_2oc3j9TY68=",
+                "title": "tankpac.com",
+                "start_index": 905,
+                "end_index": 986
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdMyW4duN2rBGr0eXJlmfqVVKXFGzjH_95S4YTRjdUNGhWugyXlm3np1pSwloxznj4CxlQlRvxAXFaA1OPRYGz7p8FIPIse9ADQVCVUqIXPFedH9l1Adrj9oxMkDJCV5HJmRBFii48lh-Kmc3BYTA=",
+                "title": "tankpac.com",
+                "start_index": 905,
+                "end_index": 986
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnTb3_6xr9ZJbvaFuFWDjo-KHZM87GiC1dHGaZ5uX5hldcaQiJsdzEqPJc2ty9I1h-i2ZT5-ogm84h0qprrG40avCg5CHVqvF_RtQWBmvYr9hFWJUFX-NGF0TfZ6VdCJgfmMtVMjozADpIGJZ-tlU9prE5Ty-oFKRPyAvhK3rF0WlTz-Dkrj-S9__6r4AiGF71dUKieG8paCrNMMfoReHoXcMjtQ-uIvDDHyGncJKnLubtFPMK89pL8eYhnsEkrvpRtlmNOCiDga6plytSPCEMVuS20CGeTwp1_VdNvplEjnF2hWh5j5JlWfiVCmA1tra0fXefDw==",
+                "title": "taiwan-water.com",
+                "start_index": 999,
+                "end_index": 1207
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs8994-ILM0HpZc-snRifL0xWnKyHm22NxL06BvHn2zIgTwltLfJjkCYf5EmFFlHkSai-y_KzKNAixUGCwKPgciY6XgO8Hv1HJ5b9SdVJ3y_M8fNuT",
+                "title": "tankpac.com",
+                "start_index": 1890,
+                "end_index": 1949
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEie5R27986stkJCRIl_-5mOT_yWRz72D8wOwT2ZpIyOnxXlTjGgNWFZBTSZfiTh_kq4nJpPE10xrxuI_vfhHOOU0r2dtzi-pdUp5njq45qVpRd6N4UsCQ_ayKpUKUOOJJQDWGMvX7MJzyhIPMW99xajq7iV60YeQfiMfneBwal0-ee_10R",
+                "title": "taobao.com",
+                "start_index": 2181,
+                "end_index": 2346
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 80,
+      "completion_tokens": 3473,
+      "total_tokens": 3553,
+      "cost": 0.04108375,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.04108375,
+        "upstream_inference_prompt_cost": 6e-05,
+        "upstream_inference_completions_cost": 0.01302375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1921,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

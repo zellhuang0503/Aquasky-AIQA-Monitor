@@ -1,0 +1,179 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790007906-uObXKb1Ejy1vxOQS5Wp2",
+    "object": "chat.completion",
+    "created": 1790007906,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**若是 RO 淨水、泵浦用壓力桶，我建議先洽 AQUASKY 溢康；若是塗料、膠材供料用壓力桶，則先洽 PROWIN Tools。**兩者都有公開的 OEM／ODM 或客製服務資訊，但用途不同，不能直接互相替代。([aquaskyplus.com](https://aquaskyplus.com/zh?utm_source=openai))\n\n以下是公開資料初篩結果。**「官網宣稱具備認證」與「已在認證機構名錄核實」分開標示**；尚未核實的證書效期、適用型號及代工條件，不當成已確認事項。\n\n## 建議優先接洽的工廠\n\n### 1. AQUASKY 溢康企業股份有限公司｜台灣台中\n**適合：RO 儲水桶、泵浦隔膜壓力桶、膨脹水箱。**\n\n- **產品與製造據點：**官網列有 RO-PLUS、PUMPLUS、高壓泵浦壓力桶及液冷膨脹水箱；總廠位於台中市神岡區。([aquaskyplus.com](https://aquaskyplus.com/zh?utm_source=openai))\n- **OEM／ODM、研發線索：**官網提供 OEM／ODM 技術洽詢，並公開專利防漏接頭、氣閥結構及隔膜設計等技術資訊。這些可作為設計開發能力的初步依據，但我尚未核實其研發人數、實驗室配置與專利有效狀態。([aquaskyplus.com](https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-lqcol-plus-ai-cooling_ENG?utm_source=openai))\n- **認證查證：****NSF 官方名錄可查到 Aquasky Enterprises Co., Ltd. 的 NSF/ANSI 58 與 NSF/ANSI/CAN 372 項目。**官網另列 ISO 9001、歐盟壓力容器安全、UPC、KC 等標章；後者仍需索取證書及適用型號清單。([info.nsf.org](https://info.nsf.org/Certified/Common/Company.asp?CompanyName=aqu&utm_source=openai))\n- **聯絡：**+886-4-2562-6368。([aquaskyplus.com](https://aquaskyplus.com/zh?utm_source=openai))\n\n**我的判斷：**若你找的是「水用壓力桶」，這家應列第一輪詢價名單；目前找到的資料中，它的第三方認證證據相對明確。\n\n### 2. PROWIN Tools｜台灣\n**適合：塗裝供料、油漆及工業液體用壓力桶。**\n\n- **OEM／ODM、研發：**官網明確列出完整 OEM／ODM、客製方案、專業研發及品牌貼牌服務；產品包含不鏽鋼壓力桶、攪拌器等。([prowin-tools.com](https://www.prowin-tools.com/?utm_source=openai))\n- **製造能力：**台灣官網說明氣動設備為台灣製造，並接受 OEM 訂製。([prowin-tools.com.tw](https://prowin-tools.com.tw/?utm_source=openai))\n- **認證資訊：**官網宣稱油漆壓力桶具有 PED 2014/68 與 ATEX 2014/34 相關認證；**本次未獨立核實證書編號、效期及涵蓋的桶體／攪拌器組合**，應要求提供完整文件。([prowin-tools.com](https://www.prowin-tools.com/jp/?utm_source=openai))\n- **聯絡：**jimmy@prowin-tools.com。([prowin-tools.com](https://www.prowin-tools.com/jp/about-us/?utm_source=openai))\n\n**我的判斷：**若需要「壓力桶＋氣動攪拌＋供料」整合開發，值得優先接洽。\n\n### 3. HM Tanks／HUIMAY｜中國，官網列上海辦公室\n**適合：水用壓力桶、膨脹罐、RO 儲水桶及儲氣桶的貼牌或客製開發。**\n\n- **OEM／ODM：**有專門的 OEM／ODM 服務頁，列出品牌、顏色、規格及包裝客製，並表示可為塑膠 RO 桶製作專用射出模具。([huimay.cn](https://www.huimay.cn/en/oem-odm.html?utm_source=openai))\n- **開發與品管線索：**官網列有量產前打樣、模具製作、材料追溯、水壓測試與第三方驗貨安排。([huimay.cn](https://www.huimay.cn/en/oem-odm.html?utm_source=openai))\n- **認證資訊：**宣稱可依目標市場提供 ASME U-Stamp、CE/PED、NSF、ISO 9001 等文件。**目前只有供應商自身聲明，尚未核實對應持證公司、實際工廠地址及認證名錄，因此只能列為待審核候選。**([huimay.cn](https://www.huimay.cn/en/oem-odm.html?utm_source=openai))\n- **聯絡：**info@huimay.cn；+86 189 179 056 24。([huimay.cn](https://www.huimay.cn/en/oem-odm.html?utm_source=openai))\n\n**我的判斷：**可用來比較客製條件與報價，但建議先完成工廠及證書核驗，再談打樣付款。\n\n## 備選：研發明確，但 OEM／ODM 尚待確認\n\n**PROTIMA／益源興企業有限公司｜台灣**\n\n官網明確說明具備壓力容器、氣動攪拌器、泵浦與氣動馬達研發團隊，產品為台灣製造，並宣稱取得 TÜV 安全及 ISO 品質管理相關認證。**不過，本次未找到足以確認其接受品牌 OEM／ODM 的公開條款，也未核實證書範圍。**若你的用途是工業供料或攪拌，可列為技術洽談備選。聯絡：sales@protima.com.tw。([protima.com.tw](https://protima.com.tw/?lang=tw&utm_source=openai))\n\n## 詢價時，建議一次要求這些資料\n\n不要只問「有沒有認證」，建議將以下列入 RFQ／供應商審核要求：\n\n| 審核項目 | 建議要求 |\n|---|---|\n| 研發能力 | 工程團隊配置、相似開發案例、可提供哪些設計計算及測試報告 |\n| 認證 | 完整證書、證書編號、持證公司、製造地址、適用型號及有效狀態 |\n| OEM／ODM 範圍 | 僅貼牌，或可修改桶體、隔膜、接口、材質及工作壓力 |\n| 驗證能力 | 耐壓、爆破、壓力循環、洩漏及介質相容性測試方案 |\n| 商務條件 | MOQ、打樣費、模具費、開發期、量產交期與保固 |\n| 智財與責任 | 模具／圖面所有權、設計變更管制、貼牌後認證安排 |\n\n**請先告訴我：壓力桶用途、容量與工作壓力、銷售市場，以及預估訂量。**例如「RO 飲用水用、4 加侖、100 psi、銷美國、每年 5,000 顆」。有這些條件，才能把名單縮到真正適合的 2–3 家，而不是只比較誰的認證標章最多。",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVpy_U14O0GiTgy5hZkn88z9vk1srOqacriFhnsaxaMeqt3UPnkh1GXe1QoWpG7UIHgg8-3AR12gZJPpgoGLiat5b0lte0WE8CzJRIARmhGLWxErLSxt7wlf_3JtgpJcVTYbK1gzWzokfjSjkExxxd-9w7uOhKecwE1UINMQU-TGeZAPIqHwYjHHSpKPsB05TOgln3m_dQlM-GfyvRZU-WOhrmKIU33HvxyllPc1L9KjegC81nVM6p1IMtAjY4kaMSl22DJy2kLVXPMjuF9pMs4n0KQPxl6Km2aQ4WU03aljJbk81bMecY66PT6oj_k77MCnJbBztP4C4d1MfRo9hne7gXrMgbMznng_4YmtpnWj-ikFVci7w9t8jKKpV_uhZ8msN7yaqanZzozd4lQIHl4_VPFb4OCqfLt-N3112_PdTNf1RG5HpL0pwpqzkcxSQXLTRgPYuVslpHts9NtSaQtzmUeO0YC8uAxgx7nhKO0sSeKf4EA46EG3_JrbyIHroDEMEa2zWZM_5hAkY90oZrLKqbbT8o5XjDnPgB3SmCP3swReFAkZJwzC089CGHxylBsuLvVnrk8mxIyPO9rTBkcHBUftmfxqI2DXnDm3U9fuaOHN8r1xxrwjKxYmedSGZpeooKLZXbOYWSYzeXRfX5s1V5wEbaoZnwgj9uKH2an2JCYbRv_djqkKZLtyOY37NGhAcJtYWkM9fbEejCcMXafJkFl5CWy1bPT6TrPmYnpYTWZHk9vNYvwZP39OgGMlw8HayILEpQlmvtHOiERDCJkOqN5S1y8ylqZ8zW5IxfFHhL_t80TNV28ntscvMLme61XIOZI_Ge-ZAufNerCNTMr66W4c5UXIPPBhToJUB5E6qIauVAb1muNk5ILq8wQNCfIJkDfWQ2ajv3DzuXyvxNcJP1_cZcsFe2Z0sIgFO3LqYsfz2Prwdkv9-r9K1a40qdEnCP_E213YOcycD2i7odxCUk9evyUsArPWIslBMF5kn5Ppu4TBbghpGi4Qhy61sA_KjaN5COYSuEtx7TonsI8yAngl-AdIIGGLA2p5QNG3-fRtUK3vr2Wpeg_qv9_oGwJG3cVLnq6CtA-_jsJXR4YYZ0eIYBrElkqVW-yJq-lYnNcNJJHZFOz0Zdic7V13iEFZgMw9xxknPviDlM9eH4JnMH5kd8MC3km9MoDoTRFcFh33JUPFhCcCXrsRSLmIYtpQKBdoKTGA1fPP8JHLs9ZHrYcjO_HtnzKZpy4Ca37_B92r3Y6x_JrAXIraB-zfV8W5cnpTOV4_l2XMPmZmX3LXFGM1Iv0DygpYeW8RvoXJ7imJF44aSgPtbXZrT7g6moHV_XzNFQHG_4A3yxMIdl7fHkEd-_fxMFQE8md-ULhzaNCn6E215bv2zJmACuO5Gm0U.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_05c5280130228986016ab15a721cac87d18e497703dfad7d93",
+              "index": 0
+            },
+            {
+              "type": "reasoning.summary",
+              "summary": "**Evaluating entries and patents**\n\nI'm considering if the final four entries should total 900 Chinese. It seems like I need to ensure adequate research and development for Aquasky, with enough patents, though they might be limited. I'm planning to use three primary components and have Protima as a backup. There’s no uncertainty with the factory, which is good! Finally, I think a four-entries table might work as a medium. Overall, I’m piecing this plan together!",
+              "format": "openai-responses-v1",
+              "index": 1
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqsVp5jlIU5mNWnqWt73ttRRiEHYNTPqpD1vf-puDEPN7mMzpkwQcKicYvRRZoqduoEx8tz3BD5_lYb90on0HVY6SD0yAqVWalJpBHw3RpY5gSX4xEGIEt0Xyoem8aZZx3t_CCWxNQ_FuYbD9pJauIXkurrBO3jVBZmoQl6i3cms1YoHb3ROJd_RfcVLqIJ6n4fVF2pcIIk_e2ORy65FhlAzET1msYCDb1hhBW0A1q0jXNf94Z3Za4jLaOrSj0ok6AtcYVOIMyTMGc3yFPz20zG3ZHe9nmBnq44MauJe503DZyj6Cr71IPAmATeJzCVHF0WsSggz7ojirA6PtH_7MRexxOIxJ3zbQb5keKp3uzlLmiuJWMlBNjS4WSX2xtMYIx4axZo8wFFvw2WaVqKzOBkvY6drkWo07jpOttCuvSlWyTn5ADCs10GzG2lLs8xXc90wuTuQGO36bEMZ1g-o79j5lGajeJrDw36hXqbbLsn6nRjODrkq63hc7PSL5LFufJx83tKNM4WlRMQroB5SPbGEg653dSbRHDL3hiQ27owA0wvWpTq_hQM-Tzn6MG5Sm0OJcbPvcPMhlpNMqsj9EA8AtJyxoISRQ5QXfzOVntKCMUU5nKg0JeXJhbhdiu9ubhUS5LS1YflZHY8XXdX_79Nu3fKZiEm1o70LLY1rBQ564Dqzyr0LLJRFGSCB96tgIKAkZGIJ3_ADH8-J__zis3w1cJgNeYrZr5ZqmwUygBLgraQc3pKD3-GSTDXcLCTt9caJwkh48Ao67ho5DW6ALLLjfnxzAnx22kBHK6yGN7nmrxAtUHtJOoAyk3msHZ0HiCYsjIPLAhShsz9Zst6gGsI38RVfBIKdMvL7tOarcvpBsdx3zS_Dd_SgQzejyv91KhAvCdGmMXQxHaY79JCSvLkbrGwdBHj_pqQv2tS3FkmKTqaQmaxQCTAiG-xpGN-UsbD6ryPNKAgfu-7RMvLAFMDK3wszkF8TGSw4YH6kS9VaCrgkMEYlIAwbP68f9uw3vSZY59wCQSh-gmoWl-ezlvTES00wibIgHkwEoiU4_zuE5oGULvvmIpBwklKm7I70S6gspIlExedU7B_pbs_F0mK1CrYYU7zDyfvd-gAhsjQalRnxsG2DzCOW3F5YgA-QJqSVqErQVVxeT8GNqGXm0KsQ5aRG0oXj_LWl0TIShFNxMRgxa3FFi4AXGpmDj5Zci1-xtZruqO9eNDkbebW81xRqko5D3xoCSQHnuFeLhg0ft84oh-5KvxcoNxC2-t3Be3t1bYHBrjNb9v7YRkuub9rSCjTd68PlKhQQWaDs0jNXquwJvnMnhD1NNBT2T8QfrbRXP-KXbsEIr0MYqJkwAXY7qtgoEDhprorGsqxiuNACXZk1DiXR2dVsEY6S8Ep73ub_WVIDCgeWiT8totfwQjjGHb9qpgSDIzoVDPpo0DiQxxdtnrzlv6BhxHif2x3xSMgrlrJqHAwdsGwDMd161iWTwUrXu7fmJ-Hoyckc161WjeW09xf2vrGveN6RptXMyNSYZQqj-DUjiFT1ElU_q1bZWKfRTX3VhBrViSJsOi5IU-Qa4=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+              "format": "openai-responses-v1",
+              "id": "rs_05c5280130228986016ab15a76f86c87d19b6d4054753528a0",
+              "index": 2
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh?utm_source=openai",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 107,
+                "end_index": 172
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/news-detail/INDUSTRY/aquasky-lqcol-plus-ai-cooling_ENG?utm_source=openai",
+                "title": "RIDING THE 7.28% WAVE: HOW AQUASKY LQCOL PLUS IS LEADING THE EVOLUTION OF AI COOLING ｜Aquasky",
+                "start_index": 554,
+                "end_index": 674
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://info.nsf.org/Certified/Common/Company.asp?CompanyName=aqu&utm_source=openai",
+                "title": "Listing Category Search Page | NSF International",
+                "start_index": 818,
+                "end_index": 919
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.prowin-tools.com/?utm_source=openai",
+                "title": "PROWIN TOOLS Taiwan | Spray gun, Airbrush, Painting tools, Air tools manufacturer",
+                "start_index": 1188,
+                "end_index": 1257
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://prowin-tools.com.tw/?utm_source=openai",
+                "title": "氣動工具 噴漆槍 自動噴槍 噴筆 油漆壓力桶 氣動馬達 攪拌器 Home - Prowin tools Taiwan",
+                "start_index": 1296,
+                "end_index": 1367
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.prowin-tools.com/jp/?utm_source=openai",
+                "title": "エアツール - Prowin Tools Company",
+                "start_index": 1464,
+                "end_index": 1536
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.prowin-tools.com/jp/about-us/?utm_source=openai",
+                "title": "私たちに関しては",
+                "start_index": 1569,
+                "end_index": 1650
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.huimay.cn/en/oem-odm.html?utm_source=openai",
+                "title": "OEM & ODM Pressure Tank Manufacturing | Custom Branded Tanks | HM Tanks",
+                "start_index": 1832,
+                "end_index": 1902
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://protima.com.tw/?lang=tw&utm_source=openai",
+                "title": "台灣壓力桶製造商-益源興企業有限公司 (YHS)",
+                "start_index": 2574,
+                "end_index": 2643
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 38663,
+      "completion_tokens": 2178,
+      "total_tokens": 40841,
+      "cost": 0.4958855,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 29,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.4958855,
+        "upstream_inference_prompt_cost": 0.3469855,
+        "upstream_inference_completions_cost": 0.1089
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 399,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

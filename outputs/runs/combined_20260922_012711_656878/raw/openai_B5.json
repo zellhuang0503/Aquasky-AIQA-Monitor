@@ -1,0 +1,103 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的壓力桶出廠前經過什麼品質測試？壓力循環測試標準是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790008157-RHTMcbFuXC2kS1BwoWB4",
+    "object": "chat.completion",
+    "created": 1790008157,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "依據 AQUASKY（溢康）的官方公開資料，**每個壓力桶出廠前都會接受壓力安全測試；官方公布的壓力循環測試要求為連續 100,000 次（10 萬次）**。但應區分「逐桶出廠檢驗」與「循環耐久測試」，不能直接解讀成每個出貨桶都做過 10 萬次循環。([aquaskyplus.com](https://aquaskyplus.com/zh/about?utm_source=openai))\n\n### 出廠前有哪些品質測試？\n\n| 測試項目 | 官方可查證的說明 |\n|---|---|\n| **壓力安全測試** | 公司簡介明確表示，每個壓力桶均經過 **100% 壓力安全測試**，再行出廠。該頁未公布測試壓力、保壓時間或允收值。([aquaskyplus.com](https://aquaskyplus.com/zh/about?utm_source=openai)) |\n| **預充壓力與測試** | 官方 FAQ 表示，所有溢康壓力桶都在工廠進行預充壓力及測試。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)) |\n| **水壓試驗——特定系列** | **Hydro-Plus 導熱液體膨脹罐**的官方產品說明指出，所有型號須以**設計壓力的 1.5 倍**進行水壓試驗。這項數值的公開說明有特定系列範圍，不宜直接套用到所有 AQUASKY 壓力桶。([aquaskyplus.com](https://aquaskyplus.com/zh/products)) |\n\n### 壓力循環測試標準是什麼？\n\n官方 FAQ 的說明是：\n\n- **連續進行 100,000 次壓力循環測試**，用來模擬真實運作環境。\n- 同一回答也宣稱壓力罐符合 **NSF/ANSI 61 與歐盟 PED**；另於認證段落列出 **PED 2014/68/EU、EN 13831**。以上屬原廠公開聲明。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n**目前公開資料不足以確認的細節**包括：循環壓力上下限、每次循環時間、測試溫度、抽樣比例、失效判定條件，以及是否每個出貨桶都執行此循環測試。官方也未在該 FAQ 列出「10 萬次」所依據的具體標準條款，因此不宜逕稱這就是 NSF/ANSI 61 或 PED 的統一循環要求。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n若是用於採購驗收，建議向 AQUASKY 索取**指定型號的出廠檢驗紀錄與壓力循環測試報告**，確認上述測試條件及合格判定，而不只依據官網的次數宣稱。",
+          "refusal": null,
+          "reasoning": null,
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/about?utm_source=openai",
+                "title": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+                "start_index": 125,
+                "end_index": 196
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 439,
+                "end_index": 490
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/products",
+                "title": "全球最完整的隔膜式壓力桶產品線：泵浦增壓、RO過濾與地暖膨脹 | AQUASKY",
+                "start_index": 611,
+                "end_index": 667
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 29568,
+      "completion_tokens": 935,
+      "total_tokens": 30503,
+      "cost": 0.332808,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 38,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.332808,
+        "upstream_inference_prompt_cost": 0.256058,
+        "upstream_inference_completions_cost": 0.04675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 210,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 3
+      }
+    }
+  }
+}

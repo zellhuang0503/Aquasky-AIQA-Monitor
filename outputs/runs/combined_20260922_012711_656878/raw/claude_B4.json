@@ -1,0 +1,162 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的產品有哪些國際認證？例如 NSF、WRAS、CE。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790011175-XnB0mMjAPXiPxyOd0NNg",
+    "object": "chat.completion",
+    "created": 1790011175,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "根據 AQUASKY（溢康企業股份有限公司）官方網站的資料，該公司主要生產壓力桶（Pressure Tank）及水處理相關設備，其產品持有多項國際認證：\n\n## AQUASKY 產品的主要國際認證\n\nAQUASKY 壓力桶符合全球品質標準，持有 ISO 9001、NSF/ANSI 61、NSF 372 無鉛認證、CE (PED)、WaterMark、WRAS、ACS 以及 KC 等認證。\n\n以下逐一說明各項認證的意義：\n\n**1. CE（PED 歐盟壓力設備指令）**\n歐盟壓力設備指令 2014/68/EU (PED) 規範了容量通常超過一公升、最大壓力超過 0.5 bar 的壓力設備之設計與製造標準，並訂定了「符合性評鑑」的行政程序要求，以使產品能自由進入歐洲市場而無須面對當地法規障礙。 所有 AQUASKY 壓力桶均通過 PED 認證，並由 PED 認證合格的焊接技師製造。\n\n**2. NSF 認證（多項標準）**\n- NSF/ANSI 58 訂定了家用逆滲透（POU RO）系統的最低認證要求，範圍涵蓋材料安全性、結構完整性、總溶解固體（TDS）去除率及其他選擇性汙染物去除聲明。\n- NSF/ANSI 61 測試涵蓋所有與飲用水接觸的產品，從水源到水龍頭，測定產品可能滲出或釋出至飲用水中的汙染物，並確認其是否低於安全標準所允許的最高含量。\n- 市場領導品牌致力取得 NSF 認證，作為向客戶保證產品可安全用於飲用水的卓越標誌。\n\n**3. WRAS（英國水務認證）**\nWRAS 促進並確保產品符合英格蘭及威爾斯的《供水（水件）條例》，以及蘇格蘭與北愛爾蘭相應的水務附則規定，其核准範疇亦涵蓋非金屬零件與材料（如橡膠墊片與密封圈）。\n\n**4. ISO 9001（品質管理系統）**\nISO 9001:2015 訂定了品質管理系統的準則，是該標準家族中唯一可供認證的標準，適用於任何規模、任何領域的組織，其核心原則包括強烈的顧客導向、高層管理的動機與參與、流程導向以及持續改善。\n\n**5. 其他認證：WaterMark、ACS、KC**\n除上述外，官方網站也提及 AQUASKY 壓力桶持有澳洲 WaterMark、法國 ACS（Attestation de Conformité Sanitaire）以及韓國 KC 等區域性認證，這些皆是各國/地區針對飲用水接觸產品的安全與衛生規範認證。\n\n---\n\n### ⚠️ 需要說明的部分\n- 由於搜尋結果主要為 AQUASKY 官方網站針對「壓力桶（Pressure Tank）」產品線的認證說明，若您想了解 AQUASKY 其他產品線（如有的話）是否持有相同或不同的認證，建議直接查閱其官網「Certification」頁面（aquaskyplus.com/en/certification）或聯繫廠商確認最新且完整的清單，因認證可能因產品型號、市場及時間點而有差異。\n- 搜尋結果中未提及 AQUASKY 是否針對每一款產品型號都個別取得所有上述認證，建議在採購前向廠商索取特定型號的認證證書以確認範圍。",
+          "refusal": null,
+          "reasoning": "The user wants details on AQUASKY's certifications like NSF, WRAS, and CE — I should search for specifics on this brand.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants details on AQUASKY's certifications like NSF, WRAS, and CE — I should search for specifics on this brand.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EpsDCrABCBIYAipAeKjtq2xgD5YTIoiqxJQonHEsa9TAD3yTKnn1MBzhQr4UrXGfitJhHWaiUqfwMWQ+bltkD0yHjmwCljnpA4CGkzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBqs7F1QYSDIFZoKspdDl+zsSWDxoMZkb1nTQwa9sakHZTIjCfyLqLPdmSPf41/2SsXiXtbSdb/3gpgu3xrl9iv0/g1PUVQoRlxFR+XAjRjxVt5BkqlwGpjTr7TdFGqjvQw5x2vbiWRvVqvuVpYUOxiHHKKYAKKI7FPxDyGbkjldn+/Rdu3bZWa9nHz3JmpAqyXRYdF8d27QKFBib4H67WdgaclMrGiQgASH0n0TjLH09pPH0fLNG5JXkg4IXb/am4T7EOOKvNJKX6o36oBD9jejzvZMyszgKzFujwJ6YzNrLbzsaZyFvEtZ2eqj5mGAE="
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY pressure tanks comply with global quality standards, holding ISO 9001, NSF/ANSI 61, NSF 372 lead-free, CE (PED), WaterMark, WRAS, ACS, and KC ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The Pressure Equipment Directive 2014/68/EU(PED) of the EU sets out the standards for the design and fabrication of pressure equipment generally over ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "All of Aquasky Pressure Tank is certified by PED and made by PED certified welder. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "... NSF/ANSI 58 establishes the minimum requirements for the certification of point-of-use (POU) reverse osmosis systems designed to reduce contaminan..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "NSF/ANSI 61 testing covers all products with drinking water contact from source to tap, and determines what contaminants may migrate or leach from you..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Market leaders strive to attain NSF certification as a mark of distinction that provides their customers with assurance that their product is safe for..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/certification.php?lang=en",
+                "title": "AQUASKY: About Certifications",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "WRAS promotes and ensures compliance with the Water Supply (Water Fittings Regulations) in England and Wales, and the equivalent Water Byelaws in Scot..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "Certified Pressure Tanks: NSF, ISO 9001, CE, WaterMark, WRAS | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "... ISO 9001:2015 sets out the criteria for a quality management system and is the only standard in the family that can be certified to (although this..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 19299,
+      "completion_tokens": 1609,
+      "total_tokens": 20908,
+      "cost": 0.074688,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.074688,
+        "upstream_inference_prompt_cost": 0.038598,
+        "upstream_inference_completions_cost": 0.01609
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 47,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

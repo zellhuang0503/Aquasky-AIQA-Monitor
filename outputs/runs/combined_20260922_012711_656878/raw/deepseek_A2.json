@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011085-MtQwAGMmWU6XtByBlCFk",
+    "object": "chat.completion",
+    "created": 1790011085,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "台灣在壓力桶製造領域有數家專注外銷的廠商，產品涵蓋鋼製、不鏽鋼及隔膜式壓力桶，主要應用於流體輸送、塗裝、水處理與加壓系統等領域。以下根據公開網路資料整理幾家代表性的外銷製造商及其品質認證概況。\n\n## 主要壓力桶外銷製造商\n\n### 禾茂興企業（Unitec）\n禾茂興專注於流體輸送產品的研發與製造，產品外銷全球市場，並提供客製化服務。其鋼製壓力桶（如 AT-10E）用於油性塗料、離型劑、膠水、防鏽塗料、化學液體及高黏度流體等輸送；不鏽鋼壓力桶則提供 SUS304 或 SUS316 材質，適用於油性或水性塗料。品質方面，該公司強調所有產品皆為「台灣製造」，並通過 TUV 安全認證及 ISO 認證。[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n\n### 益源興企業（YHS / PROTIMA）\n益源興專業於壓力容器及氣動攪拌器的研發與創新，產品行銷全球，擁有多年製造經驗。其 PROTIMA 研發團隊設計的壓力容器、氣動攪拌器、泵浦及氣動馬達皆為「台灣製造」，並通過德國萊茵 TUV 標準安全認證及 ISO 國際品質管理系統認證。產品線包括鋼製壓力桶（AT-10E，適用於油性流體輸送）、不鏽鋼壓力桶（AT-10ESS，可選 SUS304/SUS316，適用於食品及醫療等級領域）及雙層桶不鏽鋼壓力桶（DT-20E(FG)SS）。[protima.com.tw](https://protima.com.tw/?lang=tw)\n\n### 笠毅工業（TankPAC）\n笠毅工業位於台中市清水區，自稱是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等多個國家，年產量可達 500 萬顆壓力桶。產品容量從 0.5 公升至 150 公升，結合海外關係企業產品最大可達 450 公升；材質涵蓋金屬外殼、塑膠外殼、不鏽鋼外殼及玻璃纖維外殼。該公司強調使用安全堅固的金屬材質、食品級 PP 內膽、不鏽鋼接頭與高密度丁基橡膠，以提供安全穩定的出水品質。[zh-tw.tankpac.com](https://zh-tw.tankpac.com/about-us)\n\n### 溢康企業（AQUASKY）\n溢康企業創立於 1998 年，最初是台中的小型水五金加工廠，現已發展為全球領先的隔膜式壓力桶製造商之一。其壓力桶應用於住宅用水、汙水處理、熱水器、空調、太陽能熱水器及商業加壓泵浦系統等市場。生產方面，該公司使用自動化生產機械和測試設備，大部分生產工作在內部進行，且每個壓力桶都經過 100% 的壓力安全測試。[aquaskyplus.com](https://aquaskyplus.com/zh/about)\n\n### 台灣有理控（Unicontrols）\n台灣有理控的不鏽鋼壓力容器來自日本新潟縣燕市的有理控工場生產製造，擁有高強度耐壓、不易生鏽且具耐久性的特性，廣泛應用於各生產線及實驗室設備。該公司提供標準及特製壓力容器，可符合壓力容器法規之第二類壓力容器、小型壓力容器，並自 2009 年起在上海成立分公司，可生產符合中國壓力容器法規的容器。其日本國內生產據點已於 2014 年 7 月取得 ISO9001 品質管理認證。[unicontrols.com.tw](https://www.unicontrols.com.tw/%E4%B8%8D%E9%8A%B9%E9%8B%BC%E5%A3%93%E5%8A%9B%E5%AE%B9%E5%99%A8/)\n\n## 品質與國際認證概況\n\n綜合上述資料，台灣壓力桶外銷製造商在品質與認證方面有以下共同特點：\n\n- **台灣製造（Made in Taiwan）**：多家廠商明確標示產品為台灣製造，強調在地生產的品質穩定性。\n- **TUV 安全認證**：禾茂興與益源興均通過德國萊茵 TUV 的安全認證，這是壓力容器產品常見的國際安全標準。\n- **ISO 品質管理認證**：禾茂興、益源興及台灣有理控（日本廠）分別取得 ISO 認證，顯示其在品質管理系統上符合國際規範。\n- **100% 壓力安全測試**：溢康企業強調每個壓力桶出廠前都經過 100% 壓力安全測試，以確保產品安全性。\n- **材質與應用多元化**：不鏽鋼壓力桶可選 SUS304 或 SUS316，部分產品可應用於食品及醫療等級領域；隔膜式壓力桶則採用食品級 PP 內膽與高密度丁基橡膠等材料。\n\n## 小結\n\n台灣的壓力桶外銷製造商以台中地區為主要聚落，產品涵蓋鋼製、不鏽鋼及隔膜式壓力桶，外銷市場遍及美洲、歐洲、中東、澳洲等地。在品質認證方面，TUV 安全認證與 ISO 品質管理系統是多家廠商共同具備的國際認證，部分廠商更進一步強調 100% 壓力測試與食品級材料的使用。不過，上述資訊主要來自各家廠商的官方網站，屬於廠商自行揭露的內容；若需更嚴謹的第三方驗證資訊，建議直接向廠商索取認證證書或查閱相關認證機構的公開資料庫。",
+          "refusal": null,
+          "reasoning": "用户想了解台灣的壓力桶外銷製造商，以及品質和國際認證情況。我需要根據提供的搜尋結果來回答。\n\n搜尋結果中提到了幾家台灣的壓力桶製造商：\n\n1. **禾茂興企業 (Unitec)** - 專業壓力桶製造商，產品外銷全球，通過 TUV 安全認證和 ISO 認證，產品包括鋼製壓力桶和不鏽鋼壓力桶。\n\n2. **益源興企業有限公司 (YHS/PROTIMA)** - 專業壓力容器及氣動攪拌器製造商，產品行銷全球，通過德國萊茵 TUV 安全認證及 ISO 國際品質管理系統認證。\n\n3. **笠毅工業 (TankPAC)** - 位於台中清水，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等，年產量可達 500 萬顆壓力桶。\n\n4. **溢康企業 (AQUASKY)** - 創立於 1998 年，全球領先的隔膜式壓力桶製造商，產品提供給住宅用水、汙水處理、熱水器、空調、太陽能熱水器及商業加壓泵浦系統等市場。\n\n5. **台灣有理控 (Unicontrols)** - 不銹鋼壓力容器，來自日本新潟縣燕市有理控工場生產製造，自 2009 年起在上海成立分公司。這個可能不完全算是台灣製造商，而是日本公司在台灣的據點。\n\n用戶還問到品質和國際認證。從搜尋結果來看：\n- 禾茂興：TUV 安全認證、ISO 認證\n- 益源興：德國萊茵 TUV 標準安全認證、ISO 國際品質管理系統認證\n- 笠毅：沒有明確提到認證，但提到使用安全堅固的金屬材質、食品級 PP 內膽等\n- 溢康：每個壓力桶都經過 100% 的壓力安全測試\n- 台灣有理控：ISO9001 認證\n\n我應該用繁體中文回答，附上來源連結，並明確說明無法查證的資訊。我不應該捏造資訊。\n\n讓我整理一下回答。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想了解台灣的壓力桶外銷製造商，以及品質和國際認證情況。我需要根據提供的搜尋結果來回答。\n\n搜尋結果中提到了幾家台灣的壓力桶製造商：\n\n1. **禾茂興企業 (Unitec)** - 專業壓力桶製造商，產品外銷全球，通過 TUV 安全認證和 ISO 認證，產品包括鋼製壓力桶和不鏽鋼壓力桶。\n\n2. **益源興企業有限公司 (YHS/PROTIMA)** - 專業壓力容器及氣動攪拌器製造商，產品行銷全球，通過德國萊茵 TUV 安全認證及 ISO 國際品質管理系統認證。\n\n3. **笠毅工業 (TankPAC)** - 位於台中清水，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等，年產量可達 500 萬顆壓力桶。\n\n4. **溢康企業 (AQUASKY)** - 創立於 1998 年，全球領先的隔膜式壓力桶製造商，產品提供給住宅用水、汙水處理、熱水器、空調、太陽能熱水器及商業加壓泵浦系統等市場。\n\n5. **台灣有理控 (Unicontrols)** - 不銹鋼壓力容器，來自日本新潟縣燕市有理控工場生產製造，自 2009 年起在上海成立分公司。這個可能不完全算是台灣製造商，而是日本公司在台灣的據點。\n\n用戶還問到品質和國際認證。從搜尋結果來看：\n- 禾茂興：TUV 安全認證、ISO 認證\n- 益源興：德國萊茵 TUV 標準安全認證、ISO 國際品質管理系統認證\n- 笠毅：沒有明確提到認證，但提到使用安全堅固的金屬材質、食品級 PP 內膽等\n- 溢康：每個壓力桶都經過 100% 的壓力安全測試\n- 台灣有理控：ISO9001 認證\n\n我應該用繁體中文回答，附上來源連結，並明確說明無法查證的資訊。我不應該捏造資訊。\n\n讓我整理一下回答。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://uni-pressuretank.com.tw/",
+                "title": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)\n\n...\n\nUnitec specializes in the research and manufacturing of fluid transfer products. Our products have been selling to the global market with excellent quality and stability. We can also offer customized services in order to meet various requirements in different fields. To ensure the safe use of our products by customers, all products are \"Made in Taiwan\" and safety certified and ISO certified by TUV.\n\n...\n\n禾茂興核心價值 ... Values of Unitec\n\n...\n\n- 高品質 High-Quality\n- 國際化 International\n- 永續性 Sustainable\n\n...\n\nSteel Pressure Tank\n\n...\n\nAT-10E\n\n...\n\nSteel Pressure Tank is used for the transportation of oil-based paint, such as release agent、glue、rust preventive coating、chemical liquid、high viscosity fluid...etc\n\n...\n\nStainless Steel Pressure Tank\n\n...\n\nStainless Steel Pressure Tank is used for the transportation of oil-based or water-based paint, Material is available from SUS304 or SUS316.\n\n...\n\n禾茂興提供完整的產品 ... 安及功能規劃，若有任何 ... 歡迎與我們聯絡！ We can offer instructions on products and customized services for various fields upon customer request. Please feel free to contact us if you have any\n\n...\n\nADDR 台中市霧峰區草湖路15巷16號 No. 16, Lane 15, Caohu Road, Wufeng District, Taichung City\n\n...\n\nunitec ... .com"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://protima.com.tw/?lang=tw",
+                "title": "台灣壓力桶製造商-益源興企業有限公司 (YHS)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "台灣壓力桶製造商-益源興企業有限公司 (YHS)\n\n...\n\n益源興企業有限公司專業於壓力容器及氣動攪拌器的研發與創新，至今已有多年的製造經驗，並且行銷到全球市場，擁有絕佳的品質與耐用性。 我們的PROTIMA 研發團隊所設計的壓力容器、氣動攪拌器、泵浦及氣動馬達皆為“台灣製造”，為了確保客戶在產品使用上的安全，所有系列的產品皆通過德國萊茵TUV的標準安全認證及ISO國際品質管理系統認證。產品的專業設計不僅符合各領域的需求，而多樣化的種類款式，更能有效的提升工作效率。在強烈競爭的市場需求下，PROTIMA 團隊從未停止前進的腳步。\n\n...\n\n0\n\n...\n\n國際品質 High Quality\n\n...\n\n0\n\n...\n\n專業技術 Professional Technique\n\n...\n\n國際化 高品質．提高效率 永續經營．提供滿意的產品及服務 是我們一貫的理念及堅持的品質目標 Our company philosophy and goals: “International, High Quality” “Efficiency, Sustainable Management” and “Satisfactory Products and Services”.\n\n...\n\n鋼製壓力桶\n\n...\n\nAT-10E\n\n...\n\n適用於油性流體之輸送、模型製作，並可應用於油性離型劑、鞋面、木器、金屬、皮革之表面塗裝。\n\n...\n\n不鏽鋼壓力桶\n\n...\n\nAT-10ESS\n\n...\n\n材質可選擇不鏽鋼SUS304/SUS316。適用於油性和水性流體、膠水、離型劑、脫模劑、化學藥水之輸送，並可應用於食品及醫療等級之領域。\n\n...\n\n雙層桶不銹鋼壓力桶\n\n...\n\nDT-20E(FG)SS"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zh-tw.tankpac.com/about-us",
+                "title": "過濾水壓力桶製造商 - 笠毅工業(TankPAC)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "過濾水壓力桶製造商 - TankPAC\n\n...\n\n## 笠毅（台灣沛毅）工業股份有限公司\n\n...\n\n位於台灣台中市清水區，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等多個國家，幾乎涵蓋全球市場，年產量可達500萬顆壓力桶。本公司秉持基本信念：環保節能、永續經營、社會責任、誠信經營、以客為尊，並全心全意生產最高品質的壓力桶。公司的經營理念為追求品質，並以滿足客戶需求為優先。\n\n...\n\n## 提供安全、穩定出水 與 純淨水源\n\n...\n\n本公司產品涵蓋從0.5公升至150公升的完整容量區間，並結合海外關係企業的產品，最大容量可達450公升。產品材質包含金屬外殼、塑膠外殼、不鏽鋼外殼及玻璃纖維外殼，幾乎涵蓋所有常見的隔膜壓力桶規格。我們堅持使用安全堅固的金屬材質、食品級PP內膽、不鏽鋼接頭與高密度丁基橡膠，以提供安全、穩定的出水品質與純淨水源。\n\n...\n\n金屬隔膜式膨脹桶的優勢\n\n...\n\n金屬外殼比塑膠更具耐壓性。\n\n...\n\n金屬分子孔隙率低，有效避免氣壓流失。\n\n...\n\n隔膜式設計確保穩定出水。\n\n...\n\n近年 ... ，笠毅積極投入於水處理用濾材配件的 ... ，"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/about",
+                "title": "關於AQUASKY 溢康企業- 全球隔膜壓力桶與水處理設備專業製造商",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商\n\n...\n\n創立於 1998 年\n\n...\n\n溢康企業股份有限公司 (AQUASKY) 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商。溢康企業股份有限公司提供全方位的壓力桶製造解決方案，以提供最優質的壓力桶支援國際經銷商，提供壓力桶給住宅用水, 汙水處理、熱水器、空調、太陽能熱水器以及商業加壓泵浦系統等服務市場。我們的目標是為客戶提供最優質、可靠的壓力桶，並以具有競爭力的價格，提供穩定的供貨、最快的客製化設計選項和準時的交貨。讓全世界都能享有好的用水體驗.\n\n...\n\n高品質\n\n...\n\n我們的大量生產使用自動化生產機械和測試設備。 每一位員工都經過培訓且經驗豐富。我們大部分的生產工作都在內部進行，這限制了來自其他製造商的品質問題。每個壓力桶都經過100％的壓力安全測試，以確保最好的產品出廠。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.unicontrols.com.tw/%E4%B8%8D%E9%8A%B9%E9%8B%BC%E5%A3%93%E5%8A%9B%E5%AE%B9%E5%99%A8/",
+                "title": "不銹鋼壓力容器 - 台灣有理控",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "不銹鋼壓力容器 - 台灣有理控\n\n...\n\n# 不銹鋼壓力容器\n\n...\n\n從特別訂製式樣到標準產品 皆來自於日本新潟県燕市 有理控工場所生產製造之壓力容器\n\n...\n\n擁有高強度之耐壓、不容易生銹且具有耐久性之不銹鋼壓力容器，被廣泛使用在各生產線及實驗室等設備上。 有理控將先進的銲接技術和精確的耐壓計算與長年經驗累積的專業技術相結合;提供輕量型、安全性高的不銹鋼壓力容器。\n\n...\n\n- 壓力容器選購配件\n- 壓力容器選購加工\n- 特製加壓容器\n- 標準壓力容器\n\n...\n\n我們的不銹鋼壓力容器已廣泛應用於各行各業，並依照客戶之要求進行研究、開發及改良。我們也提供製造可符合壓力容器法規之第二類壓力容器、小型壓力容器，並也擁有豐富壓力容器相關技術知識。自2009年起，我們也在上海當地成立分公司,可生產製造符合中國壓力容器法規之容器。\n\n...\n\n可根據客戶之需求特製壓力容器，並深入討論來製定詳細之規格,以滿足需求上及應用上、預算及交期之條件。在特製壓力容器生產製造完成後，會將其型式圖檔歸類至特製壓力容器之類型進行管理，以便日後如有需求也可再重新訂購生產。\n\n...\n\n### 高品質、日本國內的生產據點「新潟工場」\n\n...\n\n日本國內的生產據點位於集結許多專業金屬加工技術職人之鄉而聞名的燕市，並由擁有身為燕市專業金屬加工技術職人們，用引以為傲之抛光及研磨之技術來進行製造。並於2014年7月取得品質管理國際規範ISO9001之認證。"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2032,
+      "completion_tokens": 1825,
+      "total_tokens": 3857,
+      "cost": 0.0097996,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0027996,
+        "upstream_inference_prompt_cost": 0.0006096,
+        "upstream_inference_completions_cost": 0.00219
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 493,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

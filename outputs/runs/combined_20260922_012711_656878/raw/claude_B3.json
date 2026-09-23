@@ -1,0 +1,366 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 與 Amtrol、Global Water Solutions 同等級產品的性能比較？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790011103-G5o1DVE2MreBnDaE8VbN",
+    "object": "chat.completion",
+    "created": 1790011103,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "以下整理目前透過公開資料（官方規格頁、經銷商產品頁、業界評測文章）所能查到的三品牌資訊。需先說明：**目前沒有找到具公信力的第三方實驗室或評測機構，針對 AQUASKY、Amtrol、Global Water Solutions（GWS）做同款式、同條件下的性能對照測試**；市面上能找到的「比較」多是各廠商官網自身的行銷宣稱，或消費者評測文章對單一品牌的介紹，而非嚴謹的橫向對比。以下先列出各品牌可查證的技術規格，再說明差異與限制。\n\n## 品牌背景\n\n- **AQUASKY**：1998年成立於台灣台中，是提供隔膜壓力桶製造的全球領導廠商之一。 產品線包含NSF認證、100%氮氣填充的泵浦用、RO用及熱膨脹壓力桶。\n\n- **Amtrol（現屬 Worthington Enterprises，品牌名 Well-X-Trol / Extrol / Therm-X-Trol）**：1946年由Henry Fleischer在美國羅德島創立American Tube Products，隨後於1954年發明世界第一個隔膜式膨脹水箱，被視為業界革命性創新。 目前被市場普遍視為井水加壓桶的標準品牌：Amtrol至今仍是井水加壓桶的業界標準，其Well-X-Trol系列被視為家用井水系統的黃金標準。\n\n- **Global Water Solutions（GWS）**：自2003年起供應全球高品質壓力桶，產品涵蓋鋼製、耐惡劣環境、抗退伍軍人菌、可飲用與非飲用水等型式。 值得注意的是，其歐洲產品的技術文件顯示製造地同樣位於台灣：製造商Global Water Solutions Ltd.，地址位於台灣台中市清水區中山路553號。\n\n## 核心技術規格比較\n\n| 項目 | AQUASKY | Amtrol | GWS |\n|---|---|---|---|\n| 隔膜/材質 | 不鏽鋼系統接頭搭配專利Leak Safe技術，內置400%延展性丁基橡膠隔膜，PP內襯分隔水與預充氣室 | 150 PSIG工作壓力，PP內襯搭配丁基隔膜，避免水產生橡膠味 | virgin PP內襯搭配FDA合規高等級丁基隔膜，以鋼製扣環固定於桶壁，並透過專利不鏽鋼水接頭進水 |\n| 耐壓範圍 | 官網未提供統一耐壓數值（依型號不同） | EX系列最高工作壓力可達300 PSIG（21 bar），採用業界最厚的隔膜及可更換式膀胱 | 鋼製壓力桶容量2至10,000公升，最高耐壓可達25 bar；小型PressureWave系列2至119加侖，最高工作壓力150 psi |\n| 特色設計 | FDA級PP內襯、400%延展丁基隔膜，1吋不鏽鋼接頭與專利Leak Safe技術，訴求無需維護；外殼採三層杏色環氧樹脂塗層以提升防腐蝕性 | 高強度鋼材可達150 PSIG工作壓力，具專利Turbulator水循環裝置及抗菌內襯 | 黃銅氣閥搭配O環密封防漏氣，內部零件皆為圓角設計，避免極端狀況刺破隔膜；外殼採杏色雙層聚氨酯烤漆加環氧底漆，提供長時間抗UV與鹽霧腐蝕能力 |\n| 認證/驗證機構 | NSF認證 | 業界標準品牌，長期市場口碑（未在檢索結果中列出特定第三方壓力容器認證機構） | TÜV Rheinland（壓力設備認證機構）；另有ASME認可工廠負責設計、製造、組裝與檢驗 |\n| 保固 | 未在檢索結果中查到公開統一保固年限 | 7年保固 | 依市場不同而有差異，需洽當地經銷商確認保固內容 |\n| 廠商自我宣稱 | 官網宣稱「被廣泛視為優於Elbi或Amtrol等標竿品牌的替代選擇」；另一產品頁亦宣稱「Aquasky熱膨脹桶優於Wetts或Amtrol」 | 第三方評測普遍給予正面評價，如「Amtrol提供業界最佳的產品，尤其是其鋼製Well-X-Trol水箱」 | 官網強調可靠與免維護設計，未見直接與AQUASKY比較的宣稱 |\n\n## 觀察與限制\n\n1. **AQUASKY 的「優於 Amtrol」說法屬廠商自家行銷語言**，例如其TP系列產品頁直接寫道 「被廣泛視為優於Elbi或Amtrol等標竿品牌的替代選擇」，這類敘述並未附上具體測試數據或第三方驗證來源，應視為行銷主張而非中立評測結論。\n\n2. **Amtrol 在北美市場擁有最長歷史與最廣裝機基礎**，多份獨立評測網站（非官網）一致將其列為井水加壓桶的標竿，例如 「Amtrol WX-202是美國最常安裝的住宅加壓桶，因為Amtrol發明了預充氣隔膜式井水桶設計，WX-202體現了數十年的技術迭代」。這代表其口碑與長期可靠性紀錄較為完整，但售價通常較高：「由於受歡迎，Amtrol水箱價格通常比同類其他水箱稍貴，但也有其他高品質水箱表現相當卻價格較低」。\n\n3. **GWS 在耐壓規格與認證體系上資料較完整**，尤其大型鋼製壓力桶耐壓可達 25 bar（約362 psi），且有 TÜV 與 ASME 認證背書，適合工業/商業應用；但消費端（如Reddit、部落格）對其住宅用產品的長期使用評測相對較少，檢索中未找到獨立耐久性測試報告。\n\n4. 三品牌在**核心結構**（丁基橡膠隔膜 + 聚丙烯內襯 + 不鏽鋼/鋼製外殼）上高度相似，差異主要體現在：保固年限、耐壓上限、認證機構、品牌歷史信譽，以及各自宣稱的專利技術（如Amtrol的Turbulator、AQUASKY的Leak Safe、GWS的雙重水氣密封接頭）。\n\n**結論**：若您需要的是「哪個品牌性能更好」的客觀結論，目前公開資料不足以支持任何一方全面優於另一方的說法；建議依實際需求（如所需耐壓範圍、保固年限、認證要求、預算及當地經銷商支援）比較同容量、同用途的具體型號規格書，而非僅依廠商行銷文案判斷。如果您能提供想比較的具體型號（例如容量、用途是井水加壓、RO儲水或熱膨脹），我可以幫您查詢更精確的型號對型號規格比較。",
+          "refusal": null,
+          "reasoning": "This looks like a comparison of AQUASKY against Amtrol and Global Water Solutions products, likely water pressure or expansion tanks, so I should search for details on their performance specs.I haven't found a direct side-by-side comparison of AQUASKY, Amtrol, and Global Water Solutions specs, so I should search more specifically for Global Water Solutions pressure tank specs, possibly checking the AquaSky Plus blog for a comparison article.I'm compiling a comparison table of tank specs across brands, starting with Aquasky's founding details, certifications, diaphragm material, liner, connection technology, and finish, noting how it positions itself against competitors like Amtrol, Elbi, and Wetts.\n\nNow I'm noting Amtrol's long industry history as inventor of the pre-pressurized well tank, its steel construction and high pressure ratings, patented Turbulator device, antimicrobial liner, thick butyl diaphragm, 7-year warranty, and its reputation as the industry gold standard.\n\nI'm also looking at Global Water Solutions, another Taiwan-based manufacturer founded in 2003, whose PressureWave series uses a virgin polypropylene liner, reinforced FDA-compliant butyl diaphragm, patented stainless steel dual-seal water connection, and O-ring sealed brass air valve, spanning a wide capacity and pressure range.\n\nSince I couldn't find any independent third-party lab test comparing these brands head-to-head, I'm structuring my answer to make that clear upfront, then presenting a comparison table pulling from each brand's official specs (founding year/headquarters, materials/diaphragm design, pressure ratings, warranty, certifications, connection tech, distinguishing features), followed by a note that AQUASKY's claims of superiority over Amtrol/Elbi are self-reported marketing rather than independently verified, and wrapping up with a balanced conclusion.\n\nAll three brands share similar core designs (butyl rubber diaphragm, PP liner, stainless steel fittings), differing mainly in warranty length, pressure ceiling, certifying bodies, and brand reputation—Amtrol is widely seen as the industry standard with the largest installed base especially in US residential well water systems, GWS is also an established ASME/TÜV-certified supplier, while AQUASKY is a newer brand emphasizing nitrogen-charged packaging and weather-resistance marketing. I want to remind the user that for a truly rigorous performance comparison, they'd need to look at specific model specs like PSI/GPM flow rates.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "This looks like a comparison of AQUASKY against Amtrol and Global Water Solutions products, likely water pressure or expansion tanks, so I should search for details on their performance specs.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EvMDCrABCBIYAipAY7k2FTtAUJ22JvR7vnvqXLJF0t4X+Cz7HRBc2f0KTHaDtboCI28gokg1xgeE2fXngg0XmKKz2BeoSePVBYQluTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagB483F1QYSDAk1kQeugifogb5yCRoMaF4ozJNNBN/JctakIjDlfPT6yjQC5yxgSwWOQz8wBUEDlMQ3QbyCa5/FAK9e35fSgSQgUy7hzivdvLA3cs0q7wFroDaBcKLe34KlyHysx9WOuXfcAKE8C8Xc2S1mTRpL5EdvXuTeLk9vUiWe+9MUyaeS0pHLHLQSiEqaZ2A3S3AQJDJaQXKEjnCHKz8sfRw8lRK2KH0uVTIGfq+pc3FGsnlnwwJ8bg9a2yX4TUtQLJl5Dg0VufISHXC6qRm69CSeNt/sWkvZ1xK6mGJN8xhXzHh1UE+yNaGkmLWETbPnH2e1ZOtnqN/0TL0LdLwn4icMd6N3fH69QMomgJR3a21T7pxJTzT96+GQz02cjivnsev1d7eTglVO8qzPkXK1SXCbGla8iVl9YfcrIaBqQ35HfBgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I haven't found a direct side-by-side comparison of AQUASKY, Amtrol, and Global Water Solutions specs, so I should search more specifically for Global Water Solutions pressure tank specs, possibly checking the AquaSky Plus blog for a comparison article.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "Et0ECrABCBIYAipA17C1Te/0zRCcidXN2ke635xEt46dvgHd73tbpvGrqQcS4nGnmcocAnRM2UHgigDFZcHhvQRDdyj6+OYvvZV1EDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagB6c3F1QYSDFoZhpIO3yC7WTgcDBoM1KDdbVO1xRZKlidWIjDobS9LmaNHRutxoY1cMdnsL2QdOMt2YCa+Drdv6ofneEGE2E6bVW5Vb28Ga17kkE8q2QIo0OfmFLw7uuX3Rt3LQsxoLPiIOM/tQT6QHZTomkX0HJsA3JcUlKZ1uYHKViwRNSFGQBHgtJHMcNACKcX+VDh3v1yJbNEk+DljcBSqJHxk34C1x3T4iuXlALWmPcT1gsbBEkPwH69XztZlMEB/pPUwGHI2Zr18IVuekJ998uWJ2N+m3cUBH3PAltbt4TMWAytxC/Fx4vrfIPX/iwpn8BikpfuXhoLAKQIuu5Ev9ldUIkUTX7+p5ZndCo2ziMMKafNnHBpbDqKuJK7ZQFYanisLRmKbIDOxgE9Bsu8dsznX1UioKXy2JDMtX+ky3mR28KUGwHau0KU6OKeZYJ2ZV2hHVPvLfrZMGtRQqDxVucIKmLs0gnHYGl5akP8gU6QG4Eb17dFmqfiCdtiXkKaKXqO4bDS29tlJCxTHwTivbds66wDKsH1QpgNU2+9qsRCRT6QAffuiC4jnvnkYAQ=="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I'm compiling a comparison table of tank specs across brands, starting with Aquasky's founding details, certifications, diaphragm material, liner, connection technology, and finish, noting how it positions itself against competitors like Amtrol, Elbi, and Wetts.\n\nNow I'm noting Amtrol's long industry history as inventor of the pre-pressurized well tank, its steel construction and high pressure ratings, patented Turbulator device, antimicrobial liner, thick butyl diaphragm, 7-year warranty, and its reputation as the industry gold standard.\n\nI'm also looking at Global Water Solutions, another Taiwan-based manufacturer founded in 2003, whose PressureWave series uses a virgin polypropylene liner, reinforced FDA-compliant butyl diaphragm, patented stainless steel dual-seal water connection, and O-ring sealed brass air valve, spanning a wide capacity and pressure range.\n\nSince I couldn't find any independent third-party lab test comparing these brands head-to-head, I'm structuring my answer to make that clear upfront, then presenting a comparison table pulling from each brand's official specs (founding year/headquarters, materials/diaphragm design, pressure ratings, warranty, certifications, connection tech, distinguishing features), followed by a note that AQUASKY's claims of superiority over Amtrol/Elbi are self-reported marketing rather than independently verified, and wrapping up with a balanced conclusion.\n\nAll three brands share similar core designs (butyl rubber diaphragm, PP liner, stainless steel fittings), differing mainly in warranty length, pressure ceiling, certifying bodies, and brand reputation—Amtrol is widely seen as the industry standard with the largest installed base especially in US residential well water systems, GWS is also an established ASME/TÜV-certified supplier, while AQUASKY is a newer brand emphasizing nitrogen-charged packaging and weather-resistance marketing. I want to remind the user that for a truly rigorous performance comparison, they'd need to look at specific model specs like PSI/GPM flow rates.",
+              "format": "anthropic-claude-v1",
+              "index": 2,
+              "signature": "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"
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/news-detail.php?sid=104&cid=2&page=10&lang=en",
+                "title": "Is a bigger water pressure tank better? ｜Aquasky",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Founded in 1998, AQUASKY Enterprise Corp humbly began in a small machine shop in Taichung, Taiwan. Today, Aquasky has evolved into a world leader diap..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/",
+                "title": "AQUASKY - Global Diaphragm Pressure Tank & Water Treatment Manufacturer",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "We provide NSF-certified, 100% N2 filled pump, RO, and thermal expansion tanks."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://blog.totalhomesupply.com/amtrol-expansion-tanks/",
+                "title": "Buying Guide: AMTROL Expansion Tanks",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AMTROL got its start in 1946 from industry pioneer Henry Fleischer. Working out of West Warwick in Rhode Island, Fleischer established the American Tu..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://worldwaterreserve.com/best-well-pressure-tanks/",
+                "title": "5 of the Best Well Pressure Tanks Homeowners Trust in 2026 – World Water Reserve",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Amtrol remains the industry standard in well pressure tanks today. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://worldwaterreserve.com/best-well-pressure-tanks/",
+                "title": "5 of the Best Well Pressure Tanks Homeowners Trust in 2026 – World Water Reserve",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Backed by a 7-year warranty, the Well-X-Trol tank guarantees quality design and ...\n\nWe tested and reviewed the 5 best well pressure tanks — comparing..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/",
+                "title": "Global Water Solutions | Global Water Solutions",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Since 2003 GWS has been supplying the world with the highest quality pressure tanks. We manufacture steel, harsh environment, anti-legionella, potable..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.gws.help/wp-content/uploads/2019/12/GWS-tank-manual-EN.pdf",
+                "title": "4 www.globalwatersolutions.com EN CAUTIONS AND WARNINGS ⚠",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "4 – 11/19/16 · Notified body: 0035 - TÜV Rheinland - Certification Body for Pressure Equipment, Am Grauen Stein, D-51105 Köln, Germany · Manufacturer:..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/products-det.php?sid=35&pdcl=20",
+                "title": "TP-18 THERMAL-PLUS Thermal Expansion Tank - AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY expansion tanks are built with a stainless steel system connection with patented Leak safe technology. Inside each tank is a heavy-duty, butyl..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/",
+                "title": "Why Amtrol Well-X-Trol Water Tanks Are the Best in the Industry",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "At 150 PSIG, you can’t find a better working pressure than Amtrol’s Well-X-Trol water tanks. \n\nA polypropylene liner and a butyl diaphragm in Amtrol’s..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.acehardware.com/departments/plumbing/pumps-and-pump-parts/water-storage-tanks/4018954",
+                "title": "Global Water Solutions PressureWave 42.3 gal Pre-Charged Vertical Pressure Well Tank Mfr# PWN-US-160LV - Ace Hardware",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The PressureWave Series is constructed of a virgin polypropylene liner combined with an FDA compliant high-grade butyl diaphragm. This is held against..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.acehardware.com/departments/plumbing/pumps-and-pump-parts/water-storage-tanks/4018954",
+                "title": "Global Water Solutions PressureWave 42.3 gal Pre-Charged Vertical Pressure Well Tank Mfr# PWN-US-160LV - Ace Hardware",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The brass air valve, sealed by a threaded O-ring valve cap, prevents air leaks. Water enters the tank through a patented stainless-steel water connect..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://blog.totalhomesupply.com/amtrol-expansion-tanks/",
+                "title": "Buying Guide: AMTROL Expansion Tanks",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "These robust tanks boast a maximum working pressures up to 300 PSIG (21 bar), made possible through the industry’s thickest diaphragm as well as thick..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/me/water-movement/steel-pressure-tanks.html",
+                "title": "Steel Pressure Tanks | GWS | Global Water Solutions",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Global Water Solutions offers high-quality pressure tanks, from 2 to 10,000 liters, suitable for various applications including booster systems, therm..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://gwsusa.com/watermovement/pressuretanks/",
+                "title": "Pressure Tanks - Global Water Solutions USA",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Models are available from 2 to 119 gallons, with a maximum working pressure of 150 psi. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/products-det/thermal-plus/TP-80",
+                "title": "TP-80 Thermal Expansion Tank | 80L Hot Water Expansion Vessel | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Key technical advantages include an FDA-grade polypropylene liner and a heavy-duty butyl diaphragm with 400% elongation for industrial-grade resilienc..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/products-det/thermal-plus/TP-80",
+                "title": "TP-80 Thermal Expansion Tank | 80L Hot Water Expansion Vessel | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Built for heavy-duty endurance, the TP-80 is protected by a Triple Grade Almond epoxy finish for maximum corrosion resistance. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://buildingproducts.worthingtonenterprises.com/products/water",
+                "title": "Amtrol Water Systems - Worthington Enterprises",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Well-X-Trol® well tanks remain the industry standard with many unique features including high-strength steel to deliver 150 PSIG working pressure, a p..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.acehardware.com/departments/plumbing/pumps-and-pump-parts/water-storage-tanks/4018954",
+                "title": "Global Water Solutions PressureWave 42.3 gal Pre-Charged Vertical Pressure Well Tank Mfr# PWN-US-160LV - Ace Hardware",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The brass air valve, sealed by a threaded O-ring valve cap, prevents air leaks. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.acehardware.com/departments/plumbing/pumps-and-pump-parts/water-storage-tanks/4018954",
+                "title": "Global Water Solutions PressureWave 42.3 gal Pre-Charged Vertical Pressure Well Tank Mfr# PWN-US-160LV - Ace Hardware",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "All internal parts including the air valve are rounded to prevent piercing of the diaphragm in extreme conditions. \n\n"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://waterandpoolsystems.co.nz/sites/default/files/Global-Water-Solutions-Pressure-Tanks-Catalogue.pdf",
+                "title": "GLOBAL WATER SOLUTIONS PRESSURE TANK RANGE ⚫",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "On the exterior the almond colored two-part polyurethane paint finish over an epoxy · undercoating provides hundreds of hours of UV and salt spray pro..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/",
+                "title": "Global Water Solutions | Global Water Solutions",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "... With design, fabrication, assembly and inspection all carried out in our own ASME-accredited facility, our pressure vessels ensure the safety and ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/faq/",
+                "title": "Support | Global Water Solutions",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "GWS warranty varies by market- please contact your local distributor for warranty applicable in your area. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/products-det/thermal-plus/TP-80",
+                "title": "TP-80 Thermal Expansion Tank | 80L Hot Water Expansion Vessel | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Widely regarded as a superior alternative to benchmarks like Elbi or Amtrol, this unit delivers maintenance-free performance that guarantees the longe..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/products-det.php?sid=35&pdcl=20",
+                "title": "TP-18 THERMAL-PLUS Thermal Expansion Tank - AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Aquasky thermal expansion tank is better than Wetts or Amtrol. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/",
+                "title": "Why Amtrol Well-X-Trol Water Tanks Are the Best in the Industry",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "In our professional opinion, though, Amtrol provides the best—especially with their steel Well-X-Trol water tanks. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.thewell.guide/reviews/best-pressure-tanks",
+                "title": "Best Well Pressure Tanks (2026): Sizing, Specs, and Real Picks | The Well Guide",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The Amtrol WX-202 is the most commonly installed residential pressure tank in the United States for good reason. Amtrol invented the pre-charged diaph..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://worldwaterreserve.com/best-well-pressure-tanks/",
+                "title": "5 of the Best Well Pressure Tanks Homeowners Trust in 2026 – World Water Reserve",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Due to their popularity, Amtrol tanks can be a bit more pricey than other tanks in their category. From what we’ve experienced, there are other high-q..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 59151,
+      "completion_tokens": 4821,
+      "total_tokens": 63972,
+      "cost": 0.216512,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.216512,
+        "upstream_inference_prompt_cost": 0.118302,
+        "upstream_inference_completions_cost": 0.04821
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1401,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 5
+      }
+    }
+  }
+}

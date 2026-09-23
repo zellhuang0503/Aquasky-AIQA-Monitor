@@ -1,0 +1,252 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "台灣有數家**壓力桶／壓力儲水桶**外銷製造商，其中較明確可從公開資料查到、且有外銷與認證資訊者，包括**笠毅工業（TankPAC／台灣沛毅）**、**溢康企業（AQUASKY）**、**益源興企業（YHS）**、**典昌企業**等。就公開資料來看，這些廠商多以出口為主，並普遍強調 **ISO、CE、NSF、IAPMO、TPED** 等國際認證或品質管理制度；但各家認證項目不完全相同，仍應以最新官方文件與證書為準。[1][2][6][8][12]\n\n以下整理公開可查的重點：\n\n| 廠商 | 外銷／市場資訊 | 品質／認證資訊 |\n|---|---|---|\n| **笠毅工業（TankPAC／台灣沛毅）** | 公開資料稱銷售遍及美洲、歐洲、南美洲、中東、澳洲等，接近全球市場，年產能可達500萬顆壓力桶。[1][3] | 官方頁面提到產品通過多項國際認證；建築世界資料另列出 **NSF、IAMPO（應為 IAPMO）、CE**。[9][10] |\n| **溢康企業（AQUASKY）** | 公開資料稱產品以外銷為主，約占95%，銷往北美、南美、歐洲、亞洲等55國。[2][6] | 公開資料強調自動化生產與100%壓力安全測試，以確保品質穩定。[2] |\n| **益源興企業（YHS）** | 公開資料稱為國際知名壓力桶製造商。[8] | 公開資料明載通過**德國萊茵 CE 認證**與**ISO 國際品質管理認證**，並有全球專利註冊。[8] |\n| **典昌企業** | 主要公開資料顯示其為台灣製造商，並有壓力罐產品。[12] | 公開資料明載已取得**ISO 9001**與歐洲 **TPED** 國際認證，以確保品質與安全性。[12] |\n| **頂天鋼鐵有限公司** | 公開頁面顯示曾有加壓桶外銷實績。[4] | 公開頁面列出 **SEMI／ASME BPE／3A** 等認證或規範，偏向衛生級／工業容器用途。[4] |\n\n幾點判讀：\n\n- **外銷能力**：從公開資料看，笠毅工業與溢康企業的外銷敘述最明確，前者強調全球市場覆蓋，後者明載出口占比約95%與55國銷售。[1][2][3][6]\n- **品質管理**：公開資料最常見的是 **ISO 9001**、壓力測試、自動化製程與全檢機制；這代表其內部品管制度與出貨檢驗較完整，但不等於所有產品規格都相同。[2][8][12]\n- **國際認證**：  \n  - **CE**：常見於歐洲市場要求，益源興與笠毅相關資料皆有提及。[8][10]  \n  - **NSF / IAPMO**：較常見於飲用水接觸材料或相關水處理產品，笠毅資料有提及。[10]  \n  - **TPED**：與歐洲壓力設備/運輸相關法規有關，典昌公開資料明列取得。[12]\n\n若你要找的是「**適合外銷、且認證較完整的台灣壓力桶廠商**」，依公開資料可優先從以下幾家開始比對：\n\n- **笠毅工業（TankPAC）**：全球外銷布局大，且有多項國際認證提及。[1][9][10]\n- **溢康企業（AQUASKY）**：外銷比例高，且有明確的全檢與自動化品管描述。[2][6]\n- **益源興企業（YHS）**：明確標示 CE 與 ISO，適合優先確認其證書版本與適用產品型號。[8]\n- **典昌企業**：若你的產品屬壓力罐/壓力容器用途，可留意其 ISO 9001 與 TPED 資訊。[12]\n\n如果你需要，我可以再幫你整理成一份更實用的清單，例如：\n- **「可外銷歐美」的廠商名單**\n- **各家認證對照表（CE / NSF / IAPMO / ISO / TPED）**\n- **依用途分類（淨水、熱水、空調、工業壓力容器）**",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://zh-tw.tankpac.com/about-us",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843",
+      "https://www.tankpac.com/about.html",
+      "http://tw.allproducts.com/metal/dingten/Tank_print.htm",
+      "https://www.dtisanitary.com.tw/chinese/Tank.html?CID=6",
+      "https://aquaskyplus.com/about.php?lang=zh",
+      "https://trade.1111.com.tw/Comp_Info.aspx?vNo=240801",
+      "https://protima.com.tw/about.php?lang=tw",
+      "https://zh-tw.tankpac.com/",
+      "https://www.arch-world.com.tw/Company/90204.html",
+      "https://www.archi.net.tw/tw/company/131628/index.html",
+      "https://dceccylinders.com/cht/aboutus.htm",
+      "https://www.taiwanintlwaterweek.com/zh-tw/product/B0EAC49CD16CAC8F39530674D599F5658A99531459BFA8B1/info.html",
+      "https://www.tecotw.com.tw/ec99/rwd1605/category.asp?category_id=10",
+      "https://tw.ttnet.net/co/gotohtm-jl3whrmuj3vwjra.html",
+      "https://www.archi.net.tw/tw/yelpage/keyword-1-%E5%A3%93%E5%8A%9B%E6%A1%B6.html",
+      "https://www.ctee.com.tw/news/20260915700361-439901",
+      "https://zh-tw.tankpac.com/pressure-tanks",
+      "https://business.com.tw/cop/cop.php?id=ksubztkfgho1ubz",
+      "https://www.thtco.com.tw/products_detail/69"
+    ],
+    "created": 1790008673,
+    "id": "d9f0579e-b2fe-402d-a4df-87d3a5a4cb51",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2026-06-11",
+        "place_metadata": null,
+        "snippet": "## 笠毅（台灣沛毅）工業股份有限公司\n位於台灣台中市清水區，是全球最專業的金屬隔膜壓力桶製造公司，銷售範圍遍及美洲、歐洲、南美洲、中東、澳洲等多個國家，幾乎涵蓋全球市場，年產量可達500萬顆壓力桶。",
+        "source": "web",
+        "title": "過濾水壓力桶製造商",
+        "url": "https://zh-tw.tankpac.com/about-us"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-17",
+        "place_metadata": null,
+        "snippet": "|**公司名稱**|溢康企業股份有限公司|\n...\n|**核心競爭力**|**目標市場** 透過不斷地技術創新和對客戶需求的深入了解，為客戶尋找解決方案、提供客製化服務及維持長遠的合作夥伴關係。公司的產品以外銷為主，約占95%，產品銷售至北美洲、南美洲、歐洲、亞洲等55個國家，在行業中保持領先地位。**產品品質** 以自動化生產機械和測試設備在內部進行大量生產，加上完善的培訓制度及員工豐富的經驗，確保生產流程的穩定性與品質。每個壓力桶都經過100%的壓力安全測試，出廠的都是最好的產品。|",
+        "source": "web",
+        "title": "溢康企業股份有限公司",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "笠毅（台灣沛毅）工業股份有限公司位於台灣台中清水區，為全世界最專業的金屬隔膜式壓力桶生產公司，銷售範圍囊括：美洲、歐洲、南美洲、中東、澳洲……等國家，涵蓋幾近全世界，年產能更可達500萬只壓力桶。",
+        "source": "web",
+        "title": "關於我們",
+        "url": "https://www.tankpac.com/about.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-24",
+        "place_metadata": null,
+        "snippet": "## 不銹鋼壓力桶, 不鏽鋼加壓容器, 不鏽鋼保壓桶, 衛生級桶槽 (Stainless Steel Pressure Tank / Unicontrols / Nakakin)\n...\n2006 液晶加壓桶 大立高分子 100 20 20 2005 高壓Bubble桶 漢磊 150 20 50 2004 加壓桶外銷至中國、泰國、馬來西亞等 **認證: **\n- SEMI/ASME BPE/3A\n...\n業務聯絡人: 陳小姐 / 詹小姐\n地址:241 新北市三重區光復路二段102巷1-2號\n電話:886-2-22783666\n傳真:886-2-85112456\n電子郵件: dti999@ms4...",
+        "source": "web",
+        "title": "頂天鋼鐵有限公司專門生產-真空管件,不銹鋼 ...",
+        "url": "http://tw.allproducts.com/metal/dingten/Tank_print.htm"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-03",
+        "place_metadata": null,
+        "snippet": "- 不銹鋼壓力桶, 不鏽鋼加壓容器, 不鏽鋼保壓桶, 衛生級桶槽 (Stainless Steel Pressure Tank / Unicontrols / Nakakin)",
+        "source": "web",
+        "title": "不銹鋼壓力桶, 不鏽鋼加壓容器, 不鏽鋼保壓桶, 衛生級桶槽 ...",
+        "url": "https://www.dtisanitary.com.tw/chinese/Tank.html?CID=6"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-04",
+        "place_metadata": null,
+        "snippet": "溢康企業股份有限公司 (AQUASKY) 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商。\n溢康企業股份有限公司提供全方位的壓力桶製造解決方案，以提供最優質的壓力桶支援國際經銷商，提供壓力桶給住宅用水, 汙水處理、熱水器、空調、太陽能熱水器以及商業加壓泵浦系統等服務市場。",
+        "source": "web",
+        "title": "公司簡介",
+        "url": "https://aquaskyplus.com/about.php?lang=zh"
+      },
+      {
+        "date": "2019-07-02",
+        "last_updated": "2025-11-11",
+        "place_metadata": null,
+        "snippet": "造昇有限公司\n聯絡人：造昇\n電話：\n(02)22060387\n傳真：(02)22030975\n地址：新北市新莊區新樹路493號\n網址：\nhttp://www.iyp.com.tw/0222060387/\nEmail：\nkokuyo14@gmail.com\n...\n造昇有限公司專營銷售：壓力桶、儲氣桶、Air桶、壓力容器、補充桶、消防桶、真空桶、不銹鋼風桶、醫療容器桶、空氣桶等。",
+        "source": "web",
+        "title": "造昇有限公司",
+        "url": "https://trade.1111.com.tw/Comp_Info.aspx?vNo=240801"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-27",
+        "place_metadata": null,
+        "snippet": "經過多年的經驗累積，益源興以一體成形的製造技術成為國際知名的壓力桶製造商。在產品的生產過程中，客戶在產品使用上的安全和產品的品質是我們非常重視的，所有產品皆通過德國萊茵的CE認證和ISO國際品質管理認證，並在全世界皆有註冊專利。",
+        "source": "web",
+        "title": "關於我們| 台灣壓力桶製造商-益源興企業有限公司(YHS)",
+        "url": "https://protima.com.tw/about.php?lang=tw"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-04-13",
+        "place_metadata": null,
+        "snippet": "### TankPAC 為業界領先的壓力桶與水處理產品製造商，並與 Global Water Solutions 為緊密合作之姊妹公司。\n...\n正因如此，我們的產品皆通過多項國際的重要認證。",
+        "source": "web",
+        "title": "笠毅工業(TankPAC): 壓力儲水桶專業製造商",
+        "url": "https://zh-tw.tankpac.com/"
+      },
+      {
+        "date": "2024-01-01",
+        "last_updated": "2024-09-18",
+        "place_metadata": null,
+        "snippet": "電話號碼｜\n04-26220078\n傳真號碼｜\n04-26226006\n...\n公司地址｜\n43643台中市清水區中山路553號\n企業網址｜\nwww.globalwatersolutions.com\n...\n隔膜使用高品質高密度橡膠，且再經過二次去硫處理可完全去除異味。NSF認證通過。IAMPO認證通過。CE標誌認證通過。",
+        "source": "web",
+        "title": "笠毅工業股份有限公司-金屬隔膜式壓力桶,壓力儲水桶,膨漲穩壓桶,家用淨水設備壓力儲水桶|建築世界台中廠商",
+        "url": "https://www.arch-world.com.tw/Company/90204.html"
+      },
+      {
+        "date": "2010-01-01",
+        "last_updated": "2025-03-20",
+        "place_metadata": null,
+        "snippet": "台中市清水區中山路553號\n04-26220078",
+        "source": "web",
+        "title": "笠毅工業股份有限公司 - 壓力儲水桶,膨脹穩壓桶,台中水鎚吸收器",
+        "url": "https://www.archi.net.tw/tw/company/131628/index.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-22",
+        "place_metadata": null,
+        "snippet": "典昌企業成立於1962年 , 一直以來都生產鋁製相關用品 , 為確保生產品質 , 在2003年通過ISO9001品質管理系統認証 , 目前以兩大生產為主體：\n...\n典昌企業已取得歐洲TPED國際認証藉由認証來確保壓力罐的品質與安全性。",
+        "source": "web",
+        "title": "關於典昌",
+        "url": "https://dceccylinders.com/cht/aboutus.htm"
+      },
+      {
+        "date": "2024-07-02",
+        "last_updated": "2025-02-20",
+        "place_metadata": null,
+        "snippet": "## 壓力桶系列\n- 笠毅工業股份有限公司\n- 世貿一館 A0506",
+        "source": "web",
+        "title": "台灣國際水週-產品資訊-壓力桶系列-笠毅工業股份有限公司",
+        "url": "https://www.taiwanintlwaterweek.com/zh-tw/product/B0EAC49CD16CAC8F39530674D599F5658A99531459BFA8B1/info.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-11",
+        "place_metadata": null,
+        "snippet": "地址：新北市241-58三重區光復路2段102巷32號\nAddress：No . 32, Lane 102, Sec. 2, Kuang Fu Rd., Sanchung Dist., New Taipei City, Taiwan, R.O.C.\nTEL No.: (02) 29951460 ~ 3\nFAX No.: (02) 29956985\nEmail：sale@tecotw.com.tw\n地址：高雄市828-41永安區維新里永工一路12號\nAddress：No. 12, Yung Kung 1 Rd., Way Hsin Village, Yong An Dist., Kaohsiun...",
+        "source": "web",
+        "title": "壓力容器Pressure Vessel - 台灣端板鋼鐵企業股份有限公司",
+        "url": "https://www.tecotw.com.tw/ec99/rwd1605/category.asp?category_id=10"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-12-22",
+        "place_metadata": null,
+        "snippet": "穩鑫實業有限公司\n...\n通過UN認證\n中空成型Blow/射出成型Injection",
+        "source": "web",
+        "title": "穩鑫實業有限公司- 化工桶，PC桶，水桶，出口，製造",
+        "url": "https://tw.ttnet.net/co/gotohtm-jl3whrmuj3vwjra.html"
+      },
+      {
+        "date": "2010-01-01",
+        "last_updated": "2025-10-16",
+        "place_metadata": null,
+        "snippet": "多用途不銹鋼流體接頭模具設計/製造/開發、全自動不銹鋼壓力桶、水壓機、抽水機、沉水泵浦、消防泵浦、無水自動斷電器、渦流馬達、恆壓變頻馬達、日本壓力開關、泵浦部品生產製造/開發開發、消防設備、 ...",
+        "source": "web",
+        "title": "壓力桶廠商20大推薦",
+        "url": "https://www.archi.net.tw/tw/yelpage/keyword-1-%E5%A3%93%E5%8A%9B%E6%A1%B6.html"
+      },
+      {
+        "date": "2026-09-14",
+        "last_updated": "2026-09-15",
+        "place_metadata": null,
+        "snippet": "根據產業數據統計，台灣市售多數的飲料、罐頭、常溫調理包、高機能營養品及寵物食品，皆是由金瑛發的殺菌設備生產完成，金瑛發始終堅持100％台灣研發與製造（MIT），於彰化擁有6,000平方公尺的現代化專業廠房，陪伴無數食品業者從創業走向國際市場。",
+        "source": "web",
+        "title": "金瑛發多功能自動殺菌釜 食品業利器",
+        "url": "https://www.ctee.com.tw/news/20260915700361-439901"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-03",
+        "place_metadata": null,
+        "snippet": "專業製造高性能隔膜式壓力桶。",
+        "source": "web",
+        "title": "濾水壓力桶 - 笠毅工業(TankPAC)",
+        "url": "https://zh-tw.tankpac.com/pressure-tanks"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-21",
+        "place_metadata": null,
+        "snippet": "大震企業股份有限公司\n壓力容器..\n正大鐵工廠股份有限公司\n高壓容器..\n威太鍋爐工業有限公司\n壓力容器..\n萬能工業股份有限公司\n瓦斯貯槽各式壓力容器..\n一浡輸送傳動機械工業有限公司\n攪拌桶.\n...\n原料桶儲槽及配件裝置..\n...\n七福工業股份有限公司\n壓力容器..\n...\n久皇機械股份有限公司\n壓力容器..\n...\n允升工業股份有限公司\n壓力容器..\n中華金屬精機廠\n壓力容器, 桶槽, 塔槽..",
+        "source": "web",
+        "title": "鋼(鐵)製壓縮或液化氣容器- 相關產品廠商系列 - 工商快訊",
+        "url": "https://business.com.tw/cop/cop.php?id=ksubztkfgho1ubz"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-17",
+        "place_metadata": null,
+        "snippet": "**臺灣熱傳** 為壓力容器型式檢查合格之製造廠，可以依照法規生產“一壓”、“高壓特”“ASME U Stamp”壓力容器。",
+        "source": "web",
+        "title": "壓力容器",
+        "url": "https://www.thtco.com.tw/products_detail/69"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 1168,
+      "cost": {
+        "input_tokens_cost": 0.00019,
+        "output_tokens_cost": 0.01752,
+        "request_cost": 0.006,
+        "total_cost": 0.02372
+      },
+      "prompt_tokens": 65,
+      "search_context_size": "low",
+      "total_tokens": 1233
+    }
+  }
+}

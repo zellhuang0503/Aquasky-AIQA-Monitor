@@ -1,0 +1,216 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790010753-PKZAtulcICramSwQq0kl",
+    "object": "chat.completion",
+    "created": 1790010753,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "根據公開網路資料查詢結果，台灣所謂「壓力桶」（Pressure Tank/Vessel）產業其實涵蓋多個應用領域，各領域的廠商與認證體系也不同。以下整理供參考：\n\n## 一、依應用類型分類的台灣壓力桶廠商\n\n### 1. 淨水設備用「RO壓力桶」（家用/商用純水機儲水桶）\n這類廠商多屬台灣區飲用水設備工業同業公會會員，例如國品實業股份有限公司位於臺中市大雅區，產品包含RO純水機零配件-壓力桶類。另外**振景公司**的RO壓力桶「通過NSF認證及CE認證，適用RO逆滲透純水機」，並採用「完全密閉設計，可有效防塵及保護水質不受污染」。\n\n此類產品常見的國際認證是**NSF**（美國國家衛生基金會，食品/飲水安全認證）與**CE**（歐盟安全認證）。\n\n### 2. 工業塗裝用「噴漆壓力桶」\n彰化的**冠品塗裝設備股份有限公司（GPPT）**是這類產品的代表廠商，成立於1994年，代理進口德國SCHUTZE等品牌塗裝設備器材，並專業設計製造塗裝專用機、噴漆機、噴槍、過濾器、調壓器等機具配件。其產品線包括鋼製壓力桶-CE認證、不鏽鋼壓力桶-CE認證、不鏽鋼液位壓力桶-CE認證、不銹鋼拋光壓力桶-CE認證、環扣式不鏽鋼壓力桶-CE認證、鋁合金壓力桶-CE認證等多種型號，主要銷往符合CE標準的市場（歐盟等）。\n\n### 3. 空壓機用「儲氣桶／氣壓桶」\n國內廠商如遠鵬企業、清水電機（TAIWAN POWER）、力大空壓等均生產空壓機專用儲氣桶。國際上此類壓力容器常見認證包括**CE、ASME、KC（韓國）**等，例如日系品牌SMC台灣分公司產品附有海外規格適合品，包括CE認證適用品、符合ASME標準品、中國壓力容器規程適合品、勞動安全衛生法KC認證適合品等多種國際規格選項，反映此類產品外銷時需視目的地市場分別取得對應認證。\n\n### 4. 工業級壓力容器（化工/能源用）\n這是規格最高、認證最嚴謹的一類。代表廠商包括：\n\n- **臺灣熱傳股份有限公司**：為合格壓力容器製造廠，具備一壓、高壓特及ASME U Stamp國際認證，可依法規設計與製造塔槽、反應器、儲槽、過濾器及各式熱交換器。\n- **中鼎集團（CTCI）**：在高雄擁有兩座設備製造廠，一座以製造壓力容器、管件預製、熱交換器為主，材質涵蓋碳鋼、蒙鎳合金、高鎳、銅鎳、鋁、鈦和鋯等，工作團隊依客戶規格製造設備並符合ISO9001品質管理標準、美國機械工程師學會（ASME）之認證。\n- **大震企業股份有限公司（TAIJUNE）**：可提供壓力容器和一般壓力容器，如第一種壓力容器、第二種壓力容器、特定高壓氣體設備及國際級ASME U Stamp，皆可依客戶需求客製化、專業設計並提供合理報價，並可提供ASMS S Stamp以行銷至美國、日本等高標準國家。\n\n## 二、國際認證體系概觀\n\n台灣壓力容器/壓力桶產業的品質與外銷資格，主要仰賴以下認證：\n\n1. **ASME認證（美國機械工程師學會）**：ASME成立於1880年，是全球最具權威的工程標準制定機構之一，其制定的《鍋爐及壓力容器規範》（BPVC）被廣泛應用於超過100個國家，成為壓力設備設計、製造與檢驗的國際標準。取得ASME認證不僅能提升產品的國際信譽與市場競爭力，更是進入北美及其他高標準市場的通行證。目前中國通過ASME認證的企業已有127家（不含台灣獨立統計），台灣亦有多家壓力容器廠商取得U鋼印（壓力容器）或S鋼印（鍋爐）認證。\n\n2. **CE認證（歐盟）**：適用於出口歐盟市場的壓力設備，特別是中小型壓力桶（如塗裝、淨水用）多會標示CE認證以符合歐盟壓力設備指令（PED）。\n\n3. **NSF認證**：主要用於與飲用水接觸的壓力桶（如RO壓力桶），確保材質對人體無害、符合食品衛生安全標準。\n\n4. **CNS國內標準**：台灣國內針對鍋爐、高壓設備、第一種壓力容器等分別訂有CNS認證項目，是廠商在國內合法製造、銷售的基礎，部分廠商同時列出ASME認證、CNS認證-鍋爐、CNS認證-高壓設備、CNS認證-第一壓力容器、ISO認證等多項證書，顯示國內外雙軌認證是業界常見做法。\n\n## 三、選擇廠商建議\n\n若您要尋找特定用途的外銷壓力桶製造商，建議先明確用途（例如：飲用水儲存、工業塗裝、空壓機配件，或化工/能源用壓力容器），因為不同用途所需的國際認證（ASME、CE、NSF等）差異很大，對應的合格廠商名單也不同。\n\n**需說明的是**：由於「壓力桶」一詞範圍廣泛，且並無單一官方「外銷壓力桶製造商總表」可供查證，以上僅為透過公開網路資料整理出的代表性廠商案例，並非完整清單；建議實際採購前可進一步向經濟部標準檢驗局（BSMI）、台灣區鍋爐協會或個別廠商網站確認最新認證有效性與外銷實績。",
+          "refusal": null,
+          "reasoning": "The user's asking about Taiwanese manufacturers of pressure barrels or drums, focusing on quality standards and international certifications, so I should search for this since 壓力桶 could refer to pressure tanks or vessels.The results aren't quite matching what I need for \"壓力桶\" - I should clarify this could mean pressure vessels, compressed air tanks, or chemical storage barrels. I'll search more specifically for manufacturers of pressure barrels and water pressure tanks.\"壓力桶\" could mean several things - water filtration pressure tanks, air compressor storage tanks, industrial ASME pressure vessels, or even water towers. Given this ambiguity, I should give a comprehensive answer that covers the different types.\n\nI'm compiling companies I've found so far: 振景 for RO壓力桶 with NSF/CE, 國品實業 for RO parts, 益銳股份 selling pressure tanks, 臺灣熱傳 for ASME U Stamp vessels, and gppt.com.tw for industrial paint pressure tanks with CE certification. I should search further for a broader list of Taiwan ASME-certified pressure vessel makers and more background on gppt.com.tw.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user's asking about Taiwanese manufacturers of pressure barrels or drums, focusing on quality standards and international certifications, so I should search for this since 壓力桶 could refer to pressure tanks or vessels.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EuIDCrABCBIYAipAMLtYAgj02DsefyeOFqjzOWVjh6U/Hcalk5SAan+M+9vRzvBH7XNwNGujs2JJJFzUqul5TBjV2jEcKvZo6qhT/jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBhcvF1QYSDHvgu+v58FVc31yjGxoMWSiPDWnS6gxBBqVgIjBChpEsZsreErjsareisAzk4pjWk9rHPtj7XE97OU42v7cJVp/iYbB4a87AtxId4S0q3gEnR1u66wQ8SyVpuvnrt8Ny5DSCAa9FhzUXwmBWtV7/jSfNUX3884je/3KPM+LLxQXvY8QH6AqZ12Ju6EIePNYw2JhB6joyRPrrRGhAdZJ+WtMY1RyX+D7Wc0YD3mpRyyVJPL0BlDbs1uRMmuVX8/Q/FvQKrWladgQUkdH2SXu5jwSgPInLbmauDgzT5Tes2G0oOHhXnfmm0ff18+fRmwJgPcjBU0Rq7bVW1hW+iqbPu/82UBxHXktdibNo6jWDJlrqU+P5tHUW3dhZZ36jKk/IKF9lyfwBHX5y248PBIEYAQ=="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "The results aren't quite matching what I need for \"壓力桶\" - I should clarify this could mean pressure vessels, compressed air tanks, or chemical storage barrels. I'll search more specifically for manufacturers of pressure barrels and water pressure tanks.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "EuwFCrABCBIYAipA4QOkQXjGX7Z0DZ64iqLFJjlasvk2AvN+bqGEvC/a6x22J3fIYqFg9lxkB5dNWPUF1Fa/GKsjP7I/JKee/a70TDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBjMvF1QYSDBk8tTvXh1bdJ+NKyxoMs0IOqvyXxu4fMZQIIjB8gjoVBXbmV+Lc8xI36lQ5L9lSq2f+skeCP/b3cgMV6VrTJPOVSUwvlLYeLCwfc8Mq6AOCXYqQ6m2gx4D1lMa8UZFOw2MaF/zeyzAb0v6szVbWuAJX/iYyZ/SMN8ps606orb7sooas1rX+HMpTupdmAfwvRDRXoQeg43Y5Zkdko3X0lDuUfRVOhI34ffhMd8il49lMQabZ6mWY8k8ayJtY+89zL6QHEOGOrFFliTSacRNBo044zPpAnLmzbsU/GiE6AaenRRdNWc3id4Wg62EXJjo/n5Ymdb/LOmMQPrzGFQT43M5jmIERNs4vxz4YY9JuqCbA96BiIJk//LoqXNucLXGWyecRVyQE1349veSh5fdQSy3fkCGVCWYuxfmcUKtGmOVPF6wpa31AuDZmVJHzTKeHUMYHGVSQ1Ye53Xgw8AmSXNghpnbKmWSYgLPMhKsiOXl59iuU1EtTWj1XbVHlQkezNSuLUWCRvyIVTSibR7s9E8DCihNRx9RQ+ehpg/ItwsmQK9aCulLOxJ4CqV8C3E7jzm41aBbAimYEIqkf2FC9Fs7W8q4rrsMg4II9NxOT9nxKEP+QOywZEHVSKG2ApajS4/VQUvCdS9tM+zCa0qzfqMC+FHK/NNavmnon4YjwElXg5o5s7TAgRLRzxlB4kYbVh/2UqyPglpVXp3e1rRU9UB8Yw37wi/GZtt8tum3OuZbR41gxo46a/xgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "\"壓力桶\" could mean several things - water filtration pressure tanks, air compressor storage tanks, industrial ASME pressure vessels, or even water towers. Given this ambiguity, I should give a comprehensive answer that covers the different types.\n\nI'm compiling companies I've found so far: 振景 for RO壓力桶 with NSF/CE, 國品實業 for RO parts, 益銳股份 selling pressure tanks, 臺灣熱傳 for ASME U Stamp vessels, and gppt.com.tw for industrial paint pressure tanks with CE certification. I should search further for a broader list of Taiwan ASME-certified pressure vessel makers and more background on gppt.com.tw.",
+              "format": "anthropic-claude-v1",
+              "index": 2,
+              "signature": "EtcOCrABCBIYAipANLntqtaIWnKfq/gwmJrSNJHsBj0te1qW+1YfKpD2VSD2a4wf4acDLYSTc8J3j+xX+6jk/Re84aescf8ivun11DIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBmsvF1QYSDOLARFJuvq0a6wrr7BoMVTYhZixXaBvQaLtHIjAyisMxv4tqRIXplcLBQwDRC0wskqmR4lELi4CMd3+/9ZPjeDHeMxaWcKMOHJ1t5X0q0wzDlTtc0MXPZlNdWrGiIlvQA5YYMZbgxnjG7mUEnif444hwA3TRR0RAYuPd46nPYbFaBUAel7A4RnnVecqWkvkTZDltcRhiummXuG/u9cPUv4uhtLBT/q5GLriFmlt1PKogYT5LJExV9yQiXF8kFsfhvVFd26B/9BlIIg0lDCy3wm/bAHCArh6bJZWd7dz0jOZuRXnBL3ep20Mvl6Kq7+QPc/326OSXdfc6T6luw8Lzz1wDNgvoMjsLFLwUzdIdejHVBn1t+AL3ifNafU9BDq/O1wcy4ooUcgcQxn7sjMAd6Fiv60RQlQz9d7+zKyqPLR4390SG5hvTfHHIkqFEqx1ywjkP6AweEO8xKeq2wTbA6W9Y3aXZ1PXnk+WWbnYnlW6Sg5yHTcXiJwGThhpPPDoNRsA82A8Z6ZwVT8j0GC8egbLU01TgUQclV+/qexWcr3eWNytXOyWVaYdqRBs9ZrE5jlr3K7Sa5HmMTo5kmeJpkaUkQos15Visrl5AVot3FjLMo8wYXH6/S+Y7C2wxF6/1DiKE7SE90+PP2yrLmZCpBtzJCc94fNyPK9iLAAaw/FKxpzS0hOnfz1Zjz1WuYw9RAK76G1pH48lPCDELOX2T94lMq1wp3tYq7bxPp5NlxpLNdqIdjE99/xIdoqg6ah27uUpjib+HBE2Jnm6Byd01I8QeMShvGMbEtZcOCOCu3inZkhMXjNwKfkb1jeMhknaSNMuIy9yCrxTYYbwOjkZ5fqjskHAkP3W1iYEphvIE+I91ZDos+DkRjlotyHaWW+7M5On4jqx982pGP75LF28lKWX3qa75Q0WAa4PwX+2BTb07Gq9t7ji4TAqqviNIPF+sM7MlKMf1VfTgGAh9XS4BmXiJx7Y5TT1C7lgqEpw52tp5dtQ+zdBA+6Bk9OfTsYjuacgFMpChQ31S2QTFSFaL/cuK1cJP3fdOY1M4mOuJG3UAlUsf54eYlI0080J0aIKoSiJY8uw7PrW2+9n8sS0M/zbh1q+8qPZfux+MX1App7dDSphDoW1KhGpLsisCpFivlx/tUxPPr3s2W5yaUER0CuE7IGDlgmikLqwXB0nSxD0AnRgev1e9aT4wIVW6Wo2u8UORSEaq2iXyBhBoT0+lEECtd6iKf/LNMA9bY+svpoWGOU4HTve3tWF5k842BoaSjbAUTyZXKLANtZgJb4DB8nGH6Y4HbIMSt9oChth8yj/gdF6eKxMo89L3sl+cD/OtdfmUkiWA7fBSn58ilQoh+DyQbD4vmrPvY6oIArASB4Ktox7sCdFjdgv4AIYaXMVgf7Q86Gbc9m+mBZnm5MeTqbfbhXl1/jsaHcqADo1UfADP+OkJvB3lSdccE5NIx6ZS4UBlZilFqphgR2yyDXjOrVPDJzaZy+L85akP9m7dVr8cgHAnbU2rR4d2moLmRXJLJn0qTFcv5AgKGsJqP3rZYQKQVQBpojmGl9hWDGq1PyR29a8LLjLGWukyYw0aTp3EW61rkoHvorFMZdqUEaWCUCE4oVDIoTf00/226jSfAt5fCkRP3awq1SXS5loLYticKvsUK0T3s/piF0KOAKJsvHvrP6vGACbE/q9BISXNlM1dOfX5Jb9TrzcSWv77K1QFcbYrH5SATDjtoHNtlxUaziEI97B6Wmy+aAtZpavZev5jq4b70k8yRFojCknckgclH4puHw75zvqBmmjcnNQZZKsviTONJK6tTE49g16w9R4X9owwAhIu9hHJkhzijGoJLB5Ucrokp8ivNwwxXF18AhZdoDTM1TS0nIT3lZCYlT28xvAZGijpDZVVoPaTdiN+GasuQkx1uitE7luNnOA6zgqRA+M+i7JKD9vRwzW0cEBb5hhVbcBB0ujZSCyQ3srKTHRV457M88t+vwO8d6Hg942uderfry6ifhAjZxkaTkZXZXA83WqQp1LFod8S7medJdmVz5jXCpQ3AajxsMD/PIPCheZXi6LCUbL+sEMZxCqISLcB3SR5ZIpVnOzW/LAEiBTluMbCjfrM0rz7mGF4RVQLH9uYLaq3G7C0uAOjdyngyuUQdnZN6TNVVevD3VMgxY4Qv4b/7ERb6JP6uqBUl9rsWaaXaA9Z+9ZRo54xR0mdeMD8x+eWH+8Z5gSNpU/JhAhuD+zgPM0tBhy4OAAGVZpGGxgB"
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "http://www.tdwe.org.tw/html/company_list.php",
+                "title": "台灣區飲用水設備工業同業公會",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "甲級-031 國品實業股份有限公司 428427臺中市大雅區中清路四段766號 886-4-25689366 886-4-25687574 RO純水機零配件-其它組裝零配件 RO純水機零配件-濾殼類 RO純水機零配件-膜、濾芯、濾材類 RO純水機零配件-管線、接頭類 RO純水機零配件-壓力桶類 家庭..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.zhen-jing.com.tw/zh/products_detail/?pid=20",
+                "title": "壓力桶 - 振景",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "通過NSF認證及CE認證 適用RO逆滲透純水機 壓力儲水桶可將逆滲透淨水器所製的純水保存起來，使飲水更方便。 採用完全密閉設計，可有效防塵及保護水質不受污染。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "http://www.twdoit.com/gppt",
+                "title": "商貿一站通-工商服務 企業網站 平台入口-冠品塗裝設備有限公司-噴槍,泵浦,調壓器,過濾器,噴嘴,壓力桶,攪拌器,罐注機,靜電塗裝,加熱器",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "公司地址：彰化市三村里三村路436號 · 電話： (04)-7371298 · 傳真 (04)-7387570 · E-mail： dean@gppt.com.tw http://www.gppt.com.tw/T/body.php · 專營： · 噴槍,泵浦,調壓器,過濾器,噴嘴,壓力桶,攪拌器,..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.gppt.com.tw/AT-L.html",
+                "title": "噴塗設備：電動噴塗設備、自動噴塗設備 - 冠品塗裝設備股份有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "8-2 噴蠟桶 · 09 塗裝工作台與烤箱 · 9-1 移動噴漆台 · 9-2 固定式噴漆台 · 9-3 噴漆台耗材 · 9-4 烤箱 · 9-5 噴漆旋轉台 · 10 壓力桶 · 10-1 鋼製壓力桶-CE認證 · 10-2 不鏽鋼壓力桶-CE認證 · 10-3 不鏽鋼液位壓力桶-CE認證 · 1..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.smcworld.com/webcatalog/zh-tw/series/VBAT-ZHTW",
+                "title": "產品目錄 ｜SMC Automation (Taiwan) Co., Ltd.",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "・可與增壓缸直接連結輕巧型的小容量儲氣桶 ・儲氣桶單體也可使用 ・附安全閥（選配） ・海外規格適合品: CE認證適用品 (-Q) 符合ASME標準品 (-X105) ASME規格適用除外品 (-X11) 中國壓力容器規程適合品 (-X104) 勞動安全衛生法KC認證適合品 (-X101)"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.thtco.com.tw/products_detail/69",
+                "title": "壓力容器｜ASME U Stamp 高壓特製造認證｜臺灣熱傳股份有限公司 - 臺灣熱傳產品總覽｜殼管式、板式、鰭片式熱交換器與吸收式冰水機 - 臺灣熱傳股份有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "臺灣熱傳股份有限公司為合格壓力容器製造廠，具備一壓、高壓特及ASME U Stamp國際認證，可依法規設計與製造塔槽、反應器、儲槽、過濾器及各式熱交換器。提供客製化壓力容器解決方...\n\n臺灣熱傳股份有限公司為合格壓力容器製造廠，具備一壓、高壓特及ASME U Stamp國際認證，可依法規設計與製造..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.ctci.com/www/ctci2022/page.aspx?L=CH&C=0301",
+                "title": "CTCI Group 中鼎集團",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "協力廠商查詢付款狀態，帳號請輸入廠商編號，密碼已於廠商註冊流程提供。 登入 ... 中鼎集團為提升國內工程水準，成立此課程學習平台，將工程界的專業課程無償對外界開放，讓大家能夠根據自身的領域與興趣，進行課程進修。 前往學習 ... \n\nCTCI有近30年的設備製造經驗，在煉油石化、一般工業及電力市場..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.taijune.com/professional",
+                "title": "專業領域-大震企業股份有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Pressure Vessels and General Pressure Vessels, such as Pressure Vessel Type-I, Pressure Vessel Type-II, specific High-pressure gas equipment and world..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.taijune.com/professional",
+                "title": "專業領域-大震企業股份有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "We can provide ASMS S Stamp for marketing to the USA, Japan and other high-standard countries. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.value-chain.com.tw/product_info.asp?id=1183",
+                "title": "課程資訊-ASME 美國機械工程師學會認證|大人提、ESG輔導、搭配補助計畫、ISO驗證",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "ASME（American Society of Mechanical Engineers，美國機械工程師學會）成立於 1880 年，是全球最具權威的工程標準制定機構之一。其制定的《鍋爐及壓力容器規範》（BPVC）被廣泛應用於超過 100 個國家，成為壓力設備設計、製造與檢驗的國際標準。獲得 ASM..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://wiki.mbalib.com/zh-tw/ASME%E8%AE%A4%E8%AF%81",
+                "title": "ASME認證 - MBA智库百科",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "針對這些認證項目，ASME向世界範圍內的生產企業授予25種鋼印及相應的認證證書。 其中字母Ｕ開頭的屬壓力容器範疇，字母Ｈ開頭的屬鍋爐類產品範疇，字母Ｎ開頭的屬於核動力裝置範疇。目前，我國通過ASME認證的企業已有127家，其中大部分獲得了U鋼印和S鋼印。 ... ASME鍋爐壓力容器規範是一部控制鍋..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.worfin.com.tw/about/%E8%A8%B1%E5%8F%AF%E8%AA%8D%E8%AD%89",
+                "title": "許可認證",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "許可認證 · 首頁 · / 關於我們 · / 許可認證 · 認證證書 · ASME認證 · CNS認證-鍋爐 · CNS認證-高壓設備 · CNS認證-第一壓力容器 · ISO認證"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 82793,
+      "completion_tokens": 3741,
+      "total_tokens": 86534,
+      "cost": 0.262996,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.262996,
+        "upstream_inference_prompt_cost": 0.165586,
+        "upstream_inference_completions_cost": 0.03741
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 918,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 6
+      }
+    }
+  }
+}

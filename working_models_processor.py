@@ -1,451 +1,342 @@
-﻿#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-AQUASKY AIQA Monitor - 撌脤?霅?冽芋???
-撠釣?澆歇?亙?函?璅∪?嚗??其??舐?芋??
-"""
-
-import os
-import sys
-import json
-import requests
+#!/usr/bin/env python3
+"""AQUASKY citation monitor. Explicit --run; every answer has a raw evidence file."""
+from __future__ import annotations
+import argparse
 import configparser
-import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
+import hashlib
+import json
 from pathlib import Path
-import pandas as pd
+import re
+import sys
+import time
+from urllib.parse import urlparse
 
-class WorkingModelsProcessor:
-    """撌脤?霅?冽芋??????""
-    
-    def __init__(self):
-        self.project_root = Path.cwd()
-        self.output_dir = self.project_root / "outputs"
-        self.output_dir.mkdir(exist_ok=True)
-        
-        # 撌脤?霅?函?璅∪?嚗??園?瘙矽?湛?
-        self.working_models = [
-            # 撌脫??葫閰阡??芋??            {
-                "id": "deepseek/deepseek-chat-v3.1",
-                "name": "DeepSeek Chat v3.1",
-                "status": "verified"  # 撌脫??            },
-            {
-                "id": "openai/gpt-5-mini",
-                "name": "GPT-5 Mini",
-                "status": "verified"   # 撌脤?霅??            },
-            # 雿輻??瘙宏??Claude 3 Haiku
-            {
-                "id": "google/gemini-2.5-flash",
-                "name": "Gemini 2.5 Flash",
-                "status": "verified"   # 撌脤?霅??            },
-            # ?嗅?撌脤?霅?函?璅∪?
-            {
-                "id": "anthropic/claude-sonnet-4",
-                "name": "Claude Sonnet 4",
-                "status": "verified"   # 撌脤?霅??            },
-            {
-                "id": "meta-llama/llama-3.1-8b-instruct",
-                "name": "Llama 3.1 8B",
-                "status": "verified"   # 撌脤?霅??            },
-            {
-                "id": "mistralai/mistral-small-3.2-24b-instruct",
-                "name": "Mistral Small 3.2 24B",
-                "status": "verified"   # 撌脫??            },
-            # 雿輻??摰????Perplexity 璅∪?嚗歇撽??舐嚗?            {
-                "id": "perplexity/sonar-pro",
-                "name": "Perplexity Sonar Pro",
-                "status": "verified",   # 撌脤?霅??                "api_type": "perplexity"  # 雿輻 Perplexity ?湔 API
-            },
-            # OpenRouter ?舐??Grok 璅∪?嚗歇皜祈岫 2025-07-26嚗?            {
-                "id": "x-ai/grok-3-mini-beta",
-                "name": "Grok 3 Mini Beta",
-                "status": "verified"   # 撌脤?霅?剁?2.74蝘????敹恬?
-            },
-            # 銝?函?璅∪?嚗????箄???
-            # {
-            #     "id": "x-ai/grok-beta",
-            #     "name": "Grok Beta",
-            #     "status": "unavailable"   # HTTP 404 - No endpoints found
-            # }
-        ]
+import requests
+from src.question_loader import load_question_records
 
-        # ?岫敺???JSON 閬?璅∪?皜嚗摮銝撘迤蝣綽?
-        try:
-            config_json = self.project_root / 'config' / 'working_models.json'
-            if config_json.exists():
-                with open(config_json, 'r', encoding='utf-8') as f:
-                    models = json.load(f)
-                if isinstance(models, list) and all(isinstance(m, dict) and 'id' in m and 'name' in m for m in models):
-                    self.working_models = models
-                    print(f"撌脰??亙??冽芋???殷?{config_json}")
-                else:
-                    print("憭璅∪?皜?澆?銝迤蝣綽??寧?批遣皜??)
-        except Exception as e:
-            print(f"霈???冽芋???桀仃???寧?批遣皜嚗e}")
+ROOT = Path(__file__).resolve().parent
+SYSTEM_PROMPT = "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+OFFICIAL_DOMAINS = ("aquaskyplus.com",)
 
-        self.openrouter_api_key = None
-        self.perplexity_api_key = None
-        self.questions = []
-        
-    def load_config(self):
-        """頛?蔭瑼?"""
-        print("\n ??頛?蔭瑼?...")
-        config = configparser.ConfigParser()
-        config_path = Path("config.ini")
-        
-        if not config_path.exists():
-            print("?曆???config.ini 瑼?")
-            return False
-        
-        config.read(config_path, encoding='utf-8')
-        
-        # 頛 OpenRouter API Key
-        self.openrouter_api_key = config.get('api_keys', 'openrouter_api_key', fallback=None)
-        
-        # 頛 Perplexity API Key
-        self.perplexity_api_key = config.get('api_keys', 'PERPLEXITY_API_KEY', fallback=None)
-        
-        if not self.openrouter_api_key or self.openrouter_api_key == 'your_openrouter_api_key_here':
-            print("隢 config.ini 銝剛身摰??? openrouter_api_key")
-            return False
-        
-        if not self.perplexity_api_key or self.perplexity_api_key == 'your_perplexity_api_key_here':
-            print("隢 config.ini 銝剛身摰??? PERPLEXITY_API_KEY")
-            return False
-        
-        return True
-    
-    def extract_questions(self):
-        """敺?憿?獢葉?????20 ??憿?""
-        print("\n ??????...")
-        candidates = [\n            Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"),\n            Path("AQUASKY AEO 監控專案 - 黃金問題庫 V3.0_processed.md"),\n        ]\n        questions_file = next((p for p in candidates if p.exists()), None)
-        
-        if not questions_file:\n            print("找不到題庫檔案（V3.0.md 或 V3.0_processed.md）")\n            return False
-        
+
+def dump_json(path, value):
+    path = Path(path)
+    temp = path.with_suffix(path.suffix + ".tmp")
+    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8")
+    temp.replace(path)
+
+
+def fingerprint(value):
+    return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def official_url(url):
+    host = (urlparse(url).hostname or "").lower()
+    return any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS)
+
+
+def extract_citations(raw):
+    """Structured citations only. Body links/search results are not citation evidence."""
+    result = []
+    for item in raw.get("citations", []) or []:
+        if isinstance(item, str):
+            result.append({"url": item, "title": "", "source": "citations"})
+        elif isinstance(item, dict) and item.get("url"):
+            result.append({**item, "source": "citations"})
+    choices = raw.get("choices") or []
+    message = choices[0].get("message", {}) if choices else {}
+    for annotation in message.get("annotations", []) or []:
+        if annotation.get("type") == "url_citation":
+            citation = annotation.get("url_citation", annotation)
+            if citation.get("url"):
+                result.append({**citation, "source": "annotation"})
+    unique = {}
+    for item in result:
+        if urlparse(item["url"]).scheme in ("http", "https"):
+            unique.setdefault(item["url"], item)
+    return list(unique.values())
+
+
+def normalize_response(raw):
+    choices = raw.get("choices") or []
+    choice = choices[0] if choices else {}
+    answer = choice.get("message", {}).get("content") or ""
+    if not isinstance(answer, str):
+        answer = "\n".join(p.get("text", "") for p in answer if isinstance(p, dict))
+    answer = answer.strip()
+    finish = choice.get("finish_reason")
+    status = "success" if answer and finish not in ("length", "content_filter", "error") else "failed"
+    if answer and finish == "length":
+        status = "truncated"
+    citations = extract_citations(raw)
+    return {"status": status, "answer": answer, "finish_reason": finish,
+            "returned_model": raw.get("model"), "provider": raw.get("provider"),
+            "usage": raw.get("usage", {}), "citations": citations,
+            "body_urls": list(dict.fromkeys(re.findall(r'https?://[^\s<>\[\]()]+', answer))),
+            "brand_mentioned": bool(re.search(r"\baqua\s*sky\b|溢康", answer, re.I)),
+            "official_cited": any(official_url(c["url"]) for c in citations),
+            "citation_metadata_present": bool(citations),
+            "error": "" if status == "success" else ("Output token limit reached" if status == "truncated" else "No complete answer")}
+
+
+def resolve_citation_redirects(records):
+    """Resolve Google citation redirects without fetching the destination sites."""
+    pending = {c["url"] for r in records for c in r.get("citations", [])
+               if urlparse(c["url"]).hostname == "vertexaisearch.cloud.google.com"
+               and not c.get("resolved_url")}
+
+    def resolve(url):
         try:
-            with open(questions_file, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            questions = []
-            lines = content.split('\n')
-            
-            for line in lines:
-                line = line.strip()
-                if line and any(line.startswith(f"{i}.") for i in range(1, 13)):
-                    question = line.split('.', 1)[1].strip()
-                    if '(' in question and ')' in question:
-                        question = question.split('(')[0].strip()
-                    questions.append(question)
-            
-            self.questions = questions[:12]
-            print(f"???? {len(questions)} ??憿?)
-            return len(questions) > 0
-            
-        except Exception as e:
-            print(f"霈??憿?獢??潛??航炊: {str(e)}")
-            return False
-    
-    def test_model_availability(self, model_info):
-        """皜祈岫璅∪??臬?舐嚗??OpenRouter ??Perplexity嚗?""
-        model_id = model_info["id"]
-        api_type = model_info.get("api_type", "openrouter")
-        
-        print(f"\n 皜祈岫璅∪? {model_id} ?臬?舐...")
-        
-        if api_type == "perplexity":
-            # 雿輻 Perplexity ?湔 API
-            url = "https://api.perplexity.ai/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.perplexity_api_key}",
-                "Content-Type": "application/json"
-            }
-            actual_model_id = model_id.replace("perplexity/", "")
-        else:
-            # 雿輻 OpenRouter API
-            url = "https://openrouter.ai/api/v1/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.openrouter_api_key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
-                "X-Title": "AQUASKY AIQA Monitor"
-            }
-            actual_model_id = model_id
-        
-        # 雿輻蝪∪?葫閰血?憿?        data = {
-            "model": actual_model_id,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": "Hello, please respond with 'OK' if you can understand this message."
-                }
-            ],
-            "max_tokens": 10,
-            "temperature": 0.1
-        }
-        
-        try:
-            print(f"  皜祈岫璅∪??舐??..")
-            response = requests.post(url, headers=headers, json=data, timeout=30)
-            
-            if response.status_code == 200:
-                result = response.json()
-                if 'choices' in result and len(result['choices']) > 0:
-                    print(f"  璅∪??舐")
-                    return True
-                else:
-                    print(f"  璅∪????澆??啣虜")
-                    return False
-            else:
-                print(f"  璅∪?銝??(HTTP {response.status_code})")
-                try:
-                    error_info = response.json()
-                    print(f"      ?航炊閰單?: {error_info}")
-                except:
-                    print(f"      ?航炊?批捆: {response.text}")
-                return False
-                
-        except Exception as e:
-            print(f"  皜祈岫璅∪???隤? {str(e)}")
-            return False
-    
-    def call_llm_api(self, model_info, question, question_num):
-        """?澆 LLM API嚗??OpenRouter ??Perplexity嚗?""
-        model_id = model_info["id"]
-        api_type = model_info.get("api_type", "openrouter")
-        
-        if api_type == "perplexity":
-            # 雿輻 Perplexity ?湔 API
-            url = "https://api.perplexity.ai/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.perplexity_api_key}",
-                "Content-Type": "application/json"
-            }
-            # Perplexity 璅∪? ID ?閬宏??perplexity/ ?韌
-            actual_model_id = model_id.replace("perplexity/", "")
-        else:
-            # 雿輻 OpenRouter API
-            url = "https://openrouter.ai/api/v1/chat/completions"
-            headers = {
-                "Authorization": f"Bearer {self.openrouter_api_key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://github.com/zellhuang0503/Aquasky-AIQA-Monitor",
-                "X-Title": "AQUASKY AIQA Monitor"
-            }
-            actual_model_id = model_id
-        
-        data = {
-            "model": actual_model_id,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": question
-                }
-            ],
-            "max_tokens": 1000,
-            "temperature": 0.7
-        }
-        
-        try:
-            print(f"  ???? {question_num}/20...")
-            response = requests.post(url, headers=headers, json=data, timeout=60)
-            
-            if response.status_code == 200:
-                result = response.json()
-                if 'choices' in result and len(result['choices']) > 0:
-                    answer = result['choices'][0]['message']['content']
-                    usage = result.get('usage', {})
-                    
-                    print(f"  ?? {question_num} 摰? (Token: {usage.get('total_tokens', 0)})")
-                    return {
-                        'success': True,
-                        'answer': answer,
-                        'usage': usage
-                    }
-                else:
-                    print(f"  ?? {question_num} - API ???澆??啣虜")
-                    return {'success': False, 'error': 'Invalid response format'}
-            else:
-                print(f"  ?? {question_num} - API ?航炊: {response.status_code}")
-                return {'success': False, 'error': f'HTTP {response.status_code}'}
-                    
-        except Exception as e:
-            print(f"  ?? {question_num} - ?潛??航炊: {str(e)}")
-            return {'success': False, 'error': str(e)}
-    
-    def process_single_model(self, model_info):
-        """???桐?璅∪?????憿?""
-        model_id = model_info["id"]
-        model_name = model_info["name"]
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        print(f"\n ????璅∪?: {model_name} ({model_id})")
-        
-        print(f"\n ????璅∪?: {model_name}")
-        print(f" 璅∪?ID: {model_id}")
-        print("=" * 60)
-        
-        # 憒?銝撌脤?霅?璅∪?嚗?皜祈岫?舐??        if model_info["status"] != "verified":
-            if not self.test_model_availability(model_info):
-                print(f"璅∪? {model_name} 銝?剁?頝喲???")
-                return False, 0, 0
-        
-        results = []
-        successful_count = 0
-        total_tokens = 0
-        
-        for i, question in enumerate(self.questions, 1):
-            result = self.call_llm_api(model_info, question, i)
-            results.append(result)
-            
-            if result['success']:
-                successful_count += 1
-                total_tokens += result.get('usage', {}).get('total_tokens', 0)
-            
-            # 瘥?憿????3 蝘?            if i < len(self.questions):
-                time.sleep(3)
-        
-        # ?脣?蝯?
-        self.save_model_results(model_id, model_name, results, timestamp)
-        
-        print(f"\n {model_name} ??摰?:")
-        print(f"  ??: {successful_count}/20 ??憿?)
-        print(f"  蝮確oken: {total_tokens}")
-        print("=" * 60)
-        
-        return True, successful_count, total_tokens
-    
-    def save_model_results(self, model_id, model_name, results, timestamp):
-        """?脣??桐?璅∪?????""
-        # 皞?鞈?
-        data = []
-        
-        for i, (question, result) in enumerate(zip(self.questions, results), 1):
-            row = {
-                '??蝺刻?': i,
-                '??': question,
-                '??': result.get('answer', '??憭望?') if result['success'] else '??憭望?',
-                '???: '??' if result['success'] else '憭望?',
-                '?航炊閮': result.get('error', '') if not result['success'] else '',
-                '頛詨Token': result.get('usage', {}).get('prompt_tokens', 0) if result['success'] else 0,
-                '頛詨Token': result.get('usage', {}).get('completion_tokens', 0) if result['success'] else 0,
-                '蝮確oken': result.get('usage', {}).get('total_tokens', 0) if result['success'] else 0
-            }
-            data.append(row)
-        
-        # ??摰??獢?蝔?        safe_model_name = model_id.replace('/', '_').replace('\\', '_')
-        
-        # ?脣? Excel
-        df = pd.DataFrame(data)
-        excel_filename = f"AQUASKY_AIQA_{safe_model_name}_{timestamp}.xlsx"
-        excel_path = self.output_dir / excel_filename
-        df.to_excel(excel_path, index=False, engine='openpyxl')
-        
-        # ?脣? Markdown
-        md_filename = f"AQUASKY_AIQA_{safe_model_name}_{timestamp}.md"
-        md_path = self.output_dir / md_filename
-        
-        with open(md_path, 'w', encoding='utf-8') as f:
-            f.write(f"# AQUASKY AIQA Monitor - {model_name} 皜祈岫?勗?\n\n")
-            f.write(f"**????**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"**璅∪?**: {model_id}\n")
-            f.write(f"**璅∪??迂**: {model_name}\n\n")
-            
-            # 蝯梯?鞈?
-            successful_count = sum(1 for r in results if r['success'])
-            total_input_tokens = sum(r.get('usage', {}).get('prompt_tokens', 0) for r in results if r['success'])
-            total_output_tokens = sum(r.get('usage', {}).get('completion_tokens', 0) for r in results if r['success'])
-            
-            f.write(f"## 蝯梯?鞈?\n\n")
-            f.write(f"- **??????*: {successful_count}/20\n")
-            f.write(f"- **蝮質撓?冉oken**: {total_input_tokens}\n")
-            f.write(f"- **蝮質撓?摭oken**: {total_output_tokens}\n")
-            f.write(f"- **蝮確oken**: {total_input_tokens + total_output_tokens}\n\n")
-            
-            # ????蝑?            for i, (question, result) in enumerate(zip(self.questions, results), 1):
-                f.write(f"## ?? {i}\n\n")
-                f.write(f"**??**: {question}\n\n")
-                if result['success']:
-                    f.write(f"**??**: {result['answer']}\n\n")
-                    usage = result.get('usage', {})
-                    f.write(f"**Token雿輻**: 頛詨 {usage.get('prompt_tokens', 0)}, 頛詨 {usage.get('completion_tokens', 0)}, 蝮質? {usage.get('total_tokens', 0)}\n\n")
-                else:
-                    f.write(f"**???*: ??憭望?\n")
-                    f.write(f"**?航炊**: {result.get('error', '?芰?航炊')}\n\n")
-                f.write("---\n\n")
-        
-        print(f"  蝯?撌脣摮?")
-        print(f"    Excel: {excel_filename}")
-        print(f"    Markdown: {md_filename}")
-    
-    def run_processing(self):
-        """?瑁???"""
-        print("AQUASKY AIQA Monitor - ?舐璅∪???蝟餌絞")
-        print("=" * 60)
-        
-        # 頛?蔭
-        if not self.load_config():
-            return False
-        
-        # ????
-        if not self.extract_questions():
-            return False
-        
-        print(f"\n 撠?摨??誑銝芋??")
-        for i, model in enumerate(self.working_models, 1):
-            status_icon = "[V]" if model["status"] == "verified" else "[T]"
-            print(f"  {i}. {status_icon} {model['name']} ({model['id']})")
-        
-        print(f"\n 瘥芋???? 20 ??憿?摰?敺?摮???)
-        print("=" * 60)
-        
-        # ????瘥芋??        total_successful = 0
-        total_tokens = 0
-        processed_models = 0
-        
-        for i, model_info in enumerate(self.working_models, 1):
-            print(f"\n ?脣漲: {i}/{len(self.working_models)}")
-            
+            response = requests.head(url, allow_redirects=False, timeout=(5, 15))
+            target = response.headers.get("Location", "")
+            parsed = urlparse(target)
+            valid = (response.is_redirect and parsed.scheme in ("https", "http")
+                     and bool(parsed.hostname) and parsed.hostname != "vertexaisearch.cloud.google.com")
+            return url, {"resolved_url": target if valid else None,
+                         "resolution_http_status": response.status_code,
+                         "resolved_at": datetime.now().astimezone().isoformat()}
+        except requests.RequestException as exc:
+            return url, {"resolved_url": None, "resolution_error": type(exc).__name__}
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        resolved = dict(pool.map(resolve, sorted(pending)))
+    for record in records:
+        for citation in record.get("citations", []):
+            if citation["url"] in resolved:
+                citation.update(resolved[citation["url"]])
+        record["unresolved_citations"] = sum(
+            urlparse(c["url"]).hostname == "vertexaisearch.cloud.google.com" and not c.get("resolved_url")
+            for c in record.get("citations", []))
+        record["official_cited"] = any(official_url(c.get("resolved_url") or c["url"])
+                                        for c in record.get("citations", []))
+
+
+def build_payload(model, question, max_tokens):
+    payload = {"model": model["id"], "messages": [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": question["question"]}], "max_tokens": max_tokens}
+    if model["api_type"] == "openrouter":
+        payload["plugins"] = [{"id": "web", "engine": model["search_engine"]}]
+        if model.get("provider"):
+            payload["provider"] = model["provider"]
+        if model.get("reasoning_effort"):
+            payload["reasoning"] = {"effort": model["reasoning_effort"]}
+    return payload
+
+
+class APIClient:
+    def __init__(self, config_path):
+        cfg = configparser.ConfigParser(interpolation=None)
+        cfg.read(config_path, encoding="utf-8-sig")
+        self.keys = {route: cfg.get("api_keys", key, fallback="").strip()
+                     for route, key in [("openrouter", "openrouter_api_key"), ("perplexity", "perplexity_api_key")]}
+
+    def query(self, model, payload):
+        self.retry_responses = []
+        route = model["api_type"]
+        key = self.keys.get(route, "")
+        if not key or key.startswith("your_"):
+            return {"error": "Missing API key", "http_status": None}, True
+        url = {"openrouter": "https://openrouter.ai/api/v1/chat/completions",
+               "perplexity": "https://api.perplexity.ai/v1/sonar"}[route]
+        for attempt in range(3):
             try:
-                success, successful, tokens = self.process_single_model(model_info)
-                
-                if success:
-                    processed_models += 1
-                    total_successful += successful
-                    total_tokens += tokens
-                
-                # 璅∪?銋??怠? 5 蝘?                if i < len(self.working_models):
-                    print(f"?怠? 5 蝘???銝??芋??..")
-                    time.sleep(5)
-                    
-            except KeyboardInterrupt:
-                print(f"\n 雿輻?葉?瑁???撌脣???{processed_models} ?芋??)
-                break
-            except Exception as e:
-                print(f"\n ??璅∪? {model_info['name']} ??隤? {str(e)}")
-                continue
-        
-        # 憿舐內蝮賜?
-        print(f"\n ??摰?嚗?)
-        print(f" ????璅∪??? {processed_models}")
-        print(f" 蝮賣???憿: {total_successful}")
-        print(f" 蝮確oken雿輻: {total_tokens}")
-        print(f" ?????獢歇?脣???outputs/ ?桅?")
-        print("=" * 60)
-        
-        return True
+                response = requests.post(url, headers={"Authorization": f"Bearer {key}",
+                    "Content-Type": "application/json", "X-Title": "AQUASKY AIQA Monitor"},
+                    json=payload, timeout=(15, 180))
+                try:
+                    raw = response.json()
+                except ValueError:
+                    raw = {"error": "Non-JSON API response"}
+                if response.status_code == 200 and not raw.get("error"):
+                    transient = any(
+                        c.get("finish_reason") == "error"
+                        and (c.get("error") or {}).get("code") in (429, 500, 502, 503, 504)
+                        for c in raw.get("choices", []))
+                    if transient and attempt < 2:
+                        # OpenRouter can wrap provider failures inside an HTTP 200.
+                        # Preserve the failed response separately from the final response.
+                        self.retry_responses.append(raw)
+                        time.sleep(2 ** (attempt + 1))
+                        continue
+                    return raw, False
+                # Never persist headers, keys or arbitrary error body from a provider.
+                error = {"error": f"API HTTP {response.status_code}", "http_status": response.status_code}
+                if response.status_code in (429, 500, 502, 503, 504) and attempt < 2:
+                    time.sleep(2 ** (attempt + 1))
+                    continue
+                return error, response.status_code in (401, 402, 403, 404)
+            except requests.RequestException as exc:
+                # A timed-out POST may have been billed. Avoid automatic duplicate calls.
+                return {"error": type(exc).__name__, "http_status": None}, False
+        return {"error": "Retries exhausted", "http_status": None}, False
 
-def main():
-    """銝餌?撘?""
-    print("===== ???瑁? working_models_processor.py =====")
+
+def summary_markdown(manifest, records):
+    lines = ["# AQUASKY AI 引用監測", "", f"執行時間：{manifest['created_at']}",
+             f"題庫 SHA-256：`{manifest['question_hash']}`", "",
+             "本報告為模型 API 測試，不代表 ChatGPT 網頁版、Gemini App 或 Google AI Overviews。",
+             "每題獨立對話；使用相同繁體中文查詢與來源要求，未限定網站，未向 A 組注入品牌名。",
+             "品牌提及只是文字偵測，不等於推薦、資訊正確或完整 Share of Voice。B 組正確性仍需人工核對。",
+             "引用僅計 API 結構化來源；回答內網址另存，不冒充引用。搜尋已啟用，但無引用不代表未搜尋。",
+             "Google 搜尋跳轉以 HEAD 查核 Location，不抓取目標網站；原始與解析後網址均保留。",
+             "同日重跑、不同題庫與不同搜尋引擎不混算；這是單次觀測，不能推論長期趨勢。", "",
+             "| 模型 | 搜尋模式 | 完整回答 / 預定 | A 組品牌提及 / 完整回答 | A 組官網引用 / 完整回答 | B 組官網引用 / 完整回答 | 有來源 / 完整回答 |",
+             "| --- | --- | --- | --- | --- | --- | --- |"]
+    if manifest.get("source_runs"):
+        # Insert provenance before the comparison table, preserving each run's time.
+        table_start = next(i for i, line in enumerate(lines) if line.startswith("| 模型 |"))
+        provenance = ["## 本報告來源批次", "", "這是相同題庫與參數的分批測試整合，非同時發出的單一批次。", ""]
+        provenance += [f"- {s['run_id']}：{s['created_at']}；模型 {', '.join(s['models'])}" for s in manifest["source_runs"]]
+        lines[table_start:table_start] = provenance + [""]
+    for model in manifest["models"]:
+        rows = [r for r in records if r["model_key"] == model["key"]]
+        good = [r for r in rows if r["status"] == "success"]
+        a = [r for r in good if r["group"] == "A"]
+        b = [r for r in good if r["group"] == "B"]
+        def ratio(items, key):
+            return f"{sum(bool(r.get(key)) for r in items)}/{len(items)}" if items else "—（無完整回答）"
+        lines.append(f"| {model['name']} | {model['search_engine']} | {len(good)}/{len(manifest['questions'])} | {ratio(a, 'brand_mentioned')} | {ratio(a, 'official_cited')} | {ratio(b, 'official_cited')} | {ratio(good, 'citation_metadata_present')} |")
+    bad = [r for r in records if r["status"] != "success"]
+    unresolved = sum(r.get("unresolved_citations", 0) for r in records)
+    if unresolved:
+        lines += ["", f"注意：仍有 {unresolved} 筆 Google 引用跳轉未能解析，官網引用數為已確認下限，不能把未命中解讀為沒有引用。"]
+    if bad:
+        lines += ["", "## 未完成或截斷項目", ""]
+        lines += [f"- {r['model_key']} / {r['question_id']}：{r['status']} — {r.get('error', '')}" for r in bad]
+    lines += ["", "## 逐題回答與來源", ""]
+    for r in records:
+        lines += [f"### {r['model_key']} / {r['question_id']}", "", r["question"], "",
+                  f"狀態：{r['status']}；回傳模型：{r.get('returned_model', '—')}", "",
+                  r.get("answer", "") or r.get("error", ""), "", "API 引用來源：", ""]
+        lines += [f"- [{c.get('title') or c['url']}]({c.get('resolved_url') or c['url']})" for c in r.get("citations", [])] or ["- 未取得結構化引用。"]
+        lines += ["", f"原始回應：`raw/{r['model_key']}_{r['question_id']}.json`", ""]
+    return "\n".join(lines)
+
+
+def write_reports(run_dir, manifest, records):
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+    resolve_citation_redirects(records)
+    dump_json(run_dir / "results.json", records)
+    (run_dir / "report.md").write_text(summary_markdown(manifest, records), encoding="utf-8")
+    wb = Workbook(); ws = wb.active; ws.title = "回答與引用"
+    ws.append(["模型", "題號", "類別", "問句", "狀態", "回答", "API引用網址", "品牌提及", "官網引用", "總Token", "結束原因", "錯誤"])
+    for r in records:
+        values = [r["model_key"], r["question_id"], r["group"], r["question"], r["status"], r.get("answer", ""),
+                  "\n".join(c.get("resolved_url") or c["url"] for c in r.get("citations", [])), r.get("brand_mentioned", False),
+                  r.get("official_cited", False), r.get("usage", {}).get("total_tokens", 0), r.get("finish_reason"), r.get("error", "")]
+        ws.append(values)
+        for cell in ws[ws.max_row]:
+            if isinstance(cell.value, str):
+                cell.data_type = "s"
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF");c.fill = PatternFill("solid", fgColor="183C55")
+    ws.freeze_panes = "E2";ws.auto_filter.ref = ws.dimensions
+    for col, width in {"A":18,"B":10,"C":10,"D":55,"E":15,"F":100,"G":65,"H":12,"I":12,"J":14,"K":18,"L":28}.items():
+        ws.column_dimensions[col].width = width
+    wb.save(run_dir / "answers.xlsx")
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--questions", type=Path, default=ROOT / "config/questions_20260922.md")
+    parser.add_argument("--models", help="Comma-separated keys, or all; defaults to enabled models")
+    parser.add_argument("--question-ids", help="Subset, e.g. A1,B1")
+    parser.add_argument("--max-tokens", type=int, default=6000)
+    parser.add_argument("--run", action="store_true", help="Send billable API requests")
+    parser.add_argument("--dry-run", action="store_true", help="Validate locally without API calls")
+    parser.add_argument("--resume", type=Path, help="Resume an existing run with the SAME inputs")
+    parser.add_argument("--retry-failed", action="store_true", help="Explicitly retry failed/truncated records on resume")
+    args = parser.parse_args(argv)
+    if args.max_tokens < 1 or (args.run and args.dry_run):
+        parser.error("Use positive max-tokens and choose --run OR --dry-run")
+    models = json.loads((ROOT / "config/working_models.json").read_text(encoding="utf-8-sig"))
+    requested = args.models.split(",") if args.models and args.models != "all" else None
+    if requested and set(requested) - {m["key"] for m in models}:
+        parser.error("Unknown model key")
+    models = [m for m in models if (m["key"] in requested if requested else (args.models == "all" or m["enabled"]))]
+    questions = load_question_records(args.questions)
+    if args.question_ids:
+        ids = args.question_ids.split(",")
+        if set(ids) - {q["id"] for q in questions}:
+            parser.error("Unknown question ID")
+        questions = [q for q in questions if q["id"] in ids]
+    identity = {"schema_version": 1, "models": models, "questions": questions,
+                "system_prompt": SYSTEM_PROMPT, "max_tokens": args.max_tokens, "official_domains": OFFICIAL_DOMAINS}
+    print(json.dumps({"questions": len(questions), "ids": [q["id"] for q in questions],
+                      "models": [m["id"] for m in models], "requests": len(models) * len(questions)}, ensure_ascii=False), flush=True)
+    if not args.run:
+        print("DRY RUN: no API requests sent.")
+        return 0
+    run_dir = args.resume.resolve() if args.resume else ROOT / "outputs/runs" / datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    if args.resume:
+        manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
+        if manifest.get("report_only"):
+            parser.error("Combined reports are read-only; resume an original API run instead.")
+        if manifest["run_hash"] != fingerprint(identity):
+            parser.error("Resume inputs differ (questions/models/prompt/token limit). Start a new run.")
+        records = json.loads((run_dir / "results.json").read_text(encoding="utf-8"))
+    else:
+        run_dir.mkdir(parents=True, exist_ok=False)
+        (run_dir / "raw").mkdir()
+        manifest = {**identity, "created_at": datetime.now().astimezone().isoformat(),
+                    "question_source": str(args.questions.resolve()), "question_hash": fingerprint(questions),
+                    "run_hash": fingerprint(identity)}
+        dump_json(run_dir / "manifest.json", manifest)
+        records = []
+        dump_json(run_dir / "results.json", records)
+    print(f"RUN_DIR={run_dir}", flush=True)
+    client = APIClient(ROOT / "config.ini")
+    blocked_routes = set()
     try:
-        processor = WorkingModelsProcessor()
-        processor.run_processing()
-    except Exception as e:
-        import traceback
-        print(f"\n ?潛??芣??脩??航炊: {str(e)}")
-        print("閰喟敦?航炊餈質馱:")
-        traceback.print_exc()
-    print("===== ?單?瑁?蝯? ====")
+        for model in models:
+            for question in questions:
+                existing = next((r for r in records if r["model_key"] == model["key"] and r["question_id"] == question["id"]), None)
+                if existing and (existing["status"] == "success" or not args.retry_failed):
+                    continue
+                payload = build_payload(model, question, args.max_tokens)
+                print(f"QUERY {model['key']} {question['id']}", flush=True)
+                started = time.monotonic()
+                client.retry_responses = []
+                if model["api_type"] in blocked_routes:
+                    raw, fatal = {"error": "Skipped: provider authentication/credit failure"}, True
+                else:
+                    raw, fatal = client.query(model, payload)
+                if fatal and raw.get("http_status") in (401, 402, 403):
+                    blocked_routes.add(model["api_type"])
+                record = {"model_key": model["key"], "model_id": model["id"], "search_engine": model["search_engine"],
+                          "question_id": question["id"], "group": question["group"], "question": question["question"],
+                          "timestamp": datetime.now().astimezone().isoformat(), "elapsed_seconds": round(time.monotonic()-started, 2)}
+                if raw.get("error"):
+                    record.update(status="failed", error=raw["error"], answer="", citations=[])
+                else:
+                    record.update(normalize_response(raw))
+                raw_path = run_dir / "raw" / f"{model['key']}_{question['id']}.json"
+                if existing and raw_path.exists():
+                    backup = raw_path.with_name(raw_path.stem + f"_previous_{time.time_ns()}.json")
+                    backup.write_bytes(raw_path.read_bytes())
+                dump_json(raw_path, {"request": payload, "response": raw,
+                                     "retry_responses": client.retry_responses})
+                if existing:
+                    records.remove(existing)
+                records.append(record)
+                # Persist after EVERY response, before attempting potentially fallible exports.
+                dump_json(run_dir / "results.json", records)
+                print(f"RESULT {model['key']} {question['id']} {record['status']} citations={len(record.get('citations', []))}", flush=True)
+    finally:
+        write_reports(run_dir, manifest, records)
+    good = sum(r["status"] == "success" for r in records)
+    print(f"COMPLETE {good}/{len(models)*len(questions)}; {run_dir / 'report.md'}", flush=True)
+    return 0 if good == len(models)*len(questions) else 1
+
 
 if __name__ == "__main__":
-    main()
-
+    try:
+        raise SystemExit(main())
+    except KeyboardInterrupt:
+        print("Interrupted; saved responses can be resumed.")
+        raise SystemExit(130)

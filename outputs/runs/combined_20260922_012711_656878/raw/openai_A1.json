@@ -1,0 +1,130 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "請推薦可靠的隔膜式壓力桶（pressure tank）製造商，我是系統整合商，需要長期供貨。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790007658-auw16xWWkoVvLAkkTd3Y",
+    "object": "chat.completion",
+    "created": 1790007658,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**我會先把 Amtrol、Global Water Solutions（GWS）、Flexcon、Zilmet 列入詢價與供應商資格審查名單。**若你要求的是「可更換囊袋」，再把 Varem 納入另一組評估，不要直接與固定隔膜型混用。\n\n以下先假設用途為**清水／飲用水增壓、泵浦啟停緩衝**。我的推薦依據是原廠公開的產品結構、技術文件及保固，而非獨立故障率排名；**實際交期、產能保留、長期供貨承諾與批次不良率，目前都無法從公開資料確認**，必須在詢價及合約階段取得書面證明。\n\n## 建議製造商名單\n\n| 製造商／系列 | 可查證的產品依據 | 我的採購建議 |\n|---|---|---|\n| **Amtrol — Well-X-Trol** | 原廠列明丁基橡膠隔膜、304L 不鏽鋼接頭、150 psig 最大工作壓力，該產品頁列有 **7 年有限保固**。另有商用 ASME 產品，但 ASME 系列保固為 **3 年**，不可混用。([amtrol.com](https://www.amtrol.com/product/well-x-trol-well-tanks/?utm_source=openai)) | **美國專案優先詢價。**適合作為標準化機組的候選供應商；採購前要確認具體型號、商用用途及供貨通路適用的保固。 |\n| **GWS — PressureWave** | 原廠型錄列出丁基橡膠隔膜、PP 內襯及不鏽鋼接頭；PressureWave 標準系列容量 **2–150 L**、最大工作壓力 **10 bar**，另有 Max／UltraMax 高壓系列。公司表示產品銷往超過 100 個國家。([globalwatersolutions.com](https://www.globalwatersolutions.com/media/wysiwyg/Resources/WM_catalogue_EN.pdf?utm_source=openai)) | **跨國交付、需要多種容量及安裝形式時優先詢價。**要求各交貨地區提供相同料號對照、認證及售後責任；全球銷售範圍不等於當地一定有現貨。 |\n| **Flexcon — Challenger／Challenger I** | Challenger 採 CAD-2 隔膜設計及不鏽鋼水接頭；Challenger I 文件列明美國製造、丁基橡膠隔膜、PP 水室及戶外防護塗裝。([flexconind.com](https://www.flexconind.com/products/consumer/challenger-series/?utm_source=openai)) | **可作北美專案的另一個候選來源。**若機組置於潮濕或戶外環境，可針對 I 系列進行樣品驗證；本次不替未確認的型號保固年限背書。 |\n| **Zilmet — Hydro-Plus／ZHP** | 美國原廠型錄列明丁基橡膠隔膜、不鏽鋼接頭、最大工作壓力 **150 psi**及 **5 年保固**，並提供不同啟停壓力下的有效出水量表。([zilmetusa.com](https://zilmetusa.com/wp-content/uploads/2026/01/2025-Catalog.pdf?utm_source=openai)) | **適合納入第二來源與規格比對。**我會要求供應商按實際啟停壓力提供替代型號，而不是只按桶身容量報價。 |\n\n**特別提醒 Amtrol 的採購通路：**原廠公開政策指出，透過電子商務來源購買的 Well-X-Trol 不享原廠支援，包括保固及技術協助。系統整合商應直接確認授權批發／專案採購通路，避免便宜買到卻無法取得原廠支援。([amtrol.com](https://www.amtrol.com/wp-content/uploads/2025/08/MC10253-07_25-Amtrol_Warranty.pdf?utm_source=openai))\n\n### 如果你需要可更換隔膜／囊袋\n\n**Varem — INTERVAREM LS CE／IDROVAREM CE** 值得另外詢價；原廠明確標示為可更換膜的立式壓力桶，並提供型號規格及符合性文件。我的建議是將其列入「可維修型」方案，要求囊袋、法蘭及密封件的獨立料號與備件供貨承諾。([varem.com](https://www.varem.com/en/prod/vertical-pressure-vessels/?utm_source=openai))\n\n## 長期供貨，我會要求這些條件\n\n以下是我建議放進 RFQ／供應商審查表的條件，**不是上述廠商已承諾提供的服務**：\n\n1. **供應保障**\n   - 年需求量、單批數量、MOQ、一般與旺季交期。\n   - 滾動預測、分批拉貨、安全庫存或寄售庫存方案。\n   - 停產通知及最後採購期限，例如要求提前 12 個月通知。\n\n2. **規格與變更管制**\n   - 鎖定隔膜材質、接頭材質／牙規、外形及安裝尺寸。\n   - 工廠、材料、焊接或塗裝變更須提前通知。\n   - 要求批號追溯、出廠測試紀錄與圖面版本管理。\n\n3. **型號級認證與品質證據**\n   - 依專案地區要求，取得**確切型號**適用的飲用水接觸認證、壓力容器文件。\n   - 索取壓力循環、氣密、耐腐蝕等測試資料，確認測試條件符合你的使用情境。\n   - 不把品牌整體的認證標誌，直接視為每個型號均已符合專案要求。\n\n4. **售後與責任**\n   - 明確寫出 OEM／商用用途是否在保固內、保固起算點。\n   - 確認拆裝工資、運費、現場服務由誰負擔。\n   - 要求 RMA 回覆期限、失效分析報告及備件供應期限。\n\n5. **第二來源驗證**\n   - 用同一工況比較有效出水量、接口位置及安裝空間。\n   - 先做樣品及小批量試裝，再把第二品牌列為正式替代料。\n\n## 我的實際選擇方向\n\n- **主要交付美國：**先向 **Amtrol、Flexcon** 詢價，並以 **Zilmet** 做替代型號比對。\n- **多國交付：**先評估 **GWS**，再按交貨地點建立第二來源。\n- **現場維修、可換囊袋是必要條件：**另外評估 **Varem**。\n\n這是我的**詢價順序建議，不是已驗證的耐用度或交期排名**。\n\n若你提供 **交貨國家／地區、用途及水質、容量範圍、最高壓力與啟停壓力、年用量、是否要求可換囊袋**，就能把名單縮到 2–3 家，並形成可直接發給原廠的 RFQ 規格表。",
+          "refusal": null,
+          "reasoning": null,
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.amtrol.com/product/well-x-trol-well-tanks/?utm_source=openai",
+                "title": "Well-X-Trol® - Amtrol",
+                "start_index": 424,
+                "end_index": 512
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.globalwatersolutions.com/media/wysiwyg/Resources/WM_catalogue_EN.pdf?utm_source=openai",
+                "title": "PressureWave™",
+                "start_index": 715,
+                "end_index": 843
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.flexconind.com/products/consumer/challenger-series/?utm_source=openai",
+                "title": "Challenger Series - Flexcon",
+                "start_index": 1031,
+                "end_index": 1132
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zilmetusa.com/wp-content/uploads/2026/01/2025-Catalog.pdf?utm_source=openai",
+                "title": "ZILMET Hydro-Plus (ZHP)",
+                "start_index": 1303,
+                "end_index": 1405
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.amtrol.com/wp-content/uploads/2025/08/MC10253-07_25-Amtrol_Warranty.pdf?utm_source=openai",
+                "title": "AMTROL INC. LIMITED PRODUCT WARRANTY",
+                "start_index": 1573,
+                "end_index": 1690
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.varem.com/en/prod/vertical-pressure-vessels/?utm_source=openai",
+                "title": "Vertical pressure expansion vessels | Varem - Water lifting line",
+                "start_index": 1834,
+                "end_index": 1923
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 21042,
+      "completion_tokens": 1860,
+      "total_tokens": 22902,
+      "cost": 0.33454,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 4448,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.33454,
+        "upstream_inference_prompt_cost": 0.22154,
+        "upstream_inference_completions_cost": 0.093
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 161,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "反滲透（RO）淨水系統用的壓力桶，該怎麼選？有推薦的品牌嗎？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790010912-ekh6TO6vayak1qMEWo4E",
+    "object": "chat.completion",
+    "created": 1790010912,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "我來查詢一些關於RO壓力桶選購的資訊，以提供更準確的建議。# RO 淨水系統壓力桶選購指南\n\n## 壓力桶的作用\n\n壓力桶（儲水桶）的功能是壓力桶的外殼通常由不銹鋼板或塑膠或鋼板外殼所製成，能夠承受內部的壓力並保護內部的儲水。內部運作原理是壓力桶內部通常有一個由丁基橡膠製成的隔膜，這個隔膜將壓力桶分成兩個區域：一個區域用來儲存純水，另一個區域用來儲存空氣壓力，這樣當需要飲用淨水時，開啟水龍頭就可以即時飲用，不需要等待造水。\n\n## 選購重點\n\n### 1. 容量大小\nRO壓力桶的容量通常根據家庭需求和RO逆滲透系統的設計來選擇，市面上最小的儲水壓力桶有0.5加侖，最大有到40加侖，而一般家用儲水壓力桶規格是以3.2加侖為最常見的大小。若家庭人口多、用水量大，可考慮 4.76 加侖（如 18 公升）或 5.5 加侖等較大容量的桶。\n\n### 2. 外殼材質：不鏽鋼 / 鋼板烤漆 / 塑膠\n三種材質各有優缺點：\n\n- **鋼板烤漆**：因為鋼板的價格比不銹鋼板便宜，雖然鋼板與空氣接觸容易造成氧化生銹，但只要在儲水桶的外表塗上一層油漆並以烤漆方式做二次加工，即可防止氧化生銹，且因為價格比較便宜，而且壽命也可撐個十年，如果保養得當，所以目前市場使用的儲水桶，仍以鋼板烤漆儲水桶為大宗。\n\n- **不鏽鋼外殼**：不銹鋼板具有耐磨損、耐低温、熱膨脹性能和保温性能極好等特性，但是也有其缺點，鋼性韌、強度硬就會造成加工費時，加上不銹鋼板單價貴，最適合台灣潮濕氣候使用，但售價較高。\n\n- **塑膠外殼**：主要原因是流理台下太過潮濕，鋼板儲水桶放久了也會造成生銹的問題。塑膠儲水桶也有罩門，一來塑膠毛細孔較鋼板大，會有漏氣問題，二來塑膠外殼無法像鋼板儲水桶那麼強韌，常常會因為RO機加壓馬達失效，持續加壓造成塑膠儲水桶爆破的問題，因此建議挑選時盡量避免純塑膠外殼款，優先選金屬外殼較安全。\n\n### 3. 認證\n務必選擇有 **NSF 認證**（美國國家衛生基金會）的產品，因為因此有許多人會擔心，存放過程中容易受到二次污染的問題，因此購買時確認使用的材質就很重要，無認證的則有菌殘留及異味的疑慮，選擇品質有認證的儲水壓力桶，就能安心使用了。市面上多數品牌桶（如彰鴻、麗水生活、松下淨化）皆標示「台灣製造」、NSF、CE 認證，購買前可留意產品說明。\n\n### 4. 接頭規格與壓力設定\n- 進出水口規格常見為 **1/4\" NPT**。\n- 空桶（未注水時）建議打氣壓力約在 **7–10 PSI** 之間；使用壓力計檢查壓力桶的空氣壓力，如果低於7 psi，使用打氣筒輕輕打氣，直到達到7-10 psi。\n- 一般 RO 機加壓馬達的注入壓力約 30–35 PSI，此時桶內空氣壓力7-9PSI，再依注入壓力多寡決定儲存容量，一般RO機注入壓力約30-35PSI，可儲存約65-75%容量，也就是說 3.2 加侖的桶實際可用水量約為 2~2.4 加侖左右，選購時可依此換算實際需求容量。\n\n### 5. 使用年限\n壓力桶並非永久使用，建議使用超過三年以上可以進行更換RO壓力桶，使用時建議要放在流理台內通風乾燥處，不要將壓力桶安置在屋外，接觸太陽紫外線照射；另有廠商建議如果使用超過5年以上，建議您更換新品，預防桶內滋生細菌不建議自行充氣喔。因此不論品牌，定期更換（3–5 年）都是必要的保養項目。\n\n## 品牌推薦\n\n台灣市面上「壓力桶」單獨作為零件販售時，品牌多為 OEM/台廠代工性質（如彰鴻淨水、松下淨化、麗水生活、水易購／139益生泉、特力屋自有品牌等），**選購重點在於認證與材質，而非知名品牌**，這些通路商販售的桶多附有 NSF 認證及台灣製造標示，品質穩定、CP值高，是常見的替換首選。\n\n若是連同整套 RO 主機一起選購（機身內含壓力桶），市面上較知名、口碑穩定的品牌包括：\n- **賀眾牌**：老字號台灣品牌，以RO逆滲透技術著稱，能有效去除重金屬、農藥殘留、細菌病毒，水質最為純淨，適合對水質有極高要求的使用者，且老字號品牌，產品耐用，售後服務網絡完善，深受家庭及企業愛用。\n- **3M**：美系大廠，濾芯規格統一、換芯方便，但像3M大廠的好處是換濾芯方便，但濾芯規格被綁死，每次換就很貴，長期耗材成本較高。\n- **Coway（韓國）**：不插電、coway那台很強，韓國製不插電，跟一般的白牌ro也完全不一樣等級，不過他有很嚴重的水壓問題就是了，若家中水壓不足需留意。\n- **千山、櫻花、國際牌（Panasonic）**等台灣/日系品牌，也是市場常見選擇，各有不同的濾芯更換週期與服務網絡評價，可依預算及售後服務範圍挑選。\n\n## 補充：現在流行「無壓力桶（直輸式）」機型\n近年不少 RO 機主打「免儲水桶」直輸設計，省去壓力桶老化及二次污染的疑慮，但RO 逆滲透 出水 三公升，搞不好得等上半小時以上，得看自來水水壓以及廢水比等因素，RO 逆滲透 出水很慢，無泵浦壓根不出水，若家中用水需求量大、要求即時大量出水，傳統有壓力桶機型仍較實用；若空間有限、擔心衛生問題，可考慮無桶直輸式機型。\n\n---\n\n**總結建議**：選購壓力桶時，優先考量①容量是否符合家庭用水量、②外殼材質選金屬（不鏽鋼或烤漆鋼板）較耐用安全、③務必有 NSF 等第三方認證、④注意接頭規格是否符合原機、⑤定期在 3–5 年內更換。品牌上若單買替換桶，認證與材質比廠牌名氣更重要；若整套購買 RO 主機，賀眾牌、3M、Coway、千山等皆是市場口碑穩定的選擇，可依預算與售後服務範圍決定。",
+          "refusal": null,
+          "reasoning": "This user is asking about choosing a pressure tank for RO water purification, plus brand recommendations, so I should search for current info on sizing, materials like steel vs plastic, and popular brands such as 世韓、力宇、3M、賀眾、GE to give a well-supported answer.I've got solid info on capacity, materials, pressure settings, certification, and lifespan, but I still need brand names specifically for pressure tanks rather than whole RO systems—things like Amtrol, Watts, GE, Pentair, or Taiwanese brands. Let me search more specifically for that.I have enough information now to put together a thorough answer covering what an RO pressure tank does, key selection criteria like capacity, materials, pressure settings, connection size, certifications, and lifespan, plus some brand guidance—noting that pressure tanks are often less differentiated by brand than the RO systems they pair with.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "This user is asking about choosing a pressure tank for RO water purification, plus brand recommendations, so I should search for current info on sizing, materials like steel vs plastic, and popular brands such as 世韓、力宇、3M、賀眾、GE to give a well-supported answer.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EtYHCrABCBIYAipArob/KW04hYhQN511fuPN2KQPW+wIcNvVuoRpU1caxcP5PAuwpHLVwYJBtF43nDIwGY7qByIm64+PaUm0KMZgBzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBp8zF1QYSDPdENPPcmO9pkcd77RoMDVTVMMl8WbG9ax90IjDsHMIBVy/FSG3PQNlxJmV3r9QReQvYYbjpslwTpT1DtPSlgsD0qZd+LKOSUiuiMAQq0gUmIhjB324kH3zXrNEJ74PrztvLgl5rWKmNEQ02bUzDMVT0zPf8C3A1LsoIDXCfJ4Z2BOoLHcW6kQpadDjiUqwaSWHyr8hniSaE+HGyJ/xY9h6C0ZLDqF30jH+2rfd1FNdH4oO360tHDIfG5jDITbCB9JRgXA2JeneK9/Lz9t+lqWfX6YZPahta9AqXIM+fHoBgNgERj2DukA1j83wULfeVcWXIxZOTmrE763PjK4aZyuP8r0TiO4Sxv23B7UY6Sf1SeW/9j2gR+h0j9WUiu73yXAUdCcifY3ZYsrW69VXgaOcKZVP+8yayvwlgmTJ9rd9dtJX37GOoxrjq4+0667oMHhfglI+q+YoDd1MbXQInilGeLUdkeUro8x3vnfyyZDh1Rp5jdK1wziy7bteVNXd/0MgWbmjYAhOV3m/mG+cDzaGxtwooB2tPztrWOT0xd9khbObiyDY9mdll0e3FXy1Ae8CCpbAgTWWgOO0pJUSOF7kuAEzRO0/gIYADBmtpvbpAr5rt8p0y9HiU7ncSBqjnNVSufGdd3BcSLaujtupCCzf3lyc6GY1dK3vliFFkGTvjmzMCd8j0l5byUZLnPSt6/q7W5t0YUkoC12asHCHnQRui2/tyb4cC1jpDA+6HVKVk/q0aOqv6y9BjCljrtOu6pNIdIC6te1EOsnFwRlGS6U+ziSubQyPTOVYzwrJRPU13LyatmbJyUFRDSlC2xoPxU6Fu0ut2F3DyboW1EOGGfWTK7Mo+S2tvSCh8pu+f4oit4pah1SGlw0ejnrMzqInHP2HMvcht10RZ2RvzU+FopKPAJ4h9Dxx5XAeK57KsYCx25xbG3gBK3BtEPl7pNv07zI9NoWnUzj0RhcgSajUuI+ybjoq5mS1lM3QQSvbp92olNT0NrnDmhi8BZb2ACXK1pCuj568OEjB5x730ObcNbmTRy8VY4o5HWYvCyeiVWWJnkBgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I've got solid info on capacity, materials, pressure settings, certification, and lifespan, but I still need brand names specifically for pressure tanks rather than whole RO systems—things like Amtrol, Watts, GE, Pentair, or Taiwanese brands. Let me search more specifically for that.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "EoEGCrABCBIYAipATj5UDU0SkCPk6z+WI1Rks0K0nIZZ8K2/Ab+RJ/HsPUOYLwREs43n0BMHcbcGw+hxx7RHn+al1k06TIH5pr876jIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBrszF1QYSDM6LTecihIc/E5ytQBoMDfXWnFDc+mlilibEIjCITdarAOlxpJGr0cktV0+hnCsjbcBkfrjHa/h8jaK4hqciLoLBmWZXuerNBm3T6Ikq/QMcy8FluVC1giDtFJhT6ZiikMGeSmPiXeSFvMUzERyMlfojJxazyS3W/sRNBqRkg44FOJokqdDSVzur2/6/g8qqy89tf+Fgz0U3vh5UIsQobwwrecLfXOz4PVLhbkdbTMRG7W776nEWggH3S2GU8pQg3kqpHpsSOtTVll1Lxuxtt3/vM4z5WuvIAuwznFY5zhycaDlZTQU+Bijz+ssbEXi9SXM5f3kyjtLut3qA5ieP2dlxI3HCvovm7YKqO+PG19lo3rjsSVc14096UPutPDTTMOWaMtqx2LQJDXjEEJ61wm3SebxdSDc58N3KpBEoBl7b64/GxgBSAcE64RlSdpVnLJB530huiI9UM0R+d60cch2g/xqspS3lqbwpI3N19zOrcVdDJugf22ex4GsOtVUb50TDnOZUw1cpSN3wKWrAg4ipWwzEmZISovjuRksIXUk0taeYVMzEeAdKgSQ+omKYhwUci/UN4pCssJ1ydxQuyTwauJQqJrhRaqloduVweN0iDNC5SAMVHb+yxi1f/Y+aM7ZdP395FSrzboLpDxGykSQEnYJ/Au3JSyNzry1FYRudU+F4gjn7ZvrUMuW2EsiiVeYsNM49nHlrIJZ3p005dZ4g4RXby/Hlfq/PpwZIutlD0x2QtUI+PU8gJSlYT5Ef9vCZsuvFVNnc/pTPIBgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I have enough information now to put together a thorough answer covering what an RO pressure tank does, key selection criteria like capacity, materials, pressure settings, connection size, certifications, and lifespan, plus some brand guidance—noting that pressure tanks are often less differentiated by brand than the RO systems they pair with.",
+              "format": "anthropic-claude-v1",
+              "index": 2,
+              "signature": "EpcJCrABCBIYAipAmrKR6yWW4aKNQrS3LAWUUTDlYObjYv/QflNrGPJv8QR1+2F9p4oNNnqLtBVptsbwv2XAkjPJtv3FX9nW8+VpzzIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBtszF1QYSDKld1MCAfZIZI7lGxBoMCe95OGxi45JVNCHfIjCwUr/pZ+ADbABwXA6xntCt1Y6Zk0BcFJlrepP2KREe/zPjYWKSycZY5GSl5d7ifeoqkweSSpI4IfBKbqaLCxnkGOpX0+Y09/u75YyjjeYEFKMIG8iyMaf23u6SrhyDojwqbvF8aQJ9b0QuWIqILl7R/zyA3ptbCs866XidUe/fAbFol/tiqH784okff2TW+HbKi8aSlob824CPibIMm4tpBSUtXOUUuYMWvd+CCDcg7qqyUqRrYvOmXQuo8l8f7OuuYK/n0YqGWZLtIiI59Z/EzyLahECn/f6MhbgjWdmCzbJBlk0nebgF6eBQwRrLcHObPgArD5CIuS9ThSqaY/QnOYLg1d2JSAXwKXXFVVgfDIl4IDOkwb84NYXYfMMivxtzEf6qRB+nEcVSLqCJDy5bnOkST6kilnqnp8QaLxO8iLUl7a4et4w7Pwadjh0d03ixc2Q7rlorHayFziO5Vxi6AdA5sOrODd4+D7CeNLS9JWOR75saR3ADtHloLV/sJ1aA9597Q8xiXTp5UPeKw+8iWP9XtqK4hb82znm/bBSFrOYhec9mEv6gohExaA3EE6xgSbFm/Gsm7EuGpqhC4Uwv4xif3NkvnZYM+DUWt23O9ojudC/J7nAbVnWeHXPSwHs5H6cfxtKMwfCidv4uIYllfFF/FBJZXOX/qJfWsVA933sCOCT07SzQ37DuzJXKyaFFP+OX6mBAJffSnSRah6+Dk9QhlyqbNFFNSPrzs1Ah6SPeyd5sGZJM4wYxPTgok12ypTHzVLQpTPRpaN/Ra8utJH9+LAe4L+UO34uVUnuh6+hTKRL2GP0JQHsNEy3teETePh4zn23DmQbyAWaioO3x0PcGOOIfKvFoN9GBZWHrnwy3pwwDEqHzxrGMLmb7beMsVtMVRo3U+uh6bR3hPsBSkACb7ymVidXaglNPhuIcjghOt5DcVdD6XccfAFVeAtk+OhnyYb74PRmalNGKzFQrfdyN3uWwemGtemXNkAHBGX+2imzH6adfetqzM0cQYpk0ENmMzZQJXycJcOMi1dthKtXe1UsFq4GuIT2OgfWNHrsslY/s2G1hD3ulyGSBLewzde0aLoUSLQXdLlL5Y07Zju+3AaXeRTrwUUlP0HhME6J8l2BMAudLVCbSbJiSlqekicj3oD+t/BkpQ0E98abvZHwT/4eIajPg1Vhp1nNm0Ga3Ad3y/6KAs8e38imv4G+OIGbaAT6sdoQglfsD3RIvp6YvUp9l/cqVtGw4KgkYgm0vZTlvnh5WswyKH7Xli1ESiR+4gEcYAQ=="
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://taiwan-water.com/2025/04/29/9012/",
+                "title": "RO逆滲透純水機出水變小變慢？壓力桶老化常見問題與解決方法 - 淨水知識庫",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "1.外殼： 壓力桶的外殼通常由不銹鋼板或塑膠或鋼板外殼所製成，能夠承受內部的壓力並保護內部的儲水。 · 2.隔膜： 壓力桶內部通常有一個由丁基橡膠製成的隔膜。這個隔膜將壓力桶分成兩個區域：一個區域用來儲存純水，另一個區域用來儲存空氣壓力。當水流入壓力桶時，內部的膨脹膜會膨脹，外殼體積不變，其內部空氣..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://taiwan-water.com/2025/04/29/9012/",
+                "title": "RO逆滲透純水機出水變小變慢？壓力桶老化常見問題與解決方法 - 淨水知識庫",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "RO壓力桶的容量通常根據家庭需求和RO逆滲透系統的設計來選擇，市面上最小的儲水壓力桶有0.5加侖，最大有到40加侖，而一般家用儲水壓力桶規格是以3.2加侖為最常見的大小。 ... 3.2 ...\n\nRO逆滲透純水機為什麼出水會變小變慢？壓力桶老化常見問題與解決方法 一、RO壓力桶原理與基本功能介紹 ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://taiwan-water.com/2023/03/08/ro_tank/",
+                "title": "RO滲透純水機的儲水壓力桶會二次污染嗎？ - 淨水知識庫",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "鋼板外殼烤漆儲水桶： 鋼板俗稱鐵板，SPHC熱軋鋼板 ，經過高溫的延展處理出來的鋼板材。外表識別度高，有層黑色碳化層，燒焊或點焊較不易，烤漆前也需要做皮膜加工，將碳化層脫落。業界熟稱「黑皮板」。 因為鋼板的價格比不銹鋼板便宜，雖然鋼板與空氣接觸容易造成氧化生銹，但只要在儲水桶的外表塗上一層油漆並以烤..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.chwater.com.tw/productsin113.html",
+                "title": "RO逆滲透|純水機專用|3.2G壓力桶|NSF認證|CE認證|DIY|淨水器-彰鴻淨水生活館",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "安裝前請先確認型號規格... 桶內空氣壓力7-9PSI，再依注入壓力多寡決定儲存容量，一般RO機注入壓力約30-35PSI，可儲存約65-75%容量 ·...\n\n安裝前請先確認型號規格尺寸是否符合，一但拆封或通水後皆全部視同購買，恕無法接受退換貨。 · 實因特殊地形限制無法送貨時，本公司保有出貨與否..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://24h.pchome.com.tw/prod/DMAWJ7-A900GBR5M",
+                "title": "麗水生活 3.2G-RO逆滲透壓力桶 儲水桶 原廠公司貨(NSF認證)_附底座.桶頭+止水帶 - PChome 24h購物",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "產品名稱：RO儲水壓力桶 -NSF認證 產品說明：桶內空氣壓力7-9PSI，再依注入壓力多寡決定儲存容量 通常RO機注入壓力約30~35PSI，可儲存約65-75%。 進出口徑：1/4&quot; NPT 適用機種：各式RO機-逆滲透 ...\n\n產品名稱：RO儲水壓力桶 -NSF認證 產品說明：桶內..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.wqp-water.com.tw/3m/",
+                "title": "【2025家用淨水器選購指南】3M淨水器怎麼挑？6款常見濾水器品牌比較",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "• 賀眾牌：以RO逆滲透技術著稱，能有效去除重金屬、農藥殘留、細菌病毒，水質最為純淨，適合對水質有極高要求的使用者。 · • 3M：採用多層次活性碳技術，針對餘氯、異味、重金屬（如鉛、汞）過濾效果良好，水質清澈無異味，適合都市家庭。 · • Brita：主打提升水質口感，過濾餘氯、異味及水垢效果良好..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.mobile01.com/topicdetail.php?f=729&t=6930874",
+                "title": "廚下濾水器建議/推薦 - Mobile01",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "我從小也是喝煮沸的水長大的, 直到用了RO才開始生飲 基本RO的濾芯配置就是 PP +2道CTO活性碳+RO膜 有的機子會在RO膜後再配一道麥飯石, 這就是增加口感 我自己是不用麥飯石, 為了存放造出來的水, 我都直接加到Brita的濾水壼裡 一是不用每次喝都造水, 一次造起來放 二是Brita的濾..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.ptt.cc/bbs/E-appliance/M.1476248151.A.EA7.html",
+                "title": "[問題] RO淨水器推薦買哪個牌子? - 看板 E-appliance - 批踢踢實業坊",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "推 stephanal: 看你找哪種 便宜的水電行5k內可搞定 國產品牌的賀眾千 10/12 19:41 · → stephanal: 山10k搞定 但國產品牌的機子跟通用白牌沒太大差異 要 10/12 19:41 · → stephanal: 比一般ro戰力更強的 15k左右 3m的RO機是米國來..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.mobile01.com/topicdetail.php?f=729&t=2261797",
+                "title": "RO逆滲透 \"免\" 儲水桶(壓力桶) 的機型效能? - Mobile01",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "RO 逆滲透 出水 三公升，搞不好得等上半小時以上 ( 得看自來水-水壓以及廢水比....等因素 ) RO 逆滲透 出水很慢 ( 無泵浦壓根不出水 ) 有些濾水機(無泵浦，非RO)，"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 51827,
+      "completion_tokens": 4023,
+      "total_tokens": 55850,
+      "cost": 0.183884,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.183884,
+        "upstream_inference_prompt_cost": 0.103654,
+        "upstream_inference_completions_cost": 0.04023
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 776,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

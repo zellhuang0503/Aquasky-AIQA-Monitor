@@ -1,0 +1,219 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790010975-Mj5nWzmKHisIiy7q3LBI",
+    "object": "chat.completion",
+    "created": 1790010975,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "根據公開網路資料，我整理出幾類可供 OEM/ODM 壓力桶（含水塔式壓力桶、空壓儲氣桶、壓力容器等）代工，且具備研發能力與國際認證的工廠參考，供您進一步評估與聯繫：\n\n## 中國大陸廠商\n\n**1. Yangzhou Camillo Machinery Co., Ltd.（揚州卡米羅機械）**\n其產品線ODM ASME ISO Certified Industrial Vertical Pressure Vessel Storage Tank OEM Low Alloy Steel 10MPa Customizable Sizes，並具備「客製化規格、壓力參數與內部結構，可依不同應用場景調整」的能力，適合需要客製化壓力容器的品牌方。\n\n**2. Luqiang Energy Equipment Co., Ltd.（山東魯強能源設備）**\n成立於2004年，公司位於山東省泰安市，專業從事移動加油站、汽油桶、不鏽鋼桶、水桶及ISO罐式集裝箱的設計、製造與安裝。認證方面，該公司表示「已取得ISO認證和UL認證，今年將取得ASME認證和CE認證」，並「擁有全球售後服務體系，能及時提供全面的技術支援與售後服務」，產品已「出口到新加坡、印度、澳洲、日本、奈及利亞、安哥拉、吉布地、厄瓜多、南非等地」。\n\n**3. Taian Shengding Metal Container Manufacturing Co., Ltd.（泰安盛鼎金屬容器）**\n專業從事油桶及移動加油站的製造，擁有超過10年經驗，並提供「製造商出具的產品質量認證、桶體圖紙、GA圖紙、操作說明及計算表等文件」，可支援水壓力桶、空壓儲氣桶等OEM/ODM需求。\n\n## 綜合採購平台\n\n**Made-in-China.com** 上的壓力桶（Pressure Tanks）分類，可依「R&D Capacity（研發能力）」及「OEM/ODM」篩選廠商，並可依認證篩選，可篩選的認證包括CE、ISO、RoHS、CCC、ISO9001:2008、GB、TUV、UR、TS16949、ISO13485等。這是快速比對多家具備研發與認證能力工廠的實用管道。\n\n## 美國廠商（若需高規格ASME認證）\n\n**BEPeterson**（成立於1935年，美國麻州）\n成立於1935年，是ASME壓力容器與工藝槽的領先高壓容器製造商，其ISO 9001:2015認證的品質、工程、設計與生產獲眾多OEM廠商及需要客製壓力容器、工藝槽、儲槽等公司的認可，並持有ASME單一認證標章及授權證書，依照ASME鍋爐與壓力容器規範進行設計與製造。\n\n**Buckeye Fabricating Company**\n以卓越品質、速度、技術能力及可靠性生產高品質客製壓力容器、不鏽鋼桶、儲槽、壓力桶著稱，其OEM服務範圍從壓力桶設計到成套壓力容器系統，並超過五十年的經驗，發展並培養密切的合作夥伴關係，促成壓力桶產品線及完整壓力容器系統的高效建置。\n\n---\n\n### ⚠️ 重要提醒與建議\n\n1. **「壓力桶」定義需先確認**：此詞在中文業界可能指（a）家用/商用供水壓力桶（如加壓桶、隔膜式水壓桶）、（b）空壓機儲氣桶、（c）工業用ASME壓力容器。不同類型對應的專業工廠、認證要求（如CE PED、ASME、TÜV、UL、CCC）差異很大，建議您先明確產品用途與目標市場，才能鎖定最合適的廠商。\n\n2. **實際查證認證真偽**：以上廠商資訊多來自其官網或B2B平台自述（如Made-in-China），**認證有效性需自行向核發機構或客戶要求提供正本證書核實**，本回答無法代為驗證這些企業當前是否仍持有相關證書。\n\n3. **台灣本地供應商**：若您需要台灣本地或鄰近地區（如便於品質稽核、關稅優惠）的代工廠，目前搜尋結果中未找到專門的台灣壓力桶製造商資訊，建議可透過「台灣機械公會」、「TAITRA外貿協會」或工業區廠商名錄進一步查詢。\n\n4. **建議實地評估**：無論選擇哪家廠商，建議透過樣品打樣、工廠稽核（audit）、第三方檢測報告等方式驗證其研發與品管能力，而非僅依賴網站自述內容。\n\n若您能告知目標市場（如歐盟、美國、東南亞）及壓力桶的具體用途（家用供水/工業空壓/化工儲槽等），我可以協助您更精準地篩選對應認證（如CE PED、ASME U-stamp、TÜV）的廠商。",
+          "refusal": null,
+          "reasoning": "The user is looking for factories that can OEM/ODM pressure tanks with R&D capability and international certifications. I should search for Chinese-language terms related to pressure tank manufacturers, likely based in Taiwan or China.I should search more specifically for Taiwan pressure tank manufacturers, since 壓力桶 in that context likely means water pressure tanks for pumps, RO systems, or air compressors.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user is looking for factories that can OEM/ODM pressure tanks with R&D capability and international certifications. I should search for Chinese-language terms related to pressure tank manufacturers, likely based in Taiwan or China.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EvAECrABCBIYAipAv9uIB8AW0RE+ofmBzoasEu3iZhhRstPmv7rDJtmDE1+lEXQc6OBtUGC4w467Pejeh3Fcl9wsKpZjJVy6eSspmDIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagB5czF1QYSDL+SCbSPOm7sAOnZZRoMtEUI9YmlFy4HBv5oIjCPJ6xdcU1s+qq5uV49fbJjZbsX8Zv6HThTtVkKMS7KjM9jvREMHBInTluTeOGKbGwq7AKvemRiKbPNJl8rnzp+XWSvCFMrOXcIo/h5xo4/xmrB2iVs7VBTNRAy+rR4qU1a0lkSs46J7qihaeWZ7R/QlnM2kc0mfsfZozoNkfMu+ydFnY0Wug50W6dciSW2ukrLm1ahvY+PqM8F0PEuvHtwooUs1xBsSVQe4taETv1MqaLYi0F6BuyUh12zP2FbXgQowxXYMEJLiBInieZoX0UFukY8rhY8CyzR204mWtVlbFo6jZr0dacjU1UCw6FDawtyoBqriaCGQdJelfOkJcxAduPx7B7YA92dhJNJK4tl7XZ2V+1kj2rPRhvEdUCtlCXhKx8C8L68S/3UfvMGJblqJD1xhxIJyoTdS8jzi8K9CMQO5j/We0VD1USstq1Tif9LTQu+GHL4vWSsSbo1BcOZK5BabRG2d6pv8pKJB/ko6I7BlTpSZj26jHVkJ4fVdARMwj2jbdXyEchkdhxqYDDO/Bo0VL/rcIy2vhK48Z7pGAE="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I should search more specifically for Taiwan pressure tank manufacturers, since 壓力桶 in that context likely means water pressure tanks for pumps, RO systems, or air compressors.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "Eu4DCrABCBIYAipACWen0J0gjfoTUQ7THGfK3jP/y6aLVEf4LgdR1Fm2O4TKYK6PJedmEiq25SpfH2vsaQb5/J3G/fVfJ2oVhO2qMTIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagB6szF1QYSDKn3ZLxv4jKSc4idQBoMF4Om5xneVqjBtoJqIjDAx4XgjKbrmCjuDsOBEdMyM1ZFQdG4wWk/XkVlvcxI6DdN9EGQbrlztiu7TviBaJIq6gHnOsOv6zRj7J/aDVzP76TnMyE0vWzPrFNtAqZYvliYYD52IeqIalI7omrJXgPZRMGZ99ZK2a2kqVmT8BXHyRLU+sI0Ilb0Pn10DJBQsDE6JnJ33UyFjsBhnV6ThwVLImzmMRqgHMPnb9Tr3It5Y89VO/TCcFhA+cr4IPviwiqM8SeeVILGGJY75Ih2OlqA3Ib23lBuPoTNw4J52/8V/4NlW6My8e0NJsVts4ZOsxsLHXZQO1FVxESLP3V0Ag6m1NMrPg6KA81luMvr/kbNwishbhGnO3ItaVbBlhHiv0B04bCwniA/TYUDDmwYAQ=="
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://camillo-machine.en.made-in-china.com/product/wzepobPgHQVT/China-ODM-ASME-ISO-Certified-Industrial-Vertical-Pressure-Vessel-Storage-Tank-OEM-Low-Alloy-Steel-10MPa-Customizable-Sizes.html",
+                "title": "ODM ASME ISO Certified Industrial Vertical Pressure Vessel Storage Tank OEM Low Alloy Steel 10MPa Customizable Sizes - 2026 Storage Tank, Pressure Vessel price | Made-in-china.com",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "ODM ASME ISO Certified Industrial Vertical Pressure Vessel Storage Tank OEM Low Alloy Steel 10MPa Customizable Sizes, Find Details and Price about Sto..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://camillo-machine.en.made-in-china.com/product/wzepobPgHQVT/China-ODM-ASME-ISO-Certified-Industrial-Vertical-Pressure-Vessel-Storage-Tank-OEM-Low-Alloy-Steel-10MPa-Customizable-Sizes.html",
+                "title": "ODM ASME ISO Certified Industrial Vertical Pressure Vessel Storage Tank OEM Low Alloy Steel 10MPa Customizable Sizes - 2026 Storage Tank, Pressure Vessel price | Made-in-china.com",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Featuring Improved Adaptability: Customizable specifications, pressure parameters, and internal structures for different application scenarios.\n\n\n\n"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://lq0538.en.made-in-china.com/product/CBTJoUQcJDRV/China-OEM-ODM-Stainless-Steel-Pressure-Vessels-Pressure-Water-Tank-for-Power-Plant.html",
+                "title": "OEM ODM Stainless Steel Pressure Vessels Pressure Water Tank for Power Plant - Stoarge Tank and Water Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Hot Products China Products Chinese Manufacturers/Suppliers China Wholesale Wholesale Price Industry Sites Regional Channels Product Index Mobile Site..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://lq0538.en.made-in-china.com/product/CBTJoUQcJDRV/China-OEM-ODM-Stainless-Steel-Pressure-Vessels-Pressure-Water-Tank-for-Power-Plant.html",
+                "title": "OEM ODM Stainless Steel Pressure Vessels Pressure Water Tank for Power Plant - Stoarge Tank and Water Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "4.We get the ISO certifications and UL certifications,in this year we will get ASME certifiaction and CE certification. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://lq0538.en.made-in-china.com/product/CBTJoUQcJDRV/China-OEM-ODM-Stainless-Steel-Pressure-Vessels-Pressure-Water-Tank-for-Power-Plant.html",
+                "title": "OEM ODM Stainless Steel Pressure Vessels Pressure Water Tank for Power Plant - Stoarge Tank and Water Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "3.We have global after-sale service system,it can offer the Comprehensive technical support and after-sales service in a timely manner. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://lq0538.en.made-in-china.com/product/CBTJoUQcJDRV/China-OEM-ODM-Stainless-Steel-Pressure-Vessels-Pressure-Water-Tank-for-Power-Plant.html",
+                "title": "OEM ODM Stainless Steel Pressure Vessels Pressure Water Tank for Power Plant - Stoarge Tank and Water Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "5.We have widely market all over the world ,our product have export to Singapore,India,Australia,Japan,Nigeria, Angola,Djibouti,Ecuador,South Africa. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://shengdingmetal.en.made-in-china.com/product/yJIYTuvZfFkW/China-OEM-ODM-Cwt-100-10-100L-10-Bar-Changeable-Membrane-Portable-Water-Pressure-Tank.html",
+                "title": "OEM ODM Cwt-100-10 100L 10 Bar Changeable Membrane Portable Water Pressure Tank - Press Tank and Air Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Company Introduction: Taian Shengding Metal Container Manufacturing Co., Ltd specializes in manufacturing oil tanks and mobile fuel stations. "
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://shengdingmetal.en.made-in-china.com/product/yJIYTuvZfFkW/China-OEM-ODM-Cwt-100-10-100L-10-Bar-Changeable-Membrane-Portable-Water-Pressure-Tank.html",
+                "title": "OEM ODM Cwt-100-10 100L 10 Bar Changeable Membrane Portable Water Pressure Tank - Press Tank and Air Storage Tank",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "A: We offer product quality certification issued by the manufacture, tank drawing, GA drawing, operation instructions and calculation sheet etc for ea..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://mm.made-in-china.com/hot-china-products/Pressure_Tanks.html",
+                "title": "China Pressure Tanks, Pressure Tanks Wholesale, Manufacturers, Price | Made-in-China.com",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Manufacturer/Factory · Group Corporation · Other · R&D Capacity · ODM · OEM · Own Brand · Others · Categories · Pressure Vessel · Chemical Storage & T..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.bepeterson.com/projects/pressure-vessel-manufacturer",
+                "title": "Pressure Vessel Manufacturer - BEPeterson",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "...\n\nBEPeterson, founded in 1935 is a leading high pressure vessel manufacturer of ASME pressure vessels and process tanks. Our ISO 9001:2015 certifie..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.bepeterson.com/projects/pressure-vessel-manufacturer",
+                "title": "Pressure Vessel Manufacturer - BEPeterson",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "BEPeterson is a holder of the ASME single certification mark and a certificate of authorization. We design and fabricate vessels in accordance with th..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://buckeyefabricating.com/oem-vessels-services/",
+                "title": "OEM Vessels & Pressure Tank Services",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Our goal is for you to know Buckeye Fabricating Company for our unparalleled quality, speed, technical capability and reliability in producing the hig..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://buckeyefabricating.com/oem-vessels-services/",
+                "title": "OEM Vessels & Pressure Tank Services",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "For over five decades, we have developed and fostered close partnerships that resulted in the highly efficient construction of pressure tank product l..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 20971,
+      "completion_tokens": 2368,
+      "total_tokens": 23339,
+      "cost": 0.085622,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.085622,
+        "upstream_inference_prompt_cost": 0.041942,
+        "upstream_inference_completions_cost": 0.02368
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 216,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

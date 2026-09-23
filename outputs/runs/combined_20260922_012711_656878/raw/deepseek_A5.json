@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011140-Choy6VtsWKFNptmkm9hm",
+    "object": "chat.completion",
+    "created": 1790011140,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "根據公開網路資料，以下整理出幾家可承接壓力桶 OEM/ODM、且具備研發能力與國際認證的廠商，供您評估：\n\n---\n\n## 一、台灣廠商（國際認證較完整）\n\n### 1. AQUASKY 溢康企業股份有限公司\n- **定位**：全球隔膜壓力桶與水處理設備專業製造商，明確標示提供 **OEM/ODM** 服務。\n- **成立時間**：1998 年。\n- **國際認證**（資料中最齊全）：\n  - 歐盟壓力容器安全認證\n  - ISO 9001 製造品質管理認證\n  - UPC 美國管道安全認證\n  - NSF 飲用水標準認證\n  - KC 韓國安全認證\n  - 無鉛認證\n- **產品線**：高壓泵浦壓力桶、密閉式膨脹水箱、RO 逆滲透儲水桶、導熱液體膨脹罐、太陽能液體膨脹罐、不鏽鋼泵浦壓力桶、液冷系統膨脹水箱、工業式密閉膨脹水箱（ASME 認證）等。\n- **研發/客製**：設有壓力桶選擇工具，並提供水處理設備 OEM/ODM。\n- **地址**：429 台中市神岡區和睦路一段212巷36號。\n- 來源：[aquaskyplus.com](https://aquaskyplus.com/zh)、[aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh)\n\n### 2. Unitec（禾茂興企業）\n- **定位**：台灣專業壓力桶製造商，專注流體輸送產品研發與製造，產品行銷全球。\n- **認證**：全產品「Made in Taiwan」，通過 **TUV 安全認證及 ISO 認證**。\n- **產品線**：鋼製壓力桶（AT-10E，用於油性塗料、離型劑、膠水、防鏽塗料、化學液、高黏度流體等）、不鏽鋼壓力桶（SUS304/SUS316，用於油性或水性塗料）、氣動攪拌器（可依流體性質與黏度配備減速機）。\n- **客製服務**：可依不同領域需求提供客製化與功能規劃。\n- **地址**：台中市霧峰區草湖路15巷16號。\n- 來源：[uni-pressuretank.com.tw](https://uni-pressuretank.com.tw/)\n\n### 3. 益源興企業有限公司（YHS）／PROTIMA\n- **定位**：專業壓力容器及氣動攪拌器研發與創新，多年製造經驗，行銷全球。\n- **認證**：全系列產品「台灣製造」，通過 **德國萊茵 TUV 標準安全認證及 ISO 國際品質管理系統認證**。\n- **研發團隊**：PROTIMA 研發團隊設計壓力容器、氣動攪拌器、泵浦及氣動馬達。\n- **產品線**：\n  - 鋼製壓力桶（AT-10E）：適用油性流體、模型製作、離型劑、鞋面/木器/金屬/皮革表面塗裝。\n  - 不鏽鋼壓力桶（AT-10ESS）：SUS304/SUS316，適用油性/水性流體、膠水、離型劑、脫模劑、化學藥水，可應用於食品及醫療等級領域。\n  - 雙層桶不鏽鋼壓力桶（DT-20E(FG)SS）。\n- **客製服務**：提供各領域客製化需求與功能規劃。\n- 來源：[protima.com.tw](https://protima.com.tw/?lang=tw)\n\n---\n\n## 二、中國廠商（僅供參考）\n\n### 山東華宸高壓容器集團有限公司\n- **成立**：2007 年初，已發展為集團化公司。\n- **規模**：固定資產達 3.6 億人民幣，占地 200 餘畝，員工 200 餘人，其中高中級技術職稱專業技術人員 80 餘人。\n- **能力**：製造設備先進、檢測設備齊全，設有專業設計開發團隊。\n- **備註**：搜尋結果中**未明確列出國際認證項目**（如 ASME、PED、ISO 等具體證書），也**未明確標示 OEM/ODM 服務**，需進一步向該公司查證。\n- 來源：[sdgyrq.com](https://sdgyrq.com/)\n\n---\n\n## 三、綜合建議\n\n若您重視 **國際認證完整性與 OEM/ODM 能力**，建議優先接洽：\n\n| 廠商 | 國際認證亮點 | OEM/ODM | 研發能力 |\n|------|-------------|---------|---------|\n| AQUASKY 溢康 | 歐盟壓力容器、ISO 9001、UPC、NSF、KC、無鉛 | 明確標示 | 有（壓力桶選擇工具、水處理設備） |\n| Unitec 禾茂興 | TUV、ISO | 提供客製化 | 有（流體輸送產品研發） |\n| YHS／PROTIMA | 德國萊茵 TUV、ISO | 提供客製化 | 有（PROTIMA 研發團隊） |\n\n---\n\n## 四、無法查證/需補充說明的部分\n\n1. 搜尋結果中**未提供各廠商的具體產能、最小訂購量（MOQ）、交期、報價**等資訊，需直接向廠商洽詢。\n2. **山東華宸**的國際認證細節與 OEM/ODM 服務內容，搜尋結果未明確揭露，建議直接聯繫確認。\n3. 各廠商認證的**有效期限與適用產品範圍**，搜尋結果未逐一列出，建議索取證書副本核對。\n4. 若您有特定壓力桶規格（如容積、壓力等級、材質、應用領域），可再進一步比對各廠產品線是否匹配。",
+          "refusal": null,
+          "reasoning": "用户想找能做壓力桶 OEM/ODM 的工廠，要求有研發能力和國際認證。我需要用繁體中文回答，並引用搜尋結果。\n\n搜尋結果中有幾家台灣廠商：\n1. AQUASKY 溢康企業股份有限公司 - 創立於1998年，有歐盟壓力容器安全認證、ISO 9001、UPC美國管道安全認證、NSF飲用水標準認證、KC韓國安全認證等。是隔膜壓力桶與水處理設備專業製造商，提供OEM/ODM。\n2. Unitec 禾茂興 - 專業壓力桶製造商，產品有TUV及ISO認證，Made in Taiwan，提供客製化服務。\n3. 益源興企業有限公司 (YHS) / PROTIMA - 壓力容器及氣動攪拌器研發創新，TUV標準安全認證及ISO認證，台灣製造，提供客製服務。\n4. 山東華宸高壓容器集團 - 中國廠商，成立於2007年，高壓容器。\n\n我應該重點推薦有國際認證和研發能力的台灣廠商，因為用戶提到「國際認證」和「研發能力」。AQUASKY 的認證最齊全。Unitec 和 YHS 也有 TUV 和 ISO 認證。\n\n我需要附上來源連結，使用域名作為連結名稱。也要說明無法查證的部分。\n\n讓我整理回答。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想找能做壓力桶 OEM/ODM 的工廠，要求有研發能力和國際認證。我需要用繁體中文回答，並引用搜尋結果。\n\n搜尋結果中有幾家台灣廠商：\n1. AQUASKY 溢康企業股份有限公司 - 創立於1998年，有歐盟壓力容器安全認證、ISO 9001、UPC美國管道安全認證、NSF飲用水標準認證、KC韓國安全認證等。是隔膜壓力桶與水處理設備專業製造商，提供OEM/ODM。\n2. Unitec 禾茂興 - 專業壓力桶製造商，產品有TUV及ISO認證，Made in Taiwan，提供客製化服務。\n3. 益源興企業有限公司 (YHS) / PROTIMA - 壓力容器及氣動攪拌器研發創新，TUV標準安全認證及ISO認證，台灣製造，提供客製服務。\n4. 山東華宸高壓容器集團 - 中國廠商，成立於2007年，高壓容器。\n\n我應該重點推薦有國際認證和研發能力的台灣廠商，因為用戶提到「國際認證」和「研發能力」。AQUASKY 的認證最齊全。Unitec 和 YHS 也有 TUV 和 ISO 認證。\n\n我需要附上來源連結，使用域名作為連結名稱。也要說明無法查證的部分。\n\n讓我整理回答。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/index.php?lang=zh",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM\n...\n溢康企業股份有限公司\n...\n創立於 1998 年\n...\n歐盟壓力容器安全認證\n...\nISO 9001製造品質管理認證\n...\nC美國管道安全認證"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://uni-pressuretank.com.tw/",
+                "title": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Professional Pressure Tank Manufacturer in Taiwan (Unitec)\n\n...\n\nUnitec specializes in the research and manufacturing of fluid transfer products. Our products have been selling to the global market with excellent quality and stability. We can also offer customized services in order to meet various requirements in different fields. To ensure the safe use of our products by customers, all products are \"Made in Taiwan\" and safety certified and ISO certified by TUV.\n\n...\n\nSteel Pressure Tank\n\n...\n\nAT-10E\n\n...\n\nSteel Pressure Tank is used for the transportation of oil-based paint, such as release agent、glue、rust preventive coating、chemical liquid、high viscosity fluid...etc\n\n...\n\nStainless Steel Pressure Tank \n\n Stainless Steel Pressure Tank is used for the transportation of oil-based or water-based paint, Material is available from SUS304 or SUS316. \n\n Pneumatic Agitator\n\n...\n\nAccording to the properties and viscosity of fluids, it can be equipped with a reducer.\n\n...\n\n禾茂興提供完整的產品說明與諮詢，並針對各領域客製化需求提供相關解決方安及功能規劃，若有任何相關需求歡迎與我們聯絡！ We can offer instructions on products and customized services for various fields upon customer request. Please feel free to contact us if you have any inquires.\n\n...\n\nADDR 台中市霧峰區草湖路15巷16號 No. 16, Lane 15, Caohu Road, Wufeng District, Taichung City"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://protima.com.tw/?lang=tw",
+                "title": "台灣壓力桶製造商-益源興企業有限公司 (YHS)",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "台灣壓力桶製造商-益源興企業有限公司 (YHS)\n\n...\n\n益源興企業有限公司專業於壓力容器及氣動攪拌器的研發與創新，至今已有多年的製造經驗，並且行銷到全球市場，擁有絕佳的品質與耐用性。 我們的PROTIMA 研發團隊所設計的壓力容器、氣動攪拌器、泵浦及氣動馬達皆為“台灣製造”，為了確保客戶在產品使用上的安全，所有系列的產品皆通過德國萊茵TUV的標準安全認證及ISO國際品質管理系統認證。產品的專業設計不僅符合各領域的需求，而多樣化的種類款式，更能有效的提升工作效率。在強烈競爭的市場需求下，PROTIMA 團隊從未停止前進的腳步。\n\n...\n\n國際化 高品質．提高效率 永續經營．提供滿意的產品及服務 是我們一貫的理念及堅持的品質目標 Our company philosophy and goals: “International, High Quality” “Efficiency, Sustainable Management” and “Satisfactory Products and Services”.\n\n...\n\n鋼製壓力桶\n\n...\n\nAT-10E\n\n...\n\n適用於油性流體之輸送、模型製作，並可應用於油性離型劑、鞋面、木器、金屬、皮革之表面塗裝。\n\n...\n\n不鏽鋼壓力桶\n\n...\n\nAT-10ESS\n\n...\n\n材質可選擇不鏽鋼SUS304/SUS316。適用於油性和水性流體、膠水、離型劑、脫模劑、化學藥水之輸送，並可應用於食品及醫療等級之領域。\n\n...\n\n### 客製服務\n\n...\n\n雙層桶不銹鋼壓力桶\n\n...\n\nDT-20E(FG)SS\n\n...\n\n有任何相關需求歡迎與我們聯絡! We can offer product instructions and customized services for various fields upon customer request. Please feel free to contact us if you have any inquiries."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商\n\n...\n\n溢康企業股份有限公司\n\n...\n\n創立於 1998 年\n\n...\n\n產品系列\n\n...\n\n高壓泵浦壓力桶\n\n...\n\n密閉式膨脹水箱 \n\n RO逆滲透儲水桶 \n\n 導熱液體膨脹罐 \n\n 太陽能液體膨脹罐 \n\n 不鏽鋼泵浦壓力桶 \n\n 液冷系統膨脹水箱 \n\n 高壓泵浦壓力桶 \n\n 工業式密閉膨脹水箱 ASME認證 工業式密閉膨脹水箱 \n\n 經濟型工業式密閉膨脹水箱\n\n...\n\n壓力桶選擇工具\n\n...\n\n歐盟壓力容器 安全認證\n\nISO 9001 製造品質管理認證\n\n無鉛認證 \n\nUPC美國管道 安全認證\n\n...\n\nNSF飲用水 標準認證\n\n...\n\n氮氣充填\n\n...\n\nKC韓國安全認證\n\n...\n\n防鏽護盾\n\n...\n\n#### 溢康企業股份有限公司\n\n...\n\n總廠地址:429台中市神岡區和睦路一段212巷36號\n\n...\n\n電話 886-4-2562-6368 / 傳真 886-4-2561-6332"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://sdgyrq.com/",
+                "title": "山东华宸高压容器集团有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "山东华宸高压容器集团有限公司\n\n...\n\n行业精髓，中国唯一 世界品牌，制造专家\n\n...\n\nThe essence of the industry, the only one in China, a world brand, a manufacturing expert\n\n...\n\n山东华宸高压容器集团\n\n...\n\n山东华宸高压容器有限公司成立于2007年初，迄今，已发展为集团化公司。 现固定资产达3.6亿，占地面积200余亩，员工200余人，其中高中级技术职称的各类专业技术人员80余人。 本公司制造设备先进，检测设备齐全，产品统一性高。今天的华宸依然延续其“快速反应，达成客户要求；持续改善，超越客户期望”的企业管理理念，并以其现代化的生产和质量检测设备，专业的设计开发团队，高效的高级技术生产人员，创造出了华宸今天的辉煌成就。华宸秉承“诚信服务”的宗旨，最大程度上满足客户的个性化需求。华宸未来将在现有的国内外市场下，积极开拓国际市场，以信誉作为企业的生产推动\n\n...\n\n集团旗下设有四家全资子公司： 山东华宸进出口贸易有限公司 山东华宸高压容器集团（德州）有限公司\n\n...\n\n2022年3月21日，由三位成员组成的专家组莅临山东华宸高压容器集团有限公司，对公司质量管理体系进行评审，确保质量管理体系持续的适宜性、充分性和有效性。对提高公司整体管理水平有重大意义。\n\n...\n\n制造设备先进，检测设备齐全，产品统一性高"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1639,
+      "completion_tokens": 1670,
+      "total_tokens": 3309,
+      "cost": 0.0094957,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0024957,
+        "upstream_inference_prompt_cost": 0.0004917,
+        "upstream_inference_completions_cost": 0.002004
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 313,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

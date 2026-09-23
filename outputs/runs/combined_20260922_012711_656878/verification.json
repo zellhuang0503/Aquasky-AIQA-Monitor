@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-09-22T01:27:52.333704+08:00",
+  "default_enabled_models": 6,
+  "records": 72,
+  "complete_answers": 72,
+  "unique_model_question_pairs": 72,
+  "raw_files_exact_source_copies": 72,
+  "excel_rows_reopened": 72,
+  "source_file_unchanged": true,
+  "unit_tests_passed": 16,
+  "python_files_syntax_ok": 40,
+  "source_batches": 4,
+  "unresolved_google_citations": 0
+}

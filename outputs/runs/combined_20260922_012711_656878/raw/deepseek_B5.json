@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的壓力桶出廠前經過什麼品質測試？壓力循環測試標準是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011257-WLY4LkiAFE7fc9fAYKtx",
+    "object": "chat.completion",
+    "created": 1790011257,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "根據 AQUASKY 溢康企業公開的 FAQ 與認證資料，其壓力桶出廠前的品質測試與壓力循環測試標準如下：\n\n## 出廠前的品質測試\n\nAQUASKY 強調所有壓力桶在出廠前都經過 **100% 壓力安全測試**，確保產品品質[zh/about](https://aquaskyplus.com/zh/about)。具體的品質管制流程包括：\n\n- **壓力循環測試**：每一台壓力桶都必須在預充壓力與最大工作壓力之間，進行 **100,000 次連續壓力循環測試**，以模擬真實運作環境，確保長期性能[zh/FAQ](https://aquaskyplus.com/zh/FAQ)、[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n- **焊接品質**：採用 PED 認證的焊接技術，符合 **ASME VIII Div.1** 與 **EN 13831** 標準[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n- **氮氣預充**：出廠前以純氮氣預充，以減少壓力損失[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n- **品質管理系統**：所有產品在嚴格的 **ISO 9001** 品質管理系統下製造，材料與製程具備完整可追溯性[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n\n此外，所有壓力桶均符合 **NSF/ANSI 61** 與歐盟 **PED** 標準[zh/FAQ](https://aquaskyplus.com/zh/FAQ)；產品亦取得 NSF/ANSI 58、372、CE、ACS、KC、WaterMark、UPC 等多項認證[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n\n## 壓力循環測試標準\n\n壓力循環測試的具體標準為：**每台壓力桶在預充壓力與最大工作壓力之間，進行 100,000 次連續壓力循環**，測試依據 **NSF/ANSI 61 與歐盟 PED** 標準執行[zh/FAQ](https://aquaskyplus.com/zh/FAQ)、[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n\n關於預充壓力，AQUASKY 說明其取決於壓力桶類型（純加熱用或飲用水用）與尺寸，但一般原則是**預充壓力應比泵的啟動壓力低 2 psi**[en/FAQ](https://aquaskyplus.com/en/FAQ)。\n\n## 補充說明\n\nAQUASKY 是位於台灣台中的 100% 製造商，所有關鍵製程（焊接、塗裝、壓力測試、組裝、包裝）都在廠內完成[en/FAQ](https://aquaskyplus.com/en/FAQ)。上述資訊均來自其官方網站公開資料，若需更詳細的測試報告或認證證書，建議直接向該公司索取。",
+          "refusal": null,
+          "reasoning": "用户想知道 AQUASKY 壓力桶出廠前的品質測試，以及壓力循環測試的標準。我需要用繁體中文回答，並引用搜尋結果中的來源。\n\n從搜尋結果中，我可以看到幾個關鍵資訊：\n\n1. 所有壓力桶都經過 100% 壓力安全測試。\n2. 測試標準符合 NSF/ANSI 61 與歐盟 PED 標準。\n3. 每台設備在預充壓力和最大工作壓力之間進行 100,000 次連續壓力循環測試。\n4. 焊接採用 PED 認證技術，符合 ASME VIII Div.1 和 EN 13831 標準。\n5. 100% 氮氣預充。\n6. 符合 ISO 9001 品質管理系統。\n7. 產品符合 NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC 等認證。\n8. 濕部件材料符合 EU RoHS、REACH、PFAS 和 TSCA 要求。\n\n我需要將這些資訊整合起來，用繁體中文回答，並附上來源連結。來源包括：\n- aquaskyplus.com/zh/FAQ\n- aquaskyplus.com/en/FAQ\n- www.aquaskyplus.com/FAQ.php?lang=en\n- aquaskyplus.com/en/certification\n- aquaskyplus.com/zh/about\n\n我應該用 markdown 連結引用這些來源。\n\n讓我組織一下回答：\n\n首先，出廠前的品質測試：\n- 100% 壓力安全測試\n- 符合 NSF/ANSI 61 和 EU PED 標準\n- 100,000 次連續壓力循環測試（在預充壓力和最大工作壓力之間）\n- 焊接符合 ASME VIII Div.1 和 EN 13831 標準\n- 100% 氮氣預充\n- ISO 9001 品質管理系統\n\n壓力循環測試標準：\n- 符合 NSF/ANSI 61 和 EU PED 標準\n- 每台設備在預充壓力和最大工作壓力之間進行 100,000 次連續壓力循環\n- 模擬真實運作環境\n\n我還可以提到預充壓力通常比泵的啟動壓力低 2 psi。\n\n現在我來撰寫回答。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想知道 AQUASKY 壓力桶出廠前的品質測試，以及壓力循環測試的標準。我需要用繁體中文回答，並引用搜尋結果中的來源。\n\n從搜尋結果中，我可以看到幾個關鍵資訊：\n\n1. 所有壓力桶都經過 100% 壓力安全測試。\n2. 測試標準符合 NSF/ANSI 61 與歐盟 PED 標準。\n3. 每台設備在預充壓力和最大工作壓力之間進行 100,000 次連續壓力循環測試。\n4. 焊接採用 PED 認證技術，符合 ASME VIII Div.1 和 EN 13831 標準。\n5. 100% 氮氣預充。\n6. 符合 ISO 9001 品質管理系統。\n7. 產品符合 NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC 等認證。\n8. 濕部件材料符合 EU RoHS、REACH、PFAS 和 TSCA 要求。\n\n我需要將這些資訊整合起來，用繁體中文回答，並附上來源連結。來源包括：\n- aquaskyplus.com/zh/FAQ\n- aquaskyplus.com/en/FAQ\n- www.aquaskyplus.com/FAQ.php?lang=en\n- aquaskyplus.com/en/certification\n- aquaskyplus.com/zh/about\n\n我應該用 markdown 連結引用這些來源。\n\n讓我組織一下回答：\n\n首先，出廠前的品質測試：\n- 100% 壓力安全測試\n- 符合 NSF/ANSI 61 和 EU PED 標準\n- 100,000 次連續壓力循環測試（在預充壓力和最大工作壓力之間）\n- 焊接符合 ASME VIII Div.1 和 EN 13831 標準\n- 100% 氮氣預充\n- ISO 9001 品質管理系統\n\n壓力循環測試標準：\n- 符合 NSF/ANSI 61 和 EU PED 標準\n- 每台設備在預充壓力和最大工作壓力之間進行 100,000 次連續壓力循環\n- 模擬真實運作環境\n\n我還可以提到預充壓力通常比泵的啟動壓力低 2 psi。\n\n現在我來撰寫回答。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "溢康（\n...\nQUASKY）\n...\n品質管制流程\n...\n測試的標準\n...\n所有壓力罐均符合 NSF/ANSI 61 與歐盟 PED 標準。測試標準為進行 100,000 次連續壓力循環測試，模擬真實運作環境。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/FAQ",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASK ... pressure ... 01 ... / EU ... Pressure ... Directive) ... EN ... 13831\n\n...\n\nProducts comply with major certifications including NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark, and UPC\n\n...\n\nAll wet part materials are in line with EU RoHS and REACH, and also comply with PFAS and TSCA requirements.\n\n...\n\nEach product is manufactured under strict ISO 9001 quality management systems, allowing full traceability of materials and processes.\n\n...\n\nAQUASKY is a 100% manufacturer based in Taichung, Taiwan. All critical processes are performed in-house, including welding, coating, pressure testing, assembly, and packaging. Our facilities operate under ISO 9001 quality management systems.\n\n...\n\nsimulation\n\n...\n\nWhat key manufacturing technologies ... exclusive patents does\n\n...\n\nWelding excellence: Produced with PED-certified welding technologies, meeting ASME VIII Div.1 and EN 13831 standards.\n\n...\n\n100% Nitrogen pre ... charge: Factory pre-charged with pure nitrogen to minimize pressure loss.\n\n...\n\nWhat is the usual pre-charge for a tank?\n\n...\n\nThe pre-charge of a tank depends on many factors. First of all, what type of tank (generally speaking, purely heating or potable water usage) and how big the tank is. All AQUASKY tanks are pre-charged and tested in the factory. The pre-charge should be 2psi less than the pump cut-in pressure.\n\n...\n\nIn your QC process, what are the standards for pressure cycle testing?\n\n...\n\nAll tanks are tested in compliance with NSF/ANSI 61 and EU PED standards. Each unit undergoes 100,000 continuous pressure cycles between pre-charge and maximum working pressure to ensure long-term performance."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/FAQ.php?lang=en",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Each product is manufactured under strict ISO 9001 quality management systems, allowing full traceability of materials and processes.\n\n...\n\nAQUASKY is a 100% manufacturer based in Taichung, Taiwan. All critical processes are performed in-house, including welding, coating, pressure testing, assembly, and packaging. Our facilities operate under ISO 9001 quality management systems.\n\n...\n\nexcellence: Produced ... PED-certified welding technologies, meeting ASME VIII Div.1 and EN 13831 standards\n\n...\n\nWhat is the usual ... -charge for\n\n...\n\nThe pre-charge of a tank depends on many factors. First of all, what type of tank (generally speaking, purely heating or potable water usage) and how big the tank is. All AQUASKY tanks are pre-charged and tested in the factory. The pre-charge should be 2psi less than the pump cut-in pressure.\n\n...\n\nIn your QC process, what are the standards for pressure cycle testing?\n\n...\n\nAll tanks are tested in compliance with NSF/ANSI 61 and EU PED standards. Each unit undergoes 100,000 continuous pressure cycles between pre-charge and maximum working pressure to ensure long-term performance."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/certification",
+                "title": "AQUASKY: About Certifications",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "### Conformity European\n\n...\n\nThe Pressure Equipment Directive 2014/68/EU(PED) of the EU sets out the standards for the design and fabrication of pressure equipment generally over one liter in volume and having a maximum pressure of more than 0.5 bar gauge. It also sets the administrative procedures requirements for the \"conformity assessment\" of pressure equipment, for the free placing on the European market without local legislative barriers. All of Aquasky Pressure Tank is certified by PED and made by PED certified welder.\n\n...\n\n### National Sanitation Foundation 58\n\n...\n\nNSF/ANSI 58 establishes the minimum requirements for the certification of point-of-use (POU) reverse osmosis systems designed to reduce contaminants that may be present in public or private drinking water. The scope of NSF/ANSI 58 includes material safety, structural integrity, total dissolved solids (TDS) reduction, and other optional contaminant reduction claims. The most common optional claims addressed by NSF/ANSI 58 include cyst reduction, hexavalent and trivalent chromium reduction, arsenic reduction, nitrate/nitrite reduction, and cadmium and lead reduction.\n\n...\n\n### National Sanitation Foundation 61\n\n...\n\nNSF/ANSI 61 ensures that your product meets the regulatory requirements for the U.S. and Canada, and it can often meet or fulfill the testing requirements for many other countries as well. Market leaders strive to attain NSF certification as a mark of distinction that provides their customers with assurance that their product is safe for use in drinking water. NSF/ANSI 61 testing covers all products with drinking water contact from source to tap, and determines what contaminants may migrate or leach from your product into drinking water. It also confirms if they are below the maximum levels allowed to be considered safe.\n\n...\n\n### Eurocert\n\n...\n\nISO 9001:2015 sets out the criteria for a quality management system and is the only standard in the family that can be certified to (although this is not a requirement). It can be used by any organization, large or small, regardless of its field of activity. This standard is based on a number of quality management principles including a strong customer focus, the motivation and implication of top management, the process approach, and continual improvement.\n\n...\n\n### Uniform Plumbing Code (UPC)\n\n...\n\nUPC certification mark guarantees the function and safety of Aquasky Pressure Tank. Pre-pressurized potable water tanks with a barrier between the water & air portion of the tank. To be installed in accordance with the manufacturer's instructions and the requirements of the latest edition of the Uniform Plumbing Code. Products listed on this certificate have been tested by an IAPMO R&T recognized laboratory. This recognition has been granted.\n\n...\n\nnon-metallic ... as\n\n...\n\n### NSF ... ANSI 372 ... System Components - Lead Content\n\n...\n\nNSF/ANSI 372 establishes limits on the amount of lead that may be present in water contact materials within drinking water system components. This standard specifies that a product must be certified as meeting a weighted average lead content of ≤0.25% when it comes to the wetted surfaces of pipes, pipe fittings, plumbing fittings, and plumbing fixtures. This requirement ensures that these ... , helping"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/about",
+                "title": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "和測試設備。 每一位員工都經過培訓且經驗豐富。我們大部分的生產工作都在內部進行，這限制了來自其他製造商的品質問題。每個壓力桶都經過100％的壓力安全測試，以確保最好的產品出廠。"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1707,
+      "completion_tokens": 1139,
+      "total_tokens": 2846,
+      "cost": 0.0088789,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0018789,
+        "upstream_inference_prompt_cost": 0.0005121,
+        "upstream_inference_completions_cost": 0.0013668
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 489,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

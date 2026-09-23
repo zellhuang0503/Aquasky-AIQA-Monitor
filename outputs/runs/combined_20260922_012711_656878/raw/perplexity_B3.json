@@ -1,0 +1,412 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 與 Amtrol、Global Water Solutions 同等級產品的性能比較？"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "若您指的是**壓力桶／膨脹桶（pressure tank / expansion tank）**產品，AQUASKY、Amtrol、Global Water Solutions（GWS）都屬於同一類產品，但**不能只用品牌名直接判定誰「性能更好」**；更合理的比較方式是看**最高工作壓力、最高操作溫度、材質、隔膜／內膽設計、認證與應用場景**。[7][9][10][16]\n\n- **AQUASKY**：公開資料顯示其主打**高性能壓力桶**，應用於工業、化學、食品與飲料等領域，並強調**全不鏽鋼桶殼**、**高純度氮氣預充**與**相容 PG25 的 EPDM 隔膜**；其產品頁也提到可換囊壓力桶，並宣稱可帶來安靜、節能與延長壽命等效果。[3][7][9][12]\n- **Amtrol**：其 Well-X-Trol 壓力桶主打的是**減少水錘／穩定壓力／縮短泵浦啟停頻率**，官方頁面明確列出部分型號的**最高工作溫度**可到 **200°F（93°C）** 或 **240°F（116°C）**，且 Well-X-Trol 系列標示有**150 PSIG working pressure** 的高強度鋼結構與抗菌內襯。[10][16]\n- **Global Water Solutions**：您提供的搜尋結果中沒有直接列出其官方產品規格頁，因此**無法僅依這批結果做出精確性能數據比較**；只能確認它與 Amtrol 同屬壓力桶／膨脹桶市場，且在競品資料中被列為 Amtrol 的競爭對手之一。[4]\n\n如果您要的是**「同等級產品的性能比較」**，目前可先做出以下判斷：\n\n| 比較面向 | AQUASKY | Amtrol | GWS |\n|---|---|---|---|\n| 產品定位 | 工業／食品／化工與壓力桶 | 民用與商用給水、增壓系統 | 資料不足，需查官方規格 |\n| 材質訴求 | 不鏽鋼桶殼、EPDM 隔膜 | 高強度鋼、抗菌內襯、膀胱／隔膜型 | 資料不足 |\n| 壓力／溫度規格 | 搜尋結果未提供可直接比對的完整數值 | 部分型號可到 150 PSIG、200°F 或 240°F | 資料不足 |\n| 可用性／特色 | 強調可換囊、節能、長壽命 | 強調標準化、耐用、抑制細菌 | 資料不足 |\n\n就**現有公開資料**來看，**Amtrol 的官方規格揭露較完整**，因此若您在意的是「可驗證的性能數據」，Amtrol 目前比較容易直接對照。[10][16]  \nAQUASKY 則偏向**材料與應用場景**的優勢敘述，特別是在工業與高純度需求環境；但就您提供的結果而言，**缺少像最大工作壓力、最高溫、壽命循環、容量曲線等可量化指標**，因此無法嚴格證明其與 Amtrol 或 GWS 的「同等級」程度。[3][7][12]\n\n如果您要我進一步幫您做**更精準的三方比較表**，我可以下一步直接整理成：\n- **家用 RO 壓力桶**\n- **商用／工業膨脹桶**\n- **不鏽鋼 vs 鋼製 vs 複合材質**\n- **依容量、壓力、溫度、認證、保固的對照**\n\n如果您願意，我也可以再幫您查 **Global Water Solutions 的官方規格頁**，補齊三家產品的可驗證數據後再做完整比較。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://www.aquaskyusa.com/",
+      "https://www.aquaskyrot4.com/product-page/4-stge-reverse-osmosis-water-system",
+      "https://aquaskyplus.com/zh/news-detail/INDUSTRY/liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch",
+      "https://www.cbinsights.com/company/global-water-solutions/alternatives-competitors",
+      "https://aquaskyplus.com/videos.php?lang=zh",
+      "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843",
+      "https://www.tysia.org/hardware/PUMPLUS",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851",
+      "https://www.amtrol.com/product/well-x-trol-pressure-tanks/",
+      "https://aquamarinechemicals.com/product-cross-reference-guide/",
+      "https://aquaskyplus.com/zh/dl-ce",
+      "http://www.merman.com.tw/download/chemial/A.pdf",
+      "https://www.aquaskyusa.com/amtrol-reverse-osmosis-replacement",
+      "https://apps.apple.com/us/app/aquasky/id1551913904?l=zh-Hans-CN",
+      "https://www.amtrol.com/product/well-x-trol-well-tanks/",
+      "https://www.amtrol.com/",
+      "https://www.amtrol.com/products/",
+      "https://www.storm.mg/article/5552027",
+      "https://finance.sina.com.cn/roll/2026-09-04/doc-iniqryes4108788.shtml",
+      "https://www.sohu.com/a/1073222726_122221109",
+      "https://economictimes.indiatimes.com/markets/stocks/news/two-trades-for-today-a-water-solutions-provider-for-a-7-65-gain-a-mid-cap-specialty-chemical-stock-for-an-almost-7-rise/articleshow/134018045.cms",
+      "https://www.storm.mg/article/11162294",
+      "https://global.morningstar.com/en-nd/investments/etfs/0P00013BN7/quote",
+      "https://www.sohu.com/a/1078318730_122930771",
+      "https://www.justdial.com/india/Tank-Stand",
+      "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000766669_K4C5ETXU7OZKFG8BWTG7X",
+      "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000765871_LDD9VJXS6JTCX0206DBKH",
+      "https://www.sohu.com/a/1078319011_100101842",
+      "https://www.sohu.com/a/1076123719_122025709",
+      "https://seekingalpha.com/symbol/ZWS",
+      "https://www.bloomberg.com/profile/company/2664363D:PM",
+      "https://www.bloomberg.com/quote/1514826Z:US",
+      "https://www.cincinnati.com/press-release/story/124444/aquatech-china-shanghai-tongjie-as-a-top-emergency-seawater-desalination-system-company-for-temporary-operations/",
+      "https://www.justdial.com/jdmart/Mangalore/Tank-Stand/jdm-1302405-ent-2-17737902",
+      "https://app.storm.mg/article/5552062"
+    ],
+    "created": 1790008757,
+    "id": "c5149e14-19de-4837-b20c-b063dd24df9e",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2026-09-19",
+        "place_metadata": null,
+        "snippet": "For inquiries,\n- please contact us at: info@aquaskyusa.com\n- Toll-Free Number: 1-800-551-3221\n- Technical Support: 954-297-5093\n###### Toll-Free Worldwide + 1 800-551-3221\n...\n## -Original Organic Water Replacement Filters-\n## - 99.9 % Reduction rate bacteria, pesticides, herbicides & heavy metals-\n...",
+        "source": "web",
+        "title": "Official E-Store U.S.A | Aqua Sky Inc | Aquasky Reverse Osmosis ROT-4",
+        "url": "https://www.aquaskyusa.com/"
+      },
+      {
+        "date": "2016-01-01",
+        "last_updated": "2024-12-17",
+        "place_metadata": null,
+        "snippet": "**Stage 3 - RO-Membrane** ** 50 & up to100 gpd-residential-ro-membrane **\n- Semi-permeable stages of pores size 0.0001 microns, which is 620,000 times finer than a human hair,10,000 times smaller than a red blood cell 2,500 times smaller than bacteria And 20 times Smaller than virus.\n- 50-100 Gallon...",
+        "source": "web",
+        "title": "AQUASKY ROT 4 - 4 STAGE REVERSE OSMOSIS WATER SYSTEM | Any Water Filters",
+        "url": "https://www.aquaskyrot4.com/product-page/4-stge-reverse-osmosis-water-system"
+      },
+      {
+        "date": "2026-07-30",
+        "last_updated": "2026-08-27",
+        "place_metadata": null,
+        "snippet": "溢康（AQUASKY）以全不鏽鋼桶殼設計，搭配高純度乾燥氮氣預充，以及對 PG25 完美相容的過氧化物固化 EPDM 隔膜，為資料中心工程師提供了解決高溫差、高壓力波動的終極方案。",
+        "source": "web",
+        "title": "液冷CDU 膨脹水箱關鍵作用與溢康全不鏽鋼解決方案 - aquasky",
+        "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/liquid-cooling-ai-compute-cdu-expansion-tanks-aquasky-ch"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-01-15",
+        "place_metadata": null,
+        "snippet": "Global Water Solutions's top competitors include Aquatronic Group Management, Amtrol, and Eco Products Group.",
+        "source": "web",
+        "title": "Global Water Solutions's alternatives and competitors",
+        "url": "https://www.cbinsights.com/company/global-water-solutions/alternatives-competitors"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "The polypropylene liner and the butyl diaphragm are made with FDA materials and prevent water from making contact with the metal tank for cleaner, fresher and better tasting water.",
+        "source": "web",
+        "title": "Aquasky溢康─影片專區",
+        "url": "https://aquaskyplus.com/videos.php?lang=zh"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-08",
+        "place_metadata": null,
+        "snippet": "Number\n...\nTel: 886-4-2562-6368\nFax: 886-4-2561-6332\nWeb.: www.aquasky.com.tw\nEmail: frankwang@aquasky.com.tw\nNo. 36, Ln.\n212, Sec 1, Hemu Rd., Shengang Dist., Taichung City 429, Taiwan.",
+        "source": "web",
+        "title": "[PDF] AQUASKYPLUS Ebook0823(WEB)",
+        "url": "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-17",
+        "place_metadata": null,
+        "snippet": "專注提供高性能的壓力桶產品，產品應用領域包括工業、化學、食品和飲料等；以超越客戶期望的服務，滿足市場上對品質和可靠性的需求。|",
+        "source": "web",
+        "title": "溢康企業股份有限公司",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-17",
+        "place_metadata": null,
+        "snippet": "The tension of the diaphragm maintains water pressure within the system, ensuring proper operation of the dishwasher and washing machine, and robust flow for showering and bathing.",
+        "source": "web",
+        "title": "PUMPLUS | 臺中市潭雅神工業廠商協進會",
+        "url": "https://www.tysia.org/hardware/PUMPLUS"
+      },
+      {
+        "date": "2025-04-01",
+        "last_updated": "2025-11-27",
+        "place_metadata": null,
+        "snippet": "A global leader in diaphragm pressure tank manufacturing.\n2. Focused on providing high-performance pressure tank products, with applications in industrial, chemical, food, and beverage sectors; committed to exceeding customer expectations and meeting market demands for quality and reliability.|",
+        "source": "web",
+        "title": "AQUASKY Enterprise Corp. - 臺中市政府經濟發展局",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851"
+      },
+      {
+        "date": "2017-05-05",
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "Amtrol pre-pressurized, potable water well tanks are engineered to reduce surge and ensure minimum pump run time in municipal well systems and high pressure booster pump applications.\n...\n#### Performance\n- **Max.\nOperating Temperature: **\nDiaphragm Models: 200° F (93° C)\nPartial & Full Acceptance B...",
+        "source": "web",
+        "title": "Well-X-Trol® Pressure Tanks",
+        "url": "https://www.amtrol.com/product/well-x-trol-pressure-tanks/"
+      },
+      {
+        "date": "2017-05-31",
+        "last_updated": "2025-06-04",
+        "place_metadata": null,
+        "snippet": "Aquamarine chemicals Product Comparison Guide for ship chemicalsThis comparison chart is for guidance only and outline Aquamarine equivalent products for UNITOR & Drew Marine for ship chemical applications.",
+        "source": "web",
+        "title": "XML Sitemap",
+        "url": "https://aquamarinechemicals.com/product-cross-reference-guide/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-25",
+        "place_metadata": null,
+        "snippet": "DL系列密閉式膨脹水箱適用於大水量的系統，相較於傳統系統需安裝多個小型桶，安裝DL系列壓力桶能大量節省安裝所需的空間和維護的成本。\nDL系列壓力桶搭配專用可置換的水囊袋，具有高品質的密度及彈性，可確保在系統中安全、寧靜、舒適、節能的運轉，延長系統使用壽命週期。",
+        "source": "web",
+        "title": "DL 系列大容量可換囊壓力桶| 歐盟CE 認證商用多功能水箱",
+        "url": "https://aquaskyplus.com/zh/dl-ce"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-12-26",
+        "place_metadata": null,
+        "snippet": "AMERTROL 1100 ODT  食品級鍋爐水處理劑 \nAMERTROL 1100 ODT 含有亞硫酸鈉鹽，可有效防止氧腐蝕、點蝕產生，由於亞硫酸鹽與溶\n解氧的快速作用，使其成為鍋爐系統消除溶解氧的標準產品。AMERTROL 1100 ODT 所含之中和\n氨，可有效提升凝水系統之pH 值，以防止其酸性腐蝕。另外其所含之消泡劑，可防止泡沫攜帶入\n蒸汽系統。",
+        "source": "web",
+        "title": "鍋爐水處理劑",
+        "url": "http://www.merman.com.tw/download/chemial/A.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-07-09",
+        "place_metadata": null,
+        "snippet": "Stainless steel reverse osmosis faucet-elegant Aquasky Rot and PA-E Ro-132\n- New Arrival",
+        "source": "web",
+        "title": "Amtrol reverse osmosis replacement filters",
+        "url": "https://www.aquaskyusa.com/amtrol-reverse-osmosis-replacement"
+      },
+      {
+        "date": "2021-03-30",
+        "last_updated": "2026-03-13",
+        "place_metadata": null,
+        "snippet": "provides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial pumping system.",
+        "source": "web",
+        "title": "AQUASKY - App Store - Apple",
+        "url": "https://apps.apple.com/us/app/aquasky/id1551913904?l=zh-Hans-CN"
+      },
+      {
+        "date": "2017-04-29",
+        "last_updated": "2026-08-21",
+        "place_metadata": null,
+        "snippet": "Today, Well-X-Trol is still the standard of the industry with many unique features including high strength steel to deliver 150 PSIG working pressure, patented Turbulator^®^ water circulator device and antimicrobial liner that neutralizes bacteria on contact.",
+        "source": "web",
+        "title": "Well-X-Trol® - Amtrol",
+        "url": "https://www.amtrol.com/product/well-x-trol-well-tanks/"
+      },
+      {
+        "date": "2026-09-02",
+        "last_updated": "2026-09-02",
+        "place_metadata": null,
+        "snippet": "The Extrol Pro^®^ next generation expansion tank is engineered for modern, high-efficiency systems including hydronic, solar and radiant systems.",
+        "source": "web",
+        "title": "Amtrol: COMPANY",
+        "url": "https://www.amtrol.com/"
+      },
+      {
+        "date": "2026-03-31",
+        "last_updated": "2026-09-19",
+        "place_metadata": null,
+        "snippet": "PLUMBING & HOT WATER\n...\nPLUMBING & DOMESTIC HOT WATER",
+        "source": "web",
+        "title": "PRODUCTS - Amtrol",
+        "url": "https://www.amtrol.com/products/"
+      },
+      {
+        "date": "2026-09-14",
+        "last_updated": "2026-09-21",
+        "place_metadata": null,
+        "snippet": ">\n...\nNalco Water因而導入3D TRASAR冷卻水技術，同步升級化學藥劑輸送及自動化控制系統，透過即時腐蝕監測、可因應水質變化的化學處理，以及24小時遠端監控，讓NXP能安全擴大回收水使用。冷卻塔濃縮倍數因此從7提高至15，腐蝕率降低93%，也能在異常擴大前採取修正措施。\n...\n八田與一",
+        "source": "web",
+        "title": "幫台積電洗晶圓有多難藝康全球副總：整座湖水加一粒鹽水就 ...",
+        "url": "https://www.storm.mg/article/5552027"
+      },
+      {
+        "date": "2026-09-04",
+        "last_updated": "2026-09-15",
+        "place_metadata": null,
+        "snippet": "A2：通量足够则影响极小。韦思卡尔80T Pro实测通量约20T/H，多点同时开启水压几乎无明显衰减。\n...\nA3：韦思卡尔全自动反重力前置过滤器(80T Pro)。设定冲洗周期后无需人工干预，四步深度洗恢复率达99.31%，滤芯免拆洗免更换。",
+        "source": "web",
+        "title": "前置过滤器好用吗？直接给推荐名单",
+        "url": "https://finance.sina.com.cn/roll/2026-09-04/doc-iniqryes4108788.shtml"
+      },
+      {
+        "date": "2026-09-08",
+        "last_updated": "2026-09-14",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "环保运维选型：可平替进口的水文缆道测流车国产厂商推荐",
+        "url": "https://www.sohu.com/a/1073222726_122221109"
+      },
+      {
+        "date": "2026-09-20",
+        "last_updated": "2026-09-21",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Two Trades for Today: A water solutions provider for a 7.65% gain, a ...",
+        "url": "https://economictimes.indiatimes.com/markets/stocks/news/two-trades-for-today-a-water-solutions-provider-for-a-7-65-gain-a-mid-cap-specialty-chemical-stock-for-an-almost-7-rise/articleshow/134018045.cms"
+      },
+      {
+        "date": "2026-09-07",
+        "last_updated": "2026-09-17",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "算力擴張引爆水資源挑戰藝康推全週期水方案為AI半導體鏈 ...",
+        "url": "https://www.storm.mg/article/11162294"
+      },
+      {
+        "date": "2026-09-11",
+        "last_updated": "2026-09-12",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Amundi PEA Eau (MSCI Water) UCITS ETF Capi | FR0011882364",
+        "url": "https://global.morningstar.com/en-nd/investments/etfs/0P00013BN7/quote"
+      },
+      {
+        "date": "2026-09-19",
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "2026年北京碧波晟业等水处理批发厂家梳理汇总",
+        "url": "https://www.sohu.com/a/1078318730_122930771"
+      },
+      {
+        "date": "2026-09-11",
+        "last_updated": "2026-09-11",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Tank Stand at the Best Price from Verified Sellers - Justdial",
+        "url": "https://www.justdial.com/india/Tank-Stand"
+      },
+      {
+        "date": "2026-08-28",
+        "last_updated": "2026-08-28",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "2分钟内捕捉毒性污染 资策会打造黄金蚬水质监测新解方",
+        "url": "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000766669_K4C5ETXU7OZKFG8BWTG7X"
+      },
+      {
+        "date": "2026-08-24",
+        "last_updated": "2026-08-24",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "台半导体化学材料迎百年机遇 不走进口替代拼国际共生共荣",
+        "url": "https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000765871_LDD9VJXS6JTCX0206DBKH"
+      },
+      {
+        "date": "2026-09-19",
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "有哪些标杆场景在使用泳池设备",
+        "url": "https://www.sohu.com/a/1078319011_100101842"
+      },
+      {
+        "date": "2026-09-15",
+        "last_updated": "2026-09-15",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "轻松用水 安全无忧",
+        "url": "https://www.sohu.com/a/1076123719_122025709"
+      },
+      {
+        "date": "2026-09-21",
+        "last_updated": "2026-09-21",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Zurn Elkay Water Solutions Corporation (ZWS) Stock Price, Quote ...",
+        "url": "https://seekingalpha.com/symbol/ZWS"
+      },
+      {
+        "date": "2026-09-01",
+        "last_updated": "2026-09-02",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Katharo Water Solutions Inc - Company Profile and News",
+        "url": "https://www.bloomberg.com/profile/company/2664363D:PM"
+      },
+      {
+        "date": "2026-09-02",
+        "last_updated": "2026-09-04",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Azuria Water Solutions Inc - Company Profile and News",
+        "url": "https://www.bloomberg.com/quote/1514826Z:US"
+      },
+      {
+        "date": "2026-09-18",
+        "last_updated": "2026-09-19",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Aquatech China: Shanghai Tongjie as a Top Emergency Seawater Desalination System Company for Temporary Operations",
+        "url": "https://www.cincinnati.com/press-release/story/124444/aquatech-china-shanghai-tongjie-as-a-top-emergency-seawater-desalination-system-company-for-temporary-operations/"
+      },
+      {
+        "date": "2026-09-19",
+        "last_updated": "2026-09-19",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "Tank Stand in Mangalore - Durable, Adjustable & Heavy-Duty",
+        "url": "https://www.justdial.com/jdmart/Mangalore/Tank-Stand/jdm-1302405-ent-2-17737902"
+      },
+      {
+        "date": "2026-09-14",
+        "last_updated": "2026-09-15",
+        "place_metadata": null,
+        "snippet": "",
+        "source": "web",
+        "title": "專訪》提供晶片廠走向全球後當地水管理智慧 藝康目標：在台製晶圓加上Ecolab註解 | 魏鑫陽 | 新聞",
+        "url": "https://app.storm.mg/article/5552062"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 969,
+      "cost": {
+        "input_tokens_cost": 0.00019,
+        "output_tokens_cost": 0.01454,
+        "request_cost": 0.006,
+        "total_cost": 0.02072
+      },
+      "prompt_tokens": 63,
+      "search_context_size": "low",
+      "total_tokens": 1032
+    }
+  }
+}

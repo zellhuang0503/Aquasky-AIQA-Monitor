@@ -1,0 +1,207 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的保固條款和售後服務內容是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008610-iA5zsSgDxbrZNWM1mGLy",
+    "object": "chat.completion",
+    "created": 1790008610,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "provisioned",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "市場上常見名稱為 **AQUASKY** 的產品主要分為兩大領域：一是**台灣製造的壓力罐／供水壓力桶品牌（Aquasky 溢康／水天）**；二是**水族領域的 LED 照明燈具（Fluval Aquasky 或日本 ADA AQUASKY）**。\n\n---\n\n### 一、AQUASKY 溢康／水天（壓力桶／加壓水罐）\n由 Aquasky Enterprise Corp. 製造的壓力罐、RO 儲水桶及加壓系統配件，其主要保固與售後規範如下：\n\n1. **保固期限**：\n   * **RO 儲水罐**：通常享有原廠 **3 年保固**。\n   * **供水加壓系統壓力罐（如 PumPlus 系列）**：依型號與不同地區代理政策，提供 **3 年至 5 年的原廠保固**（金屬與玻璃纖維材質多數提供 5 年保固）。\n2. **保固範圍與條件**：\n   * 保固僅涵蓋**原廠材料瑕疵**與**製造缺陷**（Manufacturing Defects）。\n   * 需在符合規範的正常環境下運作（例如在額定水溫與最大工作壓力範圍內）。\n3. **免責／不保固事項**：\n   * 未由專業水電技師安裝、未正確設定預充壓力（Pre-charge）導致損壞者，可能影響保固權益。\n   * 因管路異常水擊、化學腐蝕、人為碰撞、超壓或超溫運作所導致的桶身或隔膜破裂，不屬於免費保固範圍。\n4. **售後服務流程**：\n   * 終端消費者建議透過原安裝業者或當地授權經銷商進行判定與申請。\n   * 經銷商端若發現產品缺陷，需向原廠提供相關故障照片或檢測數據等證明，經審核確認為製造瑕疵後，原廠多以「提供更換良品」的方式補足。\n\n---\n\n### 二、Fluval AQUASKY（水族 APP 控制 LED 燈具）\n德國研發、加拿大 Hagen 旗下水族品牌 Fluval 推出的 AQUASKY 系列水草燈／海水燈：\n\n1. **保固期限**：\n   * **標準保固**：普遍提供 **3 年有限保固**（3-Year Limited Warranty）。\n   * **部分新版本（如 Aquasky 3.0）**：基礎保固為 **2 年**，購買後於規定期限內（多為 30 天內）至官網註冊可延長 **2 年**（合計最長 4 年）。\n2. **保固條款細則**：\n   * 保固涵蓋正常水族箱使用環境下的材料與工藝缺陷，原廠保有維修或換新的決定權。\n   * **責任限制**：保固不承擔因產品故障造成的附帶損失（包含魚缸內的水草、活體魚蝦死亡或個人財物損害）。\n   * **不保事項**：因不當安裝、意外摔落、超出防水規格浸水、自行拆解改裝或商業濫用導致的損壞不在保固內。\n3. **售後服務流程**：\n   * 送修或更換時**必須出示合法授權經銷商的購買證明／收據（Proof of Purchase）**。\n   * 遇到問題可先參考說明書排除（如重新配對藍牙／Wi-Fi），若硬體故障則送回原購買水族門市或聯繫當地的 Hagen / Fluval 客服尋求維修換新。\n\n---\n\n### 三、ADA AQUASKY（日本水之天空 LED 燈具）\n若是日本 Aqua Design Amano 出品的「水之天空」系列水草燈具：\n\n1. **保固期限**：台灣代理商公司貨通常提供 **1 年（12 個月）原廠保固**。\n2. **保固條款**：\n   * 僅限正常使用下的機器本體功能故障。\n   * 一般耗損（如長時間使用後的正常光衰）、人為摔損、進水受潮等不列入免費保固。\n   * 通路多提供購買後「新品 7 日內故障換新」的售後服務。\n3. **售後流程**：\n   * 須憑代理商保固卡與購買收據，洽詢原購買的水族實體專門店或網路經銷通路代送維修處理。\n\n---\n\n**建議：**\n請先確認手中的產品為**壓力罐**還是**水族燈具**；申請售後服務時，請務必備妥**購買憑證（發票／收據）**與**保固卡**，並優先聯繫原購買商家或地區總代理，以獲得最迅速的檢測與售後支援。",
+          "refusal": null,
+          "reasoning": "**Investigating Warranty Policies**\n\nI am currently examining AQUASKY's warranty terms and after-sales service details based on publicly available information. My focus is on gathering and synthesizing these policies to understand their scope and limitations for users.\n\n**Exploring AQUASKY Brand Identity**\n\nI'm currently investigating the AQUASKY brand, focusing on its primary identity as a well-known manufacturer of pressure tanks and diaphragm water tanks, including their PumPlus line. My analysis is centering on their established presence within the water treatment and storage market.\n\n**Analyzing Warranty Structures**\n\nMy recent focus has been on dissecting warranty terms. I'm examining the differing durations and scope for AQUASKY’s RO tanks versus their steel and fiberglass pressure tanks, noting exclusions for improper installation and operation. The B2B aftermarket service, involving defect verification and replacement via future orders or local distributors, is also being detailed.\n\n**Clarifying Warranty Scope**\n\nI'm now differentiating warranty coverage between AQUASKY pressure tanks and ADA AQUASKY LED lights. For pressure tanks, I'm documenting exclusions like misuse or improper installation, and the after-sales process involving distributors. For the lights, I'm noting the 1-year warranty, with exclusions for wear and tear or damage.\n\n**Differentiating AQUASKY Brands**\n\nI'm focusing on clearly separating the two main \"AQUASKY\" product lines: the pressure tank manufacturer and the aquarium LED light brand. I'm detailing warranty periods, terms, and after-sales processes for each to provide accurate information.\n\n**Structuring Warranty Information**\n\nI've organized the warranty details, starting with an introduction that distinguishes the pressure tank manufacturer (AQUASKY 溢康) from the Fluval/ADA AQUASKY LED lights. I'm now detailing the warranty for pressure tanks, including general terms and limitations.\n\n**Detailing Post-Sale Processes**\n\nI'm now documenting how end-users typically engage with original plumbing channels or local distributors for warranty claims. For B2B or distributor-level issues, I'm noting the requirement for defect proof to the manufacturer, with replacements usually issued in future batches.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Investigating Warranty Policies**\n\nI am currently examining AQUASKY's warranty terms and after-sales service details based on publicly available information. My focus is on gathering and synthesizing these policies to understand their scope and limitations for users.\n\n**Exploring AQUASKY Brand Identity**\n\nI'm currently investigating the AQUASKY brand, focusing on its primary identity as a well-known manufacturer of pressure tanks and diaphragm water tanks, including their PumPlus line. My analysis is centering on their established presence within the water treatment and storage market.\n\n**Analyzing Warranty Structures**\n\nMy recent focus has been on dissecting warranty terms. I'm examining the differing durations and scope for AQUASKY’s RO tanks versus their steel and fiberglass pressure tanks, noting exclusions for improper installation and operation. The B2B aftermarket service, involving defect verification and replacement via future orders or local distributors, is also being detailed.\n\n**Clarifying Warranty Scope**\n\nI'm now differentiating warranty coverage between AQUASKY pressure tanks and ADA AQUASKY LED lights. For pressure tanks, I'm documenting exclusions like misuse or improper installation, and the after-sales process involving distributors. For the lights, I'm noting the 1-year warranty, with exclusions for wear and tear or damage.\n\n**Differentiating AQUASKY Brands**\n\nI'm focusing on clearly separating the two main \"AQUASKY\" product lines: the pressure tank manufacturer and the aquarium LED light brand. I'm detailing warranty periods, terms, and after-sales processes for each to provide accurate information.\n\n**Structuring Warranty Information**\n\nI've organized the warranty details, starting with an introduction that distinguishes the pressure tank manufacturer (AQUASKY 溢康) from the Fluval/ADA AQUASKY LED lights. I'm now detailing the warranty for pressure tanks, including general terms and limitations.\n\n**Detailing Post-Sale Processes**\n\nI'm now documenting how end-users typically engage with original plumbing channels or local distributors for warranty claims. For B2B or distributor-level issues, I'm noting the requirement for defect proof to the manufacturer, with replacements usually issued in future batches.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY7c_RvmFnqQsZkz3Jleg9FQ3WKijwFJNrcD4eMVOIfSBaj41ZwAhIJG6AaXNKuyJal_UzOhmAmUJfFIxaufVGZuzFa9Z1LJMLVhcFUSc6eiqqrqoybjGkjggbWtaLAhINra6XGX-F3wTUZuWxyfse5w==",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 160
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNOqg_NPyzS7kF4o3fUGL83NbXyemw1WyEwGKhoVtjvDX3u72GZV5I7zqxlpPsBltxboJRC1WLzzHCmhDRPFE94JZ3PNwZ1Fm4bL79TWDea6Iw_zCp533l",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 160
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuX0d_Fs_U-to0fm3pJf0iAvSyEhjFfj_IKUOWjpzeO5BuqVAi8R2rkRvSC6H9MgqEZuj9WMTL10GjUBuVYGFb1c1_9xsFFB4d4ZsquR2H5VvfDHD0bjYR0MV6tlmSgY4jfc_lDOTkbz2rcDsdF2eZcAajlvLwbt4FH8YTeOz05AFiiqhjZVjlE69lno_i1A==",
+                "title": "poseidonwarehouse.com",
+                "start_index": 0,
+                "end_index": 247
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ3KHyw42MKlvoqXzovte2LexWyAbaIS1SNqGb_3ND8Hg2z-r2cQJyytUk3DoKxAxbpvHifh53lrw2Dey7KhyotOoHjgcEjPPUE8J2rPPIcfig2wtVw0Q2szfeE37NL-uI1g0oBJClEMPnNOJTXZLfh8PVDiN1jKp3EYT9781qAk2CJuTFXivViw==",
+                "title": "acshop.com.tw",
+                "start_index": 0,
+                "end_index": 247
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAHyMTOyfDhVd8gZUu5Nmd-_-60iqWe0L-fCheISiR8Z68kCqouMARAJc1qDqcsUMaJdhfgHI8pjXCFuam2CsNVMskzn_u5D5d8ayxXE2W-YwCzc-e418fhNH7qA1VcPIH-EDDwx3E5Bn8AMTH5q6_6rFHavx9zrFS_el9YDtjssZI",
+                "title": "facebook.com",
+                "start_index": 536,
+                "end_index": 732
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHq_agjj7dMeXiE6mhlqiqonIW_nZtgY0ex3Nnn1UNk-RnJ8afQmpzSbyeQXxnE0zM0I62Za-5O5b1tlllR3bgxIubgbPWvTXz3vVJDHT46uYMqLBunRLkOj5Oop2c_-1-wos3d9k2GHlxvO6zLwUK4",
+                "title": "aquaskyplus.com",
+                "start_index": 863,
+                "end_index": 964
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFbe6C7tUIceOQrhB6FWqnIrv1wmR3aRpP4yTCBgAn4aFE5z1WxNbLJuGLjnTtpTarb58ILztpdNWAd-wanexQGHFqsa-5zKNkQQ31ogsMi63XaF39_7US",
+                "title": "aquaskyplus.com",
+                "start_index": 1280,
+                "end_index": 1398
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgGCWIJR-nswvHDRACCdQ4foklH2SN9buub1NmCCLn2XVMIsf3LcmL4wtUj6RQ21IXcFpTL3HWYSzpReiPu5z9qE44AQCylvrUoEORTyVeqFTJzy4ZO9H4y4pVWB9ptDr647gz1XJvQRRkirQ_E6ujALdbtsXlXKMnEy-b3WvlyicD",
+                "title": "manualslib.com",
+                "start_index": 1772,
+                "end_index": 1879
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4kO3XP4w1giu2j-tqFc87xU_uxn64QNXMCXEbzBvpp791VRZZ-0FiMCQz2pmaGuMdiEKh7EOUAcGkUuNui81liQnmkqGQxT0zo4HyhkxhjrCrP7jTcdzQGm8q0ZgP4b6IlNSdBxFZ_daQFB0s26UjI7QjHHlaQDG9koGd4KY6e7YFvNKuYtYl3WQq",
+                "title": "aquariumcoop.com",
+                "start_index": 1886,
+                "end_index": 2066
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVX5g3jlC2j9c0gSC715katPttBI-BIfFb43NsuQ19-z7fHIvUWrC6bVcZXudXHoI0_CIZrJaPpaA75H0CnmtiGTHemS94IuOOlXZUT91Fx2DpSL0ZFs86qL5gyKvwqqlLTZkP-Tzy5IQYZ70QVRxNLpa0udLbYBl8HHjeASY=",
+                "title": "facebook.com",
+                "start_index": 1886,
+                "end_index": 2066
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz_ZQc7Hvy3a-Yz66SLudP0X6kUjnNTG3VDGd06l2cN1_9Ur8fqzBCp9fNzseFbjERJ4ajTJiJ0KTu5BC9O_4iM0yqKD4Blym2EWaVWoww2Cxr8br4hJ2NRHCeyPHLGufJ9U47zdBkPMeb-I6bjRd5ZnF9Ja2JTL620jccpDczcNYg2Ayd",
+                "title": "scene7.com",
+                "start_index": 2073,
+                "end_index": 2212
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEO8jf0TfMlj3TmoTv7CkBcEYULWnihSiej6r2zFxuQgw9R1SBAs_07wl9MewQdcQIPEQtw3Q_wYU1JKPspSTfPqywkPGnUnEWrooOMWoHhbpKsStjeXXntjuyTH86J-cL3IGBTpjx8p6YfgH2-bZVTvloAND-cn2UB0hlaUSGfMvwh7iYP",
+                "title": "scene7.com",
+                "start_index": 2219,
+                "end_index": 2363
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQyVV2SA0ppzaAuNvbAe122I6eFV58cwsZXijkQ9fuIYJMRZtkavRnjoTSjwV1qVzcaW8htYDVsSUHJBdrpReK1Ljyxu7mLz2kTdwj69Njd64id5VDPBssmxhn4BJQO5dfq80rh9t6YlHWXFYGsD0_avZP3nEPIcHtGNOf1bhBwxsEPtfoIiZqQ2aS9RjaJvqYtv_YNScYZnp7cf2nbM_zEfwGoL_OUueJZKI77dYX3VM_ILIvxKQtuJKRa5Bwm4_cP8GtNZR-jLvdV1IA70-Xpukng7H8lVxbIUcqM3g9Yz6c7HoIawR52gcmfUTxYKgwOg2H2P3jIwXaiLo_8hz3-2-XSuvPkOR9R8Qn1vdRq3IReS1ZWp5pGLjATSzrsQqaFv0fD2fKOE39IkuJTMBkoLfwcvZltQQRAJhD2cwEnw7FZetEW_fwPha1W42Yp-DtVAxTixwBzz-Puv-qoV8AXV7V4W3l1KdVAY-MQ9uiU8yo0Fa852pAYCJpAsvSMtACJr3wSHkSvipw9xJiGgsGfa9lB7CrExWZVmYGfPE5Sks9AV0xZOKut9yLytwufxPWzHtWagXQlF1HOSxlOfPNFgkgpIZX53XP8flYbQauDkHV43D42Pc_0ut1ffHSzfqFgCiFuQJjSVaQTyTCBV_gXYY-0F8npYX0V_RQRQramuLT-xu1tNO2FLknt3hat1y9Jmjq",
+                "title": "facebook.com",
+                "start_index": 2994,
+                "end_index": 3086
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMxzwiJdLcLyGS-gvWtAVn8uTDoSN-cXn6YJVql8_rqHI2GKnFmSIruhPk8a3rCG3OB_hTtkZieJHrxXpp0JRmMvMiLe-hamnhslx26P63ILamI-xKGkWOHsRw2I-pv-BahG56mXxBkmUxBmeyYyvG9QEyF0V1T-M9toJFLT0-RHNnGA0hJMHw-HXDu8pvkZV40xQX6vkjpwcBG4F2Gk9KTkzwp2pa-lY6bNIJF9ZhlK2kWiZsXET_O589Ec98QfmMagNHy3yiWJNqF0644mrJpEwQ4kr6kl8dXI65QPy6gZKhrDu2q0KphvmpYSJ7qGDhQYYDombdy7Jtdq0-ObiT4sr-pRv4UuTTRhzIFU_uoxjtnROyL8Wku0_O4qawNySMHrMJLN92qGEzMToG29GPjiBcwaS5q0fV1fZhn9G2ku7CF9nIWHSSuppYYhw=",
+                "title": "coupang.com",
+                "start_index": 3526,
+                "end_index": 3796
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 3362,
+      "total_tokens": 3435,
+      "cost": 0.12466225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.12466225,
+        "upstream_inference_prompt_cost": 5.475e-05,
+        "upstream_inference_completions_cost": 0.0126075
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2000,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 8
+      }
+    }
+  }
+}

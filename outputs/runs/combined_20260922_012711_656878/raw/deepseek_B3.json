@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 與 Amtrol、Global Water Solutions 同等級產品的性能比較？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011227-46PS3GCirzPiDK5f5o2T",
+    "object": "chat.completion",
+    "created": 1790011227,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "目前公開網路資料**不足以對 AQUASKY、Amtrol、Global Water Solutions 三家的同等級產品做出完整、同基準的性能比較**。原因是有關 AQUASKY 的資料多來自其官方網站，Amtrol 的資料只找到一篇經銷商博客的介紹，而 **Global Water Solutions 在本次搜尋結果中完全沒有出現任何產品規格或性能資料**，因此無法納入實質比較。以下僅就「可查證到的少數規格與特點」做有限度對照，並明確標示不能比較的部分。\n\n## 可比較的有限項目\n\n| 比較項目 | AQUASKY 溢康 | Amtrol Well-X-Trol | Global Water Solutions |\n|---|---|---|---|\n| 泵浦壓力桶最大工作壓力 | 10 / 16 / 25 bar（約 150 / 230 / 360 PSI）[aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客稱 150 PSIG（約 10.3 bar）[ackersonpump.com](https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/) | 本次搜尋無資料 |\n| 最高工作溫度 | RO 桶、泵浦桶、熱膨脹罐均 90°C；導熱液體膨脹罐 120°C [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客未提及 | 本次搜尋無資料 |\n| 保固 | RO 罐 3 年；其餘多數罐體 5 年，僅限製造缺陷 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客稱 7 年 [ackersonpump.com](https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/) | 本次搜尋無資料 |\n| 飲用水接觸材料 | FDA 食品級水層、NSF 認證丁基橡膠隔膜、三層環氧塗層 [aquaskyplus.com](https://aquaskyplus.com/feature.php?lang=zh) | 聚丙烯內襯與丁基隔膜，博客稱可避免「橡膠味」[ackersonpump.com](https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/) | 本次搜尋無資料 |\n| 認證 | NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC；符合 PED 2014/68/EU、EN 13831；材料符合 RoHS、REACH、PFAS、TSCA [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客未列認證清單 | 本次搜尋無資料 |\n| 製造與客製化 | 台灣台中 100% 製造商，廠內完成焊接、塗裝、壓力測試、組裝、包裝；提供 3D 建模、壓力模擬、快速原型、尺寸與顏色客製 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客強調多圓頂結構、焊接氣閥桿、專利擾流器 [ackersonpump.com](https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/) | 本次搜尋無資料 |\n| 壓力循環測試 | 稱進行 100,000 次連續壓力循環測試 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客未提及 | 本次搜尋無資料 |\n| 起訂量與付款 | 最小起訂量一個 20 呎櫃，可混裝；FOB 台中；首單 100% T/T，後續 50% 定金、50% 出貨前付清 [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ) | 博客未提及 | 本次搜尋無資料 |\n\n## 可以謹慎解讀的部分\n\n1. **壓力等級**：AQUASKY 泵浦壓力桶提供到 25 bar 的選項，高於 Amtrol 博客所稱的 150 PSIG。但這不是「同級產品對同級產品」的嚴謹比較，因為兩邊的型號、容積、應用場景未必對應，而且 Amtrol 的數據來自經銷商博客，不是原廠技術資料表。\n\n2. **保固**：Amtrol 博客稱 7 年，AQUASKY 官網稱多數罐體 5 年、RO 罐 3 年。單看年限 Amtrol 較長，但保固條件、涵蓋範圍、是否含人工與運費並不相同，不能只憑年限判定優劣。\n\n3. **認證**：AQUASKY 官網列出了相當完整的飲用水與壓力設備認證清單。Amtrol 博客沒有提供認證清單，因此不能說 Amtrol「沒有認證」，只能說本次搜尋到的資料未列出。Global Water Solutions 同樣無法評估。\n\n4. **材料與飲用水品質**：兩者都使用丁基隔膜與某種內襯／水層設計，方向類似。AQUASKY 明確列出 FDA 食品級水層與 NSF 認證丁基橡膠；Amtrol 博客則強調聚丙烯內襯可避免異味。實際水質表現需要第三方實驗室數據才能比較。\n\n## 不應比較或無法比較的部分\n\n- **實際使用壽命、故障率、氮氣保持率**：沒有任何一家的第三方測試報告或長期實測數據。\n- **價格與總擁有成本**：本次搜尋沒有可比的報價或通路價格。\n- **Global Water Solutions 的任何性能**：本次搜尋結果完全沒有該公司的產品資料，無法與另外兩家對比。\n- **同容積、同壓力、同應用的型號對型號比較**：三家的產品線命名與規格分級不同，公開資料不足以做出精確配對。\n\n## 結論\n\n以目前可查證的公開資料，只能說 AQUASKY 在**壓力選項、認證清單、客製化與製造透明度**方面有較多官方揭露；Amtrol 在本次找到的經銷商博客中，被強調的是**較長保固、較高工作壓力與防漏設計**；**Global Water Solutions 則完全無法比較**。若要真正比較同等級產品的性能，建議直接向三家索取同容積、同壓力等級型號的技術資料表、第三方測試報告與保固條款，並要求提供飲用水認證證書與壓力循環測試數據，再以相同基準對照。\n\n如果您能提供具體型號（例如 AQUASKY 的某個泵浦桶型號、Amtrol Well-X-Trol 的某個型號、Global Water Solutions 的某個型號），我可以再嘗試針對該型號搜尋更精確的規格。",
+          "refusal": null,
+          "reasoning": "用户想比较 AQUASKY 与 Amtrol、Global Water Solutions 的同级产品性能。我需要先确认搜索资料中是否有足够的可比数据，再决定能比较哪些维度、不能比较哪些维度。\n\n搜索结果中有 AQUASKY 的官方 FAQ、产品页面、公司简介，以及一篇关于 Amtrol Well-X-Trol 的博客。这些资料提供了 AQUASKY 的部分规格和认证，也提供了 Amtrol 的部分特点，但没有 Global Water Solutions 的信息。所以我不能直接给出三方完整对比，只能做有限比较，并明确说明缺失。\n\n我可以从压力等级、温度、认证、保固、材料、制造能力和价格几个维度来对比。AQUASKY 的数据来自官网 FAQ 和产品页；Amtrol 的数据来自 Ackerson Pump 的博客，这是经销商博客，不是制造商官方技术文档，需要标注来源性质。Global Water Solutions 完全没有搜索结果，所以无法比较。\n\n具体可比点：AQUASKY 泵浦压力桶有 10/16/25 bar 选项；Amtrol Well-X-Trol 博客称最高工作压力 150 PSIG，约 10.3 bar。AQUASKY RO 桶和泵浦桶最高 90°C；Amtrol 博客没有提温度。AQUASKY 保固 RO 3 年、其他多数 5 年；Amtrol 博客称 7 年。认证方面 AQUASKY 列出 NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC 等；Amtrol 博客只提到聚丙烯内衬和丁基隔膜，没有列认证清单。材料方面 AQUASKY 提到 FDA 食品级水层、NSF 认证丁基橡胶、三层环氧涂层；Amtrol 提到聚丙烯内衬和丁基隔膜。\n\nGlobal Water Solutions 没有任何资料，不能编造。我需要在回答中明确这是信息缺口。\n\n价格和总拥有成本没有可靠数据，不能比较。我应该建议用户向三方索取最新技术数据表或第三方测试报告。\n\n回答结构：先说明可比性限制，然后分维度做表格式比较，标注来源和限制，最后给出结论和下一步建议。",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "用户想比较 AQUASKY 与 Amtrol、Global Water Solutions 的同级产品性能。我需要先确认搜索资料中是否有足够的可比数据，再决定能比较哪些维度、不能比较哪些维度。\n\n搜索结果中有 AQUASKY 的官方 FAQ、产品页面、公司简介，以及一篇关于 Amtrol Well-X-Trol 的博客。这些资料提供了 AQUASKY 的部分规格和认证，也提供了 Amtrol 的部分特点，但没有 Global Water Solutions 的信息。所以我不能直接给出三方完整对比，只能做有限比较，并明确说明缺失。\n\n我可以从压力等级、温度、认证、保固、材料、制造能力和价格几个维度来对比。AQUASKY 的数据来自官网 FAQ 和产品页；Amtrol 的数据来自 Ackerson Pump 的博客，这是经销商博客，不是制造商官方技术文档，需要标注来源性质。Global Water Solutions 完全没有搜索结果，所以无法比较。\n\n具体可比点：AQUASKY 泵浦压力桶有 10/16/25 bar 选项；Amtrol Well-X-Trol 博客称最高工作压力 150 PSIG，约 10.3 bar。AQUASKY RO 桶和泵浦桶最高 90°C；Amtrol 博客没有提温度。AQUASKY 保固 RO 3 年、其他多数 5 年；Amtrol 博客称 7 年。认证方面 AQUASKY 列出 NSF/ANSI 58、61、372、CE、ACS、KC、WaterMark、UPC 等；Amtrol 博客只提到聚丙烯内衬和丁基隔膜，没有列认证清单。材料方面 AQUASKY 提到 FDA 食品级水层、NSF 认证丁基橡胶、三层环氧涂层；Amtrol 提到聚丙烯内衬和丁基隔膜。\n\nGlobal Water Solutions 没有任何资料，不能编造。我需要在回答中明确这是信息缺口。\n\n价格和总拥有成本没有可靠数据，不能比较。我应该建议用户向三方索取最新技术数据表或第三方测试报告。\n\n回答结构：先说明可比性限制，然后分维度做表格式比较，标注来源和限制，最后给出结论和下一步建议。",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "是的，溢康壓力桶符合歐洲 PED指令 2014/68 / EU（壓力設備指令）和符合 EN 13831。\n\n...\n\n產品符合 NSF/ANSI 58, 61, 372, CE, ACS, KC, WaterMark, UPC 等主要認證。\n\n...\n\n所有接觸水的零件材料均符合歐盟 RoHS、REACH、PFAS 及 TSCA 要求。\n\n...\n\n每一件產品均在 ISO 9001 品質管理系統下製造，確保材料與製程具備完整可追溯性。\n\n...\n\nAQUASKY 是一家製造商還是貿易商？\n\n...\n\n溢康（AQUASKY）是位於台灣台中的 100% 製造商。所有核心製程（焊接、塗裝、壓力測試、組裝、包裝）均在廠內完成，產品完全符合全球認證標準。\n\n...\n\n溢康隔膜壓力桶適合飲用水使用嗎？\n\n...\n\n可以，溢康隔膜壓力桶可用於衛生飲用水系統。\n\n...\n\n溢康壓力桶的最大工作壓力是多少？\n\n...\n\n| 壓力桶 | Bar | PSI |\n| --- | --- | --- |\n| RO逆滲透儲水桶 | 7.0 | 100 |\n| 泵浦壓力桶 | 10 / 16 / 25 | 150/ 230 / 360 |\n| 熱膨脹罐 | 10 | 150 |\n| 導熱液體膨脹罐 | 10 | 150 |\n\n...\n\n溢康壓力桶的最高工作溫度是多少？\n\n...\n\n| 壓力桶 | °C | °F |\n| --- | --- | --- |\n| RO逆滲透儲水桶 | 90 | 194 |\n| 泵浦壓力桶 | 90 | 194 |\n| 熱膨脹罐 | 90 | 194 |\n| 導熱液體膨脹罐 | 120 | 250 |\n\n...\n\n3D 建模與壓力模擬： 利用全 3D CAD 設計與內部壓力模擬，確保結構完整性。\n\n...\n\n快速原型製作： 數週內即可將概念轉化為功能性原型，縮短產品上市時間。\n\n...\n\n高度彈性： 提供尺寸、塗裝顏色與接頭規格的客製化選項。\n\n...\n\n溢康擁有哪些關鍵的製造技術或獨家專利？\n\n...\n\n卓越焊接技術： 符合 ASME VIII 與 EN 13831 標準。\n\n...\n\n100% 氮氣預充填： 減少壓力流失，維持長期穩定效能。\n\n...\n\n專利 Leak-Safe 接頭： 提供防腐蝕且防洩漏的系統連接。\n\n...\n\n高性能塗層： 多層環氧樹脂塗層可耐極端環境。\n\n...\n\n標準顏色（藍色、米色）無 MOQ 要求。客製化顏色 MOQ 為每批 400 件。我們接受同一個貨櫃中混合不同型號的訂單。\n\n...\n\n所有壓力罐均符合 NSF/ANSI 61 與歐盟 PED 標準。測試標準為進行 100,000 次連續壓力循環測試，模擬真實運作環境。\n\n...\n\n為什麼要使用隔膜壓力桶？\n\n...\n\n隔膜壓力桶可以使系統中的氮氣氣墊與系統水分開，防止水洩漏。因為氮氣在桶壁和隔膜外部之間，系統水在另一側。溢康壓力桶的外殼採用經過環氧粉末塗層，此外，這一系列的壓力桶也獲得了NSF 61認證。\n\n...\n\n相較於氧氣，氮氣通過隔膜橡膠的機率較小，這意味著壓力桶在使用時不需要重新加壓空氣壓力。氮氣對溫度變化非常穩定，這意味著在使用壽命期間充氣壓力更加一致。\n\n...\n\n最小起訂量為一個 20 呎櫃（可混榜），以 FOB 台中計價。付款條件首單 100% T/T，後續訂單 50% 定金、50% 出貨前付清。\n\n...\n\n保固條款與售後服務的具體內容是什麼？\n\n...\n\nRO 罐 3 年保固；其餘多數罐體 5 年保固。僅限製造缺陷，需提供證據，批准後將以產品更換方式於下一張訂單補足。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/feature.php?lang=zh",
+                "title": "AQUASKY溢康─關於產品特色",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY溢康─關於產品特色\n...\n專利無\n...\nFDA食品級水層\n...\nNSF飲水認證的丁基橡膠\n...\n膜高氣密材質\n...\n歐盟級焊接工藝\n...\n通過歐盟指令認證的焊接工藝\n...\n三層環氧防保護烤漆\n...\n專利氣閥結構"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/PUMPLUS",
+                "title": "PumPlus 泵浦增壓壓力桶 | 隔膜式水井壓力罐 | AQUASKY 溢康企業",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "## PUMPLUS – 泵浦壓力桶\n\n...\n\nPumPlus 泵浦壓力桶是加壓水系統內相當重要的元素之一，可以維持系統水壓在設定的標準值中。水儲存放於桶內隔膜和塑膠內襯之間，加壓氮氣區的氮氣使隔膜形成動能達到供水循環。 此過程可減少泵浦需要啟動的次數，使系統壓力維持在安全節能設定內。 隔膜的內含張力設計維持系統內的水壓穩定輸出。確保家中用水家電得以正常運行；沐浴時,水流量穩定輸出,不會忽大忽小。 PumPlus 泵浦壓力桶是一種節能裝置，無需維護，搭配正確尺寸的泵浦即可延長系統壽命，達到零維護費用目標，降低耗材成本，以符合您最有效益的需求。我們提供的壓力桶尺寸從1.3L到450L等多樣化選擇, 同時也提供給您最值得信賴的客製化服務。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/",
+                "title": "AQUASKY - Global Diaphragm Pressure Tank & Water ...",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY - Global Pressure Tank Manufacturer | Water Treatment OEM/ODM\n\nFounded in 1998\n\nPRODUCT LINE\n\nLARGE SIZE DL TANK ASME TANK\n\nSELECTION TOOLS\n\nCHECK ON SELECTION TOOL"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.ackersonpump.com/blog/amtrol-well-x-trol-water-tanks-best-in-industry/",
+                "title": "Why Amtrol Well-X-Trol Water Tanks Are the Best in ...",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "At Ackerson Pump Company, it’s important to us to use only the highest-quality products for our customers. As experts in the water tank and pump industry, we’ve seen plenty of products come and go, as well as what brands our customers use. In our professional opinion, though, Amtrol provides the best—especially with their steel Well-X-Trol water tanks. Below are a few reasons why.\n\n...\n\n## Strongest Tank Design\n\n...\n\nAmtrol’s steel water tanks are built to last, with quality built in throughout the manufacturing process. Their design also features multi-dome construction.\n\n...\n\n## Highest Working Pressure\n\n...\n\nAt 150 PSIG, you can’t find a better working pressure than Amtrol’s Well-X-Trol water tanks.\n\n...\n\n## Better-Tasting Water\n\n...\n\nA polypropylene liner and a butyl diaphragm in Amtrol’s water tanks prevent the “rubbery” taste that other water tanks sometimes give water.\n\n...\n\n## The Longest Warranty\n\n...\n\nSeven years! That’s the longest warranty you’ll be able to find for a water tank—and if it’s not and you find one with a longer warranty, trust us, you don’t want that water tank.\n\n...\n\n## Protection Against Leaks\n\n...\n\nAmtrol’s Well-X-Trol water tanks have a welded air stem to help eliminate leaks. This is a fantastic feature! Who needs a leaky water tank?\n\n...\n\n## The Best in Water Circulation\n\n...\n\nThese water tanks also have a patented turbulator device which will keep your water circulated properly and powerfully.\n\n...\n\n## Fast Installation\n\n...\n\nAmtrol hasn’t forgotten the actual installation process. Their Well-X-Trol tanks also include an optional pro-access connection for simpler installation."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1971,
+      "completion_tokens": 2056,
+      "total_tokens": 4027,
+      "cost": 0.0100585,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0030585,
+        "upstream_inference_prompt_cost": 0.0005913,
+        "upstream_inference_completions_cost": 0.0024672
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 474,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,46 +1,30 @@
-"""Utility to load golden questions from markdown file.
-
-Assumes the markdown lists questions as numbered or bulleted items. Returns
-List[str].
-"""
+"""Load question rows, preserving IDs, categories and exact wording."""
 from pathlib import Path
-from typing import List
 import re
 
 
-MARKDOWN_LIST_PATTERN = re.compile(r"^\s*(?:[-*]|\d+\.)\s+(.*)$")
+def load_question_records(md_path: Path) -> list[dict]:
+    text = Path(md_path).read_text(encoding="utf-8-sig")
+    rows = []
+    for line in text.splitlines():
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if line.lstrip().startswith("|") and re.fullmatch(r"[AB]\d+", cells[0]):
+            if len(cells) != 3 or not cells[1]:
+                raise ValueError(f"Invalid question row: {cells[0]}")
+            rows.append({"id": cells[0], "group": cells[0][0],
+                         "question": cells[1], "purpose": cells[2]})
+    if not rows:
+        for line in text.splitlines():
+            match = re.match(r"^\s*(\d+)\.\s+(.+)$", line)
+            if match:
+                rows.append({"id": match[1], "group": "legacy",
+                             "question": match[2].strip(), "purpose": ""})
+    if not rows:
+        raise ValueError("No question rows found; expected A/B table rows or numbered questions.")
+    if len({r["id"] for r in rows}) != len(rows):
+        raise ValueError("Duplicate question IDs.")
+    return rows
 
 
-def load_questions(md_path: Path) -> List[str]:
-    """Parse markdown file and extract question lines.
-
-    Parameters
-    ----------
-    md_path : Path
-        Path to markdown file containing the questions.
-
-    Returns
-    -------
-    List[str]
-        Extracted question strings in original order.
-    """
-    if not md_path.exists():
-        raise FileNotFoundError(md_path)
-
-    questions: List[str] = []
-    with md_path.open(encoding="utf-8") as f:
-        for line in f:
-            m = MARKDOWN_LIST_PATTERN.match(line)
-            if m:
-                q = m.group(1).strip()
-                if q:
-                    questions.append(q)
-    if not questions:
-        raise ValueError("未能在檔案中解析出任何問題，請確認格式。")
-    return questions
-
-
-if __name__ == "__main__":
-    path = Path(__file__).resolve().parent.parent / "AQUASKY AEO 監控專案 - 黃金問題庫 V3.0.md"
-    for idx, q in enumerate(load_questions(path), 1):
-        print(idx, q)
+def load_questions(md_path: Path) -> list[str]:
+    return [row["question"] for row in load_question_records(md_path)]

@@ -1,0 +1,202 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的保固條款和售後服務內容是什麼？"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "AQUASKY 的**保固條款**依產品型號與地區可能不同；就公開資料中較明確的 Fluval Aquasky 3.0 LED 版本而言，標準保固為**自購買日起 2 年**，且僅限**材料/製作瑕疵**與**正常使用條件**下的故障，並且**需提供購買證明**。[1][3]\n\n其**售後服務內容**主要包含**維修或更換**，而不是退款或其他賠償；官方文件也明確排除多種情況，例如**不當使用、疏忽、安裝錯誤、拆改、濫用、商業用途、耗損**，以及未妥善維護造成的損壞。[1] 另外，文件指出**LED 總數少於 5% 的失效**不視為保固缺陷。[1]\n\n公開手冊中還可確認，Fluval Aquasky 3.0 的保固是針對**有缺陷零件與工藝**提供，且在一般水族箱使用與服務條件下有效。[2][3] 若是較舊的 **Aquasky Bluetooth LED Strip Light（2.0）**，公開手冊則寫的是**3 年有限保固**，顯示不同世代產品保固年限不一樣。[4]\n\n如果你問的是**台灣通路或某家經銷商的 AQUASKY**，公開資料中也常見「**原廠保固 12 個月**」、「**新品 7 日內故障換新**」這類店家自訂售後規則，但那是**特定賣場條款**，不一定等同原廠規定。[6] 若你要，我可以再幫你整理成「**原廠保固** vs **台灣經銷商售後**」的對照表。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://fluvalaquatics.com/uk/wp-content/uploads/2024/11/16650-6_Aquasky_3.0_Manual_DE_UK_ENG_Nov28_24_AB.pdf",
+      "https://fluvalaquatics.com/uk/wp-content/uploads/2025/02/Fluval-Aquasky-3.0-Strip-Series-LED-Lighting-Instruction-Manual-INT.pdf",
+      "https://fluvalaquatics.com/uk/wp-content/uploads/2025/01/Fluval-Aquasky-3.0-LED-Series-Instruction-Manual-INT-1.pdf",
+      "https://fluvalaquatics.com/manuals/14550-6_Aquasky_2.0_Manual_EU_Aug23_18_AB_WEB.pdf",
+      "https://siurbliai.lt/wp-content/uploads/2019/03/Aquasky_garantija_LT_sena.pdf",
+      "https://www.acshop.com.tw/mobile/goods.php?display_mode=mobile&id=3644&from=rss",
+      "https://www.amazon.com/AQUASKY-Fluval-Bluetooth-Aquarium-Light/dp/B07BBSRDPL",
+      "https://www.adana.co.jp/jp/contents/support/lighting/manuals/AQUASKY_RGB_S_WEB.pdf",
+      "https://www.adana.co.jp/cn/contents/support/lighting/manuals/AQUASKY_RGB_BASIC_300-450_S_web.pdf",
+      "https://de.manual.ly/fluval/fluval-aquasky-bluetooth-led-20-12w-with-weatherdaylight-simulation-38-61cm/bedienungsanleitung",
+      "https://www.aquas.com.tw/zh-tw/a3/%E5%AE%A2%E6%88%B6%E6%9C%8D%E5%8B%99.html",
+      "https://www.aquas.com.tw/en/a3/Customer-Service.html",
+      "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf",
+      "https://www.saekodive-taiwan.com.tw/zh_TW/faq",
+      "https://www.ask-corp.jp/supports/warranty.html"
+    ],
+    "created": 1790008791,
+    "id": "ec4f9e80-e504-42fa-a474-add621695384",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2025-01-08",
+        "place_metadata": null,
+        "snippet": "2 YEAR LIMITED WARRANTY\nYour Fluval Aquasky 3.0 LED is guaranteed for defective parts and workmanship for a period of two years from the date of purchase.\nThis guarantee is valid with proof of purchase only.\nThe guarantee is limited to repair or replacement only and does not cover consequential loss...",
+        "source": "web",
+        "title": "AQUASKY 3.0 LED",
+        "url": "https://fluvalaquatics.com/uk/wp-content/uploads/2024/11/16650-6_Aquasky_3.0_Manual_DE_UK_ENG_Nov28_24_AB.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-07-19",
+        "place_metadata": null,
+        "snippet": "La luz LED Fluval Aquasky 3.0 está garantizada contra defectos de materiales o mano de obra en condiciones de uso normal del acuario y servicio por 2 años.",
+        "source": "web",
+        "title": "aquasky 3.0 led",
+        "url": "https://fluvalaquatics.com/uk/wp-content/uploads/2025/02/Fluval-Aquasky-3.0-Strip-Series-LED-Lighting-Instruction-Manual-INT.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-07",
+        "place_metadata": null,
+        "snippet": "Your Fluval Aquasky 3.0 LED is guaranteed for defective parts and workmanship for a period of two years from the date of purchase.",
+        "source": "web",
+        "title": "[PDF] aquasky 3.0 led - Fluvalaquatics",
+        "url": "https://fluvalaquatics.com/uk/wp-content/uploads/2025/01/Fluval-Aquasky-3.0-LED-Series-Instruction-Manual-INT-1.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-08",
+        "place_metadata": null,
+        "snippet": "Your Fluval Aquasky Bluetooth® LED Strip Light is guaranteed for defective parts and workmanship for a period of three years from the date of purchase.\n...\nCALL US ON (U.K. ONLY): Helpline Number 01977 521015.\nBetween 9:00 AM and 5:00 \nPM, Monday to Thursday and 9:00 AM and 4:00 PM on Friday (exclud...",
+        "source": "web",
+        "title": "[PDF] APP CONTROL LED - Fluvalaquatics",
+        "url": "https://fluvalaquatics.com/manuals/14550-6_Aquasky_2.0_Manual_EU_Aug23_18_AB_WEB.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-14",
+        "place_metadata": null,
+        "snippet": "AQUASKY pardavimų ir serviso atstovas Lietuvoje UAB „Vandens siurbliai“\nVilnius - Oslo g.\n11, tel. +370 686 31478, vilnius@siurbliai.lt\nKaunas - Kuršių g.\n7, tel. +370 612 33939, kaunas@siurbliai.lt  \nKlaipėda - Baltijos pr.\n8, tel. +370 686 83188, klaipeda@siurbliai.lt            \nŠiauliai - Giruli...",
+        "source": "web",
+        "title": "AQUASKY slėgio indai (hidroforai)",
+        "url": "https://siurbliai.lt/wp-content/uploads/2019/03/Aquasky_garantija_LT_sena.pdf"
+      },
+      {
+        "date": "2016-04-15",
+        "last_updated": "2026-02-05",
+        "place_metadata": null,
+        "snippet": "1. 原廠保固12個月 。\n2. 燈管、電極、電池等物品為消耗品，皆不屬保固範圍。\n3. 我們有提供新品7日內故障換新服務。",
+        "source": "web",
+        "title": "AC草影水族Mobile",
+        "url": "https://www.acshop.com.tw/mobile/goods.php?display_mode=mobile&id=3644&from=rss"
+      },
+      {
+        "date": "2020-12-01",
+        "last_updated": "2024-11-12",
+        "place_metadata": null,
+        "snippet": "### Add to your order\n- Coverage for accidental damage including drops, spills, and broken parts, as well as breakdowns (plans vary)",
+        "source": "web",
+        "title": "Amazon.com : Fluval Aquasky 2.0 LED Aquarium Lighting, 18 Watts, 24-36 Inches : Pet Supplies",
+        "url": "https://www.amazon.com/AQUASKY-Fluval-Bluetooth-Aquarium-Light/dp/B07BBSRDPL"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-01",
+        "place_metadata": null,
+        "snippet": "0256-72-1994（平日10：30～17：30）",
+        "source": "web",
+        "title": "AQUASKY RGB 60",
+        "url": "https://www.adana.co.jp/jp/contents/support/lighting/manuals/AQUASKY_RGB_S_WEB.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-19",
+        "place_metadata": null,
+        "snippet": "お問い合わせ先：ADAサービスセンター\nE-mail/support@adana.co.jp",
+        "source": "web",
+        "title": "AQUASKY_RGB_BASIC_300-450_共通説明書_S_front",
+        "url": "https://www.adana.co.jp/cn/contents/support/lighting/manuals/AQUASKY_RGB_BASIC_300-450_S_web.pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-17",
+        "place_metadata": null,
+        "snippet": "- Die 12-W-Leuchte liefert bis zu 800 Lumen, hat eine LED-Lebensdauer von 50.000 Stunden und umfasst eine dreijaehrige beschraenkte Garantie.",
+        "source": "web",
+        "title": "Schauen Sie sich dieses Handbuch an",
+        "url": "https://de.manual.ly/fluval/fluval-aquasky-bluetooth-led-20-12w-with-weatherdaylight-simulation-38-61cm/bedienungsanleitung"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-11",
+        "place_metadata": null,
+        "snippet": "開創水資源科技股份有限公司（下稱本公司）提供產品（下稱產品）保固期間之維修或更換不良品之服務。\n保固期從產品購買日起一年，如無法提出購買證明文件，則以本公司系統紀錄之出貨日起算。\n本公司對於產品提供材料及製造瑕疵保固，產品保固僅在產品經本公司訓練合格專業人員正確安裝及使用的 情況下有效，本公司的軟體(包括但不限於系統軟體、設定校正軟體、通訊軟體等)、資料品質、電池運轉時間等，不在本保固之涵蓋範圍內，本公司不保證產品之運作絕對不會中斷或沒有錯誤。\n...\n(一) 在送回產品前，須先填寫維修申請單送交本公司，並取得一組返修商品授權碼（Return Merchandise Authorization...",
+        "source": "web",
+        "title": "開創水資源科技股份有限公司─下水道管網流量、水位、水質監測製造商",
+        "url": "https://www.aquas.com.tw/zh-tw/a3/%E5%AE%A2%E6%88%B6%E6%9C%8D%E5%8B%99.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-05",
+        "place_metadata": null,
+        "snippet": "I. Warranty Period The warranty period is 1 year, coming into effect from the date of delivery.\n**II.\n** Warranty Coverage AQUAS provides a warranty for material and manufacturing defects in the Product.\nThe warranty for the Product is valid only when the Product is correctly installed and used by t...",
+        "source": "web",
+        "title": "Customer Service - Aquas Inc.",
+        "url": "https://www.aquas.com.tw/en/a3/Customer-Service.html"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-08",
+        "place_metadata": null,
+        "snippet": "Fax: 886-4-2561-6332\n...\nEmail: frankwang@aquasky.com.tw",
+        "source": "web",
+        "title": "[PDF] AQUASKYPLUS Ebook0823(WEB)",
+        "url": "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-06-02",
+        "place_metadata": null,
+        "snippet": "一、僅有經由本公司及授權經銷商售出之產品，才適用本公司產品保固及售後服務。\n本公司擔保只有原始購買者，自產品出貨日起享有２年有條件免費產品保固（Oceanic+ Dive Housing 為１年、OrcaTorch為１年、電池及充電器為６個月）及收費售後服務，保固期間\n內正常使用在休閒潛水、經過適當的照顧和維護，無材料缺陷之顧慮，如果任何原因證明產品是有瑕疵所造成之損毀、故障，可免費維修或更換新品、同類等值商品。\n...\n三、產品保固範圍不包括：遺失、遭竊、因意外損壞、濫用、竄改、缺乏維護、暴露於過高的溫度、過度的陽光照射、或使用不適當的化學品所造成的損壞。經由非本公司授權經銷商的維修服務，保...",
+        "source": "web",
+        "title": "售後服務 - 亞太國際潛水器材",
+        "url": "https://www.saekodive-taiwan.com.tw/zh_TW/faq"
+      },
+      {
+        "date": "2010-12-22",
+        "last_updated": "2026-08-20",
+        "place_metadata": null,
+        "snippet": "5. 本保証は日本国内での使用においてのみ有効です。修理品の受付、返却は日本国内のみの発送となります。\n...\n7. 保証の範囲は、本製品の修理、交換、又は同等機能の製品との代替交換に限ります。\n8. 製品の返金や、差額での上位品との交換は受け付けておりません。",
+        "source": "web",
+        "title": "保証規定 | 株式会社アスク",
+        "url": "https://www.ask-corp.jp/supports/warranty.html"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 448,
+      "cost": {
+        "input_tokens_cost": 0.00018,
+        "output_tokens_cost": 0.00672,
+        "request_cost": 0.006,
+        "total_cost": 0.0129
+      },
+      "prompt_tokens": 61,
+      "search_context_size": "low",
+      "total_tokens": 509
+    }
+  }
+}

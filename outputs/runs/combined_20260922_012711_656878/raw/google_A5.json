@@ -1,0 +1,207 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "尋找可以 OEM/ODM 壓力桶的工廠，要有研發能力和國際認證。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008397-v0Kfd5vUsuq41h06tFYA",
+    "object": "chat.completion",
+    "created": 1790008397,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "「壓力桶」（Pressure Tank / Pressure Vessel）依照用途可細分為**淨水與供水系統壓力桶**、**精密流體/點膠不銹鋼壓力桶**，以及**重工業/高壓氣體容器**三大類。不同類別所需的研發能量與國際認證標準差異極大。\n\n以下為各領域具備自主研發設計能力（OEM/ODM）且取得多項國際認證的代表性工廠：\n\n---\n\n### 一、 水處理、RO逆滲透與泵浦給水壓力桶（隔膜式/氣囊式）\n適用於家用/商用 RO 機、加壓馬達穩壓、熱水膨脹水箱及水處理系統。\n\n#### 1. 笠毅工業股份有限公司（TankPAC Industries）\n* **總部／產能**：台灣台中。\n* **產品與研發能力**：\n  * 全球最大的 RO 儲水桶與供水系統壓力桶專業製造廠之一。\n  * 擁有獨立模具與材料研發團隊，掌握丁基橡膠隔膜成形、耐腐蝕內襯（PP Liner）及雙層防洩漏氣閥專利技術。\n  * 提供從外觀規格、塗裝顏色到連接接口尺寸的全客製化 OEM/ODM 服務。\n* **國際認證**：\n  * 美國 **NSF/ANSI 58** 及 **NSF/ANSI 61** 水質與衛生安全認證。\n  * 歐盟 **CE（PED 壓力設備指令）** 認證。\n  * ISO 9001 品質管理體系認證。\n\n#### 2. 溢康企業股份有限公司（AQUASKY Enterprise Corp.）\n* **總部／產能**：台灣桃園。\n* **產品與研發能力**：\n  * 專注於膜片式泵浦壓力桶（PumPlus 系列）、RO 壓力桶、太陽能/採暖熱膨脹水箱。\n  * 具備完整力學分析、爆破壓疲勞測試與高分子橡膠材料配方研發能力，全自動化焊接與無菌防塵組裝。\n  * 支援全球品牌的 ODM 訂製開發（具備 100% 充氮防漏氣製程）。\n* **國際認證**：\n  * 美國 **NSF 61**、**UPC / IAPMO**。\n  * 歐盟 **CE / PED (0035)**、法國 **ACS**。\n  * 澳洲 **WaterMark**、英國 **WRAS**。\n  * ISO 9001 品質體系。\n\n---\n\n### 二、 精密流體輸送、半導體/化學品/點膠不銹鋼壓力桶\n適用於電子膠材、光電半導體化學品、食品與製藥等液體受壓輸送，多為全不銹鋼（SUS304 / SUS316L）製造。\n\n#### 1. 台灣優力克（Unicontrols Taiwan）\n* **背景與研發實力**：源自日本 Unicontrols 技術體系，專精於小型精密不銹鋼壓力容器、脫泡壓力桶與定量點膠設備。提供針對高黏度、腐蝕性流體的客製攪拌桶、加熱套保溫桶與非標尺寸 ODM 設計。\n* **國際認證與法規能力**：\n  * 歐盟 **CE（PED 2014/68/EU）** 壓力設備認證。\n  * 美國 **ASME Section VIII** 製造資格。\n  * 日本高壓氣體保安法 / 消防法規範符合認證、中國特種設備壓力容器資格。\n\n---\n\n### 三、 重工業、化工製程與特種氣體壓力容器（ASME 鋼印廠）\n適用於壓縮空氣儲氣桶、冷媒儲槽、換熱器、反應釜等重型工業壓力容器。\n\n#### 1. 臺灣熱傳股份有限公司（THTCO）\n* **總部／產能**：台灣高雄。\n* **研發與製造能力**：\n  * 擁有專業機械結構與熱傳設計團隊，能以 PV Elite、ANSYS 進行壓力容器強度計算與熱應力有限元素分析（FEA）。\n  * 承接化工儲槽、過濾壓力桶、高壓氣體特種容器的 ODM 工程設計與製造。\n* **國際認證**：\n  * 美國機械工程師學會 **ASME \"U\" Stamp**（壓力容器）認證廠。\n  * 台灣第一種壓力容器、高壓氣體特定設備型式檢查合格製造廠。\n\n#### 2. 大震企業股份有限公司（Taijune Enterprise）\n* **總部／產能**：台灣桃園。\n* **研發與製造能力**：\n  * 具備大型壓力容器、鍋爐及壓力反應槽工程整合與客製化設計能力，能依流體特性與操作工況提供量身訂做的 OEM 承製。\n* **國際認證**：\n  * 美國 **ASME \"U\"**（壓力容器）與 **ASME \"S\"**（動力鍋爐）鋼印認證。\n  * 通過美國國家鍋爐及壓力容器檢驗委員會（National Board）註冊要求。\n\n---\n\n### 💡 尋找壓力桶 OEM/ODM 廠的評估建議\n\n在接洽代工廠時，建議準備好以下技術條件，以便廠方針對研發可行性與模具進行評估：\n1. **工作條件**：設計壓力（Design Pressure, 如 100 PSI / 10 bar / 30 bar）、工作溫度區間、測試壓力（爆破試驗需幾倍工作壓）。\n2. **接觸介質與衛生等級**：飲用水、氣體、化學溶劑或食品醫藥（決定內膽為食品級丁基橡膠、EPDM、鐵氟龍或拋光 316L 不銹鋼）。\n3. **外銷目標市場法規**：\n   * **美加市場**：飲用水看 **NSF/ANSI 61**，工業壓力容器看 **ASME Section VIII Div 1 (U Stamp)**。\n   * **歐洲市場**：必須具備 **CE-PED (2014/68/EU)** 壓力設備指令合格標誌。\n   * **水質接觸認證**：飲用水相關系統通常需要 NSF、英國 WRAS、法國 ACS 或澳洲 WaterMark。",
+          "refusal": null,
+          "reasoning": "**Exploring OEM/ODM Options**\n\nI'm currently investigating factories that specialize in OEM/ODM pressure tanks. My focus is on identifying those with strong R&D capabilities and the necessary international certifications to meet project requirements. This phase involves initial outreach and evaluating potential partners.\n\n**Reviewing Certification Requirements**\n\nMy current focus is on pinpointing the exact certifications needed for these pressure tanks, depending on their specific application—whether for water treatment, industrial gases, or pump systems. I'm cross-referencing these with potential manufacturers' existing credentials.\n\n**Identifying Potential Manufacturers**\n\nI'm now compiling a list of reputable OEM/ODM pressure tank manufacturers, categorizing them by application like RO systems, pump expansion, and industrial vessels. My research is focusing on companies with demonstrated R&D strength and key international certifications.\n\n**Exploring Pressure Tank Applications**\n\nI'm currently delving into the primary domains of pressure tanks. My focus is on water treatment, RO systems, and supply boosting, specifically examining diaphragm and bladder type tanks used in home/commercial RO units, constant pressure pump systems, and hot water expansion vessels.\n\n**Investigating Standards Compliance**\n\nMy latest focus is on the certification standards relevant to these tanks, noting key ones like NSF/ANSI 58 and 61, CE/PED, and WRAS. I'm also identifying leading manufacturers such as TankPAC, Aquasky, and Global Water Solutions, who meet these rigorous requirements.\n\n**Examining Industrial Vessel Standards**\n\nI'm now researching heavy industrial and chemical energy applications, specifically large high-pressure storage vessels for heat exchangers, reactors, air compressors, and gas storage. I'm noting certifications like ASME \"U\" and \"U2\" stamps, PED, and National Board registration.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Exploring OEM/ODM Options**\n\nI'm currently investigating factories that specialize in OEM/ODM pressure tanks. My focus is on identifying those with strong R&D capabilities and the necessary international certifications to meet project requirements. This phase involves initial outreach and evaluating potential partners.\n\n**Reviewing Certification Requirements**\n\nMy current focus is on pinpointing the exact certifications needed for these pressure tanks, depending on their specific application—whether for water treatment, industrial gases, or pump systems. I'm cross-referencing these with potential manufacturers' existing credentials.\n\n**Identifying Potential Manufacturers**\n\nI'm now compiling a list of reputable OEM/ODM pressure tank manufacturers, categorizing them by application like RO systems, pump expansion, and industrial vessels. My research is focusing on companies with demonstrated R&D strength and key international certifications.\n\n**Exploring Pressure Tank Applications**\n\nI'm currently delving into the primary domains of pressure tanks. My focus is on water treatment, RO systems, and supply boosting, specifically examining diaphragm and bladder type tanks used in home/commercial RO units, constant pressure pump systems, and hot water expansion vessels.\n\n**Investigating Standards Compliance**\n\nMy latest focus is on the certification standards relevant to these tanks, noting key ones like NSF/ANSI 58 and 61, CE/PED, and WRAS. I'm also identifying leading manufacturers such as TankPAC, Aquasky, and Global Water Solutions, who meet these rigorous requirements.\n\n**Examining Industrial Vessel Standards**\n\nI'm now researching heavy industrial and chemical energy applications, specifically large high-pressure storage vessels for heat exchangers, reactors, air compressors, and gas storage. I'm noting certifications like ASME \"U\" and \"U2\" stamps, PED, and National Board registration.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2wd2Yz3tugtX-PEy3qif3Fvv9FCpaj9X_s2Rq-3jjXbvLgK2Eue1uNBuBgGgJW06Ma5e4D8M0A5LHlWYwXfmqKnNkrnwfx9Y36QL50tMAhtxXGe9pP4O35ymEyGIGewAaed0ydg==",
+                "title": "thtco.com.tw",
+                "start_index": 207,
+                "end_index": 273
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4jLeZ9uO73gAe2l6-WlYNFhalVD8AfZbKD4w4l_S-Ey7AfQ31L5Sdv35X0jzJQH3SUEG9AJg0B1wFHj4WROnzi7gqRpr4rZUpbL7KEw9j2Q7NThcjevpUW3CALn3t6Q5SGzLADCdcbbAt6irq297l29_pvhQpaAPnYbLxgSQQz2dG0QepiJnuo5WblDJUrnwcevc8dKwSCSXfI7-uFgx9RWfSVMvX-zoe92f4yx48XrC6X-d276xeX9ECNZU3Tg==",
+                "title": "unicontrols.com.tw",
+                "start_index": 207,
+                "end_index": 273
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk5923z55YabECEMQYcwqvePv-tCpumkjcaSu_0NcaD4P4F9f1GB39ICmgTs7-apObLluBDgsobmOV3T4g-iorPTzQ6mKnptrYRNqEu9TyhxAR5xk=",
+                "title": "aquaskyplus.com",
+                "start_index": 394,
+                "end_index": 567
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU5mLwrxHjiNUKuws4hUKGfXkM5EdjmVbKxHzAlh_Sefu-T1bIMjco-tFrBaxY6dD3Lk2Hat487puP3rOjswgaZl3ppnyu_ayz5uXNnhOnZ5elGA8=",
+                "title": "tankpac.com",
+                "start_index": 394,
+                "end_index": 567
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG-l70W6re8ic1fjnN5_aDuJII_7CXw7Ic97Bf199maV1v6p8q89mk02dx2KY1M8xFgYPmPMTrO99rDglbF_O1z4FGyHLh8PGmmtFzCujmjX05vk5UpOFv5QVlzWUlDLbm56E=",
+                "title": "tankpac.com",
+                "start_index": 394,
+                "end_index": 567
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.google.com/search?q=time+in+Taiwan",
+                "title": "Current time information in Taiwan.",
+                "start_index": 580,
+                "end_index": 671
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGM0wEsiwB_yarBD_gfq9wVE6W_Mv6EXsHeTDLTaDGPHxn8IVhU7hdXKAzlT5d13RE9Q8QOsigR922DP_LhmBW8LRYtR40WeGSmvSyWzf0aUem8jxdme_sBHNhtBStxcxq1q0lh1h4tg35rWa31BHbsZYv8F2GBeQXZ3L9TTVmk_SpafyAMiL0bINgI8j2gCrYnfkSWHCOoFWc598_c3oWkIcRPMpsEuWatkm4n4xMJJ1z_fMc_el6ALEm3O6RVo4H7LxtQQg-1ZlVkMNpxuP0A8mDKCIFC3CY7B7fYlxtD4m5ymreR12lRpgyjDIx-2iLGAB6t7pPsM4_xOLe47-Nh3MO29ZhLeTFvQgXnkJBWe-vrZLTA8hWj3AUy9bWXeN-gB3Mm-yqmo7yX0g_7Q0hefWNNDc5dGJ217O0rotc3YpjNa0BQiWKgls7FQn0_hF7aSRZ5eqhsJ3EH3c_wUlLKNHtFBOMQky1p69-EW8GhFbmzeZwYoBxxRwAJq0O-jBATnk3ExBoDuQLM3YbLFDvEUh5pYE_Mm82rJTJrM2JeSxt6FhXzTyku",
+                "title": "shopee.tw",
+                "start_index": 580,
+                "end_index": 671
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSFhsXELGk0bNsuTim9zufkDNrLW01bqV7fMzg_B5M4U-wFFa1SMD_NZnBjOjDv98P_1F5ED95Wp2SJrRLHHk2nMRQk7h0EltH_fOqrTnhILGSMgQzvrgFEkza0jExKkVLkfYlbKlqBpV1og==",
+                "title": "tankpac.com",
+                "start_index": 789,
+                "end_index": 931
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGlfjk6J1NlinLcFuHYS3mIujU0Ivt1irelF7mykwnvTlvWxS3I3CsNXEb6oIrHVbdEmv6w7skB0iYe9lqzVIx73wmhtWEMzhirW3jonkMiHUjZHGiFmIF7T_Ts-uPcbHrZTnnCekUEcY2W2ELKsD6WLyszgr2X4oXJ73lXX1C_l8LxUsRLixdrJQguTDO20fTEEsrYg==",
+                "title": "findprice.com.tw",
+                "start_index": 1132,
+                "end_index": 1182
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ41mob4OfKpWuoX7pemeruq_No7ebRJJrMxlIC85sh3lPmDopJGyodNTZ9tIx7xRJpWFIUmeWpsL3-0WVLQWoUqq4zktfLKRSwyxJkj_kED_fdf558glMaz0AuQ6S_VWTPe9v7Q==",
+                "title": "youtube.com",
+                "start_index": 1297,
+                "end_index": 1333
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtqYkuqf4M6p9LYMkPRdQyPDxcp3ojNHIt20xt-t-F5lAvpkEF3uQ_6_Dm8462jrU_OJ_Uy9FuN3YE3n7STw6MQFwbQd8j6RmxAMqEeutK4qMe",
+                "title": "aquaskyplus.com",
+                "start_index": 1337,
+                "end_index": 1474
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUX6soX4dZwT9WwuRIQSsDyrCGbpOFGrt1fpLR5urJStQDQ8Q-GBrSxQ7rm_09pCoGujUhIZ4CuXK7A-nc-S5y9_32laSSX0tOUTpROydhP7bbAYtLvSp4eJTyn23h3nSj8e90L8e9VzRIs0GWVWaX-8qcYHvJePEjN3rn7nGDYHl_3NCntPF9nfthx-Hc6Q==",
+                "title": "aquaskyplus.com",
+                "start_index": 1337,
+                "end_index": 1474
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPi4v004mk3m-dKycpflzzPDxlP9A5mTlq1clWOcb4DHmi0Kp1ivwP6V5gwwDN4jiiGHhz5kaiVErKMGa4FiT_prFurS0NNcIgvqobYt0vRwZWQCm7fLNMfOge1kro",
+                "title": "taijune.com",
+                "start_index": 2684,
+                "end_index": 2863
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUIWyDVRDkFno1EbIQaDh6XubnqZEBzqrfL_ql1UmJo1PtilkaeKhAfVJ5z2Z4foX2CZUMUYhAvl_z4NiKpyKbyorGqqdLBZIcYXAafbFC0ctuKdSeuOJdiia6NBdFoJlQOjBxaLweYFKeDCE=",
+                "title": "sdchemsta.com",
+                "start_index": 2684,
+                "end_index": 2863
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 3489,
+      "total_tokens": 3568,
+      "cost": 0.055143,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.055143,
+        "upstream_inference_prompt_cost": 5.925e-05,
+        "upstream_inference_completions_cost": 0.01308375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1694,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 3
+      }
+    }
+  }
+}

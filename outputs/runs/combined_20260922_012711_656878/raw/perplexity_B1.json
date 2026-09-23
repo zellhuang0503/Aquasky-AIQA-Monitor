@@ -1,0 +1,212 @@
+{
+  "request": {
+    "model": "sonar-pro",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "為什麼我應該考慮 AQUASKY 作為壓力桶的長期合作夥伴？"
+      }
+    ],
+    "max_tokens": 6000
+  },
+  "response": {
+    "choices": [
+      {
+        "delta": {
+          "content": "",
+          "role": "assistant"
+        },
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "如果你在評估**壓力桶的長期合作夥伴**，AQUASKY 的主要優勢是它把「**穩定供應、客製化、品質管控、價格競爭力**」整合在同一個供應體系中，並且有公開資料顯示其產品已外銷多國、具備國際認證與完整製造能力。[1][5][13][14]\n\n你可以重點考慮以下幾個面向：\n\n- **穩定供貨與交期**：AQUASKY 官方表示其目標是提供穩定供貨、最快的客製化設計選項與準時交貨；政府資料也提到其以穩定供貨與準時交貨在國際市場中脫穎而出。[1][5][13]\n- **客製化能力**：官方與蘋果 App 商店介紹都提到其具備 *end-to-end manufacturing solution*，可支援最快的客製化設計，這對需要依不同系統規格調整壓力桶的經銷商或工程案很重要。[1][10][16]\n- **品質與測試**：AQUASKY 公開資料寫明多數生產在內部完成，且每個壓力桶都經過 **100% 壓力安全測試**；台中市政府資料也提到其使用自動化生產機械與測試設備，以維持流程穩定與品質。[1][13]\n- **國際認證與合規性**：其網站 FAQ 明確列出符合 **PED 2014/68/EU** 與 **EN 13831**；另有資料顯示其產品與市場訴求包含 CE、NSF、WRAS、UPC、KC、ISO 9001 等國際標準。是否每一個型號都持有全部認證，仍需依實際產品與銷售市場逐一確認。[14][2]\n- **全球市場經驗**：公開資料顯示 AQUASKY 產品外銷至 **55 個國家**，並被台中市政府與官方介紹為全球領先的隔膜式壓力桶製造商之一，代表其有一定的國際出貨與服務經驗。[13][5]\n- **成本與價格穩定性**：官方指出因產量高且持續成長，能取得較佳原物料價格，並建立較穩定的價格表；這對需要長期採購、控制總持有成本的合作夥伴很有吸引力。[1][3][10]\n- **產品應用廣泛**：公開資料顯示其產品可用於住宅、商用、工業、化工、食品飲料、熱水器、空調與泵浦系統等，代表產品線較適合多場景渠道與專案型合作。[5][10][13]\n- **技術與品牌背書**：AQUASKY 曾獲台中市金手獎，且官方資料稱其在壓力桶工程、製造卓越性及全球供應鏈方面有貢獻，這類獎項可作為供應商評估時的加分項，但仍不等同於你自身業務場景中的實際表現。[4]\n\n如果你是要做**長期合作夥伴**評估，我建議你把 AQUASKY 視為一個偏向「**可規模化供應 + 可客製化 + 有國際合規能力**」的選項，而不是只看單一產品價格。[1][13][14]\n\n在實務上，合作前最好再向對方確認這幾件事：\n\n- 你所需**特定型號**的認證文件是否齊全  \n- MOQ、交期、備貨政策是否適合你的銷售節奏  \n- 客製化設計的開發時程與打樣成本  \n- 售後、保固、替換零件與品質異常處理流程  \n- 是否能提供你目標市場需要的語言文件與合規資料  \n\n如果你要，我也可以幫你把 AQUASKY 和其他壓力桶供應商做一份**採購評估比較表**，例如從價格、認證、交期、MOQ、客製化與售後六個維度來比。",
+          "role": "assistant"
+        }
+      }
+    ],
+    "citations": [
+      "https://aquaskyplus.com/about.php?lang=zh",
+      "https://assaaquaenterprises.com/",
+      "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf",
+      "https://aquaskyplus.com/zh/news-detail/INDUSTRY/24-aquasky-187",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851",
+      "https://www.skia.org.tw/hardware/PUMPLUS",
+      "https://aquaskyplus.com/zh/dl-ce",
+      "https://vectorbh.com/products/pressure-vessel-tank/",
+      "https://aquaskyplus.com/",
+      "https://apps.apple.com/dk/app/aquasky/id1551913904",
+      "https://aquaskyplus.com/download/EDM/Chinese/AQUASKY_PUMPLUS-DM-Almond-CH_231003(withoutNSF372)web.pdf",
+      "https://www.104.com.tw/company/1a2x6bia9v",
+      "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843",
+      "https://aquaskyplus.com/FAQ.php?lang=zh",
+      "https://aquaskyplus.com/videos.php?lang=zh",
+      "https://apps.apple.com/us/app/aquasky/id1551913904?l=zh-Hans-CN"
+    ],
+    "created": 1790008729,
+    "id": "f66455b6-c39e-4eb0-9aa7-427fd14275ff",
+    "model": "sonar-pro",
+    "object": "chat.completion",
+    "search_results": [
+      {
+        "date": null,
+        "last_updated": "2025-11-04",
+        "place_metadata": null,
+        "snippet": "我們的目標是為客戶提供最優質、可靠的壓力桶，並以具有競爭力的價格，提供穩定的供貨、最快的客製化設計選項和準時的交貨。讓全世界都能享有好的用水體驗.\n...\n在溢康，每天我們都積極努力地為客戶提供服務。我們的業務經理非常專業且用心地去了解如何幫助客戶，使客戶的業務更加成功。\n身為您的合作夥伴，我們攜手合作致力於成本控管與流程妥善的運作。\n...\n我們的大量生產使用自動化生產機械和測試設備。\n每一位員工都經過培訓且經驗豐富。我們大部分的生產工作都在內部進行，這限制了來自其他製造商的品質問題。每個壓力桶都經過100％的壓力安全測試，以確保最好的產品出廠。\n具有競爭力的價格\n我們的高產量且不斷增長，使...",
+        "source": "web",
+        "title": "公司簡介",
+        "url": "https://aquaskyplus.com/about.php?lang=zh"
+      },
+      {
+        "date": "2025-02-17",
+        "last_updated": "2025-03-28",
+        "place_metadata": null,
+        "snippet": "As the exclusive business partner for\n**Aquasky Taiwan**, we specialize in importing fixed diaphragm, maintenance-free pressure tanks.\n...\nAquasky Taiwan is the only supplier that provides tanks pre-charged with nitrogen gas, ensuring they are truly maintenance-free.\nAll Aquasky tanks we supply come...",
+        "source": "web",
+        "title": "AquaFlow Series",
+        "url": "https://assaaquaenterprises.com/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-03-08",
+        "place_metadata": null,
+        "snippet": "Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market.\n...\nOur Goal is to provide top quality, dependable pressure tank to our customers at a competitive price time after time.\nOur end-to end manufacturing solution provides a st...",
+        "source": "web",
+        "title": "[PDF] AQUASKYPLUS Ebook0823(WEB)",
+        "url": "https://www.aquasky.com.tw/download/AQUASKYPLUS_Ebook08232016(WEB).pdf"
+      },
+      {
+        "date": "2026-01-29",
+        "last_updated": "2026-08-17",
+        "place_metadata": null,
+        "snippet": "此項殊榮不僅彰顯溢康在壓力桶工程、製造卓越性及全球供應鏈領導地位的卓越貢獻，也進一步凸顯台中市於高價值智慧製造領域持續提升的競爭實力。\n...\n電子郵件：[email protected]",
+        "source": "web",
+        "title": "溢康榮獲第24 屆台中市金手獎｜溢康AQUASKY",
+        "url": "https://aquaskyplus.com/zh/news-detail/INDUSTRY/24-aquasky-187"
+      },
+      {
+        "date": "2025-04-01",
+        "last_updated": "2025-11-27",
+        "place_metadata": null,
+        "snippet": "||1.\nA global leader in diaphragm pressure tank manufacturing.\n2. Focused on providing high-performance pressure tank products, with applications in industrial, chemical, food, and beverage sectors; committed to exceeding customer expectations and meeting market demands for quality and reliability.|...",
+        "source": "web",
+        "title": "AQUASKY Enterprise Corp. - 臺中市政府經濟發展局",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2905997/2918851"
+      },
+      {
+        "date": "2014-01-01",
+        "last_updated": "2024-10-24",
+        "place_metadata": null,
+        "snippet": "Aquasky provides the most complete and standard products.\n...\nAquasky's PumPlus products with professional and advantages is your best choice.",
+        "source": "web",
+        "title": "PUMPLUS | 臺中市潭雅神工業廠商協進會",
+        "url": "https://www.skia.org.tw/hardware/PUMPLUS"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-25",
+        "place_metadata": null,
+        "snippet": "DL系列密閉式膨脹水箱適用於大水量的系統，相較於傳統系統需安裝多個小型桶，安裝DL系列壓力桶能大量節省安裝所需的空間和維護的成本。",
+        "source": "web",
+        "title": "DL 系列大容量可換囊壓力桶| 歐盟CE 認證商用多功能水箱",
+        "url": "https://aquaskyplus.com/zh/dl-ce"
+      },
+      {
+        "date": "2021-07-22",
+        "last_updated": "2025-06-20",
+        "place_metadata": null,
+        "snippet": "Today, Aquasky has evolved into a world leader diaphragm pressure tank manufacturer serving the global water treatment market.",
+        "source": "web",
+        "title": "Pressure Vessel | Vector General Trading W.L.L",
+        "url": "https://vectorbh.com/products/pressure-vessel-tank/"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-09-20",
+        "place_metadata": null,
+        "snippet": "Founded in 1998\n...\nLQCOL-PLUS\n...\nLARGE SIZE DL TANK",
+        "source": "web",
+        "title": "AQUASKY - Global Diaphragm Pressure Tank & Water ...",
+        "url": "https://aquaskyplus.com/"
+      },
+      {
+        "date": "2021-03-30",
+        "last_updated": "2025-08-09",
+        "place_metadata": null,
+        "snippet": "Aquasky Enterprise Corp.\nprovides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial p...",
+        "source": "web",
+        "title": "AQUASKY",
+        "url": "https://apps.apple.com/dk/app/aquasky/id1551913904"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-10-23",
+        "place_metadata": null,
+        "snippet": "減少並延遲泵浦啟動的時間跟頻率達到節能及穩定壓力的效果，對\n於延長系統壽命也有顯著的幫助。",
+        "source": "web",
+        "title": "壓力桶",
+        "url": "https://aquaskyplus.com/download/EDM/Chinese/AQUASKY_PUMPLUS-DM-Almond-CH_231003(withoutNSF372)web.pdf"
+      },
+      {
+        "date": "2020-09-19",
+        "last_updated": "2026-09-13",
+        "place_metadata": null,
+        "snippet": "本公司創立至今20多年，是一家專業壓力容器的製造廠。\n公司宗旨：注重創新及重視生產流程與品質，勞工安全及福利更是列為公司首要項目！\n我們的產品外銷全世界40多餘國家，訂單穩定且持續開發。但需要更多創新思維及業界經驗的優秀人才一起努力，期待您加入團隊！",
+        "source": "web",
+        "title": "溢康企業股份有限公司｜徵才中",
+        "url": "https://www.104.com.tw/company/1a2x6bia9v"
+      },
+      {
+        "date": null,
+        "last_updated": "2026-08-17",
+        "place_metadata": null,
+        "snippet": "|**公司產業特質**|1.\n全球領先的隔膜式壓力桶製造商。2.\n專注提供高性能的壓力桶產品，產品應用領域包括工業、化學、食品和飲料等；以超越客戶期望的服務，滿足市場上對品質和可靠性的需求。|\n|**核心競爭力**|**目標市場** 透過不斷地技術創新和對客戶需求的深入了解，為客戶尋找解決方案、提供客製化服務及維持長遠的合作夥伴關係。公司的產品以外銷為主，約占95%，產品銷售至北美洲、南美洲、歐洲、亞洲等55個國家，在行業中保持領先地位。**產品品質** 以自動化生產機械和測試設備在內部進行大量生產，加上完善的培訓制度及員工豐富的經驗，確保生產流程的穩定性與品質。每個壓力桶都經過100%的壓力...",
+        "source": "web",
+        "title": "溢康企業股份有限公司",
+        "url": "https://www.economic.taichung.gov.tw/16103/1729911/1492480/2287012/2918843"
+      },
+      {
+        "date": "2014-01-01",
+        "last_updated": "2025-05-27",
+        "place_metadata": null,
+        "snippet": "是的，溢康壓力桶符合歐洲 PED指令 2014/68 / EU（壓力設備指令）和符合 EN 13831。",
+        "source": "web",
+        "title": "認證",
+        "url": "https://aquaskyplus.com/FAQ.php?lang=zh"
+      },
+      {
+        "date": null,
+        "last_updated": "2025-11-03",
+        "place_metadata": null,
+        "snippet": "AQUASKY invented the leak-safe technology and applied on the stainless connector for the pre-pressurized water storage tank, and they are the standard of the industry for drinking water tank.",
+        "source": "web",
+        "title": "Aquasky溢康─影片專區",
+        "url": "https://aquaskyplus.com/videos.php?lang=zh"
+      },
+      {
+        "date": "2021-03-30",
+        "last_updated": "2026-03-13",
+        "place_metadata": null,
+        "snippet": "Aquasky Enterprise Corp.\nprovides end-to-end pressure tank manufacturing solutions, proved the best quality pressure tank to support international distributors serving in the residential water cleaning, water heater, air conditioning and solar water heater as well as the residential and commercial p...",
+        "source": "web",
+        "title": "AQUASKY - App Store - Apple",
+        "url": "https://apps.apple.com/us/app/aquasky/id1551913904?l=zh-Hans-CN"
+      }
+    ],
+    "usage": {
+      "completion_tokens": 1011,
+      "cost": {
+        "input_tokens_cost": 0.00021,
+        "output_tokens_cost": 0.01517,
+        "request_cost": 0.006,
+        "total_cost": 0.02137
+      },
+      "prompt_tokens": 69,
+      "search_context_size": "low",
+      "total_tokens": 1080
+    }
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "台灣有哪些壓力桶外銷製造商？品質和國際認證如何？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008277-mkWKMRP54lWuh3VBZ641",
+    "object": "chat.completion",
+    "created": 1790008277,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "台灣製造（MIT）的壓力桶在國際市場上具有高度競爭力，主要外銷供應鏈可依應用領域分為**「水處理／供水暖通系統隔膜壓力桶」**、**「工業塗裝／點膠流體壓力桶」**以及**「大型重工／石化製程壓力容器」**三大類：\n\n---\n\n### 一、 主要外銷製造商盤點\n\n#### 1. 飲用水／RO 逆滲透與暖通系統壓力桶（全球重要供應聚落）\n台灣在此領域擁有世界級的隔膜式儲水壓力桶供應鏈，產品大量外銷至歐美、中東及澳洲等市場：\n* **笠毅工業股份有限公司（TankPAC Industries）**：\n  * **簡介**：位於台中清水，是全球極具規模的金屬隔膜壓力桶製造廠之一，年產能達數百萬顆，亦為國際知名品牌 Global Water Solutions（GWS）的合作體系。\n  * **主營產品**：家用／商用 RO 逆滲透儲水壓力桶、增壓泵浦壓力桶、全戶水處理配件。\n* **溢康企業股份有限公司（AQUASKY Enterprise Corp.）**：\n  * **簡介**：成立於 1998 年（台中神岡），外銷版圖涵蓋全球上百個國家，專注於各類隔膜式壓力桶與工業膨脹罐。\n  * **主營產品**：泵浦增壓罐、RO 儲水桶、熱膨脹罐、太陽能液體膨脹罐、資料中心液冷系統膨脹水箱，以及符合 ASME 規範的工業密閉式膨脹水箱。\n\n#### 2. 工業噴塗／點膠與流體輸送壓力桶\n主要應用於自動化產線點膠、塗裝、化學流體供料等工業場景：\n* **普羅納企業 / 寶麗（PRONA Tools）**：\n  * **簡介**：台灣氣動噴塗與流體輸送設備知名外銷品牌，行銷全球多個地區。\n  * **主營產品**：氣動油漆壓力桶、手動／自動攪拌塗料壓力罐、點膠壓力桶。\n* **益源興企業有限公司（Unitec / Protima）**：\n  * **簡介**：專業流體輸送與氣動設備製造商，產品 100% 台灣製造，廣泛外銷工業市場。\n  * **主營產品**：一體成型鋼製／不鏽鋼壓力桶、氣動攪拌壓力桶、雙隔膜泵浦。\n* **冠品塗裝設備（GPPT）**：\n  * **主營產品**：氣動／手動攪拌噴漆壓力桶、點膠供料壓力桶、不鏽鋼防爆壓力桶。\n\n#### 3. 大型重工與製程壓力容器（Pressure Vessels）\n若需求偏向大型石化、能源、半導體廠房設備：\n* **中鼎機械（CTCI Machinery）**：承接大型壓力容器、儲槽、熱交換器製造，外銷工程實績遍及國際。\n* **大松機械（DSME）**、**台灣熱交換（THTCO）**：具備高壓容器、反應槽與特種壓力容器製造資格。\n\n---\n\n### 二、 品質優勢與關鍵製程特點\n\n台灣製造商能夠長期穩居國際供應鏈，主要仰賴以下技術與品質特點：\n\n1. **材料與衛生安全（水處理類）**：\n   * **食品級內襯與隔膜**：內部常採用食品級全新 PP（聚丙烯）內膽及高密度丁基橡膠（Butyl）或 EPDM 隔膜，水與鋼體完全隔離，避免二次金屬污染或橡膠異味溶解。\n   * **抗腐蝕接頭**：接觸水介面多採用 SUS304 或 SUS316 不鏽鋼進出水接頭。\n   * **預充高純度氮氣**：相較於普通空氣，氮氣分子滲透率低，能大幅降低長期漏氣頻率與金屬氧化風險。\n2. **結構強度與成型工藝（工業類）**：\n   * **無縫深衝／一體成型技術**：部分工業塗裝壓力桶本體採用深衝一體成型、無焊縫工法，大幅提高耐壓上限與防爆安全性。\n   * **雙層／防爆安全防護**：配備自動洩壓閥（安全閥）、調壓閥、抗靜電接地及防爆型氣動馬達。\n3. **出廠全檢與壽命測試**：\n   * 外銷大廠通常執行 100% 壓力氣密測試，並具備 10 萬次以上的連續壓力疲勞循環壽命測試（Fatigue / Cycle Test）。\n\n---\n\n### 三、 國際認證概況\n\n台灣一線外銷廠商依照目標市場的法規標準，普遍取得相應的國際第三方認證：\n\n| 認證類型 | 代表認證名稱 | 主要適用領域與市場標準 |\n| :--- | :--- | :--- |\n| **飲用水／食品安全認證** | **NSF/ANSI 58**<br>**NSF/ANSI 61**<br>**NSF/ANSI 372** | 北美市場標準：分別涵蓋逆滲透系統元件、飲用水接觸材料毒性溶出規範及無鉛（Lead-Free）法規要求。 |\n| **歐澳其他衛生認證** | **WRAS**（英國）<br>**ACS**（法國）<br>**WaterMark**（澳洲） | 進入歐洲各國與紐澳市場的飲用水管路衛生標準。 |\n| **壓力容器承壓安全** | **CE / PED (2014/68/EU)**<br>**ASME (Boiler & Pressure Vessel Code)** | 歐盟壓力設備指令（PED）及美國機械工程師學會標準（如 ASME U-Stamp），確保高壓容器承壓結構與焊工合規。 |\n| **工業防爆指令** | **ATEX (2014/34/EU)** | 適用於可燃氣體、塗料溶劑等危險環境下的氣動設備防爆評估。 |\n| **品質與管理系統** | **ISO 9001**<br>**RoHS / REACH** | 全面材料可追溯性與有害物質限制標準（TÜV Rheinland 等驗證機構）。 |\n\n**採購評估建議**：\n在洽談台灣壓力桶代工（OEM/ODM）或採購時，需先釐清使用流體（清水、飲用水、化學溶劑或塗料）與作業壓力（Bar/PSI）。若是飲用水設備，務必確認供應商具備有效的 **NSF 58/61** 與 **PED** 證書；若為工業供料設備，則需確認是否有 **CE (PED)** 或 **ATEX 防爆** 測試報告。",
+          "refusal": null,
+          "reasoning": "**Researching Taiwan Manufacturers**\n\nI'm actively investigating Taiwanese pressure tank export manufacturers. My focus is on identifying key players, assessing their quality standards, and documenting the international certifications they possess to ensure compliance with global market demands.\n\n**Investigating Product Scope**\n\nI'm refining my understanding of \"pressure tank\" in the Taiwanese export market, differentiating between RO water systems, industrial dispensing tanks, and larger industrial vessels. This clarification is crucial for targeting relevant manufacturers.\n\n**Identifying Key Players**\n\nI've begun identifying specific manufacturers, focusing on those with NSF, CE, and RoHS certifications. Aquasky and Kemflo appear prominent for water systems, while Prona and Dau-Guan are relevant for industrial dispensing applications.\n\n**Investigating Taiwan's Manufacturers**\n\nI'm now focusing on Taiwan's industrial pressure tanks, paint tanks, and pressure vessels. My current exploration includes Prona, Meiji, and Unitec tools, noting Unitec's CE certification and ISO 9001 accreditation from TUV Rheinland.\n\n**Exploring Pressure Vessel Exporters**\n\nI'm currently investigating Taiwan's pressure vessel manufacturers with an export focus. My initial research indicates a strong presence in this sector, and I'm assessing their quality standards and international certifications to understand their global competitiveness.\n\n**Identifying Key Pressure Vessel Manufacturers**\n\nI've identified two prominent Taiwanese manufacturers specializing in pressure vessels for water treatment and supply systems: TankPAC Industries and AQUASKY Enterprise Corp. Both appear to be significant exporters, with TankPAC boasting a substantial annual capacity and AQUASKY offering a diverse product range including specialized tanks.\n\n**Analyzing Pressure Vessel Standards**\n\nI'm now delving into the specific quality features and certifications of Taiwanese manufacturers. This includes evaluating adherence to standards like the EU Pressure Equipment Directive, ASME, and ISO 9001, alongside examining their use of high-quality materials and rigorous testing protocols for products like industrial coating and dispensing tanks.\n\n**Verifying Pressure Vessel Certifications**\n\nI'm confirming that manufacturers meet critical international standards like PED and ATEX, alongside ISO 9001. I'm also noting their use of seamless forming technology and materials like SUS304/316 for products such as industrial agitator tanks.\n\n**Assessing Key Pressure Vessel Exporters**\n\nI'm now examining a broader range of Taiwanese pressure vessel manufacturers, including those focused on industrial dispensing, spraying, and heavy industrial applications. I'm also evaluating their material specifications, advanced forming technologies, and specific certifications for applications like food-grade and potable water systems.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Researching Taiwan Manufacturers**\n\nI'm actively investigating Taiwanese pressure tank export manufacturers. My focus is on identifying key players, assessing their quality standards, and documenting the international certifications they possess to ensure compliance with global market demands.\n\n**Investigating Product Scope**\n\nI'm refining my understanding of \"pressure tank\" in the Taiwanese export market, differentiating between RO water systems, industrial dispensing tanks, and larger industrial vessels. This clarification is crucial for targeting relevant manufacturers.\n\n**Identifying Key Players**\n\nI've begun identifying specific manufacturers, focusing on those with NSF, CE, and RoHS certifications. Aquasky and Kemflo appear prominent for water systems, while Prona and Dau-Guan are relevant for industrial dispensing applications.\n\n**Investigating Taiwan's Manufacturers**\n\nI'm now focusing on Taiwan's industrial pressure tanks, paint tanks, and pressure vessels. My current exploration includes Prona, Meiji, and Unitec tools, noting Unitec's CE certification and ISO 9001 accreditation from TUV Rheinland.\n\n**Exploring Pressure Vessel Exporters**\n\nI'm currently investigating Taiwan's pressure vessel manufacturers with an export focus. My initial research indicates a strong presence in this sector, and I'm assessing their quality standards and international certifications to understand their global competitiveness.\n\n**Identifying Key Pressure Vessel Manufacturers**\n\nI've identified two prominent Taiwanese manufacturers specializing in pressure vessels for water treatment and supply systems: TankPAC Industries and AQUASKY Enterprise Corp. Both appear to be significant exporters, with TankPAC boasting a substantial annual capacity and AQUASKY offering a diverse product range including specialized tanks.\n\n**Analyzing Pressure Vessel Standards**\n\nI'm now delving into the specific quality features and certifications of Taiwanese manufacturers. This includes evaluating adherence to standards like the EU Pressure Equipment Directive, ASME, and ISO 9001, alongside examining their use of high-quality materials and rigorous testing protocols for products like industrial coating and dispensing tanks.\n\n**Verifying Pressure Vessel Certifications**\n\nI'm confirming that manufacturers meet critical international standards like PED and ATEX, alongside ISO 9001. I'm also noting their use of seamless forming technology and materials like SUS304/316 for products such as industrial agitator tanks.\n\n**Assessing Key Pressure Vessel Exporters**\n\nI'm now examining a broader range of Taiwanese pressure vessel manufacturers, including those focused on industrial dispensing, spraying, and heavy industrial applications. I'm also evaluating their material specifications, advanced forming technologies, and specific certifications for applications like food-grade and potable water systems.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd6Qm4nk3a-v9IVHnTI5YXnRvXlZZq42VdbzV4LdXWNxcC4dSBBjsFhbuLWtrgNw0YN61P7bzKi0SWMXvf5xfBSyPNqKONs0-mlJxFUkPkyNFpoJcRhqz3FyNGi7T3lFQnXdS_-Wy64ZwxqSI2pfWByGdweip-sv9Sl28R",
+                "title": "ctci.com",
+                "start_index": 0,
+                "end_index": 288
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqy8oxCRzsXN92npPTpqKoQz3SG1K_8V7vlWs2-70G5673rwpHyZWh5_4PdsMP8EaOQ9vROYSyQezM1Xu5x2Tdyp822QObzjBcmx6JW9wmye_wecFNr5J8eY-62fw=",
+                "title": "tankpac.com",
+                "start_index": 0,
+                "end_index": 288
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN8-ZSDJK6AcUA4DujByLbiMNAM5XPR43YuszkSt6NeRgOBZun7nEIRpzcpf7iyxim6YWCcYP2n9LCFETmokIZ2ZtfO9yrxNPZSh4IHucXrUZ1-gBJ",
+                "title": "aquaskyplus.com",
+                "start_index": 0,
+                "end_index": 288
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1RCc4UZpF_uS795MfqQsyxU50EjRENWojaPoBj7jxccQ4GOsoseCWgMysSy_QmY0oisbpmfw2OBnl_pabJ8k8uJQIFDMQ6wv_chVWZUR0u55JnYEAA-JnJuUrvU2hVQnxzBsWuEpjs3235sTLn_syBmobV5HKamuUMLMaXwctxg==",
+                "title": "chin-lin.com",
+                "start_index": 0,
+                "end_index": 288
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNb-HKhK_6OMSucBGXYBLP2WgM0p3_bmyPf-8wSp7hbYL0yJixPuoreCoYGCYGqm7JhXl9Ep7L4SVVbo0uGhm1n-Z6Jn5UBLEfgNvwCmSvrM6qp6ZCIp0TnVQSHnzK-apfnK8=",
+                "title": "aquaskyplus.com",
+                "start_index": 346,
+                "end_index": 551
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqM9nUNETiCqB6we8v2ZQIzFlOFV1Huzb-MrapI4KmgGzTyzXoykc8kl56RdDODyHQBVVFNujcIE0-tzfaYrOlBJbKKDf55UQh5B4UEZpiS0oC7Gzk",
+                "title": "tankpac.com",
+                "start_index": 346,
+                "end_index": 818
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQB84MhERy3iXOb82B0bGUBC3qFd2sJV9XyIYDNKgbpC1pmiBJG-kDfAayHXiLh4DQbMbzkctkb4hxQCkbCo4dGi0iJHE405cnnYpU5OBwfQ3i81_mXgkRVLkyZDJE0WisRg==",
+                "title": "tankpac.com",
+                "start_index": 824,
+                "end_index": 936
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYFz9dKZmAXTSZ6sqgSMMKmqsuCQxwQEaTI-rwKwcxppIdtRjUcEShfIpU_Gut-TZJ8U1KvncutNPc2Y13HU29BhAynfq8G0k7xivhRIr-bbgionPeHEy_eyQ3",
+                "title": "aquaskyplus.com",
+                "start_index": 1004,
+                "end_index": 1006
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9amt_qhyShgbRzcjFvalpcHnwhNHPEpt14cT2MJJUpJGdFcuuE6DxERF3gwKDFdWubXkg1Xqp3zyrMtep1ZZZ6TjuoXMXKkkw54mquLrFQ1LBlBYmsFFRU4Usw9YV0e9qXg==",
+                "title": "aquaskyplus.com",
+                "start_index": 1004,
+                "end_index": 1159
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMTJZcJFwrJ8bYSV9wBWX54QM4juRp5F2-v3zBnCpTuhBBGMh-7_WRuBwCV3RZbcB1ekXtukmi-ORIIDkLIc-71bw2hxjloFDRJ1CJezwWqivEgUe_DtZXoi0O1elx",
+                "title": "aquaskyplus.com",
+                "start_index": 1165,
+                "end_index": 1354
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBPxJUYcXzLXEEelgqQlqhdgQpAr2piaHXCJ9xZ0nYqL1ueuD4cEmid31ZJuumhgysMvdEQgn3b6di0goMdEh2SfQpX5PPeFAVxHwd8JauGuRa_IXpx_KEgDKrhcuFs-r6Mk3Qv6spZ_IRFOqDNTExf1_WucKaU1IQFnedKg==",
+                "title": "taobao.com",
+                "start_index": 1367,
+                "end_index": 1650
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGpl687uq06oz1BsWifFwVSBX1fAT3okTzNzXLSwkD3P3VtJhS7eUJ5JeQ67jMwc1iPcJwh8e9EIt7W1q8o5yZvfqah-_6F1M842kTpRMq08x7DlJZZ4XUkKgPTYI8_PXMbQTdcoo-PAZ-MvkT9wg3nKHbI2-DqGv0UtGa64uwaw==",
+                "title": "prona.com.tw",
+                "start_index": 1367,
+                "end_index": 1650
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhMIJWFLdBdoB1XzeIYN7kEZA2toY7Ff7vCq7IWjIC7Edv8uzuChTB1oTfGzaqsWKC-37HG8sFkZQmJJ-3EM2aR9VB1jJT7oUvzx_H_6wMPTgelmHVwM3oUlO9pZBw9IJxjBkukBb2CSSlSSfRTSbGPP210Dc=",
+                "title": "rakuten.com.tw",
+                "start_index": 1656,
+                "end_index": 1755
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgwJZ0TpJd-NCKzLhJ-EeyW6bB4gWw7A3BVqIL6k7VawxdnaB5Q5-IVmIryFbpxl8Nxy9m1m7Ou1J3hpe9yZS70LexE8HqnM7eYbMcULTXdCJDSyAZoYeeS4FiszMj1eCAVsocz2cQe_2domOVEoBX",
+                "title": "unitec-tools.com.tw",
+                "start_index": 1759,
+                "end_index": 1814
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYHD7gVKGriTnfL0n-luCgOqUfnHgfXUajbz7sXzhdmxRlWCER8tlRMgkl5QZNCueT1tCrRQa-u5Tb8N03JVYXBCDJEWXfnHlqTtRz0cXcnbwIaZVtHMruy-sW9rBrvvw-mpr-0VPfzx5U",
+                "title": "protima.com.tw",
+                "start_index": 1759,
+                "end_index": 1931
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFz990CrQZ0F-JjmSOca-9HRM2RIjRMF_6U9RZJgo0Ytrxypk8gwv1G7Ntn9ePkmZXxR9AUVa46ICdKG7Lt304EJL1zoRr-tS-zLOm0UeoR1YtxGSXCjiUjX_xZ0Mc=",
+                "title": "gppt.com.tw",
+                "start_index": 2043,
+                "end_index": 2077
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7-QpLJ9mF2Y2S6LCcc2dckSaBakxjyfVM_j2bU17UR8qfoFA_P8E7Oq7eyQGMYL1AIiWT9QOOmgY8FO6uHLL69AYTrBZ1YRp72gtfD7y0gRRpSwjYjkmXkpu8IL4=",
+                "title": "gppt.com.tw",
+                "start_index": 2043,
+                "end_index": 2077
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7lxrdzD-s7GFcDVEPtXbvWFexn_LoMlvG1hhMnLwiozv195TGoEaEUL0AgX28FkxiDM8ykc5R7HlvLjWk9Jx9pm64l4QYWsurnIZc5-yp6rmLnwcTiPGSVsuDtQ==",
+                "title": "gppt.com.tw",
+                "start_index": 2043,
+                "end_index": 2191
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN2X3hm4wx4xBD_jyL02-3s9rFe6cfiqajRLIwyFhEcd8fjfypmcbhn2e04myIk9sGsAfOBtG6ojV9GelPKsRzIz_0n7eGtypviQTzyVzCVB20VAIbVadsEywVHy0a",
+                "title": "gppt.com.tw",
+                "start_index": 2043,
+                "end_index": 2191
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyrQrlCCdTKPvGWNuB-ZObqcKYnYK3VBUcdJ43wFXHEo5UyV5KxGGYudxrJiGIbNL0oWK_w2vZrqzicR_yTVsXj7xrLlTpI94f1VtMOatRUV33cXLHDZYajLQRZLAqbcN1Ol8=",
+                "title": "taitra.org.tw",
+                "start_index": 2456,
+                "end_index": 2583
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELm1qbxTs0-EgzSrP3FOcJ3elBO-IfAakYsQ2xMWM-r1-Z96xSPGxXKnokeW-TqwBPuqtqkjemQFId5spCl2TZrOBhtdLThnXZCnWzBi77WbaarhQEkLWACZZimhI0YUqHFGm6Kw==",
+                "title": "thtco.com.tw",
+                "start_index": 2456,
+                "end_index": 2583
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsCdUUzV5fMRdpaO31cm1AZn4e-xY70IlPqCXRGupHVYrAi-e6TS959mgydSmIWhANs8jjCgfcJGdJG7KbRr7xEWAUkB685RaZ72QyOKG1s4ZCYGqndPlsqQ==",
+                "title": "aquaskyplus.com",
+                "start_index": 2737,
+                "end_index": 2999
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWyJ8i65BlcLBvKcA2Ia3u-c8qNzMO5LUd_3fqXnaUdRdTF3EGCVdAwEXJ49RdNRwSXyiH2w2NXfrbH0nE9ztRHME1zm2rFM-xgTk6rcCFHgpJOrssENtB2p7j1yp9NCNCACCI7fP9",
+                "title": "homytech.com",
+                "start_index": 3468,
+                "end_index": 3594
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9Yz6wCzm99HFSwntq6VznWl20TwrQHxzQsSgmSq2yzAjWeI_sOcKR7SY8f59c4nc9RBavB5IjgoOn3GbdK0-_mHDHYqc1OVSn6kyi_k_4pheFCihvMBRtIU-zJxu473z2tgg=",
+                "title": "aquaskyplus.com",
+                "start_index": 3930,
+                "end_index": 4120
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYRd3yRsYNBHAD9Z8Mf1SgjTsP4z_7UosShHJcBQh9SeYfsyw7GNlWIgb9B5coySyUtsvNIGucTl-skQh6QqktT_Dp2BlffxWakQv7fw-K3dw7WHt6cR9NZGO8Zlj9sOe6-nEgXs3ewl49W7o=",
+                "title": "tankpac.com",
+                "start_index": 5172,
+                "end_index": 5265
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 4279,
+      "total_tokens": 4352,
+      "cost": 0.128101,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.128101,
+        "upstream_inference_prompt_cost": 5.475e-05,
+        "upstream_inference_completions_cost": 0.01604625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2147,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 8
+      }
+    }
+  }
+}

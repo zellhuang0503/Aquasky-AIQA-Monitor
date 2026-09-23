@@ -1,0 +1,153 @@
+{
+  "request": {
+    "model": "google/gemini-3.8-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的產品有哪些國際認證？例如 NSF、WRAS、CE。"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790008544-OXSpbfwWwCSr1TxHHrUA",
+    "object": "chat.completion",
+    "created": 1790008544,
+    "model": "google/gemini-3.8-flash",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "STOP",
+        "message": {
+          "role": "assistant",
+          "content": "**AQUASKY（溢康企業 / Aquasky Enterprise Corp.）** 的壓力桶與水處理儲水產品具備多項跨國飲用水安全、管道與壓力容器認證：\n\n---\n\n### 1. 飲用水安全與衛生標準認證\n* **美國 NSF 認證**：\n  * **NSF/ANSI 61**：飲用水系統組件安全與毒理測試，確保與水接觸的材料不會溶出有害物質。\n  * **NSF/ANSI 58**：主要用於逆滲透（RO）儲水系統，包含材料安全與結構強度評估。\n  * **NSF/ANSI 372**：無鉛標準認證（確保涉水部件加權鉛含量 $\\le 0.25\\%$）。\n* **英國 WRAS 認證（Water Regulations Advisory Scheme）**：\n  * 英國水法規諮詢計劃認證，確認桶內橡膠隔膜等非金屬材質符合水管配件規定，不污染水質。\n* **法國 ACS 認證（Attestation de Conformité Sanitaire）**：\n  * 法國衛生合格證明，符合法國 AFNOR 衛生標準，為法國市場對所有接觸飲用水配件的強制要求。\n* **澳洲 WaterMark 認證**：\n  * 澳洲管道與給排水強制性認證，證明符合澳洲水暖規範與健康安全標準。\n* **韓國 KC 認證（Korea Certification）**：\n  * 韓國針對涉水材料衛生與產品安全之標準認證。\n\n---\n\n### 2. 壓力容器與管道結構安全認證\n* **歐洲 CE 認證（PED 壓力設備指令）**：\n  * 符合歐盟 **PED (Pressure Equipment Directive 2014/68/EU)** 及 **EN 13831** 標準，涵蓋壓力容器結構設計與焊接製造安全，可在歐洲經濟區合規流通。\n* **美國 UPC 認證（Uniform Plumbing Code / IAPMO）**：\n  * 通過 IAPMO 檢測實驗室測試，符合北美統一管道規範對帶有隔膜的承壓飲用水儲水設備之安全要求。\n\n---\n\n### 3. 工廠與品質管理體系\n* **ISO 9001:2015**：\n  * 製造廠的國際品質管理系統標準認證。\n\n*(註：各認證適用的具體型號如 Pumplus、RO-Plus、Mega-Plus 等可能略有差異，選型時可參考其產品規格書或標籤說明。)*",
+          "refusal": null,
+          "reasoning": "**Researching Certifications**\n\nI'm currently investigating AQUASKY's product certifications, specifically focusing on international standards relevant to pressure tanks. My aim is to identify all applicable certifications to confirm compliance with global market requirements and safety regulations.\n\n**Confirming Aquatic Safety**\n\nI've successfully integrated verified information from AQUASKY, specifically confirming their NSF/ANSI 61 certification. This crucial detail clarifies their adherence to important health and safety standards for water systems, solidifying our understanding of their product integrity.\n\n**Exploring Material Certifications**\n\nI'm currently reviewing several additional certifications. My focus is on understanding the specific safety and health standards represented by NSF/ANSI 58, 372, and CE, WRAS, ACS, UPC, and WaterMark, aiming to comprehensively assess product integrity across different regions and applications.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "**Researching Certifications**\n\nI'm currently investigating AQUASKY's product certifications, specifically focusing on international standards relevant to pressure tanks. My aim is to identify all applicable certifications to confirm compliance with global market requirements and safety regulations.\n\n**Confirming Aquatic Safety**\n\nI've successfully integrated verified information from AQUASKY, specifically confirming their NSF/ANSI 61 certification. This crucial detail clarifies their adherence to important health and safety standards for water systems, solidifying our understanding of their product integrity.\n\n**Exploring Material Certifications**\n\nI'm currently reviewing several additional certifications. My focus is on understanding the specific safety and health standards represented by NSF/ANSI 58, 372, and CE, WRAS, ACS, UPC, and WaterMark, aiming to comprehensively assess product integrity across different regions and applications.\n\n",
+              "format": "google-gemini-v1",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUZismQQa5jaWxXzCevTiX4LlnA1O7Bq3xFkQuvLhL9DswHR0zqSxTkE2e59Xd6i6DsExpmZRWxnB8oWhB6djdRaXM73eFlHrAeSAPxU6x3uKgJnlFadKhRGIw9iojfBybM6E=",
+                "title": "aquaskyplus.com",
+                "start_index": 54,
+                "end_index": 156
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTz_9EMIUtjQLq6txjH8DNAMsMlfDHhA41FM7aOV48hdcErPPKmJiMAvN3W1O8Hrx7zLjbxOdMOhma4EorgIl-AP0U1wtlDgQnk3X4N_zi-z4y2bl22po50SAhAuqdw5DEajA=",
+                "title": "aquaskyplus.com",
+                "start_index": 54,
+                "end_index": 156
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcHNawYH24V9obwjc4FBsu5PAuwRtzlNs9Nnd0pxXqTXLQezUQK8t079ChKo_XCjwJfykfRKVhMGpTBLxX3y0EvtPLpllb9Ijz217X-jWOviZgvDVTtteWDoRB-Ksw0SgmOXvM3xJttSqTiyAlT2l5sg8z8oh5onKGv_mw17u-UsxXVuLdhKa1SJVtD_BGtr3U8O9ltJueGXnKtLNic3nJJel6ME1NeFGxk_3u84D9wsmQa2s=",
+                "title": "aquaskyplus.com",
+                "start_index": 173,
+                "end_index": 233
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy6uedMsPxOv6z46M6720ZkUNY9Cqi686P0XHa5OaaUqHTA0XJ4B4NLkT7wrta2vo0EZ7b420wGbYeTB8DHZew7RsNC2InyvQBGJvcRl3HDdpUe1sjMZK7SHm_M985dUiF7E5c7RPNS_8u_mMYDkuecKsON-htTnbKQ5S6Ds22-lXELj8L8BvcNnTGJlIF8z487buCYcpyfGpAdXNPttYH04VZRUyctwCvhICh5P14-sraJAw8HgF5BAl9j7CjAAzHxACTZqCOxrFARnqGbs4JSxTQjy3UNpWUahxC7YKD1hpk0J1k3g1Cjw0=",
+                "title": "aquaskyplus.com",
+                "start_index": 760,
+                "end_index": 954
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5mALDqQdxaMV8FurfR7VTj5nvYFP-t-qUHd8oFB7tRjqBZl4qz7Lq741THGpZOGkjfxZpm4ftYi0UcayYIHoSifGR6GPQrMzrSu3EW_E0J0CK7-TGKigUBHJoxV0=",
+                "title": "premieraqua.co.za",
+                "start_index": 1224,
+                "end_index": 1498
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCt9RWolfhus5x5OQN9BuenJzt8hrVRRCFICA-JgtS8sgZ5s-Lqzh1iUuKoTAt6QqcKmvRCGNt2_nHFyXhZroKsZEWWa0aWSNFIVd98gJzYTkBOgDibdELsBcwLNFQf2sr4tX5V7E=",
+                "title": "youtube.com",
+                "start_index": 1502,
+                "end_index": 1695
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQUvWBiVsYt7zQ8KxLdZrNzmIvE9cydBooegC-FCLZfbmeAkoastuxPnvxFJOMCZKd5jEf6R4hc5fvSptkdwZjSHPyjvSdMDyz7-RuzXzWpW-9FuckfZ8Zrud06LI3qGo=",
+                "title": "wecofilters.com",
+                "start_index": 1971,
+                "end_index": 1972
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ0ys01gmimAeYyjSnglZNpZ8K8o9xY4U04AT3zI-uMsg7JMOtT8yzvXHEewapEf4-LldbcA3uNwGVghQ1BcsUwLveNjDwAg6vLqIruV9vXtD98w==",
+                "title": "aquaskyplus.com",
+                "start_index": 1971,
+                "end_index": 1972
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 1494,
+      "total_tokens": 1570,
+      "cost": 0.0476595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0476595,
+        "upstream_inference_prompt_cost": 5.7e-05,
+        "upstream_inference_completions_cost": 0.0056025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 762,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 3
+      }
+    }
+  }
+}

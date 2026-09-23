@@ -1,0 +1,131 @@
+{
+  "request": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "為什麼我應該考慮 AQUASKY 作為壓力桶的長期合作夥伴？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "exa"
+      }
+    ],
+    "provider": {
+      "sort": "throughput"
+    }
+  },
+  "response": {
+    "id": "gen-1790011155-WhTfPFZe1kzU2jjsS78o",
+    "object": "chat.completion",
+    "created": 1790011155,
+    "model": "deepseek/deepseek-v4.1-flash",
+    "provider": "Together",
+    "system_fingerprint": "default",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "若你正在評估壓力桶的長期供應商，AQUASKY（溢康企業）值得列入考慮，主要因為它同時具備**製造規模、OEM/ODM 彈性、品質認證、供貨穩定與售後制度**。以下整理自其官方網站公開資訊；這些多為製造商自述，若要正式合作，仍建議索取證書、測試報告與合約條款確認。\n\n**1. 專業製造與全球銷售規模**\nAQUASKY 官網稱其自 1998 年創立，從台中水五金加工廠發展為全球隔膜式壓力桶製造商，銷售超過 50 國，並自稱擁有超過 30 年產業經驗。它是 100% 製造商，關鍵製程如焊接、塗裝、壓力測試、組裝、包裝都在廠內完成。[aquaskyplus.com](https://aquaskyplus.com/zh/about) [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**2. OEM/ODM 與客製化能力**\n官方表示其工程團隊使用 3D CAD 與壓力模擬，可在數週內做出功能原型；可客製設計、尺寸、塗裝顏色與接頭，並可與客戶既有系統整合，提供技術圖與模擬數據。對於需要自有品牌或特殊規格的經銷商、水處理品牌，這是長期合作的重要條件。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**3. 品質、安全與認證**\n官網列出 ISO 9001、歐盟 PED、NSF/ANSI 61、UPC、KC、無鉛等認證；焊接符合 ASME VIII Div.1 與 EN 13831。每顆壓力桶經 100% 壓力安全測試，並進行 100,000 次連續壓力循環測試；出廠前 100% 氮氣預充，搭配多層環氧塗層與專利防漏接頭，以降低鏽蝕、漏氣與壓力損失。[aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh) [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**4. 供貨與成本穩定**\nAQUASKY 強調自動化生產、大量採購與廠內製造，可吸收部分原物料上漲，提供較穩定定價與交期。供應鏈方面，官方稱透過基隆／台中／高雄多港出貨、多元原料來源與區域庫存點來緩衝衝擊。[aquaskyplus.com](https://aquaskyplus.com/zh/about) [aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**5. 合作門檻與付款條件**\n英文 FAQ 提到：標準色（藍、杏仁色）無強制 MOQ；客製色 MOQ 為每批 400 件；同一貨櫃可混款。另有條目寫 MOQ 為一個 20 呎櫃、FOB 台中，首單 100% T/T，後續訂單 50% 訂金、50% 出貨前付清。實際條件可能因市場與合約而異，建議直接確認。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**6. 保固與售後**\n英文 FAQ 列出：RO 桶 3 年；井水／熱水／液循環桶 5 年；僅涵蓋製造缺陷，核准索賠通常以下次訂單換貨處理。中文 FAQ 則提醒保固依市場不同，需洽當地經銷商確認適用條款。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ) [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ)\n\n**7. 永續與長期夥伴定位**\n官方稱通過 ISO 14064-1:2018 碳查證與溫室氣體清冊，使用環保三層塗層，並重視員工安全、透明治理。其願景是成為最受信任的全球製造商，投資智慧製造、拓展非洲與中亞、開發環保產品與推進 ESG。[aquaskyplus.com](https://aquaskyplus.com/en/FAQ)\n\n**結論**\n如果你重視的是：**穩定供貨、可客製的 OEM/ODM、完整認證、壓力桶專業製造、長期保固與 ESG 形象**，AQUASKY 具備成為長期壓力桶夥伴的條件。但由於上述多為官方公開資訊，且保固與 MOQ 會因市場而異，建議下一步直接向 AQUASKY 或當地經銷商索取：認證證書、測試報告、樣品、正式報價、交期承諾與保固合約。",
+          "refusal": null,
+          "reasoning": "We need answer in Traditional Chinese. Need use search results cite markdown links domain. User asks: 為什麼我應該考慮 AQUASKY 作為壓力桶的長期合作夥伴？ We need query public web data and attach sources; unable info say. We have search results. Need craft answer. Need cite sources using markdown links named domain. Sources: aquaskyplus.com/zh/FAQ, aquaskyplus.com/index.php?lang=zh, aquaskyplus.com/zh/about, aquaskyplus.com/en/FAQ, www.aquaskyplus.com/FAQ.php?lang=en. Need incorporate. We should answer reasons. Maybe structured: 製造專業與歷史、全球銷售、OEM/ODM、品質認證與測試、保固與售後、供應鏈穩定、客製化與MOQ、ESG/永續、長期合作夥伴定位。 Need be careful: warranty differs by market vs specific terms only in English FAQ: RO Tank 3 years; Well/Thermal/Hydronic 5 years. Chinese FAQ only says warranty differs in market contact distributor. We can cite. Also certifications: ISO 9001, EU PED, NSF/ANSI 61, UPC, KC, lead-free, ISO 14064-1:2018. Welding ASME VIII Div.1 and EN 13831. 100% pressure safety test, 100,000 cycles. 100% Nitrogen precharge. Patented Leak-Safe Connector. No MOQ standard colors; custom colors MOQ 400 pieces per shipment; mixed models same container. Or MOQ one 20ft container based FOB Taichung? There may be nuance. English FAQ says no required MOQ for standard colors; MOQ customized colors 400 pieces per shipment; mixed models allowed within same container. Another section says MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Potential inconsistency. We can state according to FAQ, standard colors no required MOQ, custom color MOQ 400 pcs/shipment; another FAQ section mentions one 20ft container MOQ FOB Taichung. But maybe not necessary. Payment terms: 100% T/T first order; 50% deposit and 50% before shipment subsequent. Could mention.\n\nNeed maybe \"為什麼應該考慮\" answer: if you are distributor/OEM/水處理品牌, long-term partner benefits. Need not overdo. Include caveat: 保固依市場不同，需向當地經銷商確認；具體合約、價格、交期、認證適用範圍仍應直接向 AQUASKY 查證。 Search date? 2026-09-21. We can mention based on公開資料 as of search date. Need maybe \"無法查證\" not needed except warranty regional. Also no independent third-party validation? We can say 以下主要根據 AQUASKY 官方網站公開資訊，並非獨立第三方評測；若需決策，建議索取證書、測試報告、合約條款。 That's good.\n\nNeed cite markdown links named domain. Use [aquaskyplus.com](URL). Could use same domain multiple times. Ensure link names using domain. Example: [aquaskyplus.com](https://aquaskyplus.com/zh/about). For en FAQ with www? Domain is aquaskyplus.com maybe link name [aquaskyplus.com](https://aquaskyplus.com/en/FAQ). Also [aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh). The instruction says named using domain of source. So use domain. Good.\n\nNeed answer in Traditional Chinese. Maybe sections.\n\nLet's draft:\n\n「若你重視供貨穩定、OEM/ODM 彈性、品質認證與長期售後，AQUASKY 值得列入壓力桶長期夥伴評估。理由如下：」\n\n1. 專業製造與規模：1998 創立，台中，從小型水五金加工廠到全球領先隔膜式壓力桶製造商；30+年產業經驗，銷售 50 多國；100% 製造商，關鍵製程廠內完成（焊接、塗裝、壓力測試、組裝、包裝）。(cite about, en FAQ)\n2. OEM/ODM 與客製：3D CAD 與壓力模擬、快速原型數週、尺寸/塗裝/接頭客製；工程團隊與客戶共同調整容量、接頭、壓力範圍；提供技術圖與模擬數據。 (en FAQ)\n3. 品質與安全認證：ISO 9001、EU PED、NSF/ANSI 61、UPC、KC、無鉛；焊接符合 ASME VIII Div.1、EN 13831；100% 壓力安全測試；每顆 100,000 次連續壓力循環；100% 氮氣預充；多層環氧塗層；專利防漏接頭。 (zh index, en FAQ)\n4. 供貨與成本穩定：大量生產、自動化、內部生產限制外部品質問題；原料採購議價能力吸收物料上漲；穩定定價與交期。全球供應鏈：基隆/台中/高雄多港出貨、多元原料來源、區域庫存。 (zh about, en FAQ)\n5. MOQ/付款與合作彈性：標準色（藍、杏仁）無強制 MOQ；客製色 400 件/批；同貨櫃可混款。另有 FAQ 提到 MOQ 一個 20 呎櫃、FOB 台中；首單 100% T/T，後續 50% 訂金、50% 出貨前。這裡可提醒確認。 (en FAQ)\n6. 售後與保固：RO 桶 3 年；井/熱水/液循環桶 5 年；僅製造缺陷；核准索賠以下次訂單換貨。中文 FAQ 說保固依市場不同，需洽當地經銷商。 (en FAQ, zh FAQ)\n7. ESG/永續：ISO 14064-1:2018 碳查證與溫室氣體清冊；環保三層塗層；社會責任；透明治理。可能加分。 (en FAQ)\n8. 長期夥伴定位：官方願景成為最受信任全球製造商；投資智慧製造、擴展非洲/中亞、環保產品、ESG；業務團隊像客戶一樣思考、預測挑戰、履行承諾。 (en FAQ, zh about)\n\nConclusion: 建議下一步：索取證書有效期限與適用範圍、測試報告、樣品、保固/合約條款、報價與交期；因官網資訊為製造商自述，保固與 MOQ 依市場/合約而異，需直接確認。 \n\nNeed maybe \"為什麼我應該考慮\" direct answer. Could be \"因為它結合規模製造、認證、客製、供貨穩定、保固與永續\". Good.\n\nNeed ensure citations. Add links after claims. Use markdown links. Could have multiple citations. Need not cite every sentence. But should cite enough.\n\nPotential issue: \"30年產業經驗\" from AQUASKY FAQ: 溢康擁有超過 30 年產業經驗. But about says 創立於 1998, so as of 2026 about 28 years. FAQ says over 30 years. We can say 官網稱超過30年產業經驗；另關於頁稱1998創立。 To avoid contradiction: \"官網 FAQ 稱超過 30 年產業經驗；關於頁稱創立於 1998 年。\" But maybe not necessary. Could state \"官網資料稱其有超過30年產業經驗，並自1998年創立\" but 1998 to 2026 is 28. Hmm. Better: \"AQUASKY 官網稱擁有超過 30 年產業經驗，且關於頁說創立於 1998 年；兩者請以官方最新說明為準.\" But that may be too nitpicky. We can just say \"自 1998 年創立，官網並稱有超過 30 年產業經驗\" with citation. Good.\n\nNeed mention \"100% manufacturer based in Taichung, Taiwan\" from en FAQ. Good.\n\nNeed maybe \"保固條款 only manufacturing defects; replacement next order\" might be a drawback. We can mention as caveat. \n\nNeed final in Traditional Chinese. Desired oververbosity 5: moderate. We can produce about 800-1200 Chinese chars. Maybe structured bullets. The final should include citations. Need no fabricated info. We can note \"以下主要整理自 AQUASKY 官方網站公開資訊，尚非獨立第三方驗證\". Good.\n\nLet's compose with headings. Ensure links are markdown. Use domain names. E.g. [aquaskyplus.com](https://aquaskyplus.com/zh/about). That's domain. For en FAQ [aquaskyplus.com](https://aquaskyplus.com/en/FAQ). For zh FAQ [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ). For index [aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh). For FAQ.php [aquaskyplus.com](https://www.aquaskyplus.com/FAQ.php?lang=en). Good.\n\nNeed maybe \"公開網路資料查詢日期 2026-09-21\" not required but can mention.\n\nLet's final.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need answer in Traditional Chinese. Need use search results cite markdown links domain. User asks: 為什麼我應該考慮 AQUASKY 作為壓力桶的長期合作夥伴？ We need query public web data and attach sources; unable info say. We have search results. Need craft answer. Need cite sources using markdown links named domain. Sources: aquaskyplus.com/zh/FAQ, aquaskyplus.com/index.php?lang=zh, aquaskyplus.com/zh/about, aquaskyplus.com/en/FAQ, www.aquaskyplus.com/FAQ.php?lang=en. Need incorporate. We should answer reasons. Maybe structured: 製造專業與歷史、全球銷售、OEM/ODM、品質認證與測試、保固與售後、供應鏈穩定、客製化與MOQ、ESG/永續、長期合作夥伴定位。 Need be careful: warranty differs by market vs specific terms only in English FAQ: RO Tank 3 years; Well/Thermal/Hydronic 5 years. Chinese FAQ only says warranty differs in market contact distributor. We can cite. Also certifications: ISO 9001, EU PED, NSF/ANSI 61, UPC, KC, lead-free, ISO 14064-1:2018. Welding ASME VIII Div.1 and EN 13831. 100% pressure safety test, 100,000 cycles. 100% Nitrogen precharge. Patented Leak-Safe Connector. No MOQ standard colors; custom colors MOQ 400 pieces per shipment; mixed models same container. Or MOQ one 20ft container based FOB Taichung? There may be nuance. English FAQ says no required MOQ for standard colors; MOQ customized colors 400 pieces per shipment; mixed models allowed within same container. Another section says MOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Potential inconsistency. We can state according to FAQ, standard colors no required MOQ, custom color MOQ 400 pcs/shipment; another FAQ section mentions one 20ft container MOQ FOB Taichung. But maybe not necessary. Payment terms: 100% T/T first order; 50% deposit and 50% before shipment subsequent. Could mention.\n\nNeed maybe \"為什麼應該考慮\" answer: if you are distributor/OEM/水處理品牌, long-term partner benefits. Need not overdo. Include caveat: 保固依市場不同，需向當地經銷商確認；具體合約、價格、交期、認證適用範圍仍應直接向 AQUASKY 查證。 Search date? 2026-09-21. We can mention based on公開資料 as of search date. Need maybe \"無法查證\" not needed except warranty regional. Also no independent third-party validation? We can say 以下主要根據 AQUASKY 官方網站公開資訊，並非獨立第三方評測；若需決策，建議索取證書、測試報告、合約條款。 That's good.\n\nNeed cite markdown links named domain. Use [aquaskyplus.com](URL). Could use same domain multiple times. Ensure link names using domain. Example: [aquaskyplus.com](https://aquaskyplus.com/zh/about). For en FAQ with www? Domain is aquaskyplus.com maybe link name [aquaskyplus.com](https://aquaskyplus.com/en/FAQ). Also [aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh). The instruction says named using domain of source. So use domain. Good.\n\nNeed answer in Traditional Chinese. Maybe sections.\n\nLet's draft:\n\n「若你重視供貨穩定、OEM/ODM 彈性、品質認證與長期售後，AQUASKY 值得列入壓力桶長期夥伴評估。理由如下：」\n\n1. 專業製造與規模：1998 創立，台中，從小型水五金加工廠到全球領先隔膜式壓力桶製造商；30+年產業經驗，銷售 50 多國；100% 製造商，關鍵製程廠內完成（焊接、塗裝、壓力測試、組裝、包裝）。(cite about, en FAQ)\n2. OEM/ODM 與客製：3D CAD 與壓力模擬、快速原型數週、尺寸/塗裝/接頭客製；工程團隊與客戶共同調整容量、接頭、壓力範圍；提供技術圖與模擬數據。 (en FAQ)\n3. 品質與安全認證：ISO 9001、EU PED、NSF/ANSI 61、UPC、KC、無鉛；焊接符合 ASME VIII Div.1、EN 13831；100% 壓力安全測試；每顆 100,000 次連續壓力循環；100% 氮氣預充；多層環氧塗層；專利防漏接頭。 (zh index, en FAQ)\n4. 供貨與成本穩定：大量生產、自動化、內部生產限制外部品質問題；原料採購議價能力吸收物料上漲；穩定定價與交期。全球供應鏈：基隆/台中/高雄多港出貨、多元原料來源、區域庫存。 (zh about, en FAQ)\n5. MOQ/付款與合作彈性：標準色（藍、杏仁）無強制 MOQ；客製色 400 件/批；同貨櫃可混款。另有 FAQ 提到 MOQ 一個 20 呎櫃、FOB 台中；首單 100% T/T，後續 50% 訂金、50% 出貨前。這裡可提醒確認。 (en FAQ)\n6. 售後與保固：RO 桶 3 年；井/熱水/液循環桶 5 年；僅製造缺陷；核准索賠以下次訂單換貨。中文 FAQ 說保固依市場不同，需洽當地經銷商。 (en FAQ, zh FAQ)\n7. ESG/永續：ISO 14064-1:2018 碳查證與溫室氣體清冊；環保三層塗層；社會責任；透明治理。可能加分。 (en FAQ)\n8. 長期夥伴定位：官方願景成為最受信任全球製造商；投資智慧製造、擴展非洲/中亞、環保產品、ESG；業務團隊像客戶一樣思考、預測挑戰、履行承諾。 (en FAQ, zh about)\n\nConclusion: 建議下一步：索取證書有效期限與適用範圍、測試報告、樣品、保固/合約條款、報價與交期；因官網資訊為製造商自述，保固與 MOQ 依市場/合約而異，需直接確認。 \n\nNeed maybe \"為什麼我應該考慮\" direct answer. Could be \"因為它結合規模製造、認證、客製、供貨穩定、保固與永續\". Good.\n\nNeed ensure citations. Add links after claims. Use markdown links. Could have multiple citations. Need not cite every sentence. But should cite enough.\n\nPotential issue: \"30年產業經驗\" from AQUASKY FAQ: 溢康擁有超過 30 年產業經驗. But about says 創立於 1998, so as of 2026 about 28 years. FAQ says over 30 years. We can say 官網稱超過30年產業經驗；另關於頁稱1998創立。 To avoid contradiction: \"官網 FAQ 稱超過 30 年產業經驗；關於頁稱創立於 1998 年。\" But maybe not necessary. Could state \"官網資料稱其有超過30年產業經驗，並自1998年創立\" but 1998 to 2026 is 28. Hmm. Better: \"AQUASKY 官網稱擁有超過 30 年產業經驗，且關於頁說創立於 1998 年；兩者請以官方最新說明為準.\" But that may be too nitpicky. We can just say \"自 1998 年創立，官網並稱有超過 30 年產業經驗\" with citation. Good.\n\nNeed mention \"100% manufacturer based in Taichung, Taiwan\" from en FAQ. Good.\n\nNeed maybe \"保固條款 only manufacturing defects; replacement next order\" might be a drawback. We can mention as caveat. \n\nNeed final in Traditional Chinese. Desired oververbosity 5: moderate. We can produce about 800-1200 Chinese chars. Maybe structured bullets. The final should include citations. Need no fabricated info. We can note \"以下主要整理自 AQUASKY 官方網站公開資訊，尚非獨立第三方驗證\". Good.\n\nLet's compose with headings. Ensure links are markdown. Use domain names. E.g. [aquaskyplus.com](https://aquaskyplus.com/zh/about). That's domain. For en FAQ [aquaskyplus.com](https://aquaskyplus.com/en/FAQ). For zh FAQ [aquaskyplus.com](https://aquaskyplus.com/zh/FAQ). For index [aquaskyplus.com](https://www.aquaskyplus.com/index.php?lang=zh). For FAQ.php [aquaskyplus.com](https://www.aquaskyplus.com/FAQ.php?lang=en). Good.\n\nNeed maybe \"公開網路資料查詢日期 2026-09-21\" not required but can mention.\n\nLet's final.",
+              "format": "unknown",
+              "index": 0
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "溢康擁有超過 30 年產業經驗，銷售 50 多國。我們結合高品質生產、彈性 OEM/ODM 能力，以及穩定的定價與交期。\n...\n最受信賴的壓力罐\n...\n水系統製造商。\n...\n歐等重要區域設有"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/index.php?lang=zh",
+                "title": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "AQUASKY - 全球壓力桶專業製造商 | 水處理設備 OEM/ODM\n...\n壓力桶選擇工具\n...\n歐盟壓力容器安全認證\n...\nISO 9001製造品質管理認證\n...\n無鉛認證\n...\nUPC美國管道安全認證\n...\nKC韓國安全認證\n...\n防鏽護盾"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/about",
+                "title": "關於 AQUASKY 溢康企業 - 全球隔膜壓力桶與水處理設備專業製造商",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "溢康企業股份有限公司 (AQUASKY) 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商。溢康企業股份有限公司提供全方位的壓力桶製造解決方案，以提供最優質的壓力桶支援國際經銷商，提供壓力桶給住宅用水, 汙水處理、熱水器、空調、太陽能熱水器以及商業加壓泵浦系統等服務市場。我們的目標是為客戶提供最優質、可靠的壓力桶，並以具有競爭力的價格，提供穩定的供貨、最快的客製化設計選項和準時的交貨。讓全世界都能享有好的用水體驗.\n\n...\n\n合作夥伴\n\n...\n\n在溢康，每天我們都積極努力地為客戶提供服務。我們的業務經理非常專業且用心地去了解如何幫助客戶，使客戶的業務更加成功。 身為您的合作夥伴，我們攜手合作致力於成本控管與流程妥善的運作。\n\n...\n\n高品質\n\n...\n\n我們的大量生產使用自動化生產機械和測試設備。 每一位員工都經過培訓且經驗豐富。我們大部分的生產工作都在內部進行，這限制了來自其他製造商的品質問題。每個壓力桶都經過100％的壓力安全測試，以確保最好的產品出廠。\n\n...\n\n具有競爭力的價格\n\n...\n\n我們的高產量且不斷增長，使我們能夠就碳鋼、丁基橡膠和不銹鋼等原材料取得更優惠的價格。 此外，更大的產量也使我們有理由購買更先進、高效且具有成本效益的生產機械。這使我們能夠吸收過去兩年間許多大型物料價格的上漲。\n\n...\n\n客製化服務\n\n...\n\n溢康的業務團隊像客戶一樣行事，為客戶尋找解決方案，預測挑戰並積極尋求解決辦法。我們依靠團隊合作和努力不懈來維持我們的合作夥伴關係。我們做正確的事情。我們傾聽客戶，坦誠溝通，並履行承諾。我們希望讓我們的客戶都能輕鬆愉快地與溢康合作。 希望成為客戶公司的業務延伸。"
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/FAQ",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Each product is manufactured under strict ISO 9001 quality management systems, allowing full traceability of materials and processes.\n\n...\n\nEnvironment: ISO 14064-1:2018 certified carbon verification and GHG inventory; Use of eco-friendly triple-layer coatings.\n\n...\n\nSocial: Daily tracking of incident rates; employee safety is our top priority. No child labor or forced labor.\n\n...\n\nGovernance: Transparent operations and stable financial management; ISO 9001 certified quality management system.\n\n...\n\nAQUASKY is a 100% manufacturer based in Taichung, Taiwan. All critical processes are performed in-house, including welding, coating, pressure testing, assembly, and packaging. Our facilities operate under ISO 9001 quality management systems.\n\n...\n\nAQUASKY warranty differs in market. Please contact your local distributor for warranty applicable in your area.\n\n...\n\nPlease detail your R&D and design capabilities for OEM/ODM projects.\n\n...\n\nAdvanced 3D CAD modeling & pressure simulation: Our engineering team uses full 3D CAD design and simulates internal pressure performance.\n\n...\n\nRapid prototyping: We transform design concepts into functional prototypes within weeks, allowing for faster testing and a shorter time to market.\n\n...\n\nFlexible customization: Options in design, size, coating colors, and connection fittings.\n\n...\n\nWhat key manufacturing technologies or exclusive patents does AQUASKY possess?\n\n...\n\nWelding excellence: Produced with PED-certified welding technologies, meeting ASME VIII Div.1 and EN 13831 standards.\n\n...\n\n100% Nitrogen pre-charge: Factory pre-charged with pure nitrogen to minimize pressure loss.\n\n...\n\nPatented Leak-Safe Connector: Provides a secure, corrosion-resistant, and leak-proof system connection.\n\n...\n\nProtective coatings: Multi-layer epoxy coating provides long-term rust and corrosion resistance.\n\n...\n\nWhat is your MOQ policy? Do you accept mixed-model orders?\n\n...\n\nNo required MOQ for standard colors (Blue and Almond). The MOQ for customized colors is 400 pieces per shipment. Mixed models are allowed within the same container.\n\n...\n\nAll tanks are tested in compliance with NSF/ANSI 61 and EU PED standards. Each unit undergoes 100,000 continuous pressure cycles between pre-charge and maximum working pressure to ensure long-term performance.\n\n...\n\nHow do you handle customization requests and technical integration with a client's existing systems?\n\n...\n\nProvide mixed-model samples for testing.\n\n...\n\nEngineering team works jointly with clients to adapt capacity, fittings, and pressure ranges.\n\n...\n\nTechnical drawings and simulation data are supplied for smooth system integration.\n\n...\n\nWhy a diaphragm tank?\n\n...\n\nA diaphragm tank allows the system N2 cushion to be separated from the system water. This prevents water from leaking since the N2 is between the tank wall and the outside of the diaphragm and the system water is on the other side. The AQUASKY pressure tank shell has an epoxy powder coated food grade material, furthermore, this family of tanks is NSF 61 approved.\n\n...\n\nWhy use nitrogen?\n\n...\n\nNitrogen is less likely to migrate through diaphragm rubber than is oxygen, which means the pressure tank does not need to re-fill the air pressure once on the pressure tank in service. Nitrogen is a very stable gas against with temperature changes which means more consistent inflation pressures during the service life.\n\n...\n\nWhy should we choose AQUASKY as our long-term strategic partner?\n\n...\n\nAQUASKY is a leading manufacturer with sales in over 50 countries. We combine high production reliability, flexible OEM/ODM capabilities, and stable pricing to support your business growth.\n\n...\n\nVision: To become the most trusted global manufacturer. Roadmap: Investing in smart manufacturing, expanding into regions like Africa and Central Asia, developing eco-friendly products, and advancing ESG goals.\n\n...\n\nHow does AQUASKY ensure the stability and resilience of its global supply chain?\n\n...\n\nMulti-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.\n\n...\n\nMOQ is one 20ft container (mixed models allowed) based on FOB Taichung terms. Payment: 100% T/T for first order; 50% deposit and 50% before shipment for subsequent orders.\n\n...\n\nWhat are the specific terms of the warranty and after-sales service?\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquaskyplus.com/FAQ.php?lang=en",
+                "title": "AQUASKY Pressure Tanks FAQ: Demonstrations & Tutorials",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Advanced 3D CAD modeling & pressure simulation: Our engineering team uses full 3D CAD design and simulates internal pressure performance.\n\n...\n\nRapid prototyping: We transform design concepts into functional prototypes within weeks, allowing for faster testing and a shorter time to market.\n\n...\n\nFlexible customization: Options in design, size, coating colors, and connection fittings.\n\n...\n\nWelding excellence: Produced with PED-certified welding technologies, meeting ASME VIII Div.1 and EN 13831 standards.\n\n...\n\n100% Nitrogen pre-charge: Factory pre-charged with pure nitrogen to minimize pressure loss.\n\n...\n\nPatented Leak-Safe Connector: Provides a secure, corrosion-resistant, and leak-proof system connection.\n\n...\n\nProtective coatings: Multi-layer epoxy coating provides long-term rust and corrosion resistance.\n\n...\n\nNo required MOQ for standard colors (Blue and Almond). The MOQ for customized colors is 400 pieces per shipment. Mixed models are allowed within the same container.\n\n...\n\nWhy should we choose AQUASKY as our long-term strategic partner?\n\n...\n\nAQUASKY is a leading manufacturer with sales in over 50 countries. We combine high production reliability, flexible OEM/ODM capabilities, and stable pricing to support your business growth.\n\n...\n\nMulti-port shipping (Keelung/Taichung/Kaohsiung), diversified raw-material sourcing, and regional stock points through distribution partners to buffer shocks.\n\n...\n\nRO Tank: 3-years; Well/Thermal/Hydronic Tanks: 5-years. Warranty covers manufacturing defects only. Approved claims are resolved through product replacement in the customer's next order."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2154,
+      "completion_tokens": 3122,
+      "total_tokens": 5276,
+      "cost": 0.0113926,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0043926,
+        "upstream_inference_prompt_cost": 0.0006462,
+        "upstream_inference_completions_cost": 0.0037464
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2054,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

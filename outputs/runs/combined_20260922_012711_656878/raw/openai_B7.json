@@ -1,0 +1,94 @@
+{
+  "request": {
+    "model": "openai/gpt-6-astra",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的保固條款和售後服務內容是什麼？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ],
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "response": {
+    "id": "gen-1790008218-1PRiwLhAb3G3yUUsmXqX",
+    "object": "chat.completion",
+    "created": 1790008218,
+    "model": "openai/gpt-6-astra",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "如果您指的是 **AQUASKY 溢康企業的壓力桶／儲水罐產品**，官方公開的保固與售後服務如下。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n### 保固條款\n- **RO 逆滲透儲水罐：3 年保固。**\n- **其餘多數罐體：5 年保固**，並非所有型號一律適用。\n- **保障範圍：僅限製造缺陷**，申請時須提供相關證據。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n**地區差異須注意：**同一份官方 FAQ 也明確表示，保固期可能因市場而異，實際適用條款應向當地經銷商確認，因此不能直接將上述年限視為所有地區、所有型號的保證。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n### 售後處理方式\n官方 FAQ 說明的流程是：**提出缺陷證據 → 廠商審核批准 → 以更換產品方式，在下一張訂單中補足**。這項說明涉及後續訂單，不能據此認定零售消費者也能立即換新或享有到府維修。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n另外，官方公開的 AQUASKY PLUS 說明書列有以下限制；是否適用您的產品，仍須核對隨附說明書：\n- 保固限原購買者或首次使用者，不可轉讓。\n- 未依說明書安裝、操作、維修或保養，以及誤用、凍結、改裝或環境因素造成的故障，不在保障範圍。\n- 不涵蓋人工、運費、服務費、運送、拆卸及重新安裝等費用。([aquasky.com.tw](https://www.aquasky.com.tw/download/EDM/English/MANUAL_20190713_FINAL_PRINT.pdf?utm_source=openai))\n\n### 如何聯繫與申請\n建議先向購買店家或當地經銷商確認適用保固，也可致電溢康：**+886-4-2562-6368**。([aquaskyplus.com](https://aquaskyplus.com/zh/FAQ))\n\n聯繫前，建議備妥型號、序號、購買憑證與故障照片／影片，方便確認。**目前查到的公開 FAQ 未明列證據格式、審核天數、到府服務或過保維修收費**，這些項目需另行詢問，不能視為已承諾提供。\n\n若您提供產品型號與購買地區，我可以協助進一步核對適用條款。",
+          "refusal": null,
+          "reasoning": null,
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/zh/FAQ",
+                "title": "AQUASKY 溢康壓力桶常見問題：保固年限、B2B起訂量與客製化流程",
+                "start_index": 49,
+                "end_index": 100
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.aquasky.com.tw/download/EDM/English/MANUAL_20190713_FINAL_PRINT.pdf?utm_source=openai",
+                "title": "AQUASKY\nPLUSINSTRUCTION\nMANUAL",
+                "start_index": 686,
+                "end_index": 803
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 17353,
+      "completion_tokens": 704,
+      "total_tokens": 18057,
+      "cost": 0.189068,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 4413,
+        "cache_write_tokens": 22,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.189068,
+        "upstream_inference_prompt_cost": 0.133868,
+        "upstream_inference_completions_cost": 0.0352
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 70,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 2
+      }
+    }
+  }
+}

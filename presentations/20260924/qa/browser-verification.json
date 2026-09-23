@@ -1,0 +1,32 @@
+{
+  "slides": 26,
+  "errors": [],
+  "overflow": [],
+  "filters": {
+    "plus": "3 / 72",
+    "intro": "4 / 72",
+    "wrong": "1 / 72",
+    "all": "72 / 72",
+    "model": "12 / 72",
+    "question": "6 / 72",
+    "empty": "0 / 72"
+  },
+  "originalMatch": true,
+  "answerOnTop": true,
+  "answerChecks": {
+    "checked": 72,
+    "failures": []
+  },
+  "matrixClick": "GPT-6 Astra · A2",
+  "mobileOverflow": false,
+  "recordChecks": {
+    "records": 72,
+    "questions": 12,
+    "plus": [
+      "openai:B7",
+      "perplexity:B6",
+      "claude:B1"
+    ],
+    "A": 11
+  }
+}

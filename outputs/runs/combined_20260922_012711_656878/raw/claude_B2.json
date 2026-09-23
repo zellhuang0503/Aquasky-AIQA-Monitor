@@ -1,0 +1,206 @@
+{
+  "request": {
+    "model": "anthropic/claude-sonnet-5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "請以繁體中文回答。請查詢公開網路資料並附上支持回答的來源；無法查證的資訊請明確說明，不要捏造。"
+      },
+      {
+        "role": "user",
+        "content": "AQUASKY 的膜片技術和義大利 CIMM 的產品相比，有什麼具體差異和優勢？"
+      }
+    ],
+    "max_tokens": 6000,
+    "plugins": [
+      {
+        "id": "web",
+        "engine": "native"
+      }
+    ]
+  },
+  "response": {
+    "id": "gen-1790011049-DQA1WnRdyQwM9vQA6qo5",
+    "object": "chat.completion",
+    "created": 1790011049,
+    "model": "anthropic/claude-sonnet-5",
+    "provider": "Claude Platform on AWS",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "根據公開資料，AQUASKY（台灣溢康企業）與義大利 CIMM 分別屬於兩種不同的壓力桶／膨脹罐技術路線，兩者在結構設計上有明顯差異。目前搜尋不到雙方直接對比的第三方測試報告，以下整理各自官方/業界資料所描述的技術特點，供您參考比對。\n\n## AQUASKY：隔膜式（Diaphragm Type）＋ PP 內襯結構\n\nAQUASKY 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商，主要產品為隔膜式壓力桶製造，提供 NSF 認證、100% 氮氣填充的泵浦、RO 及熱脹罐。\n\n其結構設計特點：\n- 水儲存區由三個組件構成：第一是不鏽鋼接頭，用於連接管路系統；第二是橡膠隔膜，作為桶內的活動部件；第三是聚丙烯（PP）內襯，用來隔開水與鋼製桶身的接觸。\n- PP 內襯貼合鋼製桶身外型並具防水功能，因為內襯緊貼鋼殼，鋼殼不會生鏽；同時內襯又靠鋼殼支撐強度以承受設計水壓，這是水儲存區設計的關鍵。\n- 高壓機型 MEGA-PLUS 系列：水儲存於桶內的隔膜和塑膠內襯之間，加壓氣體區的氣體使隔膜形成動能達到供水循環，這過程降低了泵啟動的次數，確保系統壓力保持在設定水平內，且一般壓力桶最大工作壓力是10 bar，MEGA-PLUS最高工作壓力可以達到16 bar，桶身厚度較一般厚，可以確保水穩定輸送到高樓層。\n- 熱脹罐（Hydro-Plus）：由符合 IAPMO 和 EN 標準的鋼板製成，並按照 ASME 和 EN 程序由經認證的焊工進行焊接，隔膜採用高溫耐性的 EPDM 橡膠製成，並經過水壓試驗，測試壓力為設計壓力的1.5倍。\n\n## CIMM：氣囊式（Bladder Type）結構，主打可更換氣囊與法蘭連接\n\nCIMM 成立於1968年，從事暖通行業已經超過40年，旗下產品系列擁有超過500個型式的隔膜式壓力容器，其容量在0.165 和10.000升之間。值得注意的是，中文業界文章特別強調 CIMM 的技術屬於「氣囊式」而非傳統隔膜式：由CIMM首創的氣囊式結構穩壓罐率先在行業內得到普及應用，這也標誌著給水設備穩壓罐行業的一大進步。\n\n其設計與傳統隔膜式的差異點（依中國代理商說法）：\n- **抗腐蝕結構**：CIMM氣囊式穩壓罐內部有一個整體的氣囊，在工作時水只進入氣囊內，不與殼體接觸。接口處用法蘭盤連接，這種結構就避免了焊接過程引起的生鏽問題。\n- **可更換氣囊**：這種結構的穩壓罐的氣囊可更換，維修性較高。\n- **接口強度**：由於是法蘭連接，故它的接口就可以承受很大的扭力，在安裝過程中就不怕會扭斷接口；相對地，傳統隔膜式穩壓罐罐壁厚度一般在1mm左右，接口直接與罐焊接在一起，這種聯接方式可承受的扭力相當小，安裝時容易在旋轉安裝過程中扭斷接口。\n- **內膜固定工藝的潜在缺陷**（針對非CIMM的傳統隔膜式產品）：隔膜式穩壓罐的內膜是通過熱軋的方式固定在穩壓罐的兩個半殼的碳鋼中間，這種工藝過程如果處理的不好，就會留下微小的氣孔在內膜和碳鋼之間，這些微小的氣孔就會將預充的氣體洩漏出去，穩壓罐如果洩漏氣體，90%就是從這裡洩漏的。\n- CIMM 產品符合歐盟壓力設備法規：CIMM隔膜式膨脹罐獲得歐盟指令97/23/EC(PED)所批准的CE 認證。\n\n## 綜合比較與注意事項\n\n1. **結構分類不同**：AQUASKY 走的是「鋼殼＋PP內襯＋橡膠隔膜」三件式結構；CIMM 則強調「整體氣囊＋法蘭連接」的氣囊式結構，兩者在防鏽、接口耐扭力等訴求上邏輯類似（都是為了避免鋼殼直接接觸水或焊接處生鏽），但實現方式不同（PP 內襯 vs. 可更換氣囊+法蘭）。\n\n2. **市場定位**：兩家公司在市場報告中都被列為全球「隔膜式/膀胱式膨脹罐（Diaphragm/Bladder Expansion Tanks）」市場的主要供應商之一，AQUASKY 產能與品牌被列於CIMM SpA、Zhejiang Tankpro、Varem、Aquasystem等同一份全球市佔排名報告中，顯示兩者為同業競品，但該報告本身未提供逐項技術比較。\n\n3. **資料來源限制**：以上關於「優勢」的敘述，多來自各自官網或其中國代理商（CIMM）的行銷／業界文章，屬於廠商角度的說法，並非第三方獨立測試報告，因此無法完全查證其客觀公正性。若您需要嚴謹的性能比較（如實際洩氣率、使用壽命、耐壓測試數據），建議直接向兩家廠商索取第三方檢測報告或 CE/NSF 認證證書進行核實。\n\n如果您有具體型號（例如特定容量或壓力等級）想比較，我可以再進一步查詢對應的規格書。",
+          "refusal": null,
+          "reasoning": "This is asking about AQUASKY's diaphragm technology compared to Italian CIMM products - a niche technical query about pump or water-related components. I should search for more information on this.I've found both AQUASKY and CIMM referenced as competitors in the diaphragm/bladder pressure tank market, and noticed CIMM specifically uses bladder-type (气囊式) technology while others rely on diaphragm-type (隔膜式). I want to dig deeper into AQUASKY's specific technical claims and find a direct comparison between the two approaches.Now I'm compiling AQUASKY's profile: a Taiwanese company founded in 1998 making diaphragm-type pressure tanks with PP liners and steel shells, 100% N2 filled and NSF certified, with product lines like PUMPLUS, MEGA-PLUS, Hydro-Plus, and the stainless steel Premium-Plus.\n\nFor CIMM, an Italian company founded in 1968, I'm noting they use bladder-type (氣囊式) technology rather than diaphragm type—the bladder doesn't touch the shell wall, connects via a replaceable flange, avoids welding-related rust, and can handle more torque; they offer over 500 models spanning 0.165 to 10,000L capacity.\n\nSince I don't have a source directly comparing AQUASKY and CIMM, I'll frame the answer around their differing technology types, flag that specific advantage claims mostly come from marketing material, and make clear the comparison is synthesized from each company's individual technical descriptions rather than a direct source.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "This is asking about AQUASKY's diaphragm technology compared to Italian CIMM products - a niche technical query about pump or water-related components. I should search for more information on this.",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "EvYDCrABCBIYAipA+21FNLtmab20aCEtPU+/1s/+AsleDgnzm6Qu4bp77weC8/gIz5nD5e/qs54ziYGFhWoRgPT1xIlJTmM6Bbnd1TIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBrc3F1QYSDCFegoJ8XD4b6JnJaBoMMDfSZjXDPRtEBnS1IjAXalVftkYveVjAKAvzpxW0PhDZeYd4RvPTIF7TArkjpG33PVyus5C550DRwJ5g/aUq8gE5tIPQOcARhQdyKDLlVH6dtCARFfhDP4uJOxcwAlcarXbC6in6r389gvJoyM9fStvHe4k4o0PDNVzLK5LBIoqCV9bh0iNgFzi7Uyq9eRsUk/NRUi67haz3OXNiwky5mGg+ZsZMFWeo9SI6DeMCIMjZhI1aSlpUE3M4QYHNqQo7ScRteWcXykxNFGoYpg9Tx0e7XfqDtoakYx70SThOeipHhT7i6GBmlmkhwk9CRZp5YTLH0hkBqpK1e1EnzoPYfI48LePpawrJMiENTjMHgUuvD+4sj9EfJmTRe2jzklpowyh6L7yNIoY8TcNxo9pkkJyTsRgB"
+            },
+            {
+              "type": "reasoning.text",
+              "text": "I've found both AQUASKY and CIMM referenced as competitors in the diaphragm/bladder pressure tank market, and noticed CIMM specifically uses bladder-type (气囊式) technology while others rely on diaphragm-type (隔膜式). I want to dig deeper into AQUASKY's specific technical claims and find a direct comparison between the two approaches.",
+              "format": "anthropic-claude-v1",
+              "index": 1,
+              "signature": "EuoFCrABCBIYAipAS97/7m08a6aD+iDMhEAVt4lguYEeHSloMwRLMtpTnURd/xd6qHsBemy4S7yr9KRLlKIuKyPnkVRIe2hTDqYdAjIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiQ0YzBmMDQ2Zi0yNWZkLTQ1ZmItYmZiMy1hMDhhOGUyNDljYTd6HnVwcm9mXzAxMUNmR3hUaFFBdzRmUGE2NFlEeWIxaagBtM3F1QYSDKNIobEHiEbR+1NYtBoMBweUiqR/1ePUk2p+IjC+FbGP8w5Gganub0OLsG3lJsqy1n2waW0gyAnjl+j4R66mka2HFSs9PJpVrp1WIPgq5gPjkzEGvdRaArIi/kgL+XCazpNU2LK/UDKT0ljHFABZBnkxknNIq4lQw+JoQtk4ZXoR2w8to0CaIodO6e3UEjO+bnnvAICrGR1C9/O72M52uW7RRuJ1ky0ba7U8sLqliqazw8aMAAKHLFqGlQXErP6yC7hzx0yzOV/y5cq2Ud8vlzxTAduYLaMl9Oj1D8uTsAIGeZ94++xA6un9olHcByl049Hn0ZinJUtGcKzGGRZOpIV3u0CttoMD/Nbi88mR71tSiJmFdc3F9M/1DtEAZ0gKV66GcrzdPDdTlxTUS0GYfPiXmKKxQOm38Rv3bDvPO9+0fUiOp+fPQkndjiaFtNd9dfsv6BnPBgPkutryRcCYE9lnbW45Hsa8Yo5G0izO1TRl0GZtHqLGzQdfT3mqMBaM4fB25aW7Nbxqsh8d5PPmJSTVdNwQ4qNT6AgaNBVa9URsbTmNUl3rwRMjZuThcJPAdWVdkrnN/ysPvBhn++WaYMgftCA5/44iUX0GXSWQtFR6Z3Nc5CVItfaVLOOLGlrxYS7QY5Y7L1K2t1Ql7nbGJWYY/TTaYvDcTbnM+fgGbfBoxpJIiTS4jerN/iCv9A2tAmRNAPE7ZeeszVzH21HTf2RptIksLvE10lJLGhIN+ChQ/ZzegxYYAQ=="
+            },
+            {
+              "type": "reasoning.text",
+              "text": "Now I'm compiling AQUASKY's profile: a Taiwanese company founded in 1998 making diaphragm-type pressure tanks with PP liners and steel shells, 100% N2 filled and NSF certified, with product lines like PUMPLUS, MEGA-PLUS, Hydro-Plus, and the stainless steel Premium-Plus.\n\nFor CIMM, an Italian company founded in 1968, I'm noting they use bladder-type (氣囊式) technology rather than diaphragm type—the bladder doesn't touch the shell wall, connects via a replaceable flange, avoids welding-related rust, and can handle more torque; they offer over 500 models spanning 0.165 to 10,000L capacity.\n\nSince I don't have a source directly comparing AQUASKY and CIMM, I'll frame the answer around their differing technology types, flag that specific advantage claims mostly come from marketing material, and make clear the comparison is synthesized from each company's individual technical descriptions rather than a direct source.",
+              "format": "anthropic-claude-v1",
+              "index": 2,
+              "signature": "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"
+            }
+          ],
+          "annotations": [
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/about.php?lang=zh",
+                "title": "關於AQUASKY溢康企業 - 全球領先的壓力桶製造商",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "溢康企業股份有限公司 (AQUASKY) 創立於 1998 年，最初只是在台中的一個小型水五金加工廠，然而現今已發展成為全球領先的隔膜式壓力桶製造商。溢康企業股份有限公司提供全方位的壓力桶製造解決方案，以提供最優質的壓力桶支援國際經銷商，提供壓力桶給住宅用水, 汙水處理、熱水器、空調、太陽能熱水器以..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/en/",
+                "title": "AQUASKY - Global Diaphragm Pressure Tank & Water Treatment Manufacturer",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "Founded in 1998, AQUASKY is a global leader in diaphragm pressure tank manufacturing. We provide NSF-certified, 100% N2 filled pump, RO, and thermal e..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/news.php?page=24&cid=2&lang=en",
+                "title": "Aquasky ─Latest News: Industry Information",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "The water storage zone of the Aquasky type diaphragm pressure tank is built by three components. The first is the stainless steel connector. This is t..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/news.php?page=24&cid=2&lang=en",
+                "title": "Aquasky ─Latest News: Industry Information",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "A PP line is built as the sample shape as the tank shell which can be a waterproof shell on the tank. Because the PP liner attaches to the steel tank ..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/MEGA-PLUS.php?lang=zh",
+                "title": "MEGA-PLUS (16 bar) – 高壓泵浦壓力桶 | AQUASKY",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "MEGA-PLUS (16 bar) 高壓泵浦壓力桶是加壓水系統的關鍵元件，能夠穩定維持系統水壓在安全標準值範圍內。水儲存於桶內的隔膜和塑膠內襯之間，加壓氣體區的氣體使隔膜形成動能達到供水循環。這過程降低了泵啟動的次數，確保系統壓力保持在設定水平內。隔膜的張力設計有助於穩定系統內的水壓輸出，確保高壓..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://aquaskyplus.com/HYDRO-PLUS.php?lang=zh",
+                "title": "Hydro-Plus 導熱液體膨脹罐：穩定您供暖系統的最佳選擇",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "導熱液體膨脹罐主要用於吸收住宅或商業導熱液體供暖和冷卻系統封閉迴路中的熱膨脹，以控制壓力平衡，確保系統達到穩定的功能。Hydro-Plus 導熱液體膨脹罐由符合 IAPMO 和 EN 標準的鋼板製成，並按照 ASME 和 EN 程序由經認證的焊工進行焊接。隔膜採用高溫耐性的 EPDM 橡膠製成，並經..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.mmsonline.com.cn/info/301260.shtml",
+                "title": "意大利CIMM进口膨胀罐在供水系统的应用-国际金属加工网",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "进口膨胀罐当前市场上应用最多的还是意大利CIMM品牌。CIMM成立于1968年，从事暖通行业已经超过40年，旗下产品系列拥有超过500个型式的隔膜式压力容器，其容量在0.165 和10.000升之间。在中国市场，CIMM进口膨胀罐在供水系统应用比较广泛，下面由CIMM中国总代理—上海法鸣流体设备有限..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.smedianews.com/NewsContent_13220.html",
+                "title": "CIMM气囊式稳压罐PK传统隔膜式稳压罐",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "业内人士都比较熟悉CIMM稳压罐，该品牌来源于意大利，承袭欧洲品质，风靡全球。由CIMM首创的气囊式结构稳压罐率先在行业内得到普及应用，这也标志着给水设备稳压罐行业的一大进步。气囊式稳压罐能巧妙解决在使用过程中的诸多问题，所以深受市场的青睐。 · 传统隔膜式稳压罐与气囊式稳压罐的区别 · 1、传统隔..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://zhuanlan.zhihu.com/p/25385688",
+                "title": "CIMM气囊式稳压罐PK传统隔膜式稳压罐 - 知乎",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "2、隔膜式稳压罐的内膜是通过热轧的方式固定在稳压罐的两个半壳的碳钢中间，这种工艺过程如果处理的不好，就会留下微小的气孔在内膜和碳钢之间，这些微小的气孔就会将预充的气体泄露出去，稳压罐如果泄露气体，90%就是从这里泄露的。这种漏气的稳压罐用一段时间如果不及时补充气体就不能起到定压卸荷作用。 · 3、此..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "http://www.fmltsb.com/products/product_23.html",
+                "title": "意大利CIMM可替换隔膜式稳压罐,进口意大利稳压罐,隔膜式稳压罐-上海法鸣流体设备有限公司",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "CIMM产品精选合格、高质量原材料，高效的质量把控确保了CIMM产品的可靠性，使产品能够符合最严格的国际标准，完全满足最重要的国际认证体系, 符合成员国的压力设备法律，保证在欧洲的自由流通。CIMM隔膜式膨胀罐获得欧盟指令97/23/EC(PED)所批准的CE 认证。CIMM把高科技和创新融为一体，..."
+              }
+            },
+            {
+              "type": "url_citation",
+              "url_citation": {
+                "url": "https://www.giiresearch.com/report/qyr1862139-hydropneumatic-tanks-global-market-share-ranking.html",
+                "title": "Hydropneumatic Tanks - Global Market Share and Ranking, Overall Sales and Demand Forecast 2025-2031",
+                "start_index": 0,
+                "end_index": 0,
+                "content": "CIMM SpA · Zhejiang Tankpro · Varem · Aquasystem · Taizhou Tianyang Electromechanical (Dezhi) Aquasky Enterprise · Elbi S.p.A · Ibaiondo · Kartal Bomb..."
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 54954,
+      "completion_tokens": 3482,
+      "total_tokens": 58436,
+      "cost": 0.184728,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.184728,
+        "upstream_inference_prompt_cost": 0.109908,
+        "upstream_inference_completions_cost": 0.03482
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 718,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      },
+      "server_tool_use_details": {
+        "web_search_requests": 4
+      }
+    }
+  }
+}

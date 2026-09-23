@@ -1,0 +1,4 @@
+# Preserve audited snapshots and packaged evidence byte-for-byte on Windows.
+config/questions_20260922.md -text
+outputs/runs/combined_20260922_012711_656878/** -text
+presentations/20260924/** -text
